@@ -1,0 +1,127 @@
+Most of these instructions came straight from the README.md on github.
+
+git clone https://github.com/HKUDS/VideoRAG.git
+
+cd VideoRAG
+
+
+Do this only once to create a virtual environment and install packages.
+conda create --name vrag_env python=3.11
+
+To activate this environment:
+conda activate vrag_env
+
+To deactivate an active environment, use the following, but not during the install. Do this after if you want.:
+conda deactivate
+
+Creates a better looking prompt:
+export PS1='($CONDA_DEFAULT_ENV) \w\$ '
+
+pip install numpy==1.26.4
+pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2
+pip install accelerate==0.30.1
+pip install bitsandbytes==0.43.1
+pip install moviepy==1.0.3
+pip install git+https://github.com/facebookresearch/pytorchvideo.git@28fe037d212663c6a24f373b94cc5d478c8c1a1d
+pip install timm ftfy regex einops fvcore eva-decord==0.6.1 iopath matplotlib types-regex cartopy
+pip install ctranslate2==4.4.0 faster_whisper==1.0.3 neo4j hnswlib xxhash nano-vectordb
+pip install transformers==4.37.1
+pip install tiktoken openai tenacity
+
+
+# Install ImageBind using the provided code in this repository, where we have removed the requirements.txt to avoid environment conflicts.
+cd ImageBind
+pip install .
+
+
+Then, please download the necessary checkpoints in the repository's root folder for MiniCPM-V, Whisper, and ImageBind as follows:
+
+
+# Make sure you have git-lfs installed (https://git-lfs.com)
+sudo apt update
+sudo apt install git-lfs
+
+
+git lfs install
+
+# minicpm-v
+git lfs clone https://huggingface.co/openbmb/MiniCPM-V-2_6-int4
+
+# whisper
+git lfs clone https://huggingface.co/Systran/faster-distil-whisper-large-v3
+
+# imagebind
+mkdir .checkpoints
+cd .checkpoints
+wget https://dl.fbaipublicfiles.com/imagebind/imagebind_huge.pth
+cd ../
+
+
+Your final directory structure after downloading all checkpoints should look like this:
+
+VideoRAG
+├── .checkpoints
+├── faster-distil-whisper-large-v3
+├── ImageBind
+├── LICENSE
+├── longervideos
+├── MiniCPM-V-2_6-int4
+├── README.md
+├── reproduce
+├── notesbooks
+├── videorag
+├── VideoRAG_cover.png
+└── VideoRAG.png
+
+
+To run the script without GPU. CPU only.
+CUDA_VISIBLE_DEVICES=-1 python3 _index_videos_02.py
+
+
+Check GPU installation in common directories:
+ls /usr/local/cuda*
+ls /usr/local/cuda/lib64/libcudart*
+ls /usr/local/cuda/bin
+ls /usr/local/cuda-*/bin
+ls /opt/cuda/bin
+
+Locate the nvcc executable in the system's path.
+which nvcc
+
+This one takes a while to run.
+sudo find / -name nvcc 2>/dev/null
+
+Check for installed CUDA packages:
+dpkg -l | grep cuda
+
+Check if have NVIDIA Cuda Compiler
+nvcc --version
+
+Check GPU info for Windows:
+nvidia-smi
+
+These commands run a test on the GPU.
+python3 /home/js/faiss_gpu/_test_gpu_01.py
+python3 /home/js/faiss_gpu/_test_gpu_02.py
+
+Check installed packages with dpkg:
+dpkg -l | grep cudnn
+
+Look for cuDNN files in the CUDA directory:ls -l /usr/local/cuda/include | grep cudnn
+ls -l /usr/local/cuda/lib64 | grep cudnn
+ls -l /usr/local/cuda/include | grep cudnn
+
+If you installed via apt, you can check with:
+apt list --installed | grep cudnn
+
+If you installed from the NVIDIA tar file, verify the header files exist:
+find /usr -name cudnn.h
+
+Check cuDNN version programmatically:
+cat /usr/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
+
+
+Python commands for REPL. Check PyTorch sees cuDNN
+import torch
+print(torch.backends.cudnn.version())  # Should print 8900 or similar
+print(torch.backends.cudnn.is_available())  # Should be True
