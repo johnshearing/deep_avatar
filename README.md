@@ -1,4 +1,4 @@
-Creating a.i. avatars which likely give the same answers as the person for which they are modeled.  
+### Creating a.i. avatars which likely give the same answers as the person for which they are modeled.  
 
 The first deep avatar will be modeled after Abraham Hicks.  
 The second deep avatar will be modeled after Charles Hoskinson.  
