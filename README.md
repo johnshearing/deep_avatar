@@ -31,8 +31,9 @@ More discussion on this topic is [found here on the Cardano Forum](https://forum
 Right now I am just playing in order to see what is possible with the currently available open source tech. In order for this idea to work, the entire Cardano community will need to be involved. A Large Language Model built with open source training data needs to be selected. Then open source data needs to be collected in order to fine-tune the model so that it gives the same answers Charles would give for the same questions. This is also the data the deep avatar will cite to support its answers. That's the part I am working on now.  
 
 Some milestones are:
-1. Build the RAG system and deploy a web interface so that the public can query the database using natural language.
-2. Fine-tune an LLM so as to become a deep avatar of Charles which also has a full understanding of all the protocol's technical details.
-3. Deploy the deep avatar on the web and let the public provide feedback.
+1. Build the RAG system and deploy a web interface so that the public can query the database using natural language.  
+2. Use any LLM to create question and answer pairs which will be used to fine-tune and LLM deep avatar.  
+3. Fine-tune an LLM so as to become a deep avatar of Charles which also has a full understanding of all the protocol's technical details and which can cite all the data that was used for fine-tuning.  
+4. Deploy the deep avatar on the web and let the public provide feedback.  
  
 
