@@ -125,3 +125,19 @@ Python commands for REPL. Check PyTorch sees cuDNN
 import torch
 print(torch.backends.cudnn.version())  # Should print 8900 or similar
 print(torch.backends.cudnn.is_available())  # Should be True
+
+
+python3 audio_rag_pipeline.py \
+  --channel-url "https://www.youtube.com/@abrahamhickstips/videos" \
+  --audio-dir "audio_files" \
+  --workdir "audiorag-workdir"
+  --starting-index (default: 0)
+  --ending-index (default: None, which means “process all the way to the end”)
+
+
+python3 audio_rag_pipeline.py \
+  --urls-file "my_videos.txt" \
+  --audio-dir "audio_files" \
+  --workdir "audiorag-workdir" \
+  --starting-index (default: 0)
+  --ending-index (default: None, which means “process all the way to the end”)
