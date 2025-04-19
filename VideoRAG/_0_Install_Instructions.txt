@@ -29,6 +29,13 @@ pip install transformers==4.37.1
 pip install tiktoken openai tenacity
 
 
+These may or may not need to be installed. You will see an error message asking for these if they are needed.
+pip install ollama
+pip install yt-dlp
+pip install openai-whisper
+pip install sentence-transformers
+
+
 # Install ImageBind using the provided code in this repository, where we have removed the requirements.txt to avoid environment conflicts.
 cd ImageBind
 pip install .
@@ -127,12 +134,12 @@ print(torch.backends.cudnn.version())  # Should print 8900 or similar
 print(torch.backends.cudnn.is_available())  # Should be True
 
 
-python3 audio_rag_pipeline.py \
+python3 _1_audio_rag_pipeline_05.py \
   --channel-url "https://www.youtube.com/@abrahamhickstips/videos" \
-  --audio-dir "audio_files" \
-  --workdir "audiorag-workdir"
-  --starting-index (default: 0)
-  --ending-index (default: None, which means “process all the way to the end”)
+  --audio-dir "_audio_files" \
+  --workdir "_audiorag_workdir" \
+  --starting-index 0 \ # (default 0 to start at the beginning of the list of videos)
+  --ending-index 0 # (default: None, which means “process all the way to the end of the list”)
 
 
 python3 audio_rag_pipeline.py \
