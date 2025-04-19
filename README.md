@@ -6,7 +6,7 @@ The second deep avatar will be modeled after Charles Hoskinson.
 The main building block is a Retrieval Augmented Generation (RAG) system.  
 This is a system for automatically collecting data such as videos and documents created by the human model over the course of their lifetime.  
 The RAG system is used to create training data for fine-tuning an LLM so as to give the same answers as the human model when provided with the same questions.  
-The RAG system also allows the deep avatar to give accurate answers and to quote sources.  
+The RAG system also allows the deep avatar to give accurate answers and to quote its sources.  
 The open source repositories [VideoRag](https://github.com/HKUDS/VideoRAG) and [LightRAG](https://github.com/HKUDS/LightRAG) are being used to build the RAG system.  
 All the scripts in this repository are used with these two libraries in order to create deep avatars.   
 I have been programming for most of my life but in this project a.i. such as Grok, ChatGPT, Claude, and Gemini are doing most all of the coding. For this reason, the work is going very quickly.  
@@ -32,8 +32,7 @@ Right now I am just playing in order to see what is possible with the currently 
 
 Some milestones are:
 1. Build the RAG system and deploy a web interface so that the public can query the database using natural language.  
-2. Use any LLM to create question and answer pairs which will be used to fine-tune and LLM deep avatar.  
-3. Fine-tune an LLM so as to become a deep avatar of Charles which also has a full understanding of all the protocol's technical details and which can cite all the data that was used for fine-tuning.  
-4. Deploy the deep avatar on the web and let the public provide feedback.  
- 
+2. Use the RAG system to create question and answer pairs which will be used to fine-tune an LLM deep avatar.  
+3. Fine-tune an LLM so as to become a deep avatar of Charles which also has a full understanding of all the protocol's technical details and which can cite all the data in the RAG system that was used for fine-tuning.  
+4. Deploy the deep avatar on the web and let the public provide feedback.
 
