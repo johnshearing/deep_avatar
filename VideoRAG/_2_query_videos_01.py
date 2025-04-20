@@ -16,7 +16,7 @@ from videorag import VideoRAG, QueryParam
 if __name__ == '__main__':
     multiprocessing.set_start_method('spawn')
 
-    query = "What is law of attraction?"
+    query = "What is the relationship between busyness and effectiveness? Please use the video as your only source of information when answering. Please provide the beginning and ending of all video segments which are used in your answer."
     param = QueryParam(mode="videorag")
     # if param.wo_reference = False, VideoRAG will add reference to video clips in the response
     param.wo_reference = True

@@ -1,8 +1,20 @@
+# Ignore everything
 *
+
+# Do not ignore the README.md file - include that.
 !README.md
+
+# Do not ignore the LICENSE file - include that.
 !LICENSE
+
+# Do not ignore the .gitignore file - include that.
 !.gitignore
-!_0_Install_Instructions.txt
-!_1_audio_rag_pipeline_07.py
-!_2_query_audio_rag_01.py
+
+# Ignore all subdirectories directly within VideoRAG that start with an underscore.
+VideoRAG/_*/
+
+# But do NOT ignore files directly within VideoRAG that start with an underscore - include those.
+!VideoRAG/_*
+
+# And specifically do NOT ignore the VideoRAG/_archive directory - include that directory.
 !VideoRAG/_archive/

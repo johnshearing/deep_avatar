@@ -64,11 +64,14 @@ class AudioRAG(VideoRAG):
 
 
         # asyncio.run(self.chunks_vdb.index_done_callback())
-        asyncio.run(asyncio.gather(
-            self.chunks_vdb.index_done_callback(),
-            self.entities_vdb.index_done_callback(),
-            self.video_segment_feature_vdb.index_done_callback(),
-        ))
+        async def _save_all():
+            await asyncio.gather(
+                self.chunks_vdb.index_done_callback(),
+                self.entities_vdb.index_done_callback(),
+                self.video_segment_feature_vdb.index_done_callback(),
+            )
+
+        asyncio.run(_save_all())
 
 
 def fetch_metadata(url: str) -> dict:
