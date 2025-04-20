@@ -7,22 +7,18 @@ import argparse
 import logging
 import openai
 import whisper
-import numpy as np                                # ← CHANGED: import numpy
+import numpy as np
 from pathlib import Path
 from datetime import datetime
+import asyncio
 
 from yt_dlp import YoutubeDL
 from videorag import VideoRAG
 from videorag._llm import openai_4o_mini_config
-import asyncio
 
-# ----------------------
-# Subclass AudioRAG
-# ----------------------
 class AudioRAG(VideoRAG):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # Load Whisper-large once
         print("Loading Whisper large model…")
         self.whisper_model = whisper.load_model("large")
 
@@ -34,41 +30,49 @@ class AudioRAG(VideoRAG):
         segments = result.get("segments", [])
         print(f"Got {len(segments)} segments")
 
+        # Prepare records for upsert
+        records = {}
+
         for seg in segments:
             start, end, text = seg["start"], seg["end"], seg["text"].strip()
             if not text:
                 continue
 
-            # 1) Create embedding via OpenAI
             resp = openai.embeddings.create(
                 model="text-embedding-ada-002",
                 input=[text]
             )
-            # 2) Cast to NumPy array to satisfy NanoVectorDB
-            emb = np.array(resp.data[0].embedding, dtype=np.float32)   # ← CHANGED
+            emb = np.array(resp.data[0].embedding, dtype=np.float32)
 
-            # 3) Build metadata record
+            key = f"{Path(audio_path).stem}::{int(start)}::0"
             record_meta = metadata.copy()
             record_meta.update({
                 "start_time": start,
-                "end_time":   end
+                "end_time": end
             })
 
-            # 4) Upsert with the correct key names and structure
-            self.chunks_vdb.upsert([{
-                "__id__":     f"{Path(audio_path).stem}::{int(start)}::0",  # ← CHANGED
-                "__vector__": emb,                                          # ← CHANGED
-                **record_meta                                            # ← CHANGED: spread metadata fields
-            }])
+            records[key] = {
+                "__id__": key,
+                "__vector__": emb,
+                "content": text,          # ← REQUIRED
+                **record_meta
+            }
+
+        print(f"Upserting {len(records)} chunks to vector DB")
+        awaitable = self.chunks_vdb.upsert(records)
+        asyncio.run(awaitable)
 
 
-        print("🔍 ATTRIBUTES:", dir(self))            
+        # asyncio.run(self.chunks_vdb.index_done_callback())
 
-        asyncio.run(self._save_video_segments())
+        '''
+        asyncio.run(asyncio.gather(
+            self.chunks_vdb.index_done_callback(),
+            self.entities_vdb.index_done_callback(),
+            self.video_segment_feature_vdb.index_done_callback(),
+        ))
+        '''
 
-# ----------------------
-# Helper Functions
-# ----------------------
 def fetch_metadata(url: str) -> dict:
     try:
         out = subprocess.run(
@@ -103,16 +107,13 @@ def download_audio(url: str, audio_dir: Path) -> Path:
         info = ydl.extract_info(url, download=True)
     return audio_dir / f"{info['id']}.wav"
 
-# ----------------------
-# Main: Index Channel or URLs
-# ----------------------
 def main():
     parser = argparse.ArgumentParser(
         description="Audio-only RAG pipeline: fetch metadata, download audio, transcribe, index."
     )
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--channel-url", help="YouTube channel videos page URL")
-    group.add_argument("--urls-file",   help="Path to text file with one video URL per line")
+    group.add_argument("--urls-file",   help="Text file with one video URL per line")
 
     parser.add_argument("--audio-dir",      default="audio",            help="Where to save .wav files")
     parser.add_argument("--workdir",        default="audiorag-workdir", help="RAG data folder")
@@ -121,7 +122,6 @@ def main():
 
     args = parser.parse_args()
 
-    # Build list of URLs
     if args.channel_url:
         res = subprocess.run(
             ["yt-dlp", "--flat-playlist", "--print", "id", args.channel_url],
@@ -133,14 +133,12 @@ def main():
         with open(args.urls_file, "r") as f:
             urls = [line.strip() for line in f if line.strip()]
 
-    # Slice by start/end
     end = args.ending_index + 1 if args.ending_index is not None else len(urls)
     to_process = urls[args.starting_index:end]
     print(f"\n📺 Processing videos {args.starting_index}–{end-1}, total {len(to_process)}\n")
 
-    # Initialize AudioRAG
     rag = AudioRAG(
-        llm=openai_4o_mini_config,      # pass config object
+        llm=openai_4o_mini_config,
         working_dir=args.workdir
     )
     rag.load_caption_model(debug=False)
