@@ -134,17 +134,23 @@ print(torch.backends.cudnn.version())  # Should print 8900 or similar
 print(torch.backends.cudnn.is_available())  # Should be True
 
 
-python3 _1_audio_rag_pipeline_05.py \
+python3 _1_full_index_pipeline_01.py \
   --channel-url "https://www.youtube.com/@abrahamhickstips/videos" \
   --audio-dir "_audio_files" \
   --workdir "_audiorag_workdir" \
-  --starting-index 0 \ # (default 0 to start at the beginning of the list of videos)
-  --ending-index 0 # (default: None, which means “process all the way to the end of the list”)
+  --starting-index 0 \
+  # default is 0 if nothing is entered above to start at the beginning of the zero index list of videos
+  --ending-index 0
+  # zero entered above means stop after processing the first video.
+  # default is None if nothing is entered above, which means “process all the way to the end of the list”
 
 
-python3 audio_rag_pipeline.py \
+python3 _1_full_index_pipeline_01.py \
   --urls-file "my_videos.txt" \
   --audio-dir "audio_files" \
   --workdir "audiorag-workdir" \
-  --starting-index (default: 0)
-  --ending-index (default: None, which means “process all the way to the end”)
+  --starting-index 0 \
+  # default is 0 if nothing is entered above to start at the beginning of the list of videos
+  --ending-index 0
+  # zero entered above means stop after processing the first video.
+  # default is None if nothing is entered above, which means “process all the way to the end of the list”
