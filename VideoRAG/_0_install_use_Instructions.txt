@@ -1,5 +1,9 @@
 Instructions to install and use these libraries.
 
+############## The commands is this section are used to install the libraries ####################
+
+# I happen to be using Ubuntu on WSL.
+
 # Do these only once to create a virtual environment and install packages.
 cd <location where you want to install the VideoRAG library>
 git clone https://github.com/HKUDS/VideoRAG.git
@@ -86,6 +90,9 @@ VideoRAG
 To run the script without GPU. CPU only.
 CUDA_VISIBLE_DEVICES=-1 python3 _index_videos_02.py
 
+############## End of: The commands is this section are used to install the libraries ####################
+
+
 
 ############## The commands is this section are used to trouble shoot the GPU ####################
 # Check GPU installation in common directories:
@@ -139,6 +146,10 @@ print(torch.backends.cudnn.is_available())  # Should be True
 
 ############## End of: The commands is this section are used to trouble shoot the GPU ####################
 
+
+
+
+############## The commands is this section are for running the scripts in this repository ####################
 
 
 # To index videos so that the information is availale for query, use the following two commands at the bash terminal.
