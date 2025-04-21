@@ -1,4 +1,4 @@
-# Most of these instructions came straight from the README.md on github.
+Instructions to install and use these libraries.
 
 # Do these only once to create a virtual environment and install packages.
 cd <location where you want to install the VideoRAG library>
