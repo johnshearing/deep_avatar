@@ -6,8 +6,9 @@ import subprocess
 import argparse
 import logging
 import shutil
-from pathlib import Path
+import time
 from datetime import datetime
+from pathlib import Path
 
 from yt_dlp import YoutubeDL
 from videorag import VideoRAG
@@ -82,6 +83,8 @@ def get_video_urls(args) -> list[str]:
     return []
 
 def main():
+    start_time = time.time()
+
     multiprocessing.set_start_method('spawn', force=True)
 
     parser = argparse.ArgumentParser(description="Audio-to-video full RAG indexer.")
@@ -127,6 +130,16 @@ def main():
         rag.insert_video(video_path_list=[str(mp4_path)])
 
         print("✅ Indexed:", mp4_path.name)
+
+    end_time = time.time()
+    run_time_seconds = end_time - start_time
+
+    run_time_timedelta = datetime.timedelta(seconds=run_time_seconds)
+    hours = run_time_timedelta.seconds // 3600
+    minutes = (run_time_timedelta.seconds % 3600) // 60
+    seconds = round(run_time_timedelta.seconds % 60)
+
+    print(f"The script took {hours} hours, {minutes} minutes, and {seconds} seconds to run.")         
 
 if __name__ == "__main__":
     main()

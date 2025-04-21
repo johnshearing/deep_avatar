@@ -152,15 +152,16 @@ print(torch.backends.cudnn.is_available())  # Should be True
 ############## The commands is this section are for running the scripts in this repository ####################
 
 
-# To index videos so that the information is availale for query, use the following two commands at the bash terminal.
+# To index videos so that the information is availale for query, use the following commands at the bash terminal.
 
-# Remember to activate the vrag_env virtual environment with the following command.
-# Any time when you wish to use the VideoRAG library or install the required packages that the library uses, the virtual environment must be activated.
+# Navigate to the VideoRAG directory.
+cd VideoRAG
+
+# Activate the vrag_env virtual environment with the following command.
 conda activate vrag_env
 
-
-# The first command indexes all the videos at a specified YouTube channel.
-# The second command indexes all the videos specifed in a local text file.
+# The first command below indexes all the videos at a specified YouTube channel.
+# The second command below indexes all the videos specifed in a local text file.
 # If the text file command is used then enter one URL per line in the file.
 
 # The list of videos has a zero index. 
