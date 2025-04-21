@@ -1,22 +1,24 @@
-Most of these instructions came straight from the README.md on github.
+# Most of these instructions came straight from the README.md on github.
 
+# Do these only once to create a virtual environment and install packages.
+cd <location where you want to install the VideoRAG library>
 git clone https://github.com/HKUDS/VideoRAG.git
-
 cd VideoRAG
-
-
-Do this only once to create a virtual environment and install packages.
 conda create --name vrag_env python=3.11
 
-To activate this environment:
+# Now activate the vrag_env virtual environment with the following command.
+# any time when you wish to use the VideoRAG library or install the required packages that the library uses, the virtual environment must be activated.
 conda activate vrag_env
 
-To deactivate an active environment, use the following, but not during the install. Do this after if you want.:
+# To deactivate an active virtual environment, use the following command.
+# The vrag_env must be active when installing packages or when using the VideoRAG library
+# Deactivate this virtual environment when you are finished using the VideoRAG library if you want.
 conda deactivate
 
-Creates a better looking prompt:
+# Creates a better looking prompt that takes up less space on the screen.
 export PS1='($CONDA_DEFAULT_ENV) \w\$ '
 
+# Before using the VideoRAG library, install these packages while the vrag_env virtual environment is active.
 pip install numpy==1.26.4
 pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2
 pip install accelerate==0.30.1
@@ -28,8 +30,8 @@ pip install ctranslate2==4.4.0 faster_whisper==1.0.3 neo4j hnswlib xxhash nano-v
 pip install transformers==4.37.1
 pip install tiktoken openai tenacity
 
-
-These may or may not need to be installed. You will see an error message asking for these if they are needed.
+# These packages must also be installed in order to use the custom scripts in the deep-avatar library.
+# Before using the deep-avatar library, install these packages while the vrag_env virtual environment is active.
 pip install ollama
 pip install yt-dlp
 pip install openai-whisper
@@ -41,7 +43,7 @@ cd ImageBind
 pip install .
 
 
-Then, please download the necessary checkpoints in the repository's root folder for MiniCPM-V, Whisper, and ImageBind as follows:
+# Then, please download the necessary checkpoints in the repository's root folder for MiniCPM-V, Whisper, and ImageBind as follows:
 
 
 # Make sure you have git-lfs installed (https://git-lfs.com)
@@ -85,72 +87,98 @@ To run the script without GPU. CPU only.
 CUDA_VISIBLE_DEVICES=-1 python3 _index_videos_02.py
 
 
-Check GPU installation in common directories:
+############## The commands is this section are used to trouble shoot the GPU ####################
+# Check GPU installation in common directories:
 ls /usr/local/cuda*
 ls /usr/local/cuda/lib64/libcudart*
 ls /usr/local/cuda/bin
 ls /usr/local/cuda-*/bin
 ls /opt/cuda/bin
 
-Locate the nvcc executable in the system's path.
+# Locate the nvcc executable in the system's path.
 which nvcc
 
-This one takes a while to run.
+# This one takes a while to run.
 sudo find / -name nvcc 2>/dev/null
 
-Check for installed CUDA packages:
+# Check for installed CUDA packages:
 dpkg -l | grep cuda
 
-Check if have NVIDIA Cuda Compiler
+# Check if have NVIDIA Cuda Compiler
 nvcc --version
 
-Check GPU info for Windows:
+# Check GPU info for Windows:
 nvidia-smi
 
-These commands run a test on the GPU.
+# These commands run a test on the GPU.
 python3 /home/js/faiss_gpu/_test_gpu_01.py
 python3 /home/js/faiss_gpu/_test_gpu_02.py
 
-Check installed packages with dpkg:
+# Check installed packages with dpkg:
 dpkg -l | grep cudnn
 
-Look for cuDNN files in the CUDA directory:ls -l /usr/local/cuda/include | grep cudnn
+# Look for cuDNN files in the CUDA directory:ls -l /usr/local/cuda/include | grep cudnn
 ls -l /usr/local/cuda/lib64 | grep cudnn
 ls -l /usr/local/cuda/include | grep cudnn
 
-If you installed via apt, you can check with:
+# If you installed via apt, you can check with:
 apt list --installed | grep cudnn
 
-If you installed from the NVIDIA tar file, verify the header files exist:
+# If you installed from the NVIDIA tar file, verify the header files exist:
 find /usr -name cudnn.h
 
-Check cuDNN version programmatically:
+# Check cuDNN version programmatically:
 cat /usr/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
 
 
-Python commands for REPL. Check PyTorch sees cuDNN
+# Python commands for REPL. Check PyTorch sees cuDNN
 import torch
 print(torch.backends.cudnn.version())  # Should print 8900 or similar
 print(torch.backends.cudnn.is_available())  # Should be True
 
 
-python3 _1_full_index_pipeline_01.py \
+############## End of: The commands is this section are used to trouble shoot the GPU ####################
+
+
+
+# To index videos so that the information is availale for query, use the following two commands at the bash terminal.
+
+# Remember to activate the vrag_env virtual environment with the following command.
+# Any time when you wish to use the VideoRAG library or install the required packages that the library uses, the virtual environment must be activated.
+conda activate vrag_env
+
+
+# The first command indexes all the videos at a specified YouTube channel.
+# The second command indexes all the videos specifed in a local text file.
+# If the text file command is used then enter one URL per line in the file.
+
+# The list of videos has a zero index. 
+# This means that the very first video in the list is indicated by the number zero.
+# The second video in the list is indicated by the number 1 and so on.
+
+# default value for --starting-index is 0 if nothing is entered. 
+# A value of 0 means > Start at the beginning of list of videos. 
+
+# default value for --ending-index is None if nothing is entered. 
+# a value of None means “process all the way to the end of the list”
+# a value of 0 entered means > stop after processing the first video.
+
+python3 _1_index_videos_03.py \
   --channel-url "https://www.youtube.com/@abrahamhickstips/videos" \
   --audio-dir "_audio_files" \
   --workdir "_audiorag_workdir" \
   --starting-index 0 \
-  # default is 0 if nothing is entered above to start at the beginning of the zero index list of videos
   --ending-index 0
-  # zero entered above means stop after processing the first video.
-  # default is None if nothing is entered above, which means “process all the way to the end of the list”
 
-
-python3 _1_full_index_pipeline_01.py \
+python3 _1_index_videos_03.py \
   --urls-file "my_videos.txt" \
   --audio-dir "audio_files" \
   --workdir "audiorag-workdir" \
   --starting-index 0 \
-  # default is 0 if nothing is entered above to start at the beginning of the list of videos
   --ending-index 0
-  # zero entered above means stop after processing the first video.
-  # default is None if nothing is entered above, which means “process all the way to the end of the list”
+
+
+  # To query the indexes about the videos, open the file "_2_query_indexes_01.py" in a text editor and modify the query.
+  # Then run the following command at the bash terminal:
+  python3_2_query_indexes_01.py
+
