@@ -7,7 +7,7 @@ import argparse
 import logging
 import shutil
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from yt_dlp import YoutubeDL
@@ -134,7 +134,7 @@ def main():
     end_time = time.time()
     run_time_seconds = end_time - start_time
 
-    run_time_timedelta = datetime.timedelta(seconds=run_time_seconds)
+    run_time_timedelta = timedelta(seconds=run_time_seconds)
     hours = run_time_timedelta.seconds // 3600
     minutes = (run_time_timedelta.seconds % 3600) // 60
     seconds = round(run_time_timedelta.seconds % 60)

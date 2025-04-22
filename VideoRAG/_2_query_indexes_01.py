@@ -2,7 +2,7 @@ import os
 import logging
 import warnings
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from videorag._llm import openai_4o_mini_config
 from videorag import VideoRAG, QueryParam
 
@@ -17,9 +17,8 @@ def main():
 
     # 🧠 Define your question here
     query = (
-        "Is the word 'belief' defined or discussed anywhere in video iGnBnTut2bk?"
-        "If so, please provide the beginning and ending timestamps of all video segments where the word 'belief' is defined or discussed."
-        "Also please tell me what the video is about."
+        "Are the words 'belief' or believe spoken anywhere in video iGnBnTut2bk?"
+        "If so, please provide the beginning and ending timestamps of all video segments where these words are spoken."
     )
 
     # 🧰 Initialize VideoRAG (this will load kvs, vdbs, graph, etc.)
@@ -40,7 +39,7 @@ def main():
     end_time = time.time()
     run_time_seconds = end_time - start_time
 
-    run_time_timedelta = datetime.timedelta(seconds=run_time_seconds)
+    run_time_timedelta = timedelta(seconds=run_time_seconds)
     hours = run_time_timedelta.seconds // 3600
     minutes = (run_time_timedelta.seconds % 3600) // 60
     seconds = round(run_time_timedelta.seconds % 60)
