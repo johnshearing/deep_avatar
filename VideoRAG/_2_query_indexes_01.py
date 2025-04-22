@@ -16,8 +16,8 @@ def main():
 
     # 🧠 Define your question here
     query = (
-        "Is the word 'belife' defined or discussed anywhere in video iGnBnTut2bk?"
-        "If so, please provide the beginning and ending timestamps of all video segments where the word 'belife' is defined or discussed."
+        "Is the word 'belief' defined or discussed anywhere in video iGnBnTut2bk?"
+        "If so, please provide the beginning and ending timestamps of all video segments where the word 'belief' is defined or discussed."
         "Also please tell me what the video is about."
     )
 
