@@ -193,4 +193,5 @@ python3 _1_index_videos_03.py \
   # To query the indexes about the videos, open the file "_2_query_indexes_01.py" in a text editor and modify the query.
   # Then run the following command at the bash terminal:
   python3_2_query_indexes_01.py
+  
 
