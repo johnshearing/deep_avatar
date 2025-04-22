@@ -2,6 +2,7 @@ import os
 import logging
 import warnings
 import time
+from datetime import datetime
 from videorag._llm import openai_4o_mini_config
 from videorag import VideoRAG, QueryParam
 
