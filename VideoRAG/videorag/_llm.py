@@ -7,7 +7,7 @@ from dataclasses import asdict, dataclass, field
 from tenacity import (
     retry,
     stop_after_attempt,
-    wait_exponential,
+    wait_exponential_jitter,
     retry_if_exception_type,
 )
 import os
@@ -84,8 +84,8 @@ class LLMConfig:
 
 ##### OpenAI Configuration
 @retry(
-    stop=stop_after_attempt(5),
-    wait=wait_exponential(multiplier=1, min=4, max=10),
+    wait=wait_exponential_jitter(initial=2, max=60, exp_base=2, jitter=2),
+    stop=stop_after_attempt(10),
     retry=retry_if_exception_type((RateLimitError, APIConnectionError)),
 )
 async def openai_complete_if_cache(
@@ -140,7 +140,7 @@ async def gpt_4o_mini_complete(
 
 @retry(
     stop=stop_after_attempt(5),
-    wait=wait_exponential(multiplier=1, min=4, max=10),
+    wait=wait_exponential_jitter(initial=2, max=60, exp_base=2, jitter=2),
     retry=retry_if_exception_type((RateLimitError, APIConnectionError)),
 )
 async def openai_embedding(model_name: str, texts: list[str]) -> np.ndarray:
@@ -195,7 +195,7 @@ openai_4o_mini_config = LLMConfig(
 ###### Azure OpenAI Configuration
 @retry(
     stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, min=4, max=10),
+    wait=wait_exponential_jitter(initial=2, max=60, exp_base=2, jitter=2),
     retry=retry_if_exception_type((RateLimitError, APIConnectionError)),
 )
 async def azure_openai_complete_if_cache(
@@ -258,7 +258,7 @@ async def azure_gpt_4o_mini_complete(
 
 @retry(
     stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, min=4, max=10),
+    wait=wait_exponential_jitter(initial=2, max=60, exp_base=2, jitter=2),
     retry=retry_if_exception_type((RateLimitError, APIConnectionError)),
 )
 async def azure_openai_embedding(model_name: str, texts: list[str]) -> np.ndarray:
@@ -349,7 +349,7 @@ async def ollama_mini_complete(model_name, prompt, system_prompt=None, history_m
 
 @retry(
     stop=stop_after_attempt(5),
-    wait=wait_exponential(multiplier=1, min=4, max=10),
+    wait=wait_exponential_jitter(initial=2, max=60, exp_base=2, jitter=2),
     retry=retry_if_exception_type((RateLimitError, APIConnectionError)),
 )
 async def ollama_embedding(model_name: str, texts: list[str]) -> np.ndarray:
