@@ -183,9 +183,9 @@ python3 _1_index_videos_03.py \
   --ending-index 0
 
 python3 _1_index_videos_03.py \
-  --urls-file "my_videos.txt" \
-  --audio-dir "audio_files" \
-  --workdir "audiorag-workdir" \
+  --urls-file "_my_videos.txt" \
+  --audio-dir "_audio_files" \
+  --workdir "_audiorag_workdir" \
   --starting-index 0 \
   --ending-index 0
 

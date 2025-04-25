@@ -111,6 +111,7 @@ def main():
 
     rag = VideoRAG(llm=openai_4o_mini_config, working_dir=args.workdir)
 
+
     for idx, url in enumerate(urls_to_process, start=args.starting_index):
         print(f"\n🔢 [{idx}] {url}")
         meta = fetch_metadata(url)

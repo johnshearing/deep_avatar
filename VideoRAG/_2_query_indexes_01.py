@@ -16,10 +16,12 @@ def main():
     start_time = time.time()
 
     # 🧠 Define your question here
+
     query = (
-        "Are the words 'belief' or believe spoken anywhere in video iGnBnTut2bk?"
-        "If so, please provide the beginning and ending timestamps of all video segments where these words are spoken."
-    )
+        "In the video titled with Charles Hoskinson or with YouTube ID 9xf-RcWQLDI, "
+        "what questions were asked of Charles and what were his answers? "
+        "Please summarize each answer."
+    )    
 
     # 🧰 Initialize VideoRAG (this will load kvs, vdbs, graph, etc.)
     rag = VideoRAG(llm=openai_4o_mini_config, working_dir="./_audiorag_workdir")
@@ -27,7 +29,7 @@ def main():
 
     # 🗣️ Set up query options
     param = QueryParam(mode="videorag")
-    param.wo_reference = False  # Show references (timestamps and video URLs)
+    param.wo_reference = True # include timestamps or not.
 
     # 🔍 Perform query
     response = rag.query(query=query, param=param)
