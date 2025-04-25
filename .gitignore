@@ -18,3 +18,6 @@ VideoRAG/_*/
 
 # And specifically do NOT ignore the VideoRAG/_archive directory - include that directory.
 !VideoRAG/_archive/
+
+# Do not ignore the VideoRAG/videorag/_llm.py file - include that.
+!VideoRAG/videorag/_llm.py
