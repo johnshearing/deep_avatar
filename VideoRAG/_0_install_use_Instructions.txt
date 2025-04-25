@@ -168,26 +168,33 @@ conda activate vrag_env
 # This means that the very first video in the list is indicated by the number zero.
 # The second video in the list is indicated by the number 1 and so on.
 
-# default value for --starting-index is 0 if nothing is entered. 
+# Default value for --starting-index is 0 if nothing is entered. 
 # A value of 0 means > Start at the beginning of list of videos. 
 
-# default value for --ending-index is None if nothing is entered. 
-# a value of None means “process all the way to the end of the list”
-# a value of 0 entered means > stop after processing the first video.
+# Default value for --ending-index is None if nothing is entered. 
+# A value of None means “process all the way to the end of the list”
+# A value of 0 entered means > stop after processing the first video.
+
+# Include --enable-video at the end of the command if you want to process video.
+# If --enable-video is not included in the command then only audio will be processed. 
 
 python3 _1_index_videos_03.py \
   --channel-url "https://www.youtube.com/@abrahamhickstips/videos" \
   --audio-dir "_audio_files" \
+  --mp4-dir "_mp4_files" \
   --workdir "_audiorag_workdir" \
   --starting-index 0 \
-  --ending-index 0
+  --ending-index 0 \
+  --enable-video
 
 python3 _1_index_videos_03.py \
   --urls-file "_my_videos.txt" \
   --audio-dir "_audio_files" \
+  --mp4-dir "_mp4_files" \  
   --workdir "_audiorag_workdir" \
   --starting-index 0 \
-  --ending-index 0
+  --ending-index 0 \
+  --enable-video
 
 
   # To query the indexes about the videos, open the file "_2_query_indexes_01.py" in a text editor and modify the query.
