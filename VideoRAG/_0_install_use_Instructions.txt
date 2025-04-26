@@ -178,7 +178,7 @@ conda activate vrag_env
 # Include --enable-video at the end of the command if you want to process video.
 # If --enable-video is not included in the command then only audio will be processed. 
 
-python3 _1_index_videos_03.py \
+python3 _1_index_videos_04.py \
   --channel-url "https://www.youtube.com/@abrahamhickstips/videos" \
   --audio-dir "_audio_files" \
   --mp4-dir "_mp4_files" \
@@ -187,8 +187,8 @@ python3 _1_index_videos_03.py \
   --ending-index 0 \
   --enable-video
 
-python3 _1_index_videos_03.py \
-  --urls-file "_my_videos.txt" \
+python3 _1_index_videos_04.py \
+  --urls-file "_video_list.txt" \
   --audio-dir "_audio_files" \
   --mp4-dir "_mp4_files" \  
   --workdir "_audiorag_workdir" \
@@ -200,5 +200,18 @@ python3 _1_index_videos_03.py \
   # To query the indexes about the videos, open the file "_2_query_indexes_01.py" in a text editor and modify the query.
   # Then run the following command at the bash terminal:
   python3_2_query_indexes_01.py
+
+
+
+##############End of: The commands is this section are for running the scripts in this repository ####################
+
+
+
+
+##############The commands is this section are for troubleshooting the python scripts ####################
+
+
+Finds files in a dir and all subdirs which contain the search phrase "9xf-RcWQLDI"
+pcregrep -r -M -l "9xf-RcWQLDI" . 2>/dev/null
   
 

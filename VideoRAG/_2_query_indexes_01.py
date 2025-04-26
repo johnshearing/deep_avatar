@@ -17,19 +17,34 @@ def main():
 
     # 🧠 Define your question here
 
+
     query = (
-        "In the video titled with Charles Hoskinson or with YouTube ID 9xf-RcWQLDI, "
-        "what questions were asked of Charles and what were his answers? "
-        "Please summarize each answer."
-    )    
+        "In the video with YouTube ID 9xf-RcWQLDI where Charles Hoskinson is speaking, "
+        "Please list the questions which were read aloud by Charles, and please summarize his answers? "
+    )   
+
+    '''
+    query = (
+        "In the video with YouTube ID 9xf-RcWQLDI where Charles Hoskinson is speaking, "
+        "what specifically is Charles asking the Cardano community to vote for on behalf of his company IOG when the community votes on the budget proposal? "
+        "What points does Charles express in the video in order to convince the voters to grant his request?"
+    )     
+    '''
+    
 
     # 🧰 Initialize VideoRAG (this will load kvs, vdbs, graph, etc.)
-    rag = VideoRAG(llm=openai_4o_mini_config, working_dir="./_audiorag_workdir")
+    rag = VideoRAG(llm=openai_4o_mini_config, working_dir="./_videorag_workdir")
     rag.load_caption_model(debug=False)
 
     # 🗣️ Set up query options
-    param = QueryParam(mode="videorag")
-    param.wo_reference = True # include timestamps or not.
+    param = QueryParam(mode="videorag", top_k=30, level=5) # 
+
+    # Set False if want the system to look through the video when answering.
+    # Set True If you want raw chunks from the database only. 
+    param.only_need_context = False 
+    
+    # This stands for without reference. So False means "provide the timestamps when answering"
+    param.wo_reference = True 
 
     # 🔍 Perform query
     response = rag.query(query=query, param=param)
