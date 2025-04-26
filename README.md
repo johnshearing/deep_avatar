@@ -9,7 +9,7 @@ The RAG system is used to create training data for fine-tuning an LLM so as to g
 The RAG system also allows the deep avatar to give accurate answers and to quote its sources.  
 The open source repositories [VideoRag](https://github.com/HKUDS/VideoRAG) and [LightRAG](https://github.com/HKUDS/LightRAG) are being used to build the RAG system.  
 All the scripts in this repository are used with these two libraries in order to create deep avatars.   
-I have been programming for most of my life but in this project a.i. such as Grok, ChatGPT, Claude, and Gemini are doing most all of the coding. For this reason, the work is going very quickly.  
+I have been programming for most of my life, but in this project, a.i. such as Grok, ChatGPT, Claude, and Gemini are doing most all of the coding. For this reason, the work is going very quickly.  
 Preliminary work just to get familiar with RAG at a foundational level are found in the following two repositories:  
 https://github.com/johnshearing/scrape_yt_mk_transcripts  
 https://github.com/johnshearing/index_query_YT_Transcripts  
