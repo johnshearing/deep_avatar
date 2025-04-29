@@ -1,3 +1,5 @@
+<a href="https://johnshearing.github.io/">Main list of projects</a>  
+
 #### Creating a.i. avatars which give the same answers as the person for which they are modeled.  
 
 The first deep avatar will be modeled after Abraham Hicks.  
