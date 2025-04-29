@@ -1,6 +1,9 @@
 # Ignore everything
 *
 
+# Do not ignore the _git_notes.txt file - include that.
+!_git_notes.txt
+
 # Do not ignore the README.md file - include that.
 !README.md
 

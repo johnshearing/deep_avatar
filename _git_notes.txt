@@ -1,0 +1,91 @@
+This directory named "lgt" corresponds to https://github.com/johnshearing/deep_avatar.git
+Make all git commands from this directory not from the sub directories.
+
+The following command shows where my backup remote repository currently exists and where the code originally came from:
+(vrag_env) ~/lgt$ git remote -v
+backup  https://github.com/johnshearing/deep_avatar.git (fetch)
+backup  https://github.com/johnshearing/deep_avatar.git (push)
+upstream        https://github.com/HKUDS/VideoRAG.git (fetch)
+upstream        https://github.com/HKUDS/VideoRAG.git (push)
+
+
+For more information about your remote repositories, issue the following commands:
+git remote show backup
+git remote show upstream
+
+
+The following was the basic setup to make an online repository from this directory.
+1. Create an empty online repository with whatever name you want.
+   a. README.md and License files can be added later.
+
+2. At the Bash console 
+   navigate to the top directory of the project using the "cd" command.
+
+   Remove the old git directory if it exists
+   rm -rf .git
+
+   Initialize a new one.
+   git init
+
+   Rename the branch to "main":
+   git branch -m main
+
+   Create a selective .gitignore that ignores everything by default:
+   echo "*" > .gitignore
+
+   Take a look at the gitignore file as it currently exists to get an idea of what your gitignore files should look like.
+
+   Stage and commit just these files:
+   git add .gitignore
+   git add -f important_script.py specific_folder/specific_file.py
+   git commit -m "Initial commit with selected files only"
+
+
+   Connect to your GitHub repository
+   git remote add backup https://github.com/<your_account>/deep_avatar.git
+   The following is an example of the command for my personal situation:
+   git remote add backup https://github.com/johnshearing/deep_avatar.git
+
+   Force push this clean state to GitHub:
+   git push -f backup main
+
+3. Now add the read me and the license to the online backup repository.
+
+4. Then return to the bash console
+
+   Pull the README.md and License files down to the local repository:
+   git pull backup main
+
+   Track the README and License files with the following commands, or just add the enteries to the gitignore file using a text editor
+   Again, take a look at the gitignore file to see what it should look like.
+   echo '!README.md' >> .gitignore
+   echo '!LICENSE' >> .gitignore
+
+   Gather files which are being tracked and have been changed to the stage to be committed.
+   git add -A
+
+   Commit the files to be tracked.
+   git commit -m "Some comment here about the commit"
+
+   Push the changes to the online repository:
+   git push backup main
+
+5. Sometimes you may want to pull updates from the original authors of the codebase.
+   Do this as follows: 
+
+   Very important!!
+   First save the current state of your local repository by with the following commands:
+   git add <your parameters> 
+   git commit -m "your comment about the commit"
+
+   Then be sure to copy all the work in your local repository to a new location on your hard drive before pulling any updates from the original code repository.
+   This way you can recover if anything bad happens.
+   
+   Name the original code repository as upstream.
+   git remote add upstream https://github.com/HKUDS/VideoRAG.git
+   
+   Pull any updates down to your local repository:
+   git fetch upstream
+
+   Attempt to merge updated code from the original authors with your own modifications to the code.
+   git merge upstream/main
