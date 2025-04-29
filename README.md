@@ -1,6 +1,6 @@
 <a href="https://johnshearing.github.io/">Main list of projects</a>  
 
-#### Creating a.i. avatars which give the same answers as the person for which they are modeled.  
+#### Creating a.i. Avatars Which Answer The Same As Their Human Models.  
 
 The first deep avatar will be modeled after Abraham Hicks.  
 The second deep avatar will be modeled after Charles Hoskinson.  
