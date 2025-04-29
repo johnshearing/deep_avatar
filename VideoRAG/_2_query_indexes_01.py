@@ -17,13 +17,18 @@ def main():
 
     # 🧠 Define your question here
 
+    query = (
+        "In the video with YouTube ID 9xf-RcWQLDI where Charles Hoskinson is speaking, "
+        "Please list the segments where Charles discusses issues pertaining to his company IOG"
+    )       
 
+    '''
     query = (
         "In the video with YouTube ID 9xf-RcWQLDI where Charles Hoskinson is speaking, "
         "Please list the questions which were read aloud by Charles, and please summarize his answers? "
     )   
 
-    '''
+
     query = (
         "In the video with YouTube ID 9xf-RcWQLDI where Charles Hoskinson is speaking, "
         "what specifically is Charles asking the Cardano community to vote for on behalf of his company IOG when the community votes on the budget proposal? "
@@ -37,14 +42,16 @@ def main():
     rag.load_caption_model(debug=False)
 
     # 🗣️ Set up query options
-    param = QueryParam(mode="videorag", top_k=30, level=5) # 
+    # {'mode': typing.Literal['local', 'global', 'naive'], 
+    # 'only_need_context': <class 'bool'>, 'response_type': <class 'str'>, 'level': <class 'int'>, 'top_k': <class 'int'>}
+    param = QueryParam(mode="videorag")
 
     # Set False if want the system to look through the video when answering.
     # Set True If you want raw chunks from the database only. 
-    param.only_need_context = False 
+    param.only_need_context = False
     
     # This stands for without reference. So False means "provide the timestamps when answering"
-    param.wo_reference = True 
+    param.wo_reference = True
 
     # 🔍 Perform query
     response = rag.query(query=query, param=param)
