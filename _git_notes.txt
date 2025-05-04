@@ -5,8 +5,6 @@ The following command shows where my backup remote repository currently exists a
 (vrag_env) ~/lgt$ git remote -v
 backup  https://github.com/johnshearing/deep_avatar.git (fetch)
 backup  https://github.com/johnshearing/deep_avatar.git (push)
-upstream        https://github.com/HKUDS/VideoRAG.git (fetch)
-upstream        https://github.com/HKUDS/VideoRAG.git (push)
 
 
 For more information about your remote repositories, issue the following commands:
@@ -19,12 +17,23 @@ The following was the basic setup to make an online repository from this directo
    a. README.md and License files can be added later.
 
 2. At the Bash console 
-   navigate to the top directory of the project using the "cd" command.
+   Navigate to the top directory of the project using the "cd" command.
+   For me the command is as folllows:
+   cd lgt
 
    Remove the old git directory if it exists
    rm -rf .git
 
-   Initialize a new one.
+   If there are any .git directories in any of your subdirectories then these will not respond to git commands issued from the directory above.
+   So delete any .git directories in your subdirectories if you wish to track those files from the repository above.
+   cd <my subdirectory such as LightRAG or VideoRAG>
+   rm -rf .git
+
+   Navigate back to the top directory of the project using the "cd" command.
+   For me the command is as folllows:
+   cd lgt
+
+   Initialize a new git repository after deleting the old.
    git init
 
    Rename the branch to "main":
@@ -70,22 +79,3 @@ The following was the basic setup to make an online repository from this directo
    Push the changes to the online repository:
    git push backup main
 
-5. Sometimes you may want to pull updates from the original authors of the codebase.
-   Do this as follows: 
-
-   Very important!!
-   First save the current state of your local repository by with the following commands:
-   git add <your parameters> 
-   git commit -m "your comment about the commit"
-
-   Then be sure to copy all the work in your local repository to a new location on your hard drive before pulling any updates from the original code repository.
-   This way you can recover if anything bad happens.
-   
-   Name the original code repository as upstream.
-   git remote add upstream https://github.com/HKUDS/VideoRAG.git
-   
-   Pull any updates down to your local repository:
-   git fetch upstream
-
-   Attempt to merge updated code from the original authors with your own modifications to the code.
-   git merge upstream/main
