@@ -11,7 +11,7 @@ cd VideoRAG
 conda create --name vrag_env python=3.11
 
 # Now activate the vrag_env virtual environment with the following command.
-# any time when you wish to use the VideoRAG library or install the required packages that the library uses, the virtual environment must be activated.
+# Any time when you wish to use the VideoRAG library or install the required packages that the library uses, the virtual environment must be activated.
 conda activate vrag_env
 
 # To deactivate an active virtual environment, use the following command.
