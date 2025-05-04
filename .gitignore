@@ -28,3 +28,11 @@ VideoRAG/_*/
 # Do not ignore the VideoRAG/videorag/_llm.py file - include that.
 !VideoRAG/videorag/_llm.py
 
+# Ignore all subdirectories directly within LightRAG that start with an underscore.
+LightRAG/_*/
+
+# But do NOT ignore files directly within LightRAG that start with an underscore - include those.
+!LightRAG/_*
+
+# And do NOT ignore the VideoRAG/_archive directory - include that directory.
+!LightRAG/_archive/

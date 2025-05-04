@@ -1,0 +1,40 @@
+
+############## The commands is this section are used to install the libraries ####################
+
+# I happen to be using Ubuntu on WSL.
+
+# Run the following commands at the bash terminal window
+# Do these only once to create a virtual environment and install packages.
+cd <location where you want to install the LightRAG library>
+I am installing in the same directory where I have the VideoRAG repository cloned.
+git clone https://github.com/HKUDS/LightRAG.git
+cd lgt/LightRAG
+python -m venv venv_lightrag
+
+
+# Now activate the venv_lightrag virtual environment with the following command.
+# Any time when you wish to use the LightRAG library or install the required packages that the library uses, the virtual environment must be activated.
+source venv_lightrag/bin/activate
+
+# Creates a better looking prompt that takes up less space on the screen.
+export PS1='(LR_venv) \w\$ '
+
+# Now, install LightRAG with the API support within this new environment:
+pip install -e ".[api]"
+
+
+
+
+############## The commands is this section are for running the scripts in this repository ####################
+
+
+# To index documents so that the information is availale for query, use the following commands at the bash terminal.
+
+# Navigate to the LightRAG directory.
+cd LightRAG
+
+# Activate the venv_lightrag virtual environment with the following command.
+source venv_lightrag/bin/activate
+
+# 
+
