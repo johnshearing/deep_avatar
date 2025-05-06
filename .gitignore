@@ -13,6 +13,9 @@
 # Do not ignore the .gitignore file - include that.
 !.gitignore
 
+# Do not ignore the .env file - include that.
+!.env
+
 # Ignore all subdirectories directly within VideoRAG that start with an underscore.
 VideoRAG/_*/
 
