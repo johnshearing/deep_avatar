@@ -10,9 +10,14 @@ from lightrag.kg.shared_storage import initialize_pipeline_status
 from lightrag.utils import logger, set_verbose_debug
 import textract
 
+# This is the directory where the indexing files will be created or added to.
 WORKING_DIR = "./_ts_work_dir"
+
+# These are the files to be indexed. 
+# Specify as many as you want separated by commas and on a new line.
 PDF_FILES = [
-    "./_docs_dir/mod_linx_conveyors.docx"
+    "./_docs_dir/trouble_shooting.docx",
+    "./_docs_dir/some_other_document.docx"
 ]
 
 def configure_logging():
