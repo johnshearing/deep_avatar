@@ -1,18 +1,18 @@
 ## Items To Do:
 - Continuous GitHub backup of all the work.  
 
-- Learn the LightRAG db manipulation commands and see if these will work on VideoRAG database.   
+- Learn the LightRAG db manipulation commands and see if these will work on the VideoRAG database.   
 
-- Selective searching of index given a video name or document name rather than creating response from the entire index.  
+- Selective searching of the index given a video name or document name rather than creating a response from the entire index.  
 
 - Report timestamps on videos in a usable way.  
 
 - LightRAG Server for Video as well as documents.  
-  - See if the VideoRAG db can be converted to LightRAG db or the otherway around so that both video and documents can be queried in the same context.  
+  - See if the VideoRAG db can be converted to LightRAG db or the other way around so that both video and documents can be queried in the same context.  
   - The best way will likely be to abandon VideoRAG and [work directly with whisper](https://github.com/johnshearing/scrape_yt_mk_transcripts) to create transcripts of the video.  
     - The advantage of VideoRAG is that it does object detection on the video but since we are only interested in the conversation we don't need the complications of managing another database.  
     - Scraping the audio and creating transcripts with whisper is a better option.  
-    - These trascripts will import into LightRAG with no issues.  
+    - These transcripts will import into LightRAG with no issues.  
 
 - Feeding responses back into a query - How can we get the two stage script to run?  
 
@@ -57,19 +57,19 @@ Pull video metadata into the system.
 - Prevent duplication of videos in the index with a check before adding.  
 
 - See how to delete videos from the index.  
-  - Currently LightRAG team is having hallucination issues after deleting documents from the index.
+  - Currently the LightRAG team is having hallucination issues after deleting documents from the index.
 
-- Have later videos take precidence over earlier.  
+- Have later videos take precedence  over earlier.  
   - The default prompt will need to be modified.  
 
 - Develop a list of questions and answer pairs for fine-tuning.
   - Fine-tune an LLM on Abraham's and Charles' way of thinking and manner.
   - Fine-tune how the answers are phrased (to sound even more like Abraham and Charles)
 
-- Clone Esther's and Charles' voice.
+- Clone Esther's and Charles' voices.
 
 - Generate a moving cartoon image for Esther and Charles'.  
-  - Cartoon instead of deep-fake because we want users to understand they are working with an avatar and not the actual person used as the model.  
+  - Cartoon animations instead of deep-fake because we want users to understand they are working with an avatar and not the actual person used as the model.  
 
 - Deploy system on a cloud computer.  
 
@@ -97,16 +97,16 @@ Pull video metadata into the system.
 
 ## Done:
 - Document VideoRAG and LightRAG setup.  
-- Turn off collection of video (only audio) or connect everything to a nondiscrptive jpg.  
+- Turn off collection of video (only audio) or connect everything to a descriptive jpg.  
 - Pull PDFs into the RAG system: perhaps use LightRAG with VideoRAG database? 
 - Split the script into index and query.  
 - How can we get accurate sources in the output?  
 - There is a citation function in the readme.  
 - tesseract option for ingesting documents   
 - Fix misinformation in git notes for updating code from upstream (original) repositories.  
-- I noticed that LightRag server does not append to the response file.  
-- I noticed that _1_audio_rag_pipeline_07.py does not incure charges from OpenAI event though it calls openai_4o_mini over the net.  
+- I noticed that the LightRag server does not append to the response file.  
+- I noticed that _1_audio_rag_pipeline_07.py does not incur charges from OpenAI even though it calls openai_4o_mini over the net.  
 - Look at LightRAG Server.  
-- Understand what each db file is used in indexing and query and what is stored in each.
+- Understand what each db file is used in indexing and querying and what is stored in each.
 
 
