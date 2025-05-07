@@ -8,7 +8,7 @@ from lightrag.llm.openai import openai_embed, gpt_4o_mini_complete
 from lightrag.kg.shared_storage import initialize_pipeline_status
 from lightrag.utils import logger, set_verbose_debug
 
-WORKING_DIR = "./_ts_work_dir"
+WORKING_DIR = "./_mod_linx_work_dir"
 
 def configure_logging():
     for logger_name in ["uvicorn", "uvicorn.access", "uvicorn.error", "lightrag"]:
