@@ -29,14 +29,14 @@ The image below is a small part of the entire Knowledge Graph created by the Lig
 When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships.<br>
 <br>
 <p>
-<img src="/illustrations/hs_graph.jpg">
+<img src="/_images/hs_graph.jpg">
 </p>
 <br>
 Below we see that we are asking an a.i. to look at the knowledge graph and answer our question:<br>
 Should we vote for Banstegeyn?<br>
 <br>
 <p>
-<img src="/illustrations/vote.jpg"><br>
+<img src="/_images/vote.jpg"><br>
 </p>
 <br>
 The a.i. does not give us a direct answer yet because it is acting in an advisory capacity as most LLMs are trained to do.<br>
