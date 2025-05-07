@@ -9,7 +9,7 @@
 
 - LightRAG Server for Video as well as documents.  
   - See if the VideoRAG db can be converted to LightRAG db or the otherway around so that both video and documents can be queried in the same context.
-  - The best way will likely be to abandon VideoRAG and work directly with whisper to create transcripts of the video.  
+  - The best way will likely be to abandon VideoRAG and [work directly with whisper](https://github.com/johnshearing/scrape_yt_mk_transcripts) to create transcripts of the video.  
   - These trascripts will import into LightRAG with no issues.  
 
 - How can we get the two stage script to run?
