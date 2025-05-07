@@ -52,7 +52,7 @@ Pull video metadata into the system.
      ]
 ```
     
-- Add more videos to the index.  
+- Add more video transcripts to the index.  
 
 - Prevent duplication of videos in the index with a check before adding.  
 

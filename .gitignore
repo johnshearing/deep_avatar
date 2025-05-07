@@ -7,6 +7,9 @@
 # Do not ignore the README.md file - include that.
 !README.md
 
+# Do not ignore the ToDo.md file - include that.
+!ToDo.md
+
 # Do not ignore the LICENSE file - include that.
 !LICENSE
 
