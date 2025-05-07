@@ -21,12 +21,12 @@ I expect the work to go very quickly now that the LightRAG and VideoRAG librarie
 
 <br>    
 <b>  
-Using An deep avatar for voting decisions<br>
+Using A Deep Avatar For Voting Decisions<br>
 </b>  
 We feed the book "Hydrogen Sonata" into our vector database<br>
 Now we need to know if we should vote for the character Banstegeyn to be our leader<br> 
 The image below is a small part of the entire Knowledge Graph created by the LightRAG server<br>
-We can click on any of these nodes to get all kinds of information about these entities.<br>
+We can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships.<br>
 <br>
 <p>
 <img src="/illustrations/hs_graph.jpg">
@@ -40,7 +40,7 @@ Should we vote for Banstegeyn<br>
 </p>
 <br>
 The a.i. does not give us a direct answer yet because it is acting in an advisory capacity as most LLMs are trained to do.<br>
-The goal is to use this LightRAG to collect training data for training a deep avatar of Charles which will have an opinion of its own on the matter.<br>
+The goal is to use LightRAG to collect and manage training data that we will use to create a deep avatar of Charles Hoskinson which will have an opinion of its own on how to vote.<br>
 Of course the Hydrogen Sonata is a science fiction fantasy, but the Cardano protocol and its community are very real.<br>
 So imagine how helpful a deep avatar of Charles might be when advising on Cardano governance decisions.<br>
 <br>  
