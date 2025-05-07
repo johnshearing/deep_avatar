@@ -31,6 +31,9 @@ VideoRAG/_*/
 # And do NOT ignore the _motivation directory - include that directory.
 !_motivation/
 
+# And do NOT ignore the _images directory - include that directory.
+!_images/
+
 # Do not ignore the VideoRAG/videorag/_llm.py file - include that.
 !VideoRAG/videorag/_llm.py
 
