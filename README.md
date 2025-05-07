@@ -21,19 +21,19 @@ I expect the work to go very quickly now that the LightRAG and VideoRAG librarie
 
 <br>    
 <b>  
-Using A Deep Avatar For Voting Decisions<br>
+Using A Deep Avatar For Voting Decisions in Cardano Governance<br>
 </b>  
-We feed the book "Hydrogen Sonata" into our vector database<br>
+We feed the book "Hydrogen Sonata" into our LightRAG vector database<br>
 Now we need to know if we should vote for the character Banstegeyn to be our leader<br> 
 The image below is a small part of the entire Knowledge Graph created by the LightRAG server<br>
-We can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships.<br>
+When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships.<br>
 <br>
 <p>
 <img src="/illustrations/hs_graph.jpg">
 </p>
 <br>
 Below we see that we are asking an a.i. to look at the knowledge graph and answer our question:<br>
-Should we vote for Banstegeyn<br>
+Should we vote for Banstegeyn?<br>
 <br>
 <p>
 <img src="/illustrations/vote.jpg"><br>
