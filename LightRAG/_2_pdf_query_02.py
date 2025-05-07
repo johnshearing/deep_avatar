@@ -9,7 +9,7 @@ from lightrag.utils import logger, set_verbose_debug, EmbeddingFunc
 from llama_index.embeddings.openai import OpenAIEmbedding
 
 # Configuration
-WORKING_DIR = "_mod_linx_work_dir"
+WORKING_DIR = "_ts_work_dir"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
@@ -115,12 +115,19 @@ async def main():
             "Using only the text to answer, "
             "The Mod-Linx conveyor is stopping and starting by itself. What should I do? , "
             "Please use only the provided text when forming your answer."
-        )
-        '''
+        )            
 
         query = (
             "Using only the text to answer, "
             "Tell me everything you can about wire 110? , "
+            "Please use only the provided text when forming your answer."
+        ) 
+
+        '''
+
+        query = (
+            "Using only the text to answer, "
+            "What is the likely cause of an overheating motor?, "
             "Please use only the provided text when forming your answer."
         )        
         
