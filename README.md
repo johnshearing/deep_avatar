@@ -17,6 +17,34 @@ https://github.com/johnshearing/scrape_yt_mk_transcripts
 https://github.com/johnshearing/index_query_YT_Transcripts  
 I expect the work to go very quickly now that the LightRAG and VideoRAG libraries are being used.  
 
+---
+
+<br>    
+<b>  
+Using An deep avatar for voting decisions<br>
+</b>  
+We feed the book "Hydrogen Sonata" into our vector database<br>
+Now we need to know if we should vote for the character Banstegeyn to be our leader<br> 
+The image below is a small part of the entire Knowledge Graph created by the LightRAG server<br>
+We can click on any of these nodes to get all kinds of information about these entities.<br>
+<br>
+<p>
+<img src="/illustrations/hs_graph.jpg"><br>
+</p>
+Below we see that we are asking an a.i. to look at the knowledge graph and answer our question:<br>
+Should we vote for Banstegeyn<br>
+<p>
+<img src="/illustrations/vote.jpg"><br>
+</p>
+The a.i. does not give us a direct answer yet because it is acting in an advisory capacity as most LLMs are trained to do.<br>
+The goal is to use this LightRAG to collect training data for training a deep avatar of Charles which will have an opinion of its own on the matter.<br>
+Of course the Hydrogen Sonata is a science fiction fantasy, but the Cardano protocol and its community are very real.
+So imagine how helpful a deep avatar of Charles might be when advising on Cardano governance decisions.
+<br>  
+<br>  
+
+--- 
+
 I chose Abraham Hicks as my first subject because I wanted a way to find relevant sections from all the thousands of Abraham Hicks videos by using natural language queries.  
 Soon I realized it would be very beneficial if people could talk with Abraham directly even if Esther Hicks is not available.  
 The deep avatar of Abraham will first be accessed with a keyboard at the terminal, but soon after, speech to speech access will be available.  
