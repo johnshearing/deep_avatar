@@ -9,7 +9,7 @@ from lightrag.utils import logger, set_verbose_debug, EmbeddingFunc
 from llama_index.embeddings.openai import OpenAIEmbedding
 
 # Configuration
-WORKING_DIR = "_ts_work_dir"
+WORKING_DIR = "_sonata_work_dir"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
@@ -93,7 +93,7 @@ async def initialize_rag():
     
     await rag.initialize_storages()
     await initialize_pipeline_status()
-    await rag.aclear_cache(modes=["naive"])
+    await rag.aclear_cache()
     return rag
 
 async def main():
@@ -111,26 +111,17 @@ async def main():
         # Perform query
 
         '''
-        query = (
-            "Using only the text to answer, "
-            "The Mod-Linx conveyor is stopping and starting by itself. What should I do? , "
-            "Please use only the provided text when forming your answer."
-        )            
-
-        query = (
-            "Using only the text to answer, "
-            "Tell me everything you can about wire 110? , "
-            "Please use only the provided text when forming your answer."
-        ) 
-
+        "The Mod-Linx conveyor is stopping and starting by itself. What should I do? , "
+        "Tell me everything you can about wire 110? , "
+        "What is the likely cause of an overheating motor?, "
         '''
 
         query = (
             "Using only the text to answer, "
-            "What is the likely cause of an overheating motor?, "
+            "Who is Berdle in the story?, "
             "Please use only the provided text when forming your answer."
-        )        
-        
+        )       
+         
         for mode in ["naive", "local", "global", "hybrid", "mix"]:
             print(f"\n=====================")
             print(f"Query mode: {mode}")
