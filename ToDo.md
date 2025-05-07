@@ -8,11 +8,13 @@
 - Report timestamps on videos in a usable way.  
 
 - LightRAG Server for Video as well as documents.  
-  - See if the VideoRAG db can be converted to LightRAG db or the otherway around so that both video and documents can be queried in the same context.
+  - See if the VideoRAG db can be converted to LightRAG db or the otherway around so that both video and documents can be queried in the same context.  
   - The best way will likely be to abandon VideoRAG and [work directly with whisper](https://github.com/johnshearing/scrape_yt_mk_transcripts) to create transcripts of the video.  
-  - These trascripts will import into LightRAG with no issues.  
+    - The advantage of VideoRAG is that it does object detection on the video but since we are only interested in the conversation we don't need the complications of managing another database.  
+    - Scraping the audio and creating transcripts with whisper is a better option.  
+    - These trascripts will import into LightRAG with no issues.  
 
-- How can we get the two stage script to run?
+- Feeding responses back into a query - How can we get the two stage script to run?  
 
 - Try ingesting the LightRAG libraries into a LightRAG index to see if it can map logic flow to a knowledge graph.
 
