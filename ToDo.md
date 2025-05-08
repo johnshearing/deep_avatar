@@ -1,24 +1,23 @@
 ## Items To Do:
-- Continuous GitHub backup of all the work.  
+- Continuous GitHub backup of all the work.
 
-- Learn the LightRAG db manipulation commands and see if these will work on the VideoRAG database.   
+- Try ingesting the LightRAG libraries into a LightRAG index to see if it can map its own logic flow to a knowledge graph.
 
-- Selective searching of the index given a video name or document name rather than creating a response from the entire index.  
+- Watch VideoRAG, LightRAG, and LightRAG Server in a debugger to get a feeling for how the logic flows?
 
-- Report timestamps on videos in a usable way.  
+- Learn the LightRAG knowledge graph manipulation commands. Also see if these will work on the VideoRAG database.   
 
 - LightRAG Server for Video as well as documents.  
   - See if the VideoRAG db can be converted to LightRAG db or the other way around so that both video and documents can be queried in the same context.  
   - The best way will likely be to abandon VideoRAG and [work directly with whisper](https://github.com/johnshearing/scrape_yt_mk_transcripts) to create transcripts of the video.  
     - The advantage of VideoRAG is that it does object detection on the video but since we are only interested in the conversation we don't need the complications of managing another database.  
     - Scraping the audio and creating transcripts with whisper is a better option.  
-    - These transcripts will import into LightRAG with no issues.  
+    - These transcripts will import into LightRAG with no issues.
 
-- Feeding responses back into a query - How can we get the two stage script to run?  
+- Prevent duplication of video transcripts in the index with a check before adding anything new. I think this is already done - just need to test my scripts and LightRAG Server.
 
-- Try ingesting the LightRAG libraries into a LightRAG index to see if it can map logic flow to a knowledge graph.
-
-- Watch VideoRAG, LightRAG, and LightRAG Server run in a debugger to get a feeling for how the logic flows?
+- See how to delete video transcripts from the index in case it is misrepresentative or if it is a duplicate.  
+  - Currently the LightRAG team is having hallucination issues after deleting documents from the index.
 
 - Figure out how to pull YouTube channel metadata and document metadata into the LightRAG database?
 
@@ -51,28 +50,30 @@ Sample of the video metadata we are seeking to pull into the database.
         },... more segments continue until the end
      ]
 ```
-    
-- Add more video transcripts to the index.  
 
-- Prevent duplication of videos in the index with a check before adding.  
+- Selective searching of the index given a video name or document name rather than creating a response from the entire index of videos.  
 
-- See how to delete videos from the index.  
-  - Currently the LightRAG team is having hallucination issues after deleting documents from the index.
+- Report timestamps on videos in a usable way so that users watch the videos from which the responses have been derived.    
 
-- Have later videos take precedence  over earlier.  
-  - The default prompt will need to be modified.
+- Feeding responses back into a query for a more thoughtful response - How can we get the two stage script to run?  
 
-- Time to buy a powerful computer.
+- Convert from LightRAG's native nano_vectordb to one of the following: Neo4J, PostgreSQL, Faiss for storage.
 
-- Scrape the Internet for all videos and documents regarding Charles and Cardano - including all code and technical papers.
- 
-- Time to select an open source LLM which has been trained on open source data.
+- Select an open source LLM which has been trained on open source data.
+  - Currently OpenAi's closed source gpt-4o-mini is being used to index transcripts and form responses from the data.
   - This LLM will be fine-tuned on the data collected to become a deep avatar of Charles.  
   - While not 100% open source, the [DeepSeek Prover-V2 7B: Formal Theorem Proving in Lean 4](https://youtu.be/Y-bsdjB21DI?si=F_IE_eNrnWjpMoDZ) might be selected.
   - [Charles donated 20M to Carnegie Mellon University to open the Hoskinson center for formal mathematics which is focused on developing the Lean 4 Theorem Proving System](https://youtu.be/gCLJOrJFLZQ?si=KDRdKWIFGNrXlZFF&t=258).
   - He did this because he wants to embed soul and ethics into the Cardano protocol in a way that the system itself will understand.  
   - [The following is a direct quote from the video:](https://www.youtube.com/watch?v=H9wAyW_EcDA&t=1462s) "There's a question of how much should the ethics, the integrity the soul the intentions of the system be machine understandable? Because if their machine understandable you can then build protocols that can actually operate on the intent and embed them as kind of a regulator of the system for all smart contracts"
   - From this we can see that the DeepSeek Prover-V2 7B is likely the very LLM that Charles himself would select if he were doing this project.
+
+- Buy a powerful computer - lots of ram, storage, several GPUs - specifically for ai.
+
+- Scrape the Internet for all videos and documents regarding Charles and Cardano - including all code and technical papers.
+
+- Have later videos take precedence  over earlier in the responses.  
+  - The default prompt will need to be modified.
   
 - Develop a list of questions and answer pairs taken from the videos for fine-tuning the LLM.
   - This is exactly what LightRAG does.
@@ -81,7 +82,7 @@ Sample of the video metadata we are seeking to pull into the database.
 - Fine-tune how the answers are phrased (to sound like Charles)
 - Clone Charles' voice.
 - Generate an animated cartoon image for Charles'.  
-  - Cartoon animations instead of deep-fake because we want users to understand they are working with an avatar and not the actual person used as the model.  
+  - Cartoon animations instead of deep-fake because we want users to understand they are working with an avatar and not the actual person used as the model.
 
 - Deploy system to the Internet with a web interface for the public to use and provide feedback.  
 
