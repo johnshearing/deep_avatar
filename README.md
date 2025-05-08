@@ -52,9 +52,7 @@ So imagine how helpful a deep avatar of Charles might be when advising on Cardan
 
 --- 
  
-The deep avatar of Charles will first be accessed with a keyboard at the terminal, but soon after, speech to speech access will be available.  
-It will also be quite easy to add an animated cartoon representation of Charles so that the user has someone pleasant to look at while chatting.  
-An animated cartoon representation selected over a deep-fake representation because we want to be clear that this is an avatar and not Charles himself.  
+The deep avatar of Charles will first be accessed with a keyboard at the terminal, but soon after, speech to speech access will be available. It will also be quite easy to add an animated cartoon representation of Charles so that the user has someone pleasant to look at while chatting. An animated cartoon representation selected over a deep-fake representation because we want to be clear that this is an avatar and not Charles himself.  
 
 I chose Charles Hoskinson as the subject because he is the founder of Cardano and I thought it would be wonderful if the Cardano community could always have his guidance. Imagine if we could talk with the founding fathers of the United States concerning governance issues in general, and constitutionality issues in particular. Unfortunately they weren’t able to leave enough information about themselves to make this possible. I think Charles has left enough video, audio and written information already to create a deep avatar and I have faith that he will live a long time and leave a lot more.  
 
