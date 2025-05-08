@@ -62,16 +62,24 @@ Sample of the video metadata we are seeking to pull into the database.
 - Have later videos take precedence  over earlier.  
   - The default prompt will need to be modified.
 
-- Time to buy a powerful computer and use a local open source LLM which has been trained on open source data.
+- Time to buy a powerful computer.
+
+- Scrape the Internet for all videos and documents regarding Charles and Cardano - including all code and technical papers.
  
-- Scrape the Internet for all videos and documents regarding Charles and Cardano - including all code and technical papers.  
+- Time to select an open source LLM which has been trained on open source data.
+  - This LLM will be fine-tuned on the data collected to become a deep avatar of Charles.  
+  - While not 100% opensource, the [DeepSeek Prover-V2 7B: Formal Theorem Proving in Lean 4](https://youtu.be/Y-bsdjB21DI?si=F_IE_eNrnWjpMoDZ) might be selected.
+  - [Charles donated 20M to Carnegie Mellon University to open the Hoskinson center for formal mathematics which is focused on developing the Lean 4 Theorem Proving System](https://youtu.be/gCLJOrJFLZQ?si=KDRdKWIFGNrXlZFF&t=258).
+  - He did this because he wants to embed soul and ethics into the Cardano protocol in a way that the system itself will understand.  
+  - The following is a direct quote from the video: "There's a question of how much should the ethics, the integrity the soul the intentions of the system be machine understandable? Because if their machine understandable you can then build protocols that can actually operate on the intent and embed them as kind of a regulator of the system for all smart contracts"
+  - From this we can see that the DeepSeek Prover-V2 7B is likely the very LLM that Charles himself would select if he were doing this project.
+  
+- Develop a list of questions and answer pairs taken from the videos for fine-tuning the LLM.
+  - This is exactly what LightRAG does.
 
-- Develop a list of questions and answer pairs taken from the videos for fine-tuning.
-  - Fine-tune an LLM on Charles' way of thinking and manner.  
-  - Fine-tune how the answers are phrased (to sound even more like Charles)
-
+- Fine-tune an LLM on Charles' way of thinking, manner, and personal knowledge.  
+- Fine-tune how the answers are phrased (to sound like Charles)
 - Clone Charles' voice.
-
 - Generate a animated cartoon image for Charles'.  
   - Cartoon animations instead of deep-fake because we want users to understand they are working with an avatar and not the actual person used as the model.  
 
