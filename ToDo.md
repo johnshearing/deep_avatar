@@ -20,9 +20,9 @@
 
 - Watch VideoRAG, LightRAG, and LightRAG Server run in a debugger to get a feeling for how the logic flows?
 
-- Figure out how to pull YouTube channel metadata and document metadata into the database?
+- Figure out how to pull YouTube channel metadata and document metadata into the LightRAG database?
 
-Pull video metadata into the system.
+Sample of the video metadata we are seeking to pull into the database.
 ```json
     "language": "en",
     "metadata": {
@@ -60,20 +60,22 @@ Pull video metadata into the system.
   - Currently the LightRAG team is having hallucination issues after deleting documents from the index.
 
 - Have later videos take precedence  over earlier.  
-  - The default prompt will need to be modified.  
+  - The default prompt will need to be modified.
 
-- Develop a list of questions and answer pairs for fine-tuning.
-  - Fine-tune an LLM on Abraham's and Charles' way of thinking and manner.
-  - Fine-tune how the answers are phrased (to sound even more like Abraham and Charles)
+- Time to buy a powerful computer and use a local open source LLM which has been trained on open source data.
+ 
+- Scrape the Internet for all videos and documents regarding Charles and Cardano - including all code and technical papers.  
 
-- Clone Esther's and Charles' voices.
+- Develop a list of questions and answer pairs taken from the videos for fine-tuning.
+  - Fine-tune an LLM on Charles' way of thinking and manner.  
+  - Fine-tune how the answers are phrased (to sound even more like Charles)
 
-- Generate a moving cartoon image for Esther and Charles'.  
+- Clone Charles' voice.
+
+- Generate a animated cartoon image for Charles'.  
   - Cartoon animations instead of deep-fake because we want users to understand they are working with an avatar and not the actual person used as the model.  
 
-- Deploy system on a cloud computer.  
-
-- Setup a web interface for the public to use.  
+- Deploy system to the Internet with a web interface for the public to use and provide feedback.  
 
 - Consider integrating with LOLLMs because there is already some functionality for modeling personalities.
 
