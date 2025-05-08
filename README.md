@@ -56,8 +56,9 @@ The deep avatar of Charles will first be accessed with a keyboard at the termina
 It will also be quite easy to add an animated cartoon representation of Charles so that the user has someone pleasant to look at while chatting.  
 An animated cartoon representation selected over a deep-fake representation because we want to be clear that this is an avatar and not Charles himself.  
 
-I chose Charles Hoskinson as subject because he is the founder of Cardano and I thought I would be wonderful if the Cardano community could always have his guidance. Imagine if we could talk with the founding fathers of the United States concerning governance issues in general, and constitutionality issues in particular. Unfortunately they weren’t able to leave enough information about themselves to make this possible. I think Charles has left enough video, audio and written information already to create a deep avatar and I have faith that he will live a long time and leave a lot more.  
+I chose Charles Hoskinson as the subject because he is the founder of Cardano and I thought it would be wonderful if the Cardano community could always have his guidance. Imagine if we could talk with the founding fathers of the United States concerning governance issues in general, and constitutionality issues in particular. Unfortunately they weren’t able to leave enough information about themselves to make this possible. I think Charles has left enough video, audio and written information already to create a deep avatar and I have faith that he will live a long time and leave a lot more.  
 
+**An avatar of Charles on the Constitutional committee:**
 Charles made a 20 million dollar donation to Carnegie Mellon to work on a method of coding the Cardano constitution into a smart contract. The idea was to use this smart contract to allow or disallow other smart contracts to be deployed based on whether or not they are determined to be constitutional. But my previous work in both functional programming and artificial intelligence has taught me that a.i. is likely the best path to achieving a machine understandable constitution that can validate smart contracts on the Cardano blockchain. Ultimately I am imagining that a deep avatar of Charles Hoskinson will run for a seat on the constitutional committee which is decided by a community wide election.  
 
 Charles has always wanted to hand over governance of the Cardano protocol to the community. It was his intention all along. But he also needed to do this for his own protection. Charles was a target for blackmail, kidnapping, and murder as long as he was in control of the protocol. Worse, he was a government target during a time when the deep-state/central-banks were trying to destroy crypto. Many of Charles' contemporaries were jailed or murdered by various governments because of the cryptocurrency products they were building or for the services they provided. Charles had to disassociate himself from Cardano governance in order to reduce incentive to target him personally. This was necessary, but it was also a loss for the community. A deep avatar of Charles with an eventual seat on the constitutional committee puts Charles back in a leadership position without any risk to him personally. And if the deep avatar is created and implemented in a decentralized manner, then it can't be shut down, which is not the case with Charles himself. This is a win for Charles and it's a win for the Cardano community. Venture capitalists are not going to like this idea.  
@@ -66,7 +67,9 @@ Right now I am just playing in order to see what is possible with the currently 
 
 Some milestones are:
 1. Build the RAG system and deploy a web interface so that the public can query the database using natural language.  
-2. Use the RAG system to create question and answer pairs which will be used to fine-tune an LLM deep avatar.  
-3. Fine-tune an LLM so as to become a deep avatar of Charles which also has a full understanding of all the protocol's technical details and which can cite all the data in the RAG system that was used for fine-tuning.  
-4. Deploy the deep avatar on the web and let the public provide feedback.
+2. Use the RAG system to create question and answer pairs which will be used to fine-tune an LLM deep avatar of Charles.  
+3. Fine-tune the LLM so as to become a deep avatar of Charles which also has a full understanding of all the protocol's technical details and which can cite all the data in the RAG system that was used for fine-tuning.  
+4. Deploy the deep avatar on the web and let the public provide feedback.  
+5. Experiment with allowing Charles' avatar to vote on the Cardano test net.
+6. Get more public feedback.  
 
