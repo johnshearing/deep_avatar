@@ -3,18 +3,19 @@
 
 - Try ingesting the LightRAG libraries into a LightRAG index to see if it can map its own logic flow to a knowledge graph.
 
-- Watch VideoRAG, LightRAG, and LightRAG Server in a debugger to get a feeling for how the logic flows?
+- Run LightRAG, and LightRAG Server in a debuggers to get a feeling for how the logic flows?
 
-- Learn the LightRAG knowledge graph manipulation commands. Also see if these will work on the VideoRAG database.   
+- Get familiar with the LightRAG knowledge graph manipulation bash commands.
+- Get familiar with the LightRAG Server knowledge graph manipulation API commands. 
 
-- LightRAG Server for Video as well as documents.  
-  - See if the VideoRAG db can be converted to LightRAG db or the other way around so that both video and documents can be queried in the same context.  
+- LightRAG Server for Video as well as documents.   
   - The best way will likely be to abandon VideoRAG and [work directly with whisper](https://github.com/johnshearing/scrape_yt_mk_transcripts) to create transcripts of the video.  
     - The advantage of VideoRAG is that it does object detection on the video but since we are only interested in the conversation we don't need the complications of managing another database.  
     - Scraping the audio and creating transcripts with whisper is a better option.  
     - These transcripts will import into LightRAG with no issues.
 
-- Prevent duplication of video transcripts in the index with a check before adding anything new. I think this is already done - just need to test my scripts and LightRAG Server.
+- Prevent duplication of video transcripts in the index with a check before adding anything new.
+  - I think this is already done - just need to test my scripts and LightRAG Server.
 
 - See how to delete video transcripts from the index in case it is misrepresentative or if it is a duplicate.  
   - Currently the LightRAG team is having hallucination issues after deleting documents from the index.
