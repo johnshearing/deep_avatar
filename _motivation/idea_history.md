@@ -132,3 +132,18 @@ Feel free to join in the fun!
 
 ___
 
+## The perfect LLM has been selected for this project
+**DeepSeek Prover-V2 7B: Formal Theorem Proving in Lean 4**
+
+  - This LLM will be fine-tuned on the data collected to become a deep avatar of Charles.  
+  - While not 100% open source, the [DeepSeek Prover-V2 7B: Formal Theorem Proving in Lean 4](https://youtu.be/Y-bsdjB21DI?si=F_IE_eNrnWjpMoDZ) will likely be selected.
+  - [Charles donated 20M to Carnegie Mellon University to open the Hoskinson center for formal mathematics which is focused on developing the Lean 4 Theorem Proving System](https://youtu.be/gCLJOrJFLZQ?si=KDRdKWIFGNrXlZFF&t=258).
+  - He did this because he wants to embed soul and ethics into the Cardano protocol in a way that the system itself will understand.  
+  - [The following is a direct quote from the video:](https://www.youtube.com/watch?v=H9wAyW_EcDA&t=1462s) "There's a question of how much should the ethics, the integrity the soul the intentions of the system be machine understandable? Because if their machine understandable you can then build protocols that can actually operate on the intent and embed them as kind of a regulator of the system for all smart contracts"
+  - From this we can see that the DeepSeek Prover-V2 7B is likely the very LLM that Charles himself would select if he were doing this project.
+
+While it is true that I have been working toward an a.i. system that replaces the Lean 4 Theorem Proving System, this LLM will likely give us the best of both!
+
+[Deep-avatar](https://github.com/johnshearing/deep_avatar) based on [LightRAG](https://github.com/HKUDS/LightRAG) is taking shape quickly. 
+Expect a deep avatar of Charles to participate in governance as a DRep soon!
+
