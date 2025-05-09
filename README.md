@@ -25,7 +25,7 @@ I expect the work to go very quickly now that the LightRAG and VideoRAG librarie
 
 <br>    
 <b>  
-Using A Deep Avatar For Voting Decisions in Cardano Governance<br>
+Using A Deep Avatar modeled after Charles For Voting Decisions in Cardano Governance<br>
 </b>  
 To illustrate the idea, we feed Charles' video on the budget proposal vote into our LightRAG vector database.<br>
 Now we need to know he wants DReps to vote for the Pragma budget proposal.<br> 
