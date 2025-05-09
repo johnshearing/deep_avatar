@@ -66,7 +66,7 @@ Some general milestones are:
 4. Deploy the deep avatar on the web and let the public provide feedback.  
 5. Experiment with allowing Charles' avatar to vote on the Cardano test net.
 6. Get more public feedback.
-7. Work on decentralizing control, and distrubuting the system.
+7. Work on decentralizing control, and distributing the system.
 8. Get more public feedback.
 
 [See the ToDo List for the specific plan for success](https://github.com/johnshearing/deep_avatar/blob/main/ToDo.md)
