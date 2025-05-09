@@ -33,7 +33,7 @@ The image below is a small part of the entire Knowledge Graph created by the Lig
 When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships.<br>
 <br>
 <p>
-<img src="/_images/hs_graph.jpg">
+<img src="/_images/c_graph.jpg">
 </p>
 <br>
 Below we are asking an a.i. to look at the knowledge graph and answer our question:<br>
