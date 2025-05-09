@@ -31,7 +31,7 @@ Charles made a 20 million dollar donation to Carnegie Mellon to work on the Lean
 <b>  
 Using A Deep Avatar modeled after Charles For Voting Decisions in Cardano Governance<br>
 </b>  
-To illustrate the idea, we feed <a href="https://www.youtube.com/live/_BGKIwReb0o?si=NM88Zm4vJdW146fO">Charles' video on the budget proposal vote</a> into our LightRAG vector database. Now we need to know if Charles wants DReps to vote for the Pragma budget proposal or not. The image below is a portion of the entire Knowledge Graph created by the LightRAG server after ingesting Charles' video. When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships.<br>
+To illustrate the idea, we feed <a href="https://www.youtube.com/live/_BGKIwReb0o?si=NM88Zm4vJdW146fO">Charles' video on the budget proposal vote</a> into our LightRAG vector database. Now we need to know if Charles wants DReps to vote for the Pragma budget proposal or not. The image below is a portion of the entire Knowledge Graph created by the LightRAG server after ingesting Charles' video. When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships including source material.<br>
 <br>
 <p>
 <img src="/_images/c_graph.jpg">
@@ -45,7 +45,7 @@ Does Charles want DReps to vote for the Pragma budget proposal?<br>
 </p>
 <br>
 The a.i. answers yes.<br>
-This is useful, and it's a good start, but this is just an ai looking at a vector database and answering our questions about the ingested videos. The ultimate goal is to use LightRAG to collect and manage training data that we will use to create a deep avatar of Charles which will have opinions very much like Charles himself. Imagine how helpful a deep avatar of Charles might be as it quickly ingests huge amounts of data, that no one else has time to look at, and then uses it to make the same decisions Charles himself would make were he looking at the same data.<br>
+This is useful, and it's a good start, but this is just an OpenAI LLM looking at a vector database and answering our questions about the ingested videos. The ultimate goal is to use LightRAG to collect and manage training data that we will use to create a deep avatar of Charles which will have opinions very much like Charles himself and will have direct access to the Lean 4 Proving System. Imagine how helpful a deep avatar of Charles might be as it quickly ingests huge amounts of data, that no one else has time to look at, and then uses that data to make the same decisions Charles himself would make were he looking at the same information.<br>
 <br>  
 <br>  
 
@@ -57,14 +57,16 @@ I chose Charles Hoskinson as the subject because he is the founder of Cardano an
 
 Charles has always wanted to hand over governance of the Cardano protocol to the community. It was his intention all along. But he also needed to do this for his own protection. Charles was a target for blackmail, kidnapping, and murder as long as he was in control of the protocol. Worse, he was a government target during a time when the deep-state/central-banks were trying to destroy crypto. Many of Charles' contemporaries were jailed or murdered by various governments because of the cryptocurrency products they were building or for the services they provided. Charles had to disassociate himself from Cardano governance in order to reduce incentive to target him personally. This was necessary, but it was also a loss for the community. A deep avatar of Charles with an eventual seat on the constitutional committee puts Charles back in a leadership position without any risk to him personally. And if the deep avatar is created and implemented in a decentralized manner, then it can't be shut down, which is not the case with Charles himself. This is a win for Charles and it's a win for the Cardano community. Venture capitalists are not going to like this idea.  
 
-Right now I am just playing in order to see what is possible with the currently available open source tech. In order for this idea to work, the entire Cardano community will need to be involved. A Large Language Model built with open source training data needs to be selected. Then open source data needs to be collected in order to fine-tune the model so that it gives the same answers Charles would give for the same questions. This is also the data the deep avatar will cite to support its answers. That's the part I am working on now.  
+Right now I am just playing in order to see what is possible with the currently available open source tech. In order for this idea to work, the entire Cardano community will need to be involved. A Large Language Model built with open source training data and access to Lean 4 needs to be selected. Then open source data needs to be collected in order to fine-tune the model so that it gives the same answers Charles would give for the same questions. This is also the data the deep avatar will cite to support its answers. That's the part I am working on now.  
 
 Some general milestones are:
-1. Build the RAG system and deploy a web interface so that the public can query the database using natural language.  
+1. Build the RAG system and deploy a web interface so that the public can query the vector database using natural language.  
 2. Use the RAG system to create question and answer pairs which will be used to fine-tune an LLM deep avatar of Charles.  
-3. Fine-tune the LLM so as to become a deep avatar of Charles which also has a full understanding of all the protocol's technical details and which can cite all the data in the RAG system that was used for fine-tuning.  
+3. Fine-tune the LLM so as to become a deep avatar of Charles which also has a full understanding of all the protocol's technical details, Lean 4, and which can cite all the data in the RAG system that was used for fine-tuning.  
 4. Deploy the deep avatar on the web and let the public provide feedback.  
 5. Experiment with allowing Charles' avatar to vote on the Cardano test net.
-6. Get more public feedback.  
+6. Get more public feedback.
+7. Work on decentralizing control, and distrubuting the system.
+8. Get more public feedback.
 
 [See the ToDo List for the specific plan for success](https://github.com/johnshearing/deep_avatar/blob/main/ToDo.md)
