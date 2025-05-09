@@ -27,26 +27,26 @@ I expect the work to go very quickly now that the LightRAG and VideoRAG librarie
 <b>  
 Using A Deep Avatar For Voting Decisions in Cardano Governance<br>
 </b>  
-To illustrate the idea, we feed the book "Hydrogen Sonata" into our LightRAG vector database.<br>
-Now we need to know if we should vote for the character Banstegeyn to be our leader.<br> 
-The image below is a small part of the entire Knowledge Graph created by the LightRAG server after ingesting the Hydrogen Sonata.<br>
+To illustrate the idea, we feed Charles' video on the budget proposal vote into our LightRAG vector database.<br>
+Now we need to know he wants DReps to vote for the Pragma budget proposal.<br> 
+The image below is a portion of the entire Knowledge Graph created by the LightRAG server after ingesting Charles' video.<br>
 When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships.<br>
 <br>
 <p>
 <img src="/_images/c_graph.jpg">
 </p>
 <br>
-Below we are asking an a.i. to look at the knowledge graph and answer our question:<br>
-Should we vote for Banstegeyn?<br>
+Below in a different tab of the LightRAG server we are asking an a.i. to look at the knowledge graph and answer our question:<br>
+Does Charles want DReps to vote for the Pragma budget proposal?<br>
 <br>
 <p>
 <img src="/_images/vote.jpg"><br>
 </p>
 <br>
-The a.i. does not give us a direct answer yet because it is acting in an advisory capacity as most LLMs are trained to do.<br>
-The goal is to use LightRAG to collect and manage training data that we will use to create a deep avatar of Charles Hoskinson which will have an opinion of its own on how to vote.<br>
-Of course the Hydrogen Sonata is a science fiction fantasy, but the Cardano protocol and its community are very real.<br>
-So imagine how helpful a deep avatar of Charles might be when advising on Cardano governance decisions.<br>
+The a.i. answers yes.<br>
+This is useful and it's a good start, but this is just an ai looking at a vector database and answering our questions about the ingested videos.  
+The goal is to use LightRAG to collect and manage training data that we will use to create a deep avatar of Charles which will have opinions very much like Charles himself.<br>
+Imagine how helpful a deep avatar of Charles might be as it quickly ingests huge amounts of data, that no one else has time to look at, and then uses it to make the same decisions Charles himself would make were he looking at the same data.<br>
 <br>  
 <br>  
 
