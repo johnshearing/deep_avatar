@@ -54,9 +54,9 @@ Sample of the video metadata we are seeking to pull into the database.
 
 - Selective searching of the index given a video name or document name rather than creating a response from the entire index of videos.  
 
-- Report timestamps on videos in a usable way so that users watch the videos from which the responses have been derived.    
+- Report timestamps on videos in a usable way so that users can watch the videos from which the responses have been derived.    
 
-- Feeding responses back into a query for a more thoughtful response - How can we get the two stage script to run?  
+- Feeding responses back into a query for a more thoughtful response - Investigate a two stage query script or include an agent?  
 
 - Convert from LightRAG's native nano_vectordb to one of the following: Neo4J, PostgreSQL, Faiss for storage.
 
