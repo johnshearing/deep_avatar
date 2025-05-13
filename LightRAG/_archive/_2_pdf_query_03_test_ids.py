@@ -1,7 +1,10 @@
+# Used to test document ids filtering function. Turns out that filtering does not work and it is a known bug. 
+
 import os
 import asyncio
 import logging
 import logging.config
+import json
 from lightrag import LightRAG, QueryParam
 from lightrag.llm.openai import gpt_4o_mini_complete
 from lightrag.kg.shared_storage import initialize_pipeline_status
@@ -96,6 +99,19 @@ async def initialize_rag():
     await rag.aclear_cache()
     return rag
 
+def get_indexed_doc_ids():
+    """Retrieve all document IDs from the index."""
+    doc_status_file = os.path.join(WORKING_DIR, "kv_store_doc_status.json")
+    doc_ids = []
+    if os.path.exists(doc_status_file):
+        with open(doc_status_file, "r") as f:
+            docs = json.load(f)
+            doc_ids = [doc_id for doc_id, doc in docs.items() if doc.get("status") == "processed"]
+        print(f"Indexed document IDs: {doc_ids}")
+    else:
+        print("No document status file found.")
+    return doc_ids
+
 async def main():
     """Main function to query the LightRAG index."""
     rag = None
@@ -108,29 +124,53 @@ async def main():
         if not os.path.exists(os.path.join(WORKING_DIR, "kv_store_full_docs.json")):
             raise FileNotFoundError(f"No index found in {WORKING_DIR}. Run the indexing script first.")
         
+        # Verify document ID
+        target_doc_id = "doc-c933966c02ad9fa200190ef53f843b0e"
+        doc_ids = get_indexed_doc_ids()
+        if target_doc_id not in doc_ids:
+            print(f"Warning: Document ID {target_doc_id} not found in index. Available IDs: {doc_ids}")
+        
         # Perform query
-
-        '''
-        "The Mod-Linx conveyor is stopping and starting by itself. What should I do? , "
-        "Tell me everything you can about wire 110? , "
-        "What is the likely cause of an overheating motor?, "
-        '''
-
         query = (
             "Using only the text to answer, "
-            "According to the document provided, How is the weather in Colorado?, "
+            "Tell us about the weather in Colorado. "
             "Please use only the provided text when forming your answer."
-        )       
-         
-        for mode in ["naive", "local", "global", "hybrid", "mix"]:
+        )
+        
+        # Query modes, excluding 'hybrid' due to context processing issue
+        modes = ["naive", "local", "global", "mix"]  # Removed 'hybrid'
+        for mode in modes:
             print(f"\n=====================")
             print(f"Query mode: {mode}")
             print(f"=====================")
+            try:
+                response = await rag.aquery(
+                    query,
+                    param=QueryParam(mode=mode, top_k=50, ids=[target_doc_id])
+                )
+                logger.info(f"Response for mode {mode}: {response}")
+                print(response)
+            except Exception as e:
+                logger.error(f"Error in mode {mode}: {str(e)}")
+                print(f"Error in mode {mode}: {str(e)}")
+        
+        # Optional: Try hybrid mode separately with extra error handling
+        mode = "hybrid"
+        print(f"\n=====================")
+        print(f"Query mode: {mode}")
+        print(f"=====================")
+        try:
             response = await rag.aquery(
                 query,
-                param=QueryParam(mode=mode, top_k=50, ids="doc-c933966c02ad9fa200190ef53f843b0e")
+                param=QueryParam(mode=mode, top_k=50, ids=[target_doc_id])
             )
+            logger.info(f"Response for mode {mode}: {response}")
             print(response)
+        except Exception as e:
+            logger.error(f"Error in hybrid mode: {str(e)}")
+            print(f"Error in hybrid mode: {str(e)}")
+            print("Note: Hybrid mode may have issues with the 'ids' filter. Consider using other modes.")
+    
     except Exception as e:
         print(f"An error occurred: {e}")
         import traceback
