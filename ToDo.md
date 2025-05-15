@@ -1,5 +1,7 @@
 ## Items To Do:
-- Continuous GitHub backup of all the work.
+- Continuous GitHub backup of all the work
+
+- Improve the way LightRAG Server cites source material.
 
 - Try ingesting the LightRAG libraries into a LightRAG index to see if it can map its own logic flow to a knowledge graph.
 
@@ -8,50 +10,9 @@
 - Get familiar with the LightRAG knowledge graph manipulation bash commands.
 - Get familiar with the LightRAG Server knowledge graph manipulation API commands. 
 
-- LightRAG Server for Video as well as documents.   
-  - The best way will likely be to abandon VideoRAG and [work directly with whisper](https://github.com/johnshearing/scrape_yt_mk_transcripts) to create transcripts of the video.  
-    - The advantage of VideoRAG is that it does object detection on the video but since we are only interested in the conversation we don't need the complications of managing another database.  
-    - Scraping the audio and creating transcripts with whisper is a better option.  
-    - These transcripts will import into LightRAG with no issues.
-
-- Prevent duplication of video transcripts in the index with a check before adding anything new.
-  - I think this is already done - just need to test my scripts and LightRAG Server.
-
 - See how to delete video transcripts from the index in case it is misrepresentative or if it is a duplicate.  
   - Currently the LightRAG team is having hallucination issues after deleting documents from the index.
-
-- Figure out how to pull YouTube channel metadata and document metadata into the LightRAG database?
-
-Sample of the video metadata we are seeking to pull into the database.
-```json
-    "language": "en",
-    "metadata": {
-        "channelName": "Abraham Hicks Tips",
-        "videoTitle": "Your \u2018Reality\u2019 Is Lying to You! \u2705 Abraham Hicks 2025",
-        "url": "https://www.youtube.com/watch?v=0k2tTiDTn-c",
-        "videoPostDate": "2025-01-19T17:30:00Z"
-    },
-    "text": " Hi Abraham.",
-    "segments": [
-        {
-            "id": 0,
-            "start": 0.0,
-            "end": 7.36,
-            "text": " Hi Abraham. I teach this yoga class and I base it on law of attraction and I say"
-        },
-        {
-            "id": 1,
-            "start": 7.36,
-            "end": 13.58,
-            "text": " this thing and I was questioning it on the way over here. I say if we really did",
-            "avg_logprob": -0.12857116887598863,
-            "compression_ratio": 1.687830687830688,
-            "no_speech_prob": 0.16776621341705322,
-            "speaker": "SPEAKER_01"
-        },... more segments continue until the end
-     ]
-```
-
+    
 - Selective searching of the index given a video name or document name rather than creating a response from the entire index of videos.  
 
 - Report timestamps on videos in a usable way so that users can watch the videos from which the responses have been derived.    
@@ -120,5 +81,46 @@ Sample of the video metadata we are seeking to pull into the database.
 - I noticed that _1_audio_rag_pipeline_07.py does not incur charges from OpenAI even though it calls openai_4o_mini over the net.  
 - Look at LightRAG Server.  
 - Understand what each db file is used in indexing and querying and what is stored in each.
+
+- LightRAG Server for Video as well as documents.   
+  - The best way will likely be to abandon VideoRAG and [work directly with whisper](https://github.com/johnshearing/scrape_yt_mk_transcripts) to create transcripts of the video.  
+    - The advantage of VideoRAG is that it does object detection on the video but since we are only interested in the conversation we don't need the complications of managing another database.  
+    - Scraping the audio and creating transcripts with whisper is a better option.  
+    - These transcripts will import into LightRAG with no issues.
+
+- Figure out how to pull YouTube channel metadata and document metadata into the LightRAG database? 
+Sample of the video metadata we are seeking to pull into the database.
+```json
+    "language": "en",
+    "metadata": {
+        "channelName": "Abraham Hicks Tips",
+        "videoTitle": "Your \u2018Reality\u2019 Is Lying to You! \u2705 Abraham Hicks 2025",
+        "url": "https://www.youtube.com/watch?v=0k2tTiDTn-c",
+        "videoPostDate": "2025-01-19T17:30:00Z"
+    },
+    "text": " Hi Abraham.",
+    "segments": [
+        {
+            "id": 0,
+            "start": 0.0,
+            "end": 7.36,
+            "text": " Hi Abraham. I teach this yoga class and I base it on law of attraction and I say"
+        },
+        {
+            "id": 1,
+            "start": 7.36,
+            "end": 13.58,
+            "text": " this thing and I was questioning it on the way over here. I say if we really did",
+            "avg_logprob": -0.12857116887598863,
+            "compression_ratio": 1.687830687830688,
+            "no_speech_prob": 0.16776621341705322,
+            "speaker": "SPEAKER_01"
+        },... more segments continue until the end
+     ]
+
+- Prevent duplication of video transcripts in the index with a check before adding anything new.
+  - I think this is already done - just need to test my scripts and LightRAG Server.
+```
+  
 
 
