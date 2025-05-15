@@ -19,7 +19,9 @@
   - There is a native function and parameter for this (ids) but it has been disabled by the LightRAG developers.
   - I need to see if I can get "ids" functionality working.  
 
-- Report timestamps on videos in a usable way so that users can watch the videos from which the responses have been derived.    
+- Report timestamps on videos in a more usable way
+  -  This part is already done: Generate links with each answer so that users can watch the videos from which the responses have been derived.  
+  -  Still need to accomplish this: Links must include the timestamp so that the videos are queued up to the correct moment where the answers are sourced.    
 
 - Feeding responses back into a query for a more thoughtful response - Investigate a two stage query script or include an agent?  
 
