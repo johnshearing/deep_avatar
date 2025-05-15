@@ -14,8 +14,8 @@
   - Currently the LightRAG team is having hallucination issues after deleting documents from the index.
     
 - Selective searching of the index given a video name or document name rather than creating a response from the entire index of videos.
-  - There is a native function for this but it has been disabled by the LightRAG developers.
-  - I need to see if I can get this functionality working.  
+  - There is a native function and parameter for this (ids) but it has been disabled by the LightRAG developers.
+  - I need to see if I can get "ids" functionality working.  
 
 - Report timestamps on videos in a usable way so that users can watch the videos from which the responses have been derived.    
 
