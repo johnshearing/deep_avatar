@@ -2,6 +2,8 @@
 - Continuous GitHub backup of all the work
 
 - Improve the way LightRAG Server cites source material.
+  - How can we get even more accurate sources in the output?  
+  - There is a citation function documented in the readme but this is an open issue in the LightRAG repository. 
 
 - Try ingesting the LightRAG libraries into a LightRAG index to see if it can map its own logic flow to a knowledge graph.
 
@@ -52,7 +54,11 @@
 
 - Consider integrating with LOLLMs because there is already some functionality for modeling personalities.
 
-## Items on the back burner but need to be done:
+## Items on the back burner but need to be done:  
+- Test the effect of index size with respect to quality of answers?
+
+- Test the effect of a smaller embedding dimension with respect to quality of answers. 
+
 - Test the effect of smaller chunks on the following question:
 
 ```python
@@ -61,36 +67,26 @@
 "Please use only the provided text when forming your answer."<
 ```
 
-- What is the effect on index size and quality of answers?
-  
-- Test the effect of a smaller embedding dimension.
-  
-- What is the effect on index size and quality of answers?
-
-- What does the following message mean?  
-  - "Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained."  
+- I noticed that the LightRag server does not append to the response file.  
+- I noticed that _1_audio_rag_pipeline_07.py does not incur charges from OpenAI even though it seems to call openai_4o_mini over the net. 
 
 ## Done:
 - Document VideoRAG and LightRAG setup.  
 - Turn off collection of video (only audio) or connect everything to a descriptive jpg.  
 - Pull PDFs into the RAG system: perhaps use LightRAG with VideoRAG database? 
-- Split the script into index and query.  
-- How can we get accurate sources in the output?  
-- There is a citation function in the readme.  
+- Split the script into index and query.   
 - tesseract option for ingesting documents   
-- Fix misinformation in git notes for updating code from upstream (original) repositories.  
-- I noticed that the LightRag server does not append to the response file.  
-- I noticed that _1_audio_rag_pipeline_07.py does not incur charges from OpenAI even though it calls openai_4o_mini over the net.  
-- Look at LightRAG Server.  
-- Understand what each db file is used in indexing and querying and what is stored in each.
+- Fix misinformation in git notes for updating code from upstream (original) repositories.    
+- Understand what each LightRAG db file is used for with respect to indexing and querying and what is stored in each.
 
-- LightRAG Server for Video as well as documents.   
-  - The best way will likely be to abandon VideoRAG and [work directly with whisper](https://github.com/johnshearing/scrape_yt_mk_transcripts) to create transcripts of the video.  
+- Switched to LightRAG Server for Video as well as documents.   
+  - The best way to create transcripts of the video was to abandon VideoRAG and [work directly with whisper](https://github.com/johnshearing/scrape_yt_mk_transcripts).  
     - The advantage of VideoRAG is that it does object detection on the video but since we are only interested in the conversation we don't need the complications of managing another database.  
     - Scraping the audio and creating transcripts with whisper is a better option.  
     - These transcripts will import into LightRAG with no issues.
 
-- Figure out how to pull YouTube channel metadata and document metadata into the LightRAG database? 
+- Figure out how to pull YouTube channel metadata and document metadata into the LightRAG database?
+  - This was accomplished by [merged??.py](https://github.com/johnshearing/scrape_yt_mk_transcripts) which converts the entire transcript from json to a segmented text file where the metadata is the first few lines of the file.  
 Sample of the video metadata we are seeking to pull into the database.
 ```json
     "language": "en",
