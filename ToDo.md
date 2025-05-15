@@ -3,6 +3,8 @@ All of the following are with regard to the first big milestone: The setting up 
 See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/README.md) for the overall roadmap.  
 
 - Continuous GitHub backup of all the work
+  
+- Fix bug in python script for global and mixed queries against LightRAG index  
 
 - Report timestamps on videos in a more usable way
   -  This part is already done: Generate links with each answer so that users can watch the videos from which the responses have been derived.  
