@@ -13,7 +13,7 @@
 
 - Try ingesting the LightRAG libraries into a LightRAG index to see if it can map its own logic flow to a knowledge graph.
 
-- Run LightRAG, and LightRAG Server in a debuggers to get a feeling for how the logic flows?
+- Run LightRAG python scripts, and LightRAG Server in a debuggers to get a feeling for how the logic flows?
 
 - Get more familiar with the LightRAG knowledge graph manipulation bash commands.
 - Get more familiar with the LightRAG Server knowledge graph manipulation API commands. 
