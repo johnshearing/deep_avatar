@@ -1,7 +1,7 @@
 This directory named "lgt" corresponds to https://github.com/johnshearing/deep_avatar.git
 Make all git commands from this directory not from the sub directories.
 
-The following command shows where my backup remote repository currently exists and where the code originally came from:
+The following command shows where my backup remote repository currently exists:
 (vrag_env) ~/lgt$ git remote -v
 backup  https://github.com/johnshearing/deep_avatar.git (fetch)
 backup  https://github.com/johnshearing/deep_avatar.git (push)
@@ -9,7 +9,6 @@ backup  https://github.com/johnshearing/deep_avatar.git (push)
 
 For more information about your remote repositories, issue the following commands:
 git remote show backup
-git remote show upstream
 
 
 The following was the basic setup to make an online repository from this directory.
@@ -46,7 +45,7 @@ The following was the basic setup to make an online repository from this directo
 
    Stage and commit just these files:
    git add .gitignore
-   git add -f important_script.py specific_folder/specific_file.py
+   git add -f <important_script.py> <specific_folder/specific_file.py>
    git commit -m "Initial commit with selected files only"
 
 
@@ -79,3 +78,42 @@ The following was the basic setup to make an online repository from this directo
    Push the changes to the online repository:
    git push backup main
 
+
+
+############## The commands is this section are used to merge the local and remote repositories ####################
+
+It is best to push to or pull from the remote immediatly after doing work on either the remote or the local repository.
+If both remote and local repositories are in the updated state at the same time then a merge will be required which is a pain.
+Pulling updates from the remote is required before the git will allow pushing updates from the local repository.
+If a merge becomes required then the following is the simplest procedure with the most control over the process.
+
+If you want to see what changes are different between your local branch and the remote before deciding, you can run:
+git fetch
+git log --oneline --graph --decorate --all
+
+Something like the following will be the output:
+* aa55a8a (HEAD -> main) current work
+| * 86b31b3 (backup/main) Update README.md
+|/  
+* 32de85a Update .gitignore
+* 010fd12 clean history
+
+From the above tree we see the following:
+The local branch (HEAD -> main) has a commit "current work" that isn't on the remote
+The remote branch (origin/main) has a commit "Update README.md" that isn't in the local repository
+
+To keep local changes but also get the updated README.md from the remote, merge the remote changes into your local repository.
+Pulling updates from the remote is required before the git will allow pushing updates from the local repository.
+
+******************** Important!! Commit all local changes before pulling from the remote ********************** 
+********************             There will be tears if you fail to do this              ********************** 
+
+After committing local changes, go ahead and run the following commands to pull from the remote:
+git config pull.rebase false
+git pull backup main
+
+The nano text editor will open automatically and it will be required to enter a commit messsage.
+If nothing is entered then the pull and commit from the remote will be aborted.
+
+If the pull from the remote is successful then it will be possible push updates from the local repository:
+git push backup main
