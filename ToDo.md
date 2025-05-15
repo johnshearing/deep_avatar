@@ -1,4 +1,7 @@
 ## Items To Do:
+All of the following are with regard to the first big milestone: The setting up the Retreival Augmented Generation (RAG) system.  
+See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/README.md) for the overall roadmap.  
+
 - Continuous GitHub backup of all the work
 
 - Report timestamps on videos in a more usable way
