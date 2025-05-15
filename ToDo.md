@@ -7,13 +7,15 @@
 
 - Run LightRAG, and LightRAG Server in a debuggers to get a feeling for how the logic flows?
 
-- Get familiar with the LightRAG knowledge graph manipulation bash commands.
-- Get familiar with the LightRAG Server knowledge graph manipulation API commands. 
+- Get more familiar with the LightRAG knowledge graph manipulation bash commands.
+- Get more familiar with the LightRAG Server knowledge graph manipulation API commands. 
 
 - See how to delete video transcripts from the index in case it is misrepresentative or if it is a duplicate.  
   - Currently the LightRAG team is having hallucination issues after deleting documents from the index.
     
-- Selective searching of the index given a video name or document name rather than creating a response from the entire index of videos.  
+- Selective searching of the index given a video name or document name rather than creating a response from the entire index of videos.
+  - There is a native function for this but it has been disabled by the LightRAG developers.
+  - I need to see if I can get this functionality working.  
 
 - Report timestamps on videos in a usable way so that users can watch the videos from which the responses have been derived.    
 
