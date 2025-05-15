@@ -59,7 +59,7 @@ Charles has always wanted to hand over governance of the Cardano protocol to the
 
 Right now I am just playing in order to see what is possible with the currently available open source tech. In order for this idea to work, the entire Cardano community will need to be involved. A Large Language Model built with open source training data and access to Lean 4 needs to be selected. Then open source data needs to be collected in order to fine-tune the model so that it gives the same answers Charles would give for the same questions. This is also the data the deep avatar will cite to support its answers. That's the part I am working on now.  
 
-Some general milestones are:
+Overall Roadmap:
 1. Build the RAG system and deploy a web interface so that the public can query the vector database using natural language.  
 2. Use the RAG system to create question and answer pairs which will be used to fine-tune an LLM deep avatar of Charles.  
 3. Fine-tune the LLM so as to become a deep avatar of Charles which also has a full understanding of all the Cardano protocol's technical details, Lean-4, and which can cite all the data in the RAG system that was used for fine-tuning.  
@@ -69,4 +69,4 @@ Some general milestones are:
 7. Work on decentralizing control, and distributing the system.
 8. Get more public feedback.
 
-[See the ToDo List for the specific plan for success](https://github.com/johnshearing/deep_avatar/blob/main/ToDo.md)
+[See the ToDo List for scheduled work and items accomplished on Step 1: Building the RAG system](https://github.com/johnshearing/deep_avatar/blob/main/ToDo.md)
