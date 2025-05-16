@@ -85,7 +85,7 @@ In summary, the misunderstanding lies in the belief that avoiding sun exposure i
 
 
 
-[5211.38 > 5214.1] (Max) Yeah, I would.
+[5211.38 > 5214.1](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=5211s) (Max) Yeah, I would.
 [5214.1 > 5222.54] (Max) So what Jack's proposing is it's a more holistic model of the body's energy balance, but also
 [5223.1 > 5229.66] (Max) maybe a master hormone, because it's integrating the light signals, both the external light
 [5229.66 > 5235.98] (Max) signals, because obviously this leptin is being produced in the fat cells just under the skin,
