@@ -1,4 +1,5 @@
-## Vital Key Points Regarding Melanoma In Australia
+
+## Deep Avatar Summarizes Vital Key Points Regarding Melanoma In Australia
 ### Extracted from various nonconsecutive segments [in this 3 hour video](https://youtu.be/Ln3WszTq0uA) on many health topics:  
 ### Scroll down for relevant transcript segments and timestamped video links.
 
@@ -136,9 +137,9 @@ In summary, the misunderstanding lies in the belief that avoiding sun exposure i
 
 
 
------Vector Context-----
-File path: Ln3WszTq0uA.txt
-[8318.54 > 8323.66] (Jack) sidestep it because they don't understand what I explained to you in the first two and a half
+-----Vector Context-----  
+File path: Ln3WszTq0uA.txt  
+[8318.54 > 8323.66] [(Jack) sidestep it because they don't understand](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=8318s) what I explained to you in the first two and a half
 [8323.66 > 8331.02] (Jack) hours of this podcast. POMC is the key. What melanin does for you, it allows you to absorb
 [8331.02 > 8339.26] (Jack) and use the UV light properly in your system. You putting chemicals or things on you that block
 [8339.26 > 8345.42] (Jack) that system guarantees you're going to get it. And here's the other irony. When you live a blue
@@ -177,7 +178,7 @@ File path: Ln3WszTq0uA.txt
 --New Chunk--
 [Created at: 2025-05-16 09:07:41]
 File path: Ln3WszTq0uA.txt
-[8105.26 > 8112.86] (Jack) Have you given your kid melatonin exogenously? You are guaranteeing them huge metabolic problems.
+[8105.26 > 8112.86] [(Jack) Have you given your kid melatonin exogenously?](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=8105s) You are guaranteeing them huge metabolic problems.
 [8112.86 > 8116.3] (Jack) You're guaranteeing them that if it's a woman, they're going to have osteoporosis.
 [8116.86 > 8122.7] (Jack) They'll probably enter perimenopause at 30 years old. Infertility will be off the chain.
 [8123.66 > 8130.94] (Jack) I can tell you in the United States right now, it's greater than 60% of young female and males
@@ -217,7 +218,7 @@ File path: Ln3WszTq0uA.txt
 [Created at: 2025-05-16 09:07:41]
 File path: Ln3WszTq0uA.txt
 . That's what metastasis effectively is. So we have everything completely
-[5782.62 > 5789.82] (Jack) backward. And if you think about chemotherapeutic drugs, every single drug is targeted at mitosis
+[5782.62 > 5789.82] [(Jack) backward. And if you think about chemotherapeutic drugs](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=5782s), every single drug is targeted at mitosis
 [5789.82 > 5795.66] (Jack) at some level. So if you really understand what I'm saying, we're doing everything wrong.
 [5797.66 > 5803.34] (Jack) And this is why you see all those things that I post and people in Australia lose their mind.
 [5803.34 > 5811.82] (Jack) I'm like, the vaccine for melanoma, the vaccine for skin cancer is UV light. On the surface,
