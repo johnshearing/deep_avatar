@@ -36,8 +36,8 @@ In summary, the misunderstanding lies in the belief that avoiding sun exposure i
 - [DC] Ln3WszTq0uA.txt
 
 
------Knowledge Graph Context-----
------Sources-----
+-----Knowledge Graph Context-----  
+-----Sources-----  
 
 [I'm going, I have to figure out how that happens](https://youtu.be/Ln3WszTq0uA?si=BU7yb23FC4iZdi1G&t=4295).
 [4297.52 > 4303.8] (Jack) So I looked up phenylalanine and tyrosine absorption spectra, 200 to 400 nanometer light.
@@ -82,7 +82,7 @@ In summary, the misunderstanding lies in the belief that avoiding sun exposure i
 [4462.68 > 4463.68] (Jack) UV light.
 [4463.68 > 4465.88] (Jack) And it turns out that UV light is needed.
 [4465.88 > 4471.2] (Max) UVC, not UVA or B. UVC, not A or B.
-[4471.2 > 4476.76] (Jack) He didn't know what the frequencies were because the amount of light that our"
+[4471.2 > 4476.76] (Jack) He didn't know what the frequencies were because the amount of light that our"  
 
 
 
@@ -122,7 +122,7 @@ In summary, the misunderstanding lies in the belief that avoiding sun exposure i
 [5392.46 > 5398.06] (Jack) think. And then I thought about the transition from chimp to ape. Everybody thought that took
 [5398.06 > 5402.38] (Jack) a long time. I'm saying, what if that's not true? What if melanin was able to do this way faster
 [5402.38 > 5410.62] (Jack) than we think? So how did I figure this out? I went to an African American patient who had vitiligo.
-[5411.58 > 5417.98] (Jack) And I said, I now know that"
+[5411.58 > 5417.98] (Jack) And I said, I now know that"  
 
 
 [like that's](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=4125s)
@@ -132,12 +132,12 @@ In summary, the misunderstanding lies in the belief that avoiding sun exposure i
 [4133.42 > 4136.38] (Jack) was the reason why it was 360 pounds.
 [4136.38 > 4142.5] (Jack) It was destroying POMC at the choroid level and the choroid for those of you don't know
 [4142.5 > 4146.98] (Jack) is where the blood flow comes into the retina through the ophthalmic artery.
-[4146.98 > 4153.66] (Jack) It turns out when I..."
+[4146.98 > 4153.66] (Jack) It turns out when I..."  
 
 
 
 
------Vector Context-----  
+-----Vector Context-----   
 File path: Ln3WszTq0uA.txt  
 [8318.54 > 8323.66] [(Jack) sidestep it because they don't understand](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=8318s) what I explained to you in the first two and a half
 [8323.66 > 8331.02] (Jack) hours of this podcast. POMC is the key. What melanin does for you, it allows you to absorb
@@ -174,10 +174,10 @@ File path: Ln3WszTq0uA.txt
 [8515.18 > 8520.54] (Jack) in Australia is Hashimoto's, which is an autoimmune version, which now you know the reason why,
 [8520.54 > 8528.94] (Jack) because you're also blocking beta and gamma MSH. That ruins the Th1 and Th2
 [8529.02 > 8535.66] (Jack) immunocontrols, both cell mediated and humoral immunity. When you see this right in front of
-[8535.66 >
---New Chunk--
-[Created at: 2025-05-16 09:07:41]
-File path: Ln3WszTq0uA.txt
+[8535.66 >  
+--New Chunk--  
+[Created at: 2025-05-16 09:07:41]  
+File path: Ln3WszTq0uA.txt  
 [8105.26 > 8112.86] [(Jack) Have you given your kid melatonin exogenously?](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=8105s) You are guaranteeing them huge metabolic problems.
 [8112.86 > 8116.3] (Jack) You're guaranteeing them that if it's a woman, they're going to have osteoporosis.
 [8116.86 > 8122.7] (Jack) They'll probably enter perimenopause at 30 years old. Infertility will be off the chain.
@@ -213,12 +213,12 @@ File path: Ln3WszTq0uA.txt
 [8311.58 > 8316.54] (Jack) Then they have to explain that. That's a huge problem for them. And guess what? They just
 [8316.54 > 8323.66] (Jack) sidestep it because they don't understand what I explained to you in the first two and a half
 [8323.66 > 8331.02] (Jack) hours of this podcast. POMC is the key. What melanin does for you, it allows you to absorb
-[8331.02 > 8339.26] (Jack) and use the UV light properly in your system. You putting
---New Chunk--
-[Created at: 2025-05-16 09:07:41]
-File path: Ln3WszTq0uA.txt
-. That's what metastasis effectively is. So we have everything completely
-[5782.62 > 5789.82] [(Jack) backward. And if you think about chemotherapeutic drugs](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=5782s), every single drug is targeted at mitosis
+[8331.02 > 8339.26] (Jack) and use the UV light properly in your system. You putting  
+--New Chunk--  
+[Created at: 2025-05-16 09:07:41]  
+File path: Ln3WszTq0uA.txt  
+. [That's what metastasis effectively is.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=5782s) So we have everything completely
+[5782.62 > 5789.82] (Jack) backward. And if you think about chemotherapeutic drugs, every single drug is targeted at mitosis
 [5789.82 > 5795.66] (Jack) at some level. So if you really understand what I'm saying, we're doing everything wrong.
 [5797.66 > 5803.34] (Jack) And this is why you see all those things that I post and people in Australia lose their mind.
 [5803.34 > 5811.82] (Jack) I'm like, the vaccine for melanoma, the vaccine for skin cancer is UV light. On the surface,
