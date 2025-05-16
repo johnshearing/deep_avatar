@@ -1,7 +1,15 @@
 
-## Deep Avatar Summarizes Vital Key Points Regarding Melanoma In Australia
-### Extracted from various nonconsecutive segments [in this 3 hour video](https://youtu.be/Ln3WszTq0uA) on many health topics:  
-### Scroll down for relevant transcript segments and timestamped video links.
+## Deep Avatar Scans Long Video
+## Automated Summary Of Vital Key Points With Time Stamped Links To Video
+### Regarding Melanoma In Australia: 
+  - Increasing Resistance To Melanoma With Morning And Evening Sun Exposure
+### Automatically extracted from various nonconsecutive segments [in this 3 hour video](https://youtu.be/Ln3WszTq0uA) on many health topics:  
+### Scroll down for relevant transcript segments and time stamped video links.
+
+---
+
+#### The question asked of Deep Avatar:  
+What is it about sun exposure that people in Australia fail to understand, which is causing high rates of melanoma or skin cancer?
 
 
 #### Misunderstanding Sun Exposure and Skin Cancer in Australia
