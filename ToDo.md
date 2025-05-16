@@ -3,19 +3,31 @@ All of the following are with regard to the first big milestone: The setting up 
 See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/README.md) for the overall roadmap.  
 
 - Continuous GitHub backup of all the work
-  
-- Fix bug in python script for global and mixed queries against LightRAG index  
 
-- Report timestamps on videos in a more usable way
+- Report timestamps and diarization in videos in a more usable way
   -  Done: Generate links with each answer so that users can watch the videos from which the responses have been derived.  
   -  ToDo: Links must include the timestamp so that the videos are queued up to the correct moment where the answers are sourced.
-    -  The timestamps are already embedded in the indexed chunks by [merged??.py](https://github.com/johnshearing/scrape_yt_mk_transcripts)
+    -  The timestamps are already embedded in the indexed chunks by [merged??.py](https://github.com/johnshearing/scrape_yt_mk_transcripts) so manually we can gain access to all the timestamps related to the nodes.
+    -  How can we get LightRAG server to give us this information with every answer automatically?
        -  We might consider chunking by timestamped segmements.
        -  We could add the timestamp to the metadata of the chunk the way we do with document id, chunk id, and file id.
           - The above two options will require changing LightRAG library code.
+        - We could write our own python script which makes nodes from all the timestamps and connects these to all the other nodes found in the same chunks. 
     -  We could just pull the timestamps out when serving the answers.
-       - This could be accomplished by changing the LLM prompt or by changing the LightRAG library code.  
+       - This could be accomplished by changing the LLM prompt, the query script or by changing the LightRAG library code.
+     
+- Ensure source metadata is indexed properly
+  - Instead of leaving this up to the LLM which supervises the indexing we can issue our own commands at the bash terminal or with the LightRAG Server API or with a python script to created nodes and relations from all the metadata in the first line of the source material.
  
+```json
+    "metadata": {
+        "channelName": "Abraham Hicks Tips",
+        "videoTitle": "Your \u2018Reality\u2019 Is Lying to You! \u2705 Abraham Hicks 2025",
+        "url": "https://www.youtube.com/watch?v=0k2tTiDTn-c",
+        "videoPostDate": "2025-01-19T17:30:00Z"
+    }
+```
+
 - Improve the way LightRAG Server cites source material.
   - How can we get even more accurate sources in the output?  
   - There is a citation function documented in the readme but this is an open issue in the LightRAG repository.
@@ -128,10 +140,10 @@ Sample of the video metadata we are seeking to pull into the database.
             "speaker": "SPEAKER_01"
         },... more segments continue until the end
      ]
+```
 
 - Prevent duplication of video transcripts in the index with a check before adding anything new.
   - I think this is already done - just need to test my scripts and LightRAG Server.
-```
-  
-
+       
+- Fix bug in python script for global and mixed queries against LightRAG index  
 
