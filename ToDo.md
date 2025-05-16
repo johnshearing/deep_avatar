@@ -17,7 +17,7 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
        - This could be accomplished by changing the LLM prompt, the query script or by changing the LightRAG library code.
      
 - Ensure source metadata is indexed properly
-  - Instead of leaving this up to the LLM which supervises the indexing we can issue our own commands at the bash terminal or with the LightRAG Server API or with a python script to created nodes and relations from all the metadata in the first line of the source material.
+  - Instead of leaving this up to the LLM which supervises the indexing we can issue our own commands at the python terminal or with the LightRAG Server API or with a python script to created nodes and relations from all the metadata in the first line of the source material.
  
 ```json
     "metadata": {
@@ -36,7 +36,7 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
 
 - Run LightRAG python scripts, and LightRAG Server in a debuggers to get a feeling for how the logic flows?
 
-- Get more familiar with the LightRAG knowledge graph manipulation bash commands.
+- Get more familiar with the LightRAG knowledge graph manipulation python commands.
 - Get more familiar with the LightRAG Server knowledge graph manipulation API commands. 
 
 - See how to delete video transcripts from the index in case it is misrepresentative or if it is a duplicate.  
