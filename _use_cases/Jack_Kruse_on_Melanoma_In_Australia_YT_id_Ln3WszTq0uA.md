@@ -124,7 +124,7 @@ In summary, the misunderstanding lies in the belief that avoiding sun exposure i
 [5411.58 > 5417.98] (Jack) And I said, I now know that"
 
 
-like that's
+[like that's](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=4125s)
 [4125.7 > 4126.7] (Jack) kind of interesting.
 [4126.7 > 4127.98] (Jack) Why is it doing that?
 [4127.98 > 4133.42] (Jack) It turned out when I distilled it all down that every place in the eye that has melanin
