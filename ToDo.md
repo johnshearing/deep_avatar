@@ -7,10 +7,14 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
 - Fix bug in python script for global and mixed queries against LightRAG index  
 
 - Report timestamps on videos in a more usable way
-  -  This part is already done: Generate links with each answer so that users can watch the videos from which the responses have been derived.  
-  -  Still need to accomplish this: Links must include the timestamp so that the videos are queued up to the correct moment where the answers are sourced.
-    -  The timestamps are already embedded in the index by [merged??.py](https://github.com/johnshearing/scrape_yt_mk_transcripts)
-    -  We just need to pull the information out when serving the answers.
+  -  Done: Generate links with each answer so that users can watch the videos from which the responses have been derived.  
+  -  ToDo: Links must include the timestamp so that the videos are queued up to the correct moment where the answers are sourced.
+    -  The timestamps are already embedded in the indexed chunks by [merged??.py](https://github.com/johnshearing/scrape_yt_mk_transcripts)
+      -  We might consider chunking by timestamped segmements.
+      -  We could add the timestamp to the metadata of the chunk the way we do with document id, chunk id, and file id.
+        - The above two options will require changing LightRAG library code.
+    -  We could just pull the timestamps out when serving the answers.
+       - This could be accomplished by changing the LLM prompt or by changing the LightRAG library code.  
  
 - Improve the way LightRAG Server cites source material.
   - How can we get even more accurate sources in the output?  
