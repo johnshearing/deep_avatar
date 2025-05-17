@@ -125,13 +125,13 @@ async def main():
             "Please use only the provided text when forming your answer."
         )       
          
-        for mode in ["naive", "local", "global", "hybrid", "mix"]:
+        for mode in ["mix"]: # "naive", "local", "global", "hybrid", 
             print(f"\n=====================")
             print(f"Query mode: {mode}")
             print(f"=====================")
             response = await rag.aquery(
                 query,
-                param=QueryParam(mode=mode, top_k=50)
+                param=QueryParam(mode=mode, top_k=50, only_need_context=True)
             )
             print(response)
     except Exception as e:
