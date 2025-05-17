@@ -265,11 +265,95 @@ Certainly! Here's your JSON converted to plain text with all `\n` rendered as ac
 
 ---
 
-{"id": "3", "content": "68] (Jack) He says, well, look, I got this patient I can't do anything with.\n[3426.68 > 3433.32] (Jack) They've got esophageal, I mean, eosinophilic esophagitis, and Max, you know that a neurosurgeon\n[3433.32 > 3436.32] (Jack) would never take care of that in conventional medicine.\n[3436.32 > 3439.64] (Jack) No, I know.\n[3439.64 > 3440.64] (Jack) Guess what?\n[3440.64 > 3442.84] (Jack) He sent me, he was a gastroenterologist.\n[3442.84 > 3447.42] (Jack) He sent me that patient, and I fixed that patient in four to six weeks.\n[3447.42 > 3451.76] (Jack) He didn't tell me this, but he actually had the same problem.\n[3451.76 > 3457.08] (Jack) I think he was not being altruistic when he sent me that patient because he had been all\n[3457.08 > 3458.08] (Jack) over the world.\n[3458.08 > 3463.48] (Jack) He went to the Mayo Clinic everywhere else, and he was never able to knock this off.\n[3463.48 > 3467.6] (Jack) When I fixed his patient, he called me up and said, what do I need to do?\n[3467.6 > 3470.28] (Jack) I said, well, just follow this leptin prescription.\n[3470.28 > 3475.12] (Jack) I said, go see the sun every day, see the sunrise, get as much sun as you can, but you\n[3475.12 > 3476.96] (Jack) need to use cold.\n[3476.96 > 3479.28] (Jack) You need to start taking cold baths.\n[3479.28 > 3480.28] (Jack) He said, why?\n[3480.28 > 3484.6] (Jack) I said, look, it's not important why, but this is what I'm going to tell you.\n[3484.6 > 3489.9] (Jack) Mammals figured out after they came out under the ground that if they get in cold environments,\n[3489.9 > 3495.28] (Jack) they can make stronger UV light from their own tissues than even the sun provides.\n[3495.28 > 3498.4] (Jack) This is what fueled all their evolutionary growth.\n[3498.4 > 3499.96] (Jack) He goes, what?\n[3499.96 > 3504.44] (Jack) I said, yeah, the process is called wideband semiconductor.\n[3504.44 > 3512.08] (Jack) Basically you take visible light from 250 to 760, you use non-linear optics, and the\n[3512.08 > 3514.76] (Jack) things that you use are wideband semiconductors.\n[3514.76 > 3519.92] (Jack) I said, the wideband semiconductors that you know in biology are called hemoglobin, chlorophyll,\n[3519.92 > 3521.24] (Jack) and melanin.\n[3521.24 > 3524.56] (Jack) It turns out for us, the chlorophyll is not a big part of the story.\n[3524.56 > 3528.24] (Jack) That's the plant side of the story, and food's part of the story.\n[3528.24 > 3531.4] (Jack) Hemoglobin and melanin, dude, that's the ticket.\n[3531.4 > 3537.88] (Jack) I said, you need to maximize oxygen delivery, nitric oxide delivery to melanin to renovate\n[3537.88 > 3544.48] (Jack) it and to create massive amounts of melanin where your body plan put it in.\n[3544.48 > 3551.24] (Jack) I said, I guarantee if you have eosinophilic esophagitis that the problem is going to be\n[3551.24 > 3555.16] (Jack) in the visceral level, at the hypothalamic level in your brain.\n[3555.16 > 3557.22] (Jack) I can even tell you the tract it's going to be in.\n[3557.22 > 3559.38] (Jack) I can tell you where the melanin is missing.\n[3559.38 > 3565.86] (Jack) I said, so you need to use UVA light and infrared A light through your eye predominantly, and\n[3565.86 > 3567.74] (Jack) I think it'll go away.\n[3567.74 > 3569.74] (Jack) So that's what he did.\n[3569.74 > 3571.22] (Jack) And guess what?\n[3571.22 > 3577.94] (Jack) Six weeks it was gone after having this for almost 15 years.\n[3577.94 > 3586.82] (Jack) So I gave you how I became a decentralized physician.\n[3587.42 > 3594.", "file_path": "Ln3WszTq0uA.txt"}, 
+68] (Jack) He says, well, look, I got this patient I can't do anything with.
+\[3426.68 > 3433.32] (Jack) They've got esophageal, I mean, eosinophilic esophagitis, and Max, you know that a neurosurgeon
+\[3433.32 > 3436.32] (Jack) would never take care of that in conventional medicine.
+\[3436.32 > 3439.64] (Jack) No, I know.
+\[3439.64 > 3440.64] (Jack) Guess what?
+\[3440.64 > 3442.84] (Jack) He sent me, he was a gastroenterologist.
+\[3442.84 > 3447.42] (Jack) He sent me that patient, and I fixed that patient in four to six weeks.
+\[3447.42 > 3451.76] (Jack) He didn't tell me this, but he actually had the same problem.
+\[3451.76 > 3457.08] (Jack) I think he was not being altruistic when he sent me that patient because he had been all
+\[3457.08 > 3458.08] (Jack) over the world.
+\[3458.08 > 3463.48] (Jack) He went to the Mayo Clinic everywhere else, and he was never able to knock this off.
+\[3463.48 > 3467.6] (Jack) When I fixed his patient, he called me up and said, what do I need to do?
+\[3467.6 > 3470.28] (Jack) I said, well, just follow this leptin prescription.
+\[3470.28 > 3475.12] (Jack) I said, go see the sun every day, see the sunrise, get as much sun as you can, but you
+\[3475.12 > 3476.96] (Jack) need to use cold.
+\[3476.96 > 3479.28] (Jack) You need to start taking cold baths.
+\[3479.28 > 3480.28] (Jack) He said, why?
+\[3480.28 > 3484.6] (Jack) I said, look, it's not important why, but this is what I'm going to tell you.
+\[3484.6 > 3489.9] (Jack) Mammals figured out after they came out under the ground that if they get in cold environments,
+\[3489.9 > 3495.28] (Jack) they can make stronger UV light from their own tissues than even the sun provides.
+\[3495.28 > 3498.4] (Jack) This is what fueled all their evolutionary growth.
+\[3498.4 > 3499.96] (Jack) He goes, what?
+\[3499.96 > 3504.44] (Jack) I said, yeah, the process is called wideband semiconductor.
+\[3504.44 > 3512.08] (Jack) Basically you take visible light from 250 to 760, you use non-linear optics, and the
+\[3512.08 > 3514.76] (Jack) things that you use are wideband semiconductors.
+\[3514.76 > 3519.92] (Jack) I said, the wideband semiconductors that you know in biology are called hemoglobin, chlorophyll,
+\[3519.92 > 3521.24] (Jack) and melanin.
+\[3521.24 > 3524.56] (Jack) It turns out for us, the chlorophyll is not a big part of the story.
+\[3524.56 > 3528.24] (Jack) That's the plant side of the story, and food's part of the story.
+\[3528.24 > 3531.4] (Jack) Hemoglobin and melanin, dude, that's the ticket.
+\[3531.4 > 3537.88] (Jack) I said, you need to maximize oxygen delivery, nitric oxide delivery to melanin to renovate
+\[3537.88 > 3544.48] (Jack) it and to create massive amounts of melanin where your body plan put it in.
+\[3544.48 > 3551.24] (Jack) I said, I guarantee if you have eosinophilic esophagitis that the problem is going to be
+\[3551.24 > 3555.16] (Jack) in the visceral level, at the hypothalamic level in your brain.
+\[3555.16 > 3557.22] (Jack) I can even tell you the tract it's going to be in.
+\[3557.22 > 3559.38] (Jack) I can tell you where the melanin is missing.
+\[3559.38 > 3565.86] (Jack) I said, so you need to use UVA light and infrared A light through your eye predominantly, and
+\[3565.86 > 3567.74] (Jack) I think it'll go away.
+\[3567.74 > 3569.74] (Jack) So that's what he did.
+\[3569.74 > 3571.22] (Jack) And guess what?
+\[3571.22 > 3577.94] (Jack) Six weeks it was gone after having this for almost 15 years.
+\[3577.94 > 3586.82] (Jack) So I gave you how I became a decentralized physician.
+\[3587.42 > 3594.
 
 ---
 
-{"id": "4", "content": "medical school that I learned about iron and hemoglobin.\n[3259.18 > 3262.34] (Jack) And that iron and hemoglobin comes in two states.\n[3262.34 > 3263.82] (Jack) One is ferric, the other one's ferrous.\n[3263.82 > 3266.34] (Jack) One is plus two, the other one's plus three.\n[3266.34 > 3273.38] (Jack) When hemoglobin is plus three, it releases oxygen and nitric oxide at terminal electronic\n[3273.38 > 3274.38] (Jack) receptors and mitochondria.\n[3274.38 > 3277.82] (Jack) And I'm going, somehow I think this is going to be important.\n[3277.82 > 3284.42] (Jack) Turns out it's really important for POMC because you have to have massive amounts of\n[3284.42 > 3290.98] (Jack) oxygen around to renovate melanin to make alpha MSH, beta MSH, and gamma MSH.\n[3290.98 > 3298.66] (Jack) So Max, the story that I'm weaving for you right now is how did I come to realize that\n[3298.66 > 3300.26] (Jack) light was really important?\n[3300.26 > 3305.94] (Jack) I knew that light was tied to POMC because only UV light stimulates it.\n[3305.94 > 3312.1] (Jack) I knew that it was a semiconductor protein, and it turned out it made semiconductor proteins\n[3312.1 > 3314.7] (Jack) that responded to different frequencies of color.\n[3314.7 > 3317.74] (Jack) For example, ACTH responds more to blue light.\n[3317.74 > 3324.58] (Jack) And it turns out the alpha MSH, all of them, beta and gamma, respond to really big time\n[3324.58 > 3325.58] (Jack) UV light.\n[3325.58 > 3331.5] (Jack) In fact, UV light that is stronger than the spectrum of the sun.\n[3331.5 > 3340.06] (Jack) So I went back to that Robin Sharma book, and I thought about what Robin said in that\n[3340.06 > 3349.26] (Jack) book about Julian Battle and how his life changed so rapidly and so fast, and I started\n[3349.26 > 3350.26] (Jack) to put two and two together.\n[3350.26 > 3357.42] (Jack) I said, is this because he was actually able to reestablish POMC in his body to sculpt\n[3357.42 > 3359.1] (Jack) himself?\n[3359.1 > 3363.58] (Jack) That's actually what I took out of the book, not what the lady wanted me to believe.\n[3363.58 > 3369.58] (Jack) She wanted me to go after Amgen and how they shelved the leptin trials.\n[3369.58 > 3377.36] (Jack) I took it a totally different way, and I kind of figured out pretty quickly that this story\n[3377.36 > 3380.02] (Jack) of POMC is the story of all of us.\n[3380.02 > 3384.22] (Jack) It's the story of what's going on on the surface of our planet, in our clinics.\n[3384.22 > 3387.16] (Jack) It's the reason why everybody's getting sick.\n[3387.16 > 3392.82] (Jack) Where disease functionally is linked to if you can't make enough POMC in that tissue,\n[3392.82 > 3398.76] (Jack) you're going to have a problem, and that problem is going to manifest in your mitochondria.\n[3398.76 > 3405.04] (Jack) I began to realize very, very quickly how it all worked, and I started working this\n[3405.04 > 3406.04] (Jack) out.\n[3406.04 > 3410.28] (Jack) The first person I ever did the leptin prescription in beside myself was my son.\n[3410.28 > 3411.28] (Jack) I fixed him.\n[3411.28 > 3413.68] (Jack) Then I did it with my nephew, fixed him.\n[3413.68 > 3421.36] (Jack) I had one of my gastroenterologists who was amazed at how much weight I had lost so fast,\n[3421.36 > 3423.44] (Jack) and I told him, I said, Don, I think I found something.\n[3423.44 > 3426.68] (Jack) He says, well, look, I got this patient I can't do anything with.\n[3426.68 > 3433.32] (Jack) They've got esophageal, I mean, eosinophilic esophagitis, and Max, you know that a neurosurgeon\n[3433.32 > 3436.32] (Jack) would never take care of that in conventional medicine.\n[3436.32 > 3439.", "file_path": "Ln3WszTq0uA.txt"}, 
+medical school that I learned about iron and hemoglobin.
+\[3259.18 > 3262.34] (Jack) And that iron and hemoglobin comes in two states.
+\[3262.34 > 3263.82] (Jack) One is ferric, the other one's ferrous.
+\[3263.82 > 3266.34] (Jack) One is plus two, the other one's plus three.
+\[3266.34 > 3273.38] (Jack) When hemoglobin is plus three, it releases oxygen and nitric oxide at terminal electronic
+\[3273.38 > 3274.38] (Jack) receptors and mitochondria.
+\[3274.38 > 3277.82] (Jack) And I'm going, somehow I think this is going to be important.
+\[3277.82 > 3284.42] (Jack) Turns out it's really important for POMC because you have to have massive amounts of
+\[3284.42 > 3290.98] (Jack) oxygen around to renovate melanin to make alpha MSH, beta MSH, and gamma MSH.
+\[3290.98 > 3298.66] (Jack) So Max, the story that I'm weaving for you right now is how did I come to realize that
+\[3298.66 > 3300.26] (Jack) light was really important?
+\[3300.26 > 3305.94] (Jack) I knew that light was tied to POMC because only UV light stimulates it.
+\[3305.94 > 3312.1] (Jack) I knew that it was a semiconductor protein, and it turned out it made semiconductor proteins
+\[3312.1 > 3314.7] (Jack) that responded to different frequencies of color.
+\[3314.7 > 3317.74] (Jack) For example, ACTH responds more to blue light.
+\[3317.74 > 3324.58] (Jack) And it turns out the alpha MSH, all of them, beta and gamma, respond to really big time
+\[3324.58 > 3325.58] (Jack) UV light.
+\[3325.58 > 3331.5] (Jack) In fact, UV light that is stronger than the spectrum of the sun.
+\[3331.5 > 3340.06] (Jack) So I went back to that Robin Sharma book, and I thought about what Robin said in that
+\[3340.06 > 3349.26] (Jack) book about Julian Battle and how his life changed so rapidly and so fast, and I started
+\[3349.26 > 3350.26] (Jack) to put two and two together.
+\[3350.26 > 3357.42] (Jack) I said, is this because he was actually able to reestablish POMC in his body to sculpt
+\[3357.42 > 3359.1] (Jack) himself?
+\[3359.1 > 3363.58] (Jack) That's actually what I took out of the book, not what the lady wanted me to believe.
+\[3363.58 > 3369.58] (Jack) She wanted me to go after Amgen and how they shelved the leptin trials.
+\[3369.58 > 3377.36] (Jack) I took it a totally different way, and I kind of figured out pretty quickly that this story
+\[3377.36 > 3380.02] (Jack) of POMC is the story of all of us.
+\[3380.02 > 3384.22] (Jack) It's the story of what's going on on the surface of our planet, in our clinics.
+\[3384.22 > 3387.16] (Jack) It's the reason why everybody's getting sick.
+\[3387.16 > 3392.82] (Jack) Where disease functionally is linked to if you can't make enough POMC in that tissue,
+\[3392.82 > 3398.76] (Jack) you're going to have a problem, and that problem is going to manifest in your mitochondria.
+\[3398.76 > 3405.04] (Jack) I began to realize very, very quickly how it all worked, and I started working this
+\[3405.04 > 3406.04] (Jack) out.
+\[3406.04 > 3410.28] (Jack) The first person I ever did the leptin prescription in beside myself was my son.
+\[3410.28 > 3411.28] (Jack) I fixed him.
+\[3411.28 > 3413.68] (Jack) Then I did it with my nephew, fixed him.
+\[3413.68 > 3421.36] (Jack) I had one of my gastroenterologists who was amazed at how much weight I had lost so fast,
+\[3421.36 > 3423.44] (Jack) and I told him, I said, Don, I think I found something.
+\[3423.44 > 3426.68] (Jack) He says, well, look, I got this patient I can't do anything with.
+\[3426.68 > 3433.32] (Jack) They've got esophageal, I mean, eosinophilic esophagitis, and Max, you know that a neurosurgeon
+\[3433.32 > 3436.32] (Jack) would never take care of that in conventional medicine.
+\[3436.32 > 3439.
+
 
 
 
