@@ -9,7 +9,7 @@ from lightrag.utils import logger, set_verbose_debug, EmbeddingFunc
 from llama_index.embeddings.openai import OpenAIEmbedding
 
 # Configuration
-WORKING_DIR = "_charles_work_dir"
+WORKING_DIR = "_jack_work_dir"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
@@ -114,11 +114,14 @@ async def main():
         "The Mod-Linx conveyor is stopping and starting by itself. What should I do? , "
         "Tell me everything you can about wire 110? , "
         "What is the likely cause of an overheating motor?, "
+
+
+
         '''
 
         query = (
             "Using only the text to answer, "
-            "According to the document provided, How is the weather in Colorado?, "
+            "According to Jack, why should people expose themselves to red light? "
             "Please use only the provided text when forming your answer."
         )       
          
@@ -128,7 +131,7 @@ async def main():
             print(f"=====================")
             response = await rag.aquery(
                 query,
-                param=QueryParam(mode=mode, top_k=50, ids="doc-c933966c02ad9fa200190ef53f843b0e")
+                param=QueryParam(mode=mode, top_k=50)
             )
             print(response)
     except Exception as e:
