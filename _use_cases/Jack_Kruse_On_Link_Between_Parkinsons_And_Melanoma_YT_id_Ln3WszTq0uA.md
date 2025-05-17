@@ -126,78 +126,76 @@ Without this initial exposure to red light, the skin becomes unable to respond a
 
 ---
 
-[5396.06 > 5402.38] (Jack) [a long time. I'm saying, what if that's not true?](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=5396s) What if melanin was able to do this way faster
-[5402.38 > 5410.62] (Jack) than we think? So how did I figure this out? I went to an African American patient who had vitiligo.
-[5411.58 > 5417.98] (Jack) And I said, I now know that I can repigment your skin. I just need to know how fast it can happen.
-[5417.98 > 5423.9] (Jack) I said, would you agree to let me try to repigment your skin? And I went to one of my
-[5423.9 > 5429.5] (Jack) dermatology colleagues and I said, send me a patient that you're having a lot of trouble with.
-[5430.46 > 5435.9] (Jack) And she did. And if you follow my work, any of my blogs, there's this picture of this lady that
-[5435.9 > 5443.1] (Jack) I always show. And she was African American overweight woman who had gray hair. Her hair
-[5443.1 > 5448.94] (Jack) was shaved, but she had really bad facial vitiligo. In six weeks, I fixed her.
-[5448.94 > 5453.66] (Max) And vitiligo for the listeners, loss of melanin, loss of pigmentation in the skin.
-[5454.46 > 5459.5] (Jack) Just think about Michael Jackson. That's the easiest way to think about it. It's basically
-[5459.5 > 5465.74] (Jack) the story of Michael Jackson. And in this lady's history, I found that she used sunscreen all
-[5465.74 > 5472.14] (Jack) the time. She always used sunglasses, hardly ever went out with her surface exposed. And the crazy
-[5472.14 > 5478.86] (Jack) thing is when I used the UV light to bring the melanocytes back in, she also had some metabolic
-[5478.86 > 5484.86] (Jack) issues and those metabolic issues were made worse. And I thought, oh, this is unusual. And then I
-[5484.86 > 5489.5] (Jack) thought about it. I said, no, it's not. I said, now I think I really figured it out. She was actually
-[5489.5 > 5495.5] (Jack) pulling the melanocytes from inside her head out to the skin where the UV light was. And I said,
-[5495.5 > 5500.22] (Jack) that means there's neuroplasticity between the neuroactiderm. I said, and the reason that she
-[5500.22 > 5506.46] (Jack) got metabolically worse is because she didn't have enough palm seed on the inside. So I knew
-[5506.46 > 5512.14] (Jack) immediately that this could happen really fast. So I told her implicitly, I said, look, now that
-[5512.14 > 5517.02] (Jack) we've repigmented your skin, if you continue to stay in the sun like you've done, and obviously
-[5517.02 > 5521.66] (Jack) I had buy-in now because the number one problem she went to the dermatologist was she didn't like
-[5521.66 > 5525.74] (Jack) the way her face looked. I said, look, I think I can make your diabetes and your obesity go away
-[5525.74 > 5530.78] (Jack) if you continue to stay in the sun and we can rebuild the palm seed in your hypothalamus through
-[5530.78 > 5537.66] (Jack) this leptin-melanocortin pathway. Well, guess what? She wound up losing 80 pounds and her type 2
-[5537.66 > 5544.14] (Jack) diabetes went completely away. The other crazy part of the story, I didn't anticipate this,
-[5544.14 > 5549.58] (Jack) I told you she had gray hair on the picture that I always show. Her hair got melanin back in it,
-[5549.58 > 5557.02] (Jack) so it was dark. So I realized right away that the things that we learned in neurosurgery,
-[5557.02 > 5561.58] (Jack) at least I learned, you're younger than me, I learned that neuroactiderm didn't have a lot
-[5561.58 > 5567.74] (Jack) of neuroplasticity. It turned out that it does. We now know definitively in the last 10 or 15 years
-[5567.74 > 5574.14] (Jack) that the adult brain is way more plastic than we think. But the thing that I found out is that
-[5574.14 > 5582.62] (Jack) melanin is super-duper inducible with UV light. That answered the question for me that I had
+[5396.06 > 5402.38] (Jack) [a long time. I'm saying, what if that's not true?](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=5396s) What if melanin was able to do this way faster  
+[5402.38 > 5410.62] (Jack) than we think? So how did I figure this out? I went to an African American patient who had vitiligo.  
+[5411.58 > 5417.98] (Jack) And I said, I now know that I can repigment your skin. I just need to know how fast it can happen.  
+[5417.98 > 5423.9] (Jack) I said, would you agree to let me try to repigment your skin? And I went to one of my  
+[5423.9 > 5429.5] (Jack) dermatology colleagues and I said, send me a patient that you're having a lot of trouble with.  
+[5430.46 > 5435.9] (Jack) And she did. And if you follow my work, any of my blogs, there's this picture of this lady that  
+[5435.9 > 5443.1] (Jack) I always show. And she was African American overweight woman who had gray hair. Her hair  
+[5443.1 > 5448.94] (Jack) was shaved, but she had really bad facial vitiligo. In six weeks, I fixed her.  
+[5448.94 > 5453.66] (Max) And vitiligo for the listeners, loss of melanin, loss of pigmentation in the skin.  
+[5454.46 > 5459.5] (Jack) Just think about Michael Jackson. That's the easiest way to think about it. It's basically  
+[5459.5 > 5465.74] (Jack) the story of Michael Jackson. And in this lady's history, I found that she used sunscreen all  
+[5465.74 > 5472.14] (Jack) the time. She always used sunglasses, hardly ever went out with her surface exposed. And the crazy  
+[5472.14 > 5478.86] (Jack) thing is when I used the UV light to bring the melanocytes back in, she also had some metabolic  
+[5478.86 > 5484.86] (Jack) issues and those metabolic issues were made worse. And I thought, oh, this is unusual. And then I  
+[5484.86 > 5489.5] (Jack) thought about it. I said, no, it's not. I said, now I think I really figured it out. She was actually  
+[5489.5 > 5495.5] (Jack) pulling the melanocytes from inside her head out to the skin where the UV light was. And I said,  
+[5495.5 > 5500.22] (Jack) that means there's neuroplasticity between the neuroactiderm. I said, and the reason that she  
+[5500.22 > 5506.46] (Jack) got metabolically worse is because she didn't have enough palm seed on the inside. So I knew  
+[5506.46 > 5512.14] (Jack) immediately that this could happen really fast. So I told her implicitly, I said, look, now that  
+[5512.14 > 5517.02] (Jack) we've repigmented your skin, if you continue to stay in the sun like you've done, and obviously  
+[5517.02 > 5521.66] (Jack) I had buy-in now because the number one problem she went to the dermatologist was she didn't like  
+[5521.66 > 5525.74] (Jack) the way her face looked. I said, look, I think I can make your diabetes and your obesity go away  
+[5525.74 > 5530.78] (Jack) if you continue to stay in the sun and we can rebuild the palm seed in your hypothalamus through  
+[5530.78 > 5537.66] (Jack) this leptin-melanocortin pathway. Well, guess what? She wound up losing 80 pounds and her type 2  
+[5537.66 > 5544.14] (Jack) diabetes went completely away. The other crazy part of the story, I didn't anticipate this,  
+[5544.14 > 5549.58] (Jack) I told you she had gray hair on the picture that I always show. Her hair got melanin back in it,  
+[5549.58 > 5557.02] (Jack) so it was dark. So I realized right away that the things that we learned in neurosurgery,  
+[5557.02 > 5561.58] (Jack) at least I learned, you're younger than me, I learned that neuroactiderm didn't have a lot  
+[5561.58 > 5567.74] (Jack) of neuroplasticity. It turned out that it does. We now know definitively in the last 10 or 15 years  
+[5567.74 > 5574.14] (Jack) that the adult brain is way more plastic than we think. But the thing that I found out is that  
+[5574.14 > 5582.62] (Jack) melanin is super-duper inducible with UV light. That answered the question for me that I had  
 [5582.62 > 5589.82] (Jack) with the mammals. I said, that means as soon as they came out when the dinosaurs were dead,
-[5590.38
 
 ---
 
-[8317.54 > 8323.66] (Jack) [sidestep it because they don't understand what I explained to you](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=8317s) in the first two and a half
-[8323.66 > 8331.02] (Jack) hours of this podcast. POMC is the key. What melanin does for you, it allows you to absorb
-[8331.02 > 8339.26] (Jack) and use the UV light properly in your system. You putting chemicals or things on you that block
-[8339.26 > 8345.42] (Jack) that system guarantees you're going to get it. And here's the other irony. When you live a blue
-[8345.42 > 8351.66] (Jack) light life because technology brings us inside and in front of a screen, guess what actually
-[8352.7 > 8360.86] (Jack) stimulates melanocytes most? It's actually blue light. And this is a real problem.
-[8361.42 > 8368.3] (Jack) Soon as you reintroduce UV light in an incorrect fashion, what are you going to stimulate based on
-[8368.3 > 8371.1] (Jack) what we talked about earlier, Max? You're going to stimulate mitosis.
-[8371.34 > 8379.74] (Jack) That's the way the system is screwed up. So the key is, use sun the way mammals are supposed to
-[8379.74 > 8384.78] (Jack) use the sun. And remember, we're not talking about the mammals 65 million years ago. The people that
-[8384.78 > 8390.22] (Jack) live in Australia now are the mammals with the Ferrari engines in their head. Their goal
-[8391.1 > 8398.22] (Jack) with melanoma is not to create an exterior that is atrophic. Because when you do that,
-[8398.94 > 8406.06] (Jack) you're basically causing the melanocytes in your head to migrate to the surface.
-[8406.7 > 8412.78] (Jack) When they migrate to the surface and they see UV light, that's when they undergo mitosis.
-[8413.5 > 8422.38] (Jack) That's effectively what melanoma is. And the key is anything you do to block or make your skin
-[8422.38 > 8431.82] (Jack) atrophic almost guarantees a melanoma diagnosis. That's why it's counterintuitive. Like, wait a
-[8431.82 > 8437.42] (Jack) minute, you're telling me that I need to get an UV light to avoid melanoma. That's precisely what
-[8437.42 > 8443.34] (Jack) the literature shows. And here's the crazy thing, Max, to prove it even further. I'm going to tell
-[8443.34 > 8448.3] (Jack) you something I bet you don't know. I bet you the dermatologists down there don't talk about it.
-[8448.3 > 8453.18] (Jack) Do you know that melanoma carries a worse prognosis in people that have hypothyroidism?
-[8453.82 > 8453.98] (Jack) No.
-[8453.98 > 8455.26] (Jack) You want to know why, Max?
-[8455.26 > 8455.58] (Max) Go on.
-[8456.3 > 8459.66] (Jack) Oh, yeah. Well, you need to look it up. Same thing is true about Parkinson's. And
-[8459.66 > 8465.66] (Jack) I'm going to tell you why. This is a story of Ponsse. The reason why is, remember I told you
-[8465.66 > 8473.02] (Jack) that you make T3 and T4 from the process of phenylalanine going to tyrosine. Tyrosine is what
-[8473.1 > 8480.86] (Jack) forms T3 and T4. If you block that process, remember, tyrosine ACE is what's inhibited
-[8480.86 > 8488.62] (Jack) by sunscreens. So if you turn off your ability to make things from phenylalanine and tyrosine,
-[8488.62 > 8493.66] (Jack) you're effectively turning off the whole mechanism of Ponsse. This is the reason why
-[8493.66 > 8501.58] (Jack) melanoma is much worse in people that have hypothyroidism. And almost everybody that goes
-[8501.58 > 8506.14] (Jack) to see endocrinologists in Australia, I know because I have a lot of Australian members,
-[8507.42 > 8515.18] (Jack) they have this problem. There's tremendous amounts of hypothyroidism. And the number one cause
-[8515.18 > 8520.54] (Jack) in Australia is Hashimoto's, which is an autoimmune version, which now you know the reason why,
-[8520.54 > 8528.94] (Jack) because you're also blocking beta and gamma MSH. That ruins the Th1 and Th2
+[8317.54 > 8323.66] (Jack) [sidestep it because they don't understand what I explained to you](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=8317s) in the first two and a half  
+[8323.66 > 8331.02] (Jack) hours of this podcast. POMC is the key. What melanin does for you, it allows you to absorb  
+[8331.02 > 8339.26] (Jack) and use the UV light properly in your system. You putting chemicals or things on you that block  
+[8339.26 > 8345.42] (Jack) that system guarantees you're going to get it. And here's the other irony. When you live a blue  
+[8345.42 > 8351.66] (Jack) light life because technology brings us inside and in front of a screen, guess what actually  
+[8352.7 > 8360.86] (Jack) stimulates melanocytes most? It's actually blue light. And this is a real problem.  
+[8361.42 > 8368.3] (Jack) Soon as you reintroduce UV light in an incorrect fashion, what are you going to stimulate based on  
+[8368.3 > 8371.1] (Jack) what we talked about earlier, Max? You're going to stimulate mitosis.  
+[8371.34 > 8379.74] (Jack) That's the way the system is screwed up. So the key is, use sun the way mammals are supposed to  
+[8379.74 > 8384.78] (Jack) use the sun. And remember, we're not talking about the mammals 65 million years ago. The people that  
+[8384.78 > 8390.22] (Jack) live in Australia now are the mammals with the Ferrari engines in their head. Their goal  
+[8391.1 > 8398.22] (Jack) with melanoma is not to create an exterior that is atrophic. Because when you do that,  
+[8398.94 > 8406.06] (Jack) you're basically causing the melanocytes in your head to migrate to the surface.  
+[8406.7 > 8412.78] (Jack) When they migrate to the surface and they see UV light, that's when they undergo mitosis.  
+[8413.5 > 8422.38] (Jack) That's effectively what melanoma is. And the key is anything you do to block or make your skin  
+[8422.38 > 8431.82] (Jack) atrophic almost guarantees a melanoma diagnosis. That's why it's counterintuitive. Like, wait a  
+[8431.82 > 8437.42] (Jack) minute, you're telling me that I need to get an UV light to avoid melanoma. That's precisely what  
+[8437.42 > 8443.34] (Jack) the literature shows. And here's the crazy thing, Max, to prove it even further. I'm going to tell  
+[8443.34 > 8448.3] (Jack) you something I bet you don't know. I bet you the dermatologists down there don't talk about it.  
+[8448.3 > 8453.18] (Jack) Do you know that melanoma carries a worse prognosis in people that have hypothyroidism?  
+[8453.82 > 8453.98] (Jack) No.  
+[8453.98 > 8455.26] (Jack) You want to know why, Max?  
+[8455.26 > 8455.58] (Max) Go on.  
+[8456.3 > 8459.66] (Jack) Oh, yeah. Well, you need to look it up. Same thing is true about Parkinson's. And  
+[8459.66 > 8465.66] (Jack) I'm going to tell you why. This is a story of Ponsse. The reason why is, remember I told you  
+[8465.66 > 8473.02] (Jack) that you make T3 and T4 from the process of phenylalanine going to tyrosine. Tyrosine is what  
+[8473.1 > 8480.86] (Jack) forms T3 and T4. If you block that process, remember, tyrosine ACE is what's inhibited  
+[8480.86 > 8488.62] (Jack) by sunscreens. So if you turn off your ability to make things from phenylalanine and tyrosine,  
+[8488.62 > 8493.66] (Jack) you're effectively turning off the whole mechanism of Ponsse. This is the reason why  
+[8493.66 > 8501.58] (Jack) melanoma is much worse in people that have hypothyroidism. And almost everybody that goes  
+[8501.58 > 8506.14] (Jack) to see endocrinologists in Australia, I know because I have a lot of Australian members,  
+[8507.42 > 8515.18] (Jack) they have this problem. There's tremendous amounts of hypothyroidism. And the number one cause  
+[8515.18 > 8520.54] (Jack) in Australia is Hashimoto's, which is an autoimmune version, which now you know the reason why,  
+[8520.54 > 8528.94] (Jack) because you're also blocking beta and gamma MSH. That ruins the Th1 and Th2  
 [8529.02 > 8535.66] (Jack) immunocontrols, both cell mediated and humoral immunity. When you see this right in front of
-[8535.66 >
 
 ---
 
