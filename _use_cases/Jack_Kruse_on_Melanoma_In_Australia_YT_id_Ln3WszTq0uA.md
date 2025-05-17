@@ -260,5 +260,5 @@ File path: Ln3WszTq0uA.txt
 [5991.58 > 5999.58] (Max) of light. And what Jack's told you and explained is that not only are we adapted to receiving  
 [5999.58 > 6006.14] (Max) external light sources through our eyes and our central retinal pathways and how that  
 
-### All of the responses and source data in this report was gathered automatically by Deep Avatar [from the video](https://www.youtube.com/watch?v=Ln3WszTq0uA).  
+### All of the answers and source data in this report were gathered automatically by Deep Avatar [from the video](https://www.youtube.com/watch?v=Ln3WszTq0uA).  
 Some minor formatting was done manually but all of that will be automated shortly.  
