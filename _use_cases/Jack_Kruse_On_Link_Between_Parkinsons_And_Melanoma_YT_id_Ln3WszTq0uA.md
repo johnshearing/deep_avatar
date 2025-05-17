@@ -345,7 +345,8 @@ Without this initial exposure to red light, the skin becomes unable to respond a
 [3426.68 > 3433.32] (Jack) They've got esophageal, I mean, eosinophilic esophagitis, and Max, you know that a neurosurgeon  
 [3433.32 > 3436.32] (Jack) would never take care of that in conventional medicine.  
 
-
+### All of the answers and source data in this report were gathered automatically by Deep Avatar [from the video](https://www.youtube.com/watch?v=Ln3WszTq0uA).  
+Some minor formatting was done manually but all of that will be automated shortly too.  
 
 
 
