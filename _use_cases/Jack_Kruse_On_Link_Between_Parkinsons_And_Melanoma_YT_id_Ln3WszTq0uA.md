@@ -246,7 +246,7 @@ Certainly! Here's your JSON converted to plain text with all `\n` rendered as ac
 
 ---
 
-[2535.36 > 2538.12] (Jack) So that's one thing.
+[2535.36 > 2538.12] (Jack) [So that's one thing.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=2535s)
 [2538.12 > 2545.72] (Jack) Then you make another, you make another opioid, it's called metankephalin.
 [2545.72 > 2551.92] (Jack) Also from this, metankephalin is also an opioid that works on the endocabinoid system.
 [2551.92 > 2557.84] (Jack) Most of you probably know that that's related to THC and marijuana, but it's highly important
@@ -255,7 +255,8 @@ Certainly! Here's your JSON converted to plain text with all `\n` rendered as ac
 [2569.72 > 2574.36] (Jack) conditions and Max, I'm sure you can tell your own audience that when you're in medical
 [2574.36 > 2578.96] (Jack) school and they teach you about MS, they never have an answer for what causes it.
 [2578.96 > 2583.16] (Jack) The only thing they know is that when you get closer to the equator, it goes away, right?
-[2583.16 > 2585.16] (SPEAKER_01) Yeah, correct.\n[2585.16 > 2586.16] (Jack) Right.
+[2583.16 > 2585.16] (SPEAKER_01) Yeah, correct.
+[2585.16 > 2586.16] (Jack) Right.
 [2586.16 > 2591.92] (Jack) So your job as a doctor is to treat all these people with this condition and try to figure
 [2591.92 > 2595.84] (Jack) out how in the hell it happens and you come up with all these big pharma solutions that
 [2595.84 > 2597.6] (Jack) are worth nothing.
@@ -265,7 +266,7 @@ Certainly! Here's your JSON converted to plain text with all `\n` rendered as ac
 
 ---
 
-68] (Jack) He says, well, look, I got this patient I can't do anything with.
+\[3420.0 > 3426.68] (Jack) [He says, well, look, I got this patient I can't do anything with.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=3420s)
 \[3426.68 > 3433.32] (Jack) They've got esophageal, I mean, eosinophilic esophagitis, and Max, you know that a neurosurgeon
 \[3433.32 > 3436.32] (Jack) would never take care of that in conventional medicine.
 \[3436.32 > 3439.64] (Jack) No, I know.
@@ -311,7 +312,7 @@ Certainly! Here's your JSON converted to plain text with all `\n` rendered as ac
 
 ---
 
-medical school that I learned about iron and hemoglobin.
+\[3253.18 > 3259.18] (Jack) [medical school that I learned about iron and hemoglobin.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=3253s)
 \[3259.18 > 3262.34] (Jack) And that iron and hemoglobin comes in two states.
 \[3262.34 > 3263.82] (Jack) One is ferric, the other one's ferrous.
 \[3263.82 > 3266.34] (Jack) One is plus two, the other one's plus three.
