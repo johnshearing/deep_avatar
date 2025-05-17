@@ -261,4 +261,4 @@ File path: Ln3WszTq0uA.txt
 [5999.58 > 6006.14] (Max) external light sources through our eyes and our central retinal pathways and how that  
 
 ### All of the answers and source data in this report were gathered automatically by Deep Avatar [from the video](https://www.youtube.com/watch?v=Ln3WszTq0uA).  
-Some minor formatting was done manually but all of that will be automated shortly.  
+Some minor formatting was done manually but all of that will be automated shortly too.  
