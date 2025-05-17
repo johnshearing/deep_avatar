@@ -257,49 +257,49 @@ Without this initial exposure to red light, the skin becomes unable to respond a
 
 ---
 
-\[3420.0 > 3426.68] (Jack) [He says, well, look, I got this patient I can't do anything with.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=3420s)
-\[3426.68 > 3433.32] (Jack) They've got esophageal, I mean, eosinophilic esophagitis, and Max, you know that a neurosurgeon
-\[3433.32 > 3436.32] (Jack) would never take care of that in conventional medicine.
-\[3436.32 > 3439.64] (Jack) No, I know.
-\[3439.64 > 3440.64] (Jack) Guess what?
-\[3440.64 > 3442.84] (Jack) He sent me, he was a gastroenterologist.
-\[3442.84 > 3447.42] (Jack) He sent me that patient, and I fixed that patient in four to six weeks.
-\[3447.42 > 3451.76] (Jack) He didn't tell me this, but he actually had the same problem.
-\[3451.76 > 3457.08] (Jack) I think he was not being altruistic when he sent me that patient because he had been all
-\[3457.08 > 3458.08] (Jack) over the world.
-\[3458.08 > 3463.48] (Jack) He went to the Mayo Clinic everywhere else, and he was never able to knock this off.
-\[3463.48 > 3467.6] (Jack) When I fixed his patient, he called me up and said, what do I need to do?
-\[3467.6 > 3470.28] (Jack) I said, well, just follow this leptin prescription.
-\[3470.28 > 3475.12] (Jack) I said, go see the sun every day, see the sunrise, get as much sun as you can, but you
-\[3475.12 > 3476.96] (Jack) need to use cold.
-\[3476.96 > 3479.28] (Jack) You need to start taking cold baths.
-\[3479.28 > 3480.28] (Jack) He said, why?
-\[3480.28 > 3484.6] (Jack) I said, look, it's not important why, but this is what I'm going to tell you.
-\[3484.6 > 3489.9] (Jack) Mammals figured out after they came out under the ground that if they get in cold environments,
-\[3489.9 > 3495.28] (Jack) they can make stronger UV light from their own tissues than even the sun provides.
-\[3495.28 > 3498.4] (Jack) This is what fueled all their evolutionary growth.
-\[3498.4 > 3499.96] (Jack) He goes, what?
-\[3499.96 > 3504.44] (Jack) I said, yeah, the process is called wideband semiconductor.
-\[3504.44 > 3512.08] (Jack) Basically you take visible light from 250 to 760, you use non-linear optics, and the
-\[3512.08 > 3514.76] (Jack) things that you use are wideband semiconductors.
-\[3514.76 > 3519.92] (Jack) I said, the wideband semiconductors that you know in biology are called hemoglobin, chlorophyll,
-\[3519.92 > 3521.24] (Jack) and melanin.
-\[3521.24 > 3524.56] (Jack) It turns out for us, the chlorophyll is not a big part of the story.
-\[3524.56 > 3528.24] (Jack) That's the plant side of the story, and food's part of the story.
-\[3528.24 > 3531.4] (Jack) Hemoglobin and melanin, dude, that's the ticket.
-\[3531.4 > 3537.88] (Jack) I said, you need to maximize oxygen delivery, nitric oxide delivery to melanin to renovate
-\[3537.88 > 3544.48] (Jack) it and to create massive amounts of melanin where your body plan put it in.
-\[3544.48 > 3551.24] (Jack) I said, I guarantee if you have eosinophilic esophagitis that the problem is going to be
-\[3551.24 > 3555.16] (Jack) in the visceral level, at the hypothalamic level in your brain.
-\[3555.16 > 3557.22] (Jack) I can even tell you the tract it's going to be in.
-\[3557.22 > 3559.38] (Jack) I can tell you where the melanin is missing.
-\[3559.38 > 3565.86] (Jack) I said, so you need to use UVA light and infrared A light through your eye predominantly, and
-\[3565.86 > 3567.74] (Jack) I think it'll go away.
-\[3567.74 > 3569.74] (Jack) So that's what he did.
-\[3569.74 > 3571.22] (Jack) And guess what?
-\[3571.22 > 3577.94] (Jack) Six weeks it was gone after having this for almost 15 years.
-\[3577.94 > 3586.82] (Jack) So I gave you how I became a decentralized physician.
-\[3587.42 > 3594.
+[3420.0 > 3426.68] (Jack) [He says, well, look, I got this patient I can't do anything with.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=3420s)  
+[3426.68 > 3433.32] (Jack) They've got esophageal, I mean, eosinophilic esophagitis, and Max, you know that a neurosurgeon  
+[3433.32 > 3436.32] (Jack) would never take care of that in conventional medicine.  
+[3436.32 > 3439.64] (Jack) No, I know.  
+[3439.64 > 3440.64] (Jack) Guess what?  
+[3440.64 > 3442.84] (Jack) He sent me, he was a gastroenterologist.  
+[3442.84 > 3447.42] (Jack) He sent me that patient, and I fixed that patient in four to six weeks.  
+[3447.42 > 3451.76] (Jack) He didn't tell me this, but he actually had the same problem.  
+[3451.76 > 3457.08] (Jack) I think he was not being altruistic when he sent me that patient because he had been all  
+[3457.08 > 3458.08] (Jack) over the world.  
+[3458.08 > 3463.48] (Jack) He went to the Mayo Clinic everywhere else, and he was never able to knock this off.  
+[3463.48 > 3467.6] (Jack) When I fixed his patient, he called me up and said, what do I need to do?  
+[3467.6 > 3470.28] (Jack) I said, well, just follow this leptin prescription.  
+[3470.28 > 3475.12] (Jack) I said, go see the sun every day, see the sunrise, get as much sun as you can, but you  
+[3475.12 > 3476.96] (Jack) need to use cold.  
+[3476.96 > 3479.28] (Jack) You need to start taking cold baths.  
+[3479.28 > 3480.28] (Jack) He said, why?  
+[3480.28 > 3484.6] (Jack) I said, look, it's not important why, but this is what I'm going to tell you.  
+[3484.6 > 3489.9] (Jack) Mammals figured out after they came out under the ground that if they get in cold environments,  
+[3489.9 > 3495.28] (Jack) they can make stronger UV light from their own tissues than even the sun provides.  
+[3495.28 > 3498.4] (Jack) This is what fueled all their evolutionary growth.  
+[3498.4 > 3499.96] (Jack) He goes, what?  
+[3499.96 > 3504.44] (Jack) I said, yeah, the process is called wideband semiconductor.  
+[3504.44 > 3512.08] (Jack) Basically you take visible light from 250 to 760, you use non-linear optics, and the  
+[3512.08 > 3514.76] (Jack) things that you use are wideband semiconductors.  
+[3514.76 > 3519.92] (Jack) I said, the wideband semiconductors that you know in biology are called hemoglobin, chlorophyll,  
+[3519.92 > 3521.24] (Jack) and melanin.  
+[3521.24 > 3524.56] (Jack) It turns out for us, the chlorophyll is not a big part of the story.  
+[3524.56 > 3528.24] (Jack) That's the plant side of the story, and food's part of the story.  
+[3528.24 > 3531.4] (Jack) Hemoglobin and melanin, dude, that's the ticket.  
+[3531.4 > 3537.88] (Jack) I said, you need to maximize oxygen delivery, nitric oxide delivery to melanin to renovate  
+[3537.88 > 3544.48] (Jack) it and to create massive amounts of melanin where your body plan put it in.  
+[3544.48 > 3551.24] (Jack) I said, I guarantee if you have eosinophilic esophagitis that the problem is going to be  
+[3551.24 > 3555.16] (Jack) in the visceral level, at the hypothalamic level in your brain.  
+[3555.16 > 3557.22] (Jack) I can even tell you the tract it's going to be in.  
+[3557.22 > 3559.38] (Jack) I can tell you where the melanin is missing.  
+[3559.38 > 3565.86] (Jack) I said, so you need to use UVA light and infrared A light through your eye predominantly, and  
+[3565.86 > 3567.74] (Jack) I think it'll go away.  
+[3567.74 > 3569.74] (Jack) So that's what he did.  
+[3569.74 > 3571.22] (Jack) And guess what?  
+[3571.22 > 3577.94] (Jack) Six weeks it was gone after having this for almost 15 years.  
+[3577.94 > 3586.82] (Jack) So I gave you how I became a decentralized physician.  
+[3587.42 > 3594.  
 
 ---
 
