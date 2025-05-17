@@ -199,41 +199,41 @@ Without this initial exposure to red light, the skin becomes unable to respond a
 
 ---
 
-[5568.14 > 5574.14] (Jack) [that the adult brain is way more plastic than we think.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=5568s) But the thing that I found out is that
-[5574.14 > 5582.62] (Jack) melanin is super-duper inducible with UV light. That answered the question for me that I had
-[5582.62 > 5589.82] (Jack) with the mammals. I said, that means as soon as they came out when the dinosaurs were dead,
-[5590.38 > 5596.46] (Jack) they started pulling their melanin inside their brains. That's what fueled mammalian brain
-[5596.46 > 5599.5] (Jack) evolution. And you remember, I'm a brain surgeon. That's what I'm interested in.
-[5600.22 > 5606.94] (Jack) That absolutely blew my mind. And then I immediately jumped 65 million years in advance.
-[5606.94 > 5613.42] (Jack) And I said, this explains the transition to chimp to human. Because we shouldn't, if I'm right about
-[5613.42 > 5620.14] (Jack) this, we shouldn't have a big change in our genes at all. And it turned out when the Human Genome
-[5620.14 > 5627.18] (Jack) Project came out in 96, we didn't. We had exactly the same number. And that's when I realized that
-[5628.14 > 5634.7] (Jack) the game here was we had to pull from our surface. Like any disease where you're pulling
-[5634.7 > 5640.54] (Jack) melanin from inside your head to outside is going to be devastating. That's exactly what MS is doing.
-[5640.54 > 5646.94] (Jack) That's exactly what melanoma is. I mean, if you really understand this, melanoma is melanin cells
-[5646.94 > 5653.18] (Jack) in your brain coming to the surface because you can't create any VUV light deep inside your head
-[5653.98 > 5659.34] (Jack) because the system is completely broken because you've blocked it for so long.
-[5659.34 > 5663.98] (Jack) And here's the crazy part, Max, because I know there's going to be other doctors that listen to
-[5663.98 > 5669.34] (Jack) this. And I'm sure you're listening to this. And this is beyond your belief. But I'm going to prove
-[5669.34 > 5675.42] (Jack) to you just how correct I am that this process still works in you. You learned in medical school
-[5675.9 > 5683.1] (Jack) a thing about white blood cells called diapodesis, correct? Yeah, yeah, yeah, the process of...
-[5684.7 > 5688.46] (Jack) So do you know why white blood cells are able to migrate into tissues?
-[5689.1 > 5694.54] (Jack) It's exactly the same thing as metastasis does. Do you know how it happens? You may not know this,
-[5694.54 > 5703.18] (Jack) but white blood cells are loaded with POMC. And it turns out cytoplasm where POMC is located gets
-[5703.18 > 5709.42] (Jack) turned off in these cells so that allows them to migrate. In other words, cells cannot migrate
-[5710.22 > 5718.7] (Jack) unless mitosis is turned off. That means you have to turn off UV light release to maintain
-[5718.7 > 5725.66] (Jack) neuroplasticity. This is still seen in our immune cells today. And guess what happens when
-[5726.38 > 5734.06] (Jack) the white blood cell gets to the tissue where the bacteria is emitting light, that emission of light
-[5734.06 > 5740.7] (Jack) activates mitosis in the white cell to clear the infection. That's actually how it works.
-[5740.7 > 5750.86] (Jack) So I realized right away that metastasis is actually a mammalian innovation. And we use it
-[5750.94 > 5757.34] (Jack) in our immune system to this very day. And the evidence is still present in our melanocytes
-[5757.34 > 5762.46] (Jack) because we can move our melanocytes. But here's why this is such a counterintuitive thing.
-[5763.1 > 5769.66] (Jack) You know that the paradigm of cancer in centralized medicine is that, well, mitosis is bad in cancer.
-[5769.66 > 5774.62] (Jack) Turns out that's not true. It's exactly the opposite. When a cell can't divide is when it
-[5774.62 > 5782.62] (Jack) becomes very mobile. That's what metastasis effectively is. So we have everything completely
-[5782.62 > 5789.82] (Jack) backward. And if you think about chemotherapeutic drugs, every single drug is targeted at mitosis
-[5789.82 > 5795.66] (Jack) at some level. So if you really understand what I'm saying, we're doing everything wrong.
-[5797.66 > 5803.34] (Jack) And this
+[5568.14 > 5574.14] (Jack) [that the adult brain is way more plastic than we think.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=5568s) But the thing that I found out is that  
+[5574.14 > 5582.62] (Jack) melanin is super-duper inducible with UV light. That answered the question for me that I had  
+[5582.62 > 5589.82] (Jack) with the mammals. I said, that means as soon as they came out when the dinosaurs were dead,  
+[5590.38 > 5596.46] (Jack) they started pulling their melanin inside their brains. That's what fueled mammalian brain  
+[5596.46 > 5599.5] (Jack) evolution. And you remember, I'm a brain surgeon. That's what I'm interested in.  
+[5600.22 > 5606.94] (Jack) That absolutely blew my mind. And then I immediately jumped 65 million years in advance.  
+[5606.94 > 5613.42] (Jack) And I said, this explains the transition to chimp to human. Because we shouldn't, if I'm right about  
+[5613.42 > 5620.14] (Jack) this, we shouldn't have a big change in our genes at all. And it turned out when the Human Genome  
+[5620.14 > 5627.18] (Jack) Project came out in 96, we didn't. We had exactly the same number. And that's when I realized that  
+[5628.14 > 5634.7] (Jack) the game here was we had to pull from our surface. Like any disease where you're pulling  
+[5634.7 > 5640.54] (Jack) melanin from inside your head to outside is going to be devastating. That's exactly what MS is doing.  
+[5640.54 > 5646.94] (Jack) That's exactly what melanoma is. I mean, if you really understand this, melanoma is melanin cells  
+[5646.94 > 5653.18] (Jack) in your brain coming to the surface because you can't create any VUV light deep inside your head  
+[5653.98 > 5659.34] (Jack) because the system is completely broken because you've blocked it for so long.  
+[5659.34 > 5663.98] (Jack) And here's the crazy part, Max, because I know there's going to be other doctors that listen to  
+[5663.98 > 5669.34] (Jack) this. And I'm sure you're listening to this. And this is beyond your belief. But I'm going to prove  
+[5669.34 > 5675.42] (Jack) to you just how correct I am that this process still works in you. You learned in medical school  
+[5675.9 > 5683.1] (Jack) a thing about white blood cells called diapodesis, correct? Yeah, yeah, yeah, the process of...  
+[5684.7 > 5688.46] (Jack) So do you know why white blood cells are able to migrate into tissues?  
+[5689.1 > 5694.54] (Jack) It's exactly the same thing as metastasis does. Do you know how it happens? You may not know this,  
+[5694.54 > 5703.18] (Jack) but white blood cells are loaded with POMC. And it turns out cytoplasm where POMC is located gets  
+[5703.18 > 5709.42] (Jack) turned off in these cells so that allows them to migrate. In other words, cells cannot migrate  
+[5710.22 > 5718.7] (Jack) unless mitosis is turned off. That means you have to turn off UV light release to maintain  
+[5718.7 > 5725.66] (Jack) neuroplasticity. This is still seen in our immune cells today. And guess what happens when  
+[5726.38 > 5734.06] (Jack) the white blood cell gets to the tissue where the bacteria is emitting light, that emission of light  
+[5734.06 > 5740.7] (Jack) activates mitosis in the white cell to clear the infection. That's actually how it works.  
+[5740.7 > 5750.86] (Jack) So I realized right away that metastasis is actually a mammalian innovation. And we use it  
+[5750.94 > 5757.34] (Jack) in our immune system to this very day. And the evidence is still present in our melanocytes  
+[5757.34 > 5762.46] (Jack) because we can move our melanocytes. But here's why this is such a counterintuitive thing.  
+[5763.1 > 5769.66] (Jack) You know that the paradigm of cancer in centralized medicine is that, well, mitosis is bad in cancer.  
+[5769.66 > 5774.62] (Jack) Turns out that's not true. It's exactly the opposite. When a cell can't divide is when it  
+[5774.62 > 5782.62] (Jack) becomes very mobile. That's what metastasis effectively is. So we have everything completely  
+[5782.62 > 5789.82] (Jack) backward. And if you think about chemotherapeutic drugs, every single drug is targeted at mitosis  
+[5789.82 > 5795.66] (Jack) at some level. So if you really understand what I'm saying, we're doing everything wrong.  
+[5797.66 > 5803.34] (Jack) And this  
 
 ---
 
