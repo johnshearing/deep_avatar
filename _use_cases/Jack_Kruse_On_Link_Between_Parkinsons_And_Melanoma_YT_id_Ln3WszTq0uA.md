@@ -25,6 +25,10 @@ By enhancing melanin production through UV light, it may be possible to improve 
 Jack's insights suggest that utilizing UV light correctly could help restore the balance of POMC and melanin, potentially addressing issues related to both Parkinson's and melanoma. 
 This approach contrasts with conventional treatments that often focus on blocking processes associated with these diseases.
 
+#### The Role of Red Light
+
+Jack emphasizes the necessity of exposing oneself to red light as it preconditions the skin for ultraviolet (UV) light. He explains that the red light harvested, especially during the morning, is crucial for preparing the skin to handle UV exposure effectively. This preconditioning helps in sulfating cholesterol, which is essential for the production of Vitamin D and other health benefits. Without this initial exposure to red light, the skin becomes unable to respond appropriately to UV light, leading to potential health issues.
+
 #### Conclusion
 In summary, the connection between Parkinson's Disease and melanoma lies in the POMC pathway and its implications for health. 
 UV light exposure may serve as a beneficial treatment for both conditions by promoting melanin production and restoring metabolic balance.
