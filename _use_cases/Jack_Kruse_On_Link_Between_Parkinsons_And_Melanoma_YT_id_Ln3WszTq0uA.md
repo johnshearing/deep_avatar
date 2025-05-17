@@ -37,99 +37,92 @@ He explains that the red light harvested, especially during the morning, is cruc
 This preconditioning helps in sulfating cholesterol, which is essential for the production of Vitamin D and other health benefits. 
 Without this initial exposure to red light, the skin becomes unable to respond appropriately to UV light, leading to potential health issues.
 
+---
 
-
-
-Certainly! Here's your JSON converted to plain text with all `\n` rendered as actual newlines:
+[4293.0 > 4297.52] (Jack) [I'm going, I have to figure out how that happens.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=4293s)  
+[4297.52 > 4303.8] (Jack) So I looked up phenylalanine and tyrosine absorption spectra, 200 to 400 nanometer light.  
+[4303.8 > 4305.92] (Jack) I'm like, son of a bitch.  
+[4305.92 > 4310.48] (Jack) Then when I started to look in about melanin, then I found out that melanin because it's  
+[4310.48 > 4319.04] (Jack) dark absorbs everything, meaning from RF radiation all the way up to cosmic level radiation.  
+[4319.04 > 4322.08] (Jack) And that's what defines a black semiconductor.  
+[4322.08 > 4324.84] (Jack) It absorbs all frequencies of light.  
+[4324.84 > 4327.02] (Jack) And I'm going, wait a minute.  
+[4327.02 > 4335.12] (Jack) This means this is the reason why like NAD positive, which is cytochrome one and mitochondria  
+[4335.12 > 4341.32] (Jack) is made out of this aromatic amino acid.  
+[4341.32 > 4346.48] (Jack) Melanin, there must be a process in the body that creates light.  
+[4346.48 > 4349.24] (Jack) So that's when I jumped down another rabbit hole.  
+[4349.28 > 4356.44] (Jack) I went and looked through the literature and don't you think I found a paper from 1923  
+[4356.44 > 4364.52] (Jack) by a guy named Alexander Gerwich who did this really simple experiment where he took an  
+[4364.52 > 4370.12] (Jack) onion root, cut the onion root in half and was able to stimulate mitosis in another cell.  
+[4370.12 > 4373.6] (Jack) And he called that process mitogenic radiation.  
+[4373.6 > 4378.0] (Jack) He had no idea what it was because back in those days they didn't have a spectroscope  
+[4378.0 > 4380.1] (Jack) or a photomultiplier.  
+[4380.1 > 4386.8] (Jack) But he said there is some type of release in one side of this root that can stimulate  
+[4386.8 > 4389.76] (Jack) the other side to begin to grow.  
+[4389.76 > 4392.68] (Jack) So he was pretty ingenious researcher.  
+[4392.68 > 4395.84] (Jack) He put all different materials between it.  
+[4395.84 > 4401.44] (Jack) And when he put glass between it, he stopped the ability to cause mitosis in the other  
+[4401.44 > 4402.44] (Jack) side.  
+[4402.68 > 4409.24] (Jack) Then when he put a piece of quartz in there, it actually allowed the process to go.  
+[4409.24 > 4413.12] (Jack) So he knew immediately that he was dealing with UV light.  
+[4413.12 > 4414.88] (Jack) Immediately.  
+[4414.88 > 4421.6] (Jack) So when I read that, I was like, okay, so basically what this guy is saying that cells  
+[4421.6 > 4423.76] (Jack) release UV light to signal.  
+[4423.76 > 4427.2] (Jack) I said now this story is getting even more interesting.  
+[4427.2 > 4428.92] (Jack) Then I jumped down another rabbit hole.  
+[4428.92 > 4430.8] (Jack) Remember, this is 1923.  
+[4430.8 > 4435.12] (Jack) A guy in the 1960s shows up who's a physicist.  
+[4435.12 > 4436.92] (Jack) His name is Fritz Popp.  
+[4436.92 > 4443.16] (Jack) Fritz Popp got very, very interested in this extreme low frequency UV light that all cells  
+[4443.16 > 4445.02] (Jack) seem to release.  
+[4445.02 > 4450.54] (Jack) So back in the 60s, they had the machines that Gerwich didn't have.  
+[4450.54 > 4455.84] (Jack) So Popp got the idea to take every single living cell and put it in a photomultiplier.  
+[4455.84 > 4457.44] (Jack) And guess what he found?  
+[4457.44 > 4462.68] (Jack) Every single cell, irrespective of where it comes from, releases extreme low frequency  
+[4462.68 > 4463.68] (Jack) UV light.  
+[4463.68 > 4465.88] (Jack) And it turns out that UV light is needed.  
+[4465.88 > 4471.2] (Max) UVC, not UVA or B. UVC, not A or B.  
+[4471.2 > 4476.76] (Jack) He didn't know what the frequencies were because the amount of light that our
 
 ---
 
-**ID 0**
-\[4293.0 > 4297.52] (Jack) [I'm going, I have to figure out how that happens.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=4293s)
-\[4297.52 > 4303.8] (Jack) So I looked up phenylalanine and tyrosine absorption spectra, 200 to 400 nanometer light.
-\[4303.8 > 4305.92] (Jack) I'm like, son of a bitch.
-\[4305.92 > 4310.48] (Jack) Then when I started to look in about melanin, then I found out that melanin because it's
-\[4310.48 > 4319.04] (Jack) dark absorbs everything, meaning from RF radiation all the way up to cosmic level radiation.
-\[4319.04 > 4322.08] (Jack) And that's what defines a black semiconductor.
-\[4322.08 > 4324.84] (Jack) It absorbs all frequencies of light.
-\[4324.84 > 4327.02] (Jack) And I'm going, wait a minute.
-\[4327.02 > 4335.12] (Jack) This means this is the reason why like NAD positive, which is cytochrome one and mitochondria
-\[4335.12 > 4341.32] (Jack) is made out of this aromatic amino acid.
-\[4341.32 > 4346.48] (Jack) Melanin, there must be a process in the body that creates light.
-\[4346.48 > 4349.24] (Jack) So that's when I jumped down another rabbit hole.
-\[4349.28 > 4356.44] (Jack) I went and looked through the literature and don't you think I found a paper from 1923
-\[4356.44 > 4364.52] (Jack) by a guy named Alexander Gerwich who did this really simple experiment where he took an
-\[4364.52 > 4370.12] (Jack) onion root, cut the onion root in half and was able to stimulate mitosis in another cell.
-\[4370.12 > 4373.6] (Jack) And he called that process mitogenic radiation.
-\[4373.6 > 4378.0] (Jack) He had no idea what it was because back in those days they didn't have a spectroscope
-\[4378.0 > 4380.1] (Jack) or a photomultiplier.
-\[4380.1 > 4386.8] (Jack) But he said there is some type of release in one side of this root that can stimulate
-\[4386.8 > 4389.76] (Jack) the other side to begin to grow.
-\[4389.76 > 4392.68] (Jack) So he was pretty ingenious researcher.
-\[4392.68 > 4395.84] (Jack) He put all different materials between it.
-\[4395.84 > 4401.44] (Jack) And when he put glass between it, he stopped the ability to cause mitosis in the other
-\[4401.44 > 4402.44] (Jack) side.
-\[4402.68 > 4409.24] (Jack) Then when he put a piece of quartz in there, it actually allowed the process to go.
-\[4409.24 > 4413.12] (Jack) So he knew immediately that he was dealing with UV light.
-\[4413.12 > 4414.88] (Jack) Immediately.
-\[4414.88 > 4421.6] (Jack) So when I read that, I was like, okay, so basically what this guy is saying that cells
-\[4421.6 > 4423.76] (Jack) release UV light to signal.
-\[4423.76 > 4427.2] (Jack) I said now this story is getting even more interesting.
-\[4427.2 > 4428.92] (Jack) Then I jumped down another rabbit hole.
-\[4428.92 > 4430.8] (Jack) Remember, this is 1923.
-\[4430.8 > 4435.12] (Jack) A guy in the 1960s shows up who's a physicist.
-\[4435.12 > 4436.92] (Jack) His name is Fritz Popp.
-\[4436.92 > 4443.16] (Jack) Fritz Popp got very, very interested in this extreme low frequency UV light that all cells
-\[4443.16 > 4445.02] (Jack) seem to release.
-\[4445.02 > 4450.54] (Jack) So back in the 60s, they had the machines that Gerwich didn't have.
-\[4450.54 > 4455.84] (Jack) So Popp got the idea to take every single living cell and put it in a photomultiplier.
-\[4455.84 > 4457.44] (Jack) And guess what he found?
-\[4457.44 > 4462.68] (Jack) Every single cell, irrespective of where it comes from, releases extreme low frequency
-\[4462.68 > 4463.68] (Jack) UV light.
-\[4463.68 > 4465.88] (Jack) And it turns out that UV light is needed.
-\[4465.88 > 4471.2] (Max) UVC, not UVA or B. UVC, not A or B.
-\[4471.2 > 4476.76] (Jack) He didn't know what the frequencies were because the amount of light that our
-
----
-
-**ID 1**
-\[5211.38 > 5214.1] (Max) [Yeah, I would.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=5211s)
-\[5214.1 > 5222.54] (Max) So what Jack's proposing is it's a more holistic model of the body's energy balance, but also
-\[5223.1 > 5229.66] (Max) maybe a master hormone, because it's integrating the light signals, both the external light
-\[5229.66 > 5235.98] (Max) signals, because obviously this leptin is being produced in the fat cells just under the skin,
-\[5235.98 > 5240.86] (Max) but it's also integrating that subcellular or cellular light signals that are happening
-\[5241.66 > 5244.3] (Max) inside that's being emitted from the mitochondria.
-\[5244.3 > 5249.98] (Max) And then it's feeding that information back to the brain through the hypothalamus.
-\[5249.98 > 5250.78] (Max) Is that correct, Jack?
-\[5252.54 > 5252.78] (Max) Yep.
-\[5256.78 > 5260.14] (Jack) It's really not that hard to understand when you see it all laid out for you.
-\[5260.14 > 5265.1] (Max) Yeah. So the crux of the issue is that the reason why light is so important to health
-\[5265.1 > 5273.02] (Max) is because it is modulating the signal that we're using to maintain our energy state
-\[5273.02 > 5279.02] (Max) through leptin and through the leptin-melanocorticoid corticone pathway that he was just
-\[5279.02 > 5286.14] (Max) mentioning. And then through that is POMC, which we explained to you earlier.
-\[5286.14 > 5291.74] (Jack) POMC is the key driver. POMC is the key driver for this whole pathway, because without melanin,
-\[5291.74 > 5295.42] (Jack) the system doesn't work. And that's really the come to Jesus moment for me.
-\[5295.42 > 5295.98] (Jack) So the question-
-\[5295.98 > 5301.74] (Jack) That's when I realized that everything about biology is I need to find out every place
-\[5301.74 > 5306.54] (Jack) that POMC's made, every cell line, and then start looking at different diseases. So that's
-\[5306.54 > 5311.18] (Jack) what I did. And then what did I find out? I found out that most of the diseases that
-\[5312.38 > 5319.66] (Jack) centralized medicine, I could fix if I just figured out the neural pathway between ectoderm
-\[5320.38 > 5324.94] (Jack) in the head and on the skin, because here's the cool part of the story that I still haven't told
-\[5324.94 > 5330.46] (Jack) you. This is the part I think you're going to like, Max. Because of Gerwich's story,
-\[5331.42 > 5339.82] (Jack) I knew that cells divide with this mitogenic radiation, which was UV light. So if you're
-\[5339.82 > 5344.86] (Jack) following my story really good, Max, and I'm putting this on you now, not the listener,
-\[5345.98 > 5351.42] (Jack) what one question would you want to ask me about this KT event and about us right now?
-\[5354.22 > 5356.06] (Jack) Well, since you didn't ask, I'm going to tell you.
-\[5356.22 > 5362.94] (Max) Well, don't tell me. So the question that was on my mind before you raised this point was
-\[5363.66 > 5370.14] (Max) do reptiles express POMC in the same way that mammals do?
-\[5371.9 > 5376.54] (Jack) No, that's not what I was interested in. This is totally a mammal story. When I say this to you,
-\[5376.54 > 5381.74] (Jack) you'll understand why I said it. I said the books, the evolutionary biology books,
-\[5381.82 > 5387.66] (Jack) say this is 100 to 1000 year transition for the asteroid. I'm like, there's no way mammals could
-\[5387.66 > 5392.46] (Jack) have lived that long to make it through. I said, this process has to happen faster than we all
-\[5392.46 > 5398.06] (Jack) think. And then I thought about the transition from chimp to ape. Everybody thought that took
-\[5398.06 > 5402.38] (Jack) a long time. I'm saying, what if that's not true? What if melanin was able to do this way faster
-\[5402.38 > 5410.62] (Jack) than we think? So how did I figure this out? I went to an African American patient who had vitiligo.
-\[5411.58 > 5417.98] (Jack) And I said, I now know that
+[5211.38 > 5214.1] (Max) [Yeah, I would.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=5211s)  
+[5214.1 > 5222.54] (Max) So what Jack's proposing is it's a more holistic model of the body's energy balance, but also  
+[5223.1 > 5229.66] (Max) maybe a master hormone, because it's integrating the light signals, both the external light  
+[5229.66 > 5235.98] (Max) signals, because obviously this leptin is being produced in the fat cells just under the skin,  
+[5235.98 > 5240.86] (Max) but it's also integrating that subcellular or cellular light signals that are happening  
+[5241.66 > 5244.3] (Max) inside that's being emitted from the mitochondria.  
+[5244.3 > 5249.98] (Max) And then it's feeding that information back to the brain through the hypothalamus.  
+[5249.98 > 5250.78] (Max) Is that correct, Jack?  
+[5252.54 > 5252.78] (Max) Yep.  
+[5256.78 > 5260.14] (Jack) It's really not that hard to understand when you see it all laid out for you.  
+[5260.14 > 5265.1] (Max) Yeah. So the crux of the issue is that the reason why light is so important to health  
+[5265.1 > 5273.02] (Max) is because it is modulating the signal that we're using to maintain our energy state  
+[5273.02 > 5279.02] (Max) through leptin and through the leptin-melanocorticoid corticone pathway that he was just  
+[5279.02 > 5286.14] (Max) mentioning. And then through that is POMC, which we explained to you earlier.  
+[5286.14 > 5291.74] (Jack) POMC is the key driver. POMC is the key driver for this whole pathway, because without melanin,  
+[5291.74 > 5295.42] (Jack) the system doesn't work. And that's really the come to Jesus moment for me.  
+[5295.42 > 5295.98] (Jack) So the question-  
+[5295.98 > 5301.74] (Jack) That's when I realized that everything about biology is I need to find out every place  
+[5301.74 > 5306.54] (Jack) that POMC's made, every cell line, and then start looking at different diseases. So that's  
+[5306.54 > 5311.18] (Jack) what I did. And then what did I find out? I found out that most of the diseases that  
+[5312.38 > 5319.66] (Jack) centralized medicine, I could fix if I just figured out the neural pathway between ectoderm  
+[5320.38 > 5324.94] (Jack) in the head and on the skin, because here's the cool part of the story that I still haven't told  
+[5324.94 > 5330.46] (Jack) you. This is the part I think you're going to like, Max. Because of Gerwich's story,  
+[5331.42 > 5339.82] (Jack) I knew that cells divide with this mitogenic radiation, which was UV light. So if you're  
+[5339.82 > 5344.86] (Jack) following my story really good, Max, and I'm putting this on you now, not the listener,  
+[5345.98 > 5351.42] (Jack) what one question would you want to ask me about this KT event and about us right now?  
+[5354.22 > 5356.06] (Jack) Well, since you didn't ask, I'm going to tell you.  
+[5356.22 > 5362.94] (Max) Well, don't tell me. So the question that was on my mind before you raised this point was  
+[5363.66 > 5370.14] (Max) do reptiles express POMC in the same way that mammals do?  
+[5371.9 > 5376.54] (Jack) No, that's not what I was interested in. This is totally a mammal story. When I say this to you,  
+[5376.54 > 5381.74] (Jack) you'll understand why I said it. I said the books, the evolutionary biology books,  
+[5381.82 > 5387.66] (Jack) say this is 100 to 1000 year transition for the asteroid. I'm like, there's no way mammals could  
+[5387.66 > 5392.46] (Jack) have lived that long to make it through. I said, this process has to happen faster than we all  
+[5392.46 > 5398.06] (Jack) think. And then I thought about the transition from chimp to ape. Everybody thought that took  
+[5398.06 > 5402.38] (Jack) a long time. I'm saying, what if that's not true? What if melanin was able to do this way faster  
+[5402.38 > 5410.62] (Jack) than we think? So how did I figure this out? I went to an African American patient who had vitiligo.  
+[5411.58 > 5417.98] (Jack) And I said, I now know that  
 
 ---
 
