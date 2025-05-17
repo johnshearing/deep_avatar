@@ -20,6 +20,10 @@ In Australia, there is a significant misunderstanding regarding the relationship
 
 According to Jack, blocking UV light can actually increase the risk of developing melanoma. He emphasizes that solar exposure is associated with long life and that low vitamin D levels correlate with all types of skin cancer, including melanoma. Studies, including meta-analyses, support the idea that appropriate sun exposure is beneficial and that avoiding the sun can lead to adverse health outcomes.
 
+#### The Role of Red Light
+
+Jack emphasizes the necessity of exposing oneself to red light as it preconditions the skin for ultraviolet (UV) light. He explains that the red light harvested, especially during the morning, is crucial for preparing the skin to handle UV exposure effectively. This preconditioning helps in sulfating cholesterol, which is essential for the production of Vitamin D and other health benefits. Without this initial exposure to red light, the skin becomes unable to respond appropriately to UV light, leading to potential health issues.
+
 #### Misguided Use of Sunscreens: Hormonal and Health Implications
 
 Sunscreens are often seen as protective, but they may inhibit the body's ability to produce essential hormones and compounds necessary for skin health. Jack explains that the use of sunscreens can block the synthesis of thyroid hormones from phenylalanine and tyrosine, which are crucial for metabolic processes. This could explain why melanoma has a worse prognosis in individuals with hypothyroidism, a condition that is prevalent among Australians.
