@@ -22,7 +22,7 @@ According to Jack, blocking UV light can actually increase the risk of developin
 
 #### The Role of Red Light
 
-Jack emphasizes the necessity of exposing oneself to red light as it preconditions the skin for ultraviolet (UV) light. He explains that the red light harvested, especially during the morning, is crucial for preparing the skin to handle UV exposure effectively. This preconditioning helps in sulfating cholesterol, which is essential for the production of Vitamin D and other health benefits. Without this initial exposure to red light, the skin becomes unable to respond appropriately to UV light, leading to potential health issues.
+Jack emphasizes the necessity of exposing oneself to red light as it preconditions the skin for ultraviolet (UV) light. He explains that the red light harvested, especially during the morning, is crucial for preparing the skin to handle UV exposure effectively. This preconditioning helps in sulfating cholesterol, which is essential for the production of Vitamin D and other health benefits. Without this initial exposure to red light, the skin becomes unable to respond appropriately to UV light, leading to potential health issues. He highlights that without adequate exposure to red light, individuals, particularly those with light skin types, may struggle with the appropriate biological responses required for optimal health.
 
 #### Misguided Use of Sunscreens: Hormonal and Health Implications
 
@@ -42,15 +42,11 @@ There is a pressing need for public awareness and education regarding the benefi
 
 #### Conclusion
 
-In summary, the misunderstanding lies in the belief that avoiding sun exposure is the best way to prevent skin cancer. Instead, embracing responsible sun exposure, understanding the role of melanin, and recognizing the limitations of sunscreens could be key to reducing the incidence of melanoma in Australia.
+In summary, the misunderstanding lies in the belief that avoiding sun exposure is the best way to prevent skin cancer. Instead, embracing responsible sun exposure, understanding the role of melanin, and recognizing the limitations of sunscreens could be key to reducing the incidence of melanoma in Australia.  
 
-#### References
-- [DC] Ln3WszTq0uA.txt
+---
 
-
-
------Sources-----  
------Knowledge Graph Context-----  
+#### Relevant Clips From The Video
 
 [4294.52 > 4297.52] (Jack) [I'm going, I have to figure out how that happens.](https://youtu.be/Ln3WszTq0uA?si=BU7yb23FC4iZdi1G&t=4294)  
 [4297.52 > 4303.8] (Jack) So I looked up phenylalanine and tyrosine absorption spectra, 200 to 400 nanometer light.  
