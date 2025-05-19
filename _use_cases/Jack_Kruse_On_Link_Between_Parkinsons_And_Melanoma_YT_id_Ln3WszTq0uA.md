@@ -40,6 +40,8 @@ He highlights that without adequate exposure to red light, individuals, particul
 
 ---
 
+#### Relevant Clips From The Video
+
 [4293.0 > 4297.52] (Jack) [I'm going, I have to figure out how that happens.](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=4293s)  
 [4297.52 > 4303.8] (Jack) So I looked up phenylalanine and tyrosine absorption spectra, 200 to 400 nanometer light.  
 [4303.8 > 4305.92] (Jack) I'm like, son of a bitch.  
