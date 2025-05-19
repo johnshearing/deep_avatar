@@ -42,15 +42,11 @@ There is a pressing need for public awareness and education regarding the benefi
 
 #### Conclusion
 
-In summary, the misunderstanding lies in the belief that avoiding sun exposure is the best way to prevent skin cancer. Instead, embracing responsible sun exposure, understanding the role of melanin, and recognizing the limitations of sunscreens could be key to reducing the incidence of melanoma in Australia.
+In summary, the misunderstanding lies in the belief that avoiding sun exposure is the best way to prevent skin cancer. Instead, embracing responsible sun exposure, understanding the role of melanin, and recognizing the limitations of sunscreens could be key to reducing the incidence of melanoma in Australia.  
 
-#### References
-- [DC] Ln3WszTq0uA.txt
+---
 
-
-
------Sources-----  
------Knowledge Graph Context-----  
+#### Relevant Clips From The Video
 
 [4294.52 > 4297.52] (Jack) [I'm going, I have to figure out how that happens.](https://youtu.be/Ln3WszTq0uA?si=BU7yb23FC4iZdi1G&t=4294)  
 [4297.52 > 4303.8] (Jack) So I looked up phenylalanine and tyrosine absorption spectra, 200 to 400 nanometer light.  
