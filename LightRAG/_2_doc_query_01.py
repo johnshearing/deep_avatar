@@ -114,24 +114,21 @@ async def main():
         "The Mod-Linx conveyor is stopping and starting by itself. What should I do? , "
         "Tell me everything you can about wire 110? , "
         "What is the likely cause of an overheating motor?, "
-
-
-
         '''
 
         query = (
             "Using only the text to answer, "
-            "According to Jack, why should people expose themselves to red light? "
+            "Please list some of the issues discussed. "
             "Please use only the provided text when forming your answer."
         )       
          
-        for mode in ["mix"]: # "naive", "local", "global", "hybrid", 
+        for mode in ["naive", "local", "global", "hybrid", "mix"]:  
             print(f"\n=====================")
             print(f"Query mode: {mode}")
             print(f"=====================")
             response = await rag.aquery(
                 query,
-                param=QueryParam(mode=mode, top_k=50, only_need_context=True)
+                param=QueryParam(mode=mode, top_k=50) # only_need_context=True, only_need_prompt=True
             )
             print(response)
     except Exception as e:

@@ -87,6 +87,9 @@ If both remote and local repositories are in the updated state at the same time 
 Pulling updates from the remote is required before the git will allow pushing updates from the local repository.
 If a merge becomes required then the following is the simplest procedure with the most control over the process.
 
+******************** Important!! Commit all local changes before pulling from the remote ********************** 
+********************             There will be tears if you fail to do this              ********************** 
+
 If you want to see what changes are different between your local branch and the remote before deciding, you can run:
 git fetch
 git log --oneline --graph --decorate --all
