@@ -32,8 +32,6 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
   - How can we get even more accurate sources in the output?  
   - There is a citation function documented in the readme but this is an open issue in the LightRAG repository.
 
-- Try ingesting the LightRAG libraries into a LightRAG index to see if it can map its own logic flow to a knowledge graph.
-
 - Run LightRAG python scripts, and LightRAG Server in a debuggers to get a feeling for how the logic flows?
 
 - Get more familiar with the LightRAG knowledge graph manipulation python commands.
@@ -45,8 +43,6 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
 - Selective searching of the index given a video name or document name rather than creating a response from the entire index of videos.
   - There is a native function and parameter for this (ids) but it has been disabled by the LightRAG developers.
   - I need to see if I can get "ids" functionality working.  
-
-- Feeding responses back into a query for a more thoughtful response - Investigate a two stage query script or include an agent?  
 
 - Convert from LightRAG's native nano_vectordb to one of the following: Neo4J, PostgreSQL, Faiss for storage.
 
@@ -145,5 +141,11 @@ Sample of the video metadata we are seeking to pull into the database.
 - Prevent duplication of video transcripts in the index with a check before adding anything new.
   - I think this is already done - just need to test my scripts and LightRAG Server.
        
-- Fix bug in python script for global and mixed queries against LightRAG index  
+- Fix bug in python script for global and mixed queries against LightRAG index
 
+- Try ingesting the LightRAG libraries into a LightRAG index to see if it can map its own logic flow to a knowledge graph.
+  - This worked the LightRAG server is able to explain its own libraries and logic flow.
+
+- Feeding responses back into a query for a more thoughtful response - Investigate a two stage query script or include an agent?
+  - The LighRAG library actualy does this when indexing
+  - This is controlled by the parameter entity_extract_max_gleaning
