@@ -12,16 +12,16 @@ from llama_index.embeddings.openai import OpenAIEmbedding
 import textract
 
 # Configuration
-WORKING_DIR = "_ts_work_dir"
+WORKING_DIR = "_0_jack_work_dir_02"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
 MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
 # Files to be indexed
-PDF_FILES = [
-    "./_docs_dir/trouble_shooting.docx",
-    "./_docs_dir/some_other_document.docx"
+files_2b_indexed = [
+    "./_1_docs_dir/metadata.txt",
+    "./_1_docs_dir/some_other_document.docx"
 ]
 
 def configure_logging():
@@ -129,7 +129,7 @@ async def main():
             print(f"Already indexed files: {indexed_files}")
 
         # Index new documents
-        for doc_path in PDF_FILES:
+        for doc_path in files_2b_indexed:
             if doc_path in indexed_files:
                 print(f"Skipping already indexed file: {doc_path}")
                 continue
@@ -143,7 +143,7 @@ async def main():
             decoded_text = re.sub(r"\n\s*\n", "\n", decoded_text)
             decoded_text = re.sub(r"Page \d+", "", decoded_text)
             print(f"Extracted text (first 100 chars): {decoded_text[:100]}")
-            await rag.ainsert(decoded_text, file_paths=doc_path)
+            await rag.ainsert(decoded_text, ids=["id_" + doc_path], file_paths=doc_path)
             print(f"Indexed {doc_path}")
     except Exception as e:
         print(f"An error occurred: {e}")

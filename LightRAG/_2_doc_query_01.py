@@ -9,7 +9,7 @@ from lightrag.utils import logger, set_verbose_debug, EmbeddingFunc
 from llama_index.embeddings.openai import OpenAIEmbedding
 
 # Configuration
-WORKING_DIR = "_jack_work_dir"
+WORKING_DIR = "_0_jack_work_dir_02"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
@@ -118,7 +118,7 @@ async def main():
 
         query = (
             "Using only the text to answer, "
-            "Please list some of the issues discussed. "
+            "Please list 10 facts about the video. "
             "Please use only the provided text when forming your answer."
         )       
          
