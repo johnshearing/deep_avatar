@@ -15,27 +15,12 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
         - We could write our own python script which makes nodes from all the timestamps and connects these to all the other nodes found in the same chunks. 
     -  We could just pull the timestamps out when serving the answers.
        - This could be accomplished by changing the LLM prompt, the query script or by changing the LightRAG library code.
-     
-- Ensure source metadata is indexed properly
-  - Instead of leaving this up to the LLM which supervises the indexing we can issue our own commands at the python terminal or with the LightRAG Server API or with a python script to created nodes and relations from all the metadata in the first line of the source material.
- 
-```json
-    "metadata": {
-        "channelName": "Abraham Hicks Tips",
-        "videoTitle": "Your \u2018Reality\u2019 Is Lying to You! \u2705 Abraham Hicks 2025",
-        "url": "https://www.youtube.com/watch?v=0k2tTiDTn-c",
-        "videoPostDate": "2025-01-19T17:30:00Z"
-    }
-```
 
 - Improve the way LightRAG Server cites source material.
   - How can we get even more accurate sources in the output?  
   - There is a citation function documented in the readme but this is an open issue in the LightRAG repository.
 
 - Run LightRAG python scripts, and LightRAG Server in a debuggers to get a feeling for how the logic flows?
-
-- Get more familiar with the LightRAG knowledge graph manipulation python commands.
-- Get more familiar with the LightRAG Server knowledge graph manipulation API commands. 
 
 - See how to delete video transcripts from the index in case it is misrepresentative or if it is a duplicate.  
   - Currently the LightRAG team is having hallucination issues after deleting documents from the index.
@@ -107,7 +92,9 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
     - These transcripts will import into LightRAG with no issues.
 
 - Figure out how to pull YouTube channel metadata and document metadata into the LightRAG database?
-  - This was accomplished by [merged??.py](https://github.com/johnshearing/scrape_yt_mk_transcripts) which converts the entire transcript from json to a segmented text file where the metadata is the first few lines of the file.  
+  - This was accomplished by [merged??.py](https://github.com/johnshearing/scrape_yt_mk_transcripts) which converts the entire transcript from json to a segmented text file where the metadata is the first few lines of the file.
+  - The metadata is coverted to json via a template and this is automatically imported into the LightRAG index via the rag.insert_custom_kg(custom_kg) function.
+  - The LightRAG sever now reports all the metadata on the videos.
 Sample of the video metadata we are seeking to pull into the database.
 ```json
     "language": "en",
@@ -137,6 +124,9 @@ Sample of the video metadata we are seeking to pull into the database.
         },... more segments continue until the end
      ]
 ```
+
+- Get more familiar with the LightRAG knowledge graph manipulation python commands.
+- Get more familiar with the LightRAG Server knowledge graph manipulation API commands. 
 
 - Prevent duplication of video transcripts in the index with a check before adding anything new.
   - I think this is already done - just need to test my scripts and LightRAG Server.
