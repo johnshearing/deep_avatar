@@ -7,56 +7,56 @@
     ],
     "entities": [
         {
-            "entity_name": "metadata",
-            "entity_type": "metadata",
-            "description": "This entity provides a node to link all metadata items to the metadata category",
+            "entity_name": "metadata-global-hub",
+            "entity_type": "metadata-global-hub",
+            "description": "The metadata-global-hub entity provides a central node which joins all metadata-hub entities using edge relationships. metadata-global-hub is the set of all metadata-hub entities",
             "source_id": "kruse.json"
         },
         {
-            "entity_name": "kruse.json",
-            "entity_type": "metadata",
-            "description": "This entity provides a node to link all metadata entities from the kruse.json file to each other and to the general metadata category. The kruse.json file contains all the metadata for the source document kruse.txt.",
+            "entity_name": "metadata-hub-kruse.txt",
+            "entity_type": "metadata-hub",
+            "description": "The metadata-hub-kruse.txt entity provides a central node which joins all metadata entities for the source document kruse.txt.",
             "source_id": "kruse.json"
         }, 
         {
             "entity_name": "kruse.txt",
-            "entity_type": "source_document",
-            "description": "This entity provides a node to link all entities from the kruse.txt source document to the kruse.json entity",
+            "entity_type": "source-document",
+            "description": "The kruse.txt entity provides a node which links all entities from the kruse.txt source document to the metadata-hub-kruse.txt entity",
             "source_id": "kruse.json"
         },               
         {
             "entity_name": "https://www.youtube.com/watch?v=Ln3WszTq0uA",
-            "entity_type": "metadata",
+            "entity_type": "metadata-for-kruse.txt",
             "description": "URL for the video.",
             "source_id": "kruse.json"
         },
         {
             "entity_name": "www.youtube.com",
-            "entity_type": "metadata",
+            "entity_type": "metadata-for-kruse.txt",
             "description": "video platform which hosted the video.",
             "source_id": "kruse.json"
         },
         {
             "entity_name": "Max Gulhane MD",
-            "entity_type": "metadata",
+            "entity_type": "metadata-for-kruse.txt",
             "description": "Video channel which published the video.",
             "source_id": "kruse.json"
         },
         {
             "entity_name": "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease",
-            "entity_type": "metadata",
+            "entity_type": "metadata-for-kruse.txt",
             "description": "Video title",
             "source_id": "kruse.json"
         },
         {
             "entity_name": "2023-04-02T06:06:17Z",
-            "entity_type": "metadata",
+            "entity_type": "metadata-for-kruse.txt",
             "description": "Date video was posted.",
             "source_id": "kruse.json"
         },
         {
             "entity_name": "en",
-            "entity_type": "metadata",
+            "entity_type": "metadata-for-kruse.txt",
             "description": "Language spoken in the video",
             "source_id": "kruse.json"
         }
@@ -127,66 +127,66 @@
             "source_id": "kruse.json"
         },
         {
-            "src_id": "kruse.json",
-            "tgt_id": "metadata",
-            "description": "The set of kruse.json belongs to the set of metadata",
-            "keywords": "element of metadata",
+            "src_id": "metadata-hub-kruse.txt",
+            "tgt_id": "metadata-global-hub",
+            "description": "The metadata-hub-kruse.txt belongs to the set of metadata-global-hub",
+            "keywords": "element of metadata-global-hub",
             "weight": 7.0,
             "source_id": "kruse.json"
         }, 
         {
-            "src_id": "kruse.json",
+            "src_id": "metadata-hub-kruse.txt",
             "tgt_id": "kruse.txt",
-            "description": "The set of kruse.json is the metadata for all the source document kruse.txt",
+            "description": "metadata-hub-kruse.txt is the metadata hub for the source document kruse.txt",
             "keywords": "metadata for kruse.txt",
             "weight": 7.0,
             "source_id": "kruse.json"
         },               
         {
-            "src_id": "kruse.json",
+            "src_id": "metadata-hub-kruse.txt",
             "tgt_id": "https://www.youtube.com/watch?v=Ln3WszTq0uA",
-            "description": "The URL https://www.youtube.com/watch?v=Ln3WszTq0uA belongs to kruse.json",
-            "keywords": "URL kruse.json",
+            "description": "The URL https://www.youtube.com/watch?v=Ln3WszTq0uA is metadata which belongs to metadata-hub-kruse.txt",
+            "keywords": "URL metadata-hub-kruse.txt",
             "weight": 7.0,
             "source_id": "kruse.json"
         },
         {
-            "src_id": "kruse.json",
+            "src_id": "metadata-hub-kruse.txt",
             "tgt_id": "www.youtube.com",
-            "description": "The video platform www.youtube.com belongs to kruse.json",
-            "keywords": "video platform kruse.json",
+            "description": "The video platform www.youtube.com is metadata which belongs to metadata-hub-kruse.txt",
+            "keywords": "video platform metadata-hub-kruse.txt",
             "weight": 7.0,
             "source_id": "kruse.json"
         },
         {
-            "src_id": "kruse.json",
+            "src_id": "metadata-hub-kruse.txt",
             "tgt_id": "Max Gulhane MD",
-            "description": "The video channel Max Gulhane MD belongs to kruse.json",
-            "keywords": "video channel kruse.json",
+            "description": "The video channel Max Gulhane MD is metadata which belongs to metadata-hub-kruse.txt",
+            "keywords": "video channel metadata-hub-kruse.txt",
             "weight": 7.0,
             "source_id": "kruse.json"
         },
         {
-            "src_id": "kruse.json",
+            "src_id": "metadata-hub-kruse.txt",
             "tgt_id": "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease",
-            "description": "The video titled Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease belongs to kruse.json",
-            "keywords": "video title kruse.json",
+            "description": "The video titled Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease is metadata which belongs to metadata-hub-kruse.txt",
+            "keywords": "video title metadata-hub-kruse.txt",
             "weight": 7.0,
             "source_id": "kruse.json"
         },
         {
-            "src_id": "kruse.json",
+            "src_id": "metadata-hub-kruse.txt",
             "tgt_id": "2023-04-02T06:06:17Z",
-            "description": "The video posting time and date of 2023-04-02T06:06:17Z belongs to kruse.json",
-            "keywords": "posting date time kruse.json",
+            "description": "The video posting time and date of 2023-04-02T06:06:17Z is metadata which belongs to metadata-hub-kruse.txt",
+            "keywords": "posting date time metadata-hub-kruse.txt",
             "weight": 7.0,
             "source_id": "kruse.json"
         },
         {
-            "src_id": "kruse.json",
+            "src_id": "metadata-hub-kruse.txt",
             "tgt_id": "en",
-            "description": "en, the spoken language in the video, belongs to kruse.json",
-            "keywords": "en spoken language kruse.json",
+            "description": "en, the spoken language in the video is metadata which belongs to metadata-hub-kruse.txt",
+            "keywords": "en spoken language metadata-hub-kruse.txt",
             "weight": 7.0,
             "source_id": "kruse.json"
         }

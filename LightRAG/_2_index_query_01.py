@@ -117,7 +117,7 @@ async def main():
         '''
 
         query = (
-            "What document contains the source data for the entity Regenerative Health Podcast? "
+            "Please list all entities directly related to the entity metadata-hub-kruse.txt. "
         )       
          
         for mode in ["naive", "local", "global", "hybrid", "mix"]:  

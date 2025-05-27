@@ -20,7 +20,7 @@ MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
 # Files to be indexed
 files_2b_indexed = [
-    "./_1_docs_dir/kruse.json",
+    "./_1_docs_dir/kruse_relations.json",
     "./_1_docs_dir/some_other_document.docx"
 ]
 
