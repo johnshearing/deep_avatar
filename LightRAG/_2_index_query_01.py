@@ -9,7 +9,7 @@ from lightrag.utils import logger, set_verbose_debug, EmbeddingFunc
 from llama_index.embeddings.openai import OpenAIEmbedding
 
 # Configuration
-WORKING_DIR = "_0_lightrag_work_dir"
+WORKING_DIR = "_0_jack_work_dir_02"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
@@ -117,7 +117,7 @@ async def main():
         '''
 
         query = (
-            "Which functions use the weight parameter? "
+            "What document contains the source data for the entity Regenerative Health Podcast? "
         )       
          
         for mode in ["naive", "local", "global", "hybrid", "mix"]:  
@@ -126,7 +126,7 @@ async def main():
             print(f"=====================")
             response = await rag.aquery(
                 query,
-                param=QueryParam(mode=mode, top_k=50, only_need_context=True) # only_need_context=True, only_need_prompt=True
+                param=QueryParam(mode=mode, top_k=50) # only_need_context=True, only_need_prompt=True
             )
             print(response)
     except Exception as e:

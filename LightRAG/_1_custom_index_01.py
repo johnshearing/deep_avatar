@@ -20,7 +20,7 @@ MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
 # Files to be indexed
 files_2b_indexed = [
-    "./_1_docs_dir/kruse_add_relation.json",
+    "./_1_docs_dir/kruse.json",
     "./_1_docs_dir/some_other_document.docx"
 ]
 
@@ -142,7 +142,7 @@ async def main():
             with open(doc_path, "r") as f:
                 docs = json.load(f)
 
-            await rag.ainsert_custom_kg(docs, full_doc_id=["id_" + doc_path], file_path="fp_" + doc_path)
+            await rag.ainsert_custom_kg(docs, full_doc_id=os.path.basename(doc_path), file_path=os.path.basename(doc_path))
             print(f"Indexed {doc_path}")
     except Exception as e:
         print(f"An error occurred: {e}")

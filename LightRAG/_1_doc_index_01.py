@@ -143,7 +143,7 @@ async def main():
             decoded_text = re.sub(r"\n\s*\n", "\n", decoded_text)
             decoded_text = re.sub(r"Page \d+", "", decoded_text)
             print(f"Extracted text (first 100 chars): {decoded_text[:100]}")
-            await rag.ainsert(decoded_text, ids=["id_" + doc_path], file_paths=doc_path)
+            await rag.ainsert(decoded_text, ids=[os.path.basename(doc_path)], file_paths=os.path.basename(doc_path))
             print(f"Indexed {doc_path}")
     except Exception as e:
         print(f"An error occurred: {e}")
