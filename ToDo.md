@@ -92,10 +92,10 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
     - These transcripts will import into LightRAG with no issues.
 
 - Figure out how to pull YouTube channel metadata and document metadata into the LightRAG database?
-  - This was accomplished by [merged??.py](https://github.com/johnshearing/scrape_yt_mk_transcripts) which converts the entire transcript from json to a segmented text file where the metadata is the first few lines of the file.
-  - The metadata is coverted to json via a template and this is automatically imported into the LightRAG index via the rag.insert_custom_kg(custom_kg) function.
+  - This was accomplished by [merged??.py](https://github.com/johnshearing/scrape_yt_mk_transcripts) which converts the entire transcript from json to a segmented text.
+  - The metadata collected during the process is coverted to json via a template and this is automatically imported into the LightRAG index via the rag.insert_custom_kg(custom_kg) function.
   - The LightRAG sever now reports all the metadata on the videos.
-Sample of the video metadata we are seeking to pull into the database.
+Sample of the video metadata pulled into the database.
 ```json
     "language": "en",
     "metadata": {
@@ -103,26 +103,7 @@ Sample of the video metadata we are seeking to pull into the database.
         "videoTitle": "Your \u2018Reality\u2019 Is Lying to You! \u2705 Abraham Hicks 2025",
         "url": "https://www.youtube.com/watch?v=0k2tTiDTn-c",
         "videoPostDate": "2025-01-19T17:30:00Z"
-    },
-    "text": " Hi Abraham.",
-    "segments": [
-        {
-            "id": 0,
-            "start": 0.0,
-            "end": 7.36,
-            "text": " Hi Abraham. I teach this yoga class and I base it on law of attraction and I say"
-        },
-        {
-            "id": 1,
-            "start": 7.36,
-            "end": 13.58,
-            "text": " this thing and I was questioning it on the way over here. I say if we really did",
-            "avg_logprob": -0.12857116887598863,
-            "compression_ratio": 1.687830687830688,
-            "no_speech_prob": 0.16776621341705322,
-            "speaker": "SPEAKER_01"
-        },... more segments continue until the end
-     ]
+
 ```
 
 - Get more familiar with the LightRAG knowledge graph manipulation python commands.
