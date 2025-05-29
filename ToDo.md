@@ -46,11 +46,11 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
 
 - Test the effect of a smaller embedding dimension with respect to quality of answers. 
 
-- Test the effect of smaller chunks on the following question:
-
 - Test the effect of changing the cosine value.
 
 - Test the effect of entity_extract_max_gleaning during the indexing process.
+
+- Test the effect of smaller chunks on the following question:
 
 ```python
 >query = "Using only the text to answer, " \
