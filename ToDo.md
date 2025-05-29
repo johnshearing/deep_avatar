@@ -48,13 +48,16 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
 
 - Test the effect of smaller chunks on the following question:
 
+- Test the effect of changing the cosine value.
+
+- Test the effect of entity_extract_max_gleaning during the indexing process.
+
 ```python
 >query = "Using only the text to answer, " \
 "The Mod-Linx conveyor is stopping and starting by itself. What should I do? , "\
 "Please use only the provided text when forming your answer."<
 ```
-
-- I noticed that the LightRag server does not append to the response file.  
+  
 - I noticed that _1_audio_rag_pipeline_07.py does not incur charges from OpenAI even though it seems to call openai_4o_mini over the net. 
 
 #### Done:
