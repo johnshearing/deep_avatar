@@ -117,10 +117,10 @@ async def main():
         '''
 
         query = (
-            "Please list all entities directly related to the entity metadata-hub-kruse.txt. "
+            "/local [Use mermaid format for diagrams] Please draw a relationship diagram for Catholicism "
         )       
          
-        for mode in ["naive", "local", "global", "hybrid", "mix"]:  
+        for mode in ["naive", "local", "global", "hybrid", "mix"]:  # "naive", "local", "global", "hybrid", "mix"
             print(f"\n=====================")
             print(f"Query mode: {mode}")
             print(f"=====================")
