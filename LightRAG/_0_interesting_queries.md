@@ -32,8 +32,9 @@ The discussion around topical sunscreen highlights a critical view of its use in
 - [DC] Ln3WszTq0uA.txt
 - [DC] Ln3WszTq0uA_metadata.json
 <br>
-<br>
-#### The following explains the effect of query formating
+
+---
+#### The following explains the effect of the query formating in the above example
 
 * "/naive" was specified as the query method.
   * Methods available are naive, local, global, hybrid, mix, and bypass.
