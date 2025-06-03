@@ -8,7 +8,18 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
     
 - Selective searching of the index given a video name or document name rather than creating a response from the entire index of videos.
   - There is a native function and parameter for this (ids) but it has been disabled by the LightRAG developers.
-  - I need to see if I can get "ids" functionality working.  
+  - I have worked around this issue by automatically adding metadata to the vector_db and knowledge graph [using this library](https://github.com/johnshearing/scrape_yt_mk_transcripts) but still need to test the results. 
+
+- Experiment with customizing lightrag-server's the default prompt
+  - Looking to reduce orphans beyond what is possible with entity_extract_max_gleaning.
+
+- Look into SQL code in the LightRAG library.
+  - See if the items on the lightrag-server knowledge graph ledgend can be a used as a clickable filter.
+  - See if active filters on the knowledge graph can be applied to responses on the retrieval tab.
+
+- Examine LightRAG python code and testing
+  - See if updates to knowledge graph via the API will update the vector database as well. It turns out they do not.
+  - See if it is possible to delete or at least nullify errant relations in the KG and if these are carried over to the VDB. I think there are functions for this but they are not documented. Need to dig. The documentation does warn of halucination when deleting items.
 
 - Convert from LightRAG's native nano_vectordb to one of the following: Neo4J, PostgreSQL, Faiss for storage.
 
