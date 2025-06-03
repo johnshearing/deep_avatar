@@ -9,7 +9,7 @@ from lightrag.utils import logger, set_verbose_debug, EmbeddingFunc
 from llama_index.embeddings.openai import OpenAIEmbedding
 
 # Configuration
-WORKING_DIR = "_0_jack_work_dir_02"
+WORKING_DIR = "_0_jack_work_dir_01"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
@@ -117,7 +117,7 @@ async def main():
         '''
 
         query = (
-            "/local [Use mermaid format for diagrams] Please draw a relationship diagram for Catholicism "
+            "Does Jack have an opinion on sunglasses? "
         )       
          
         for mode in ["naive", "local", "global", "hybrid", "mix"]:  # "naive", "local", "global", "hybrid", "mix"
