@@ -1,25 +1,24 @@
 ## Items To Do:
 All of the following are with regard to the first big milestone: The setting up the Retrieval Augmented Generation (RAG) system.  
-See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/README.md) for the overall roadmap.  
+See the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/README.md) for the overall roadmap.  
 
 - Continuous GitHub backup of all the work
 
-- Run LightRAG python scripts, and LightRAG Server in a debuggers to get a feeling for how the logic flows?
+- Run LightRAG python scripts, and LightRAG Server in the debuggers to get a feeling for how the logic flows?
+  - I notice the lightrag server can become intolerably slow after using it for a while but will work fine again after restarting the server.
+  - This will be good to investigate with the debuggers.
     
 - Selective searching of the index given a video name or document name rather than creating a response from the entire index of videos.
   - There is a native function and parameter for this (ids) but it has been disabled by the LightRAG developers.
   - I have worked around this issue by automatically adding metadata to the vector_db and knowledge graph [using this library](https://github.com/johnshearing/scrape_yt_mk_transcripts) but still need to test the results. 
 
-- Experiment with customizing lightrag-server's the default prompt
+- Experiment with customizing lightrag-server's default prompt
   - Looking to reduce orphans beyond what is possible with entity_extract_max_gleaning.
 
 - Look into SQL code in the LightRAG library.
   - See if the items on the lightrag-server knowledge graph ledgend can be a used as a clickable filter.
   - See if active filters on the knowledge graph can be applied to responses on the retrieval tab.
 
-- Examine LightRAG python code and testing
-  - See if updates to knowledge graph via the API will update the vector database as well. It turns out they do not.
-  - See if it is possible to delete or at least nullify errant relations in the KG and if these are carried over to the VDB. I think there are functions for this but they are not documented. Need to dig. The documentation does warn of halucination when deleting items.
 
 - Convert from LightRAG's native nano_vectordb to one of the following: Neo4J, PostgreSQL, Faiss for storage.
 
@@ -90,8 +89,8 @@ See the the [README.md](https://github.com/johnshearing/deep_avatar/blob/main/RE
 #### Done:
 - Figure out how to pull YouTube channel metadata and document metadata into the LightRAG database?
   - This was accomplished by [merged??.py](https://github.com/johnshearing/scrape_yt_mk_transcripts) which converts the entire transcript from json to a segmented text.
-  - The metadata collected during the process is coverted to json via a template and this is automatically imported into the LightRAG index via the rag.insert_custom_kg(custom_kg) function.
-  - The LightRAG sever now reports all the metadata on the videos.
+  - The metadata collected during the process is converted to json via a template and this is automatically imported into the LightRAG index via the rag.insert_custom_kg(custom_kg) function.
+  - The LightRAG server now reports all the metadata on the videos.
 Sample of the video metadata pulled into the database.
 ```json
     "language": "en",
@@ -115,7 +114,7 @@ Sample of the video metadata pulled into the database.
 
 #### Done:
 - Try ingesting the LightRAG libraries into a LightRAG index to see if it can map its own logic flow to a knowledge graph.
-  - This worked the LightRAG server is able to explain its own libraries and logic flow.
+  - This worked, the LightRAG server is able to explain its own libraries and logic flow.
 
 #### Done:
 - Feeding responses back into a query for a more thoughtful response - Investigate a two stage query script or include an agent?
@@ -135,5 +134,19 @@ Sample of the video metadata pulled into the database.
   - Currently the LightRAG team is having hallucination issues after deleting documents from the index.
   - For now this can be done manually through the API where all entities and relationships are reassigned.
   - Or we can simply reindex all the data without the items we wish to delete.
+
+  #### Done:
+- Examine LightRAG python code
+  - See if updates to knowledge graph via the API will update the vector database as well.
+    - It turns out, yes it does if done through the API or with the python functions in the library.
+  - See if it is possible to delete or at least nullify errant entities and relations in the KG and if these are carried over to the VDB.
+    - I think there are functions for this but they are not documented. Need to dig.
+      - Turns out there are functions and API calls for all of this in lightrag.py but some are undocumented.
+    - The documentation does warn of hallucination when deleting items.
+      - It seems the hallucinations only occur when entire documents are deleted.
+      - There are functions in lightrag.py for deleting entities and relations in the KG which are indeed carried over to the VDB.
+  - New data types can be added to the entities in the KG.
+    - One needs to be careful to be sure there are no mistakes in the data when adding new data types because the system changes the structure of the KG and VDB which cannot be undone.
+    - So make a backup of all files in the index when adding new data types to the KG.
 
 
