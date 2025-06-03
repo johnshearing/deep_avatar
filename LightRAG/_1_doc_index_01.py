@@ -99,7 +99,8 @@ async def initialize_rag():
     rag = LightRAG(
         working_dir=WORKING_DIR,
         embedding_func=embedding_func,
-        llm_model_func=gpt_4o_mini_complete
+        llm_model_func=gpt_4o_mini_complete,
+        entity_extract_max_gleaning=3
     )
     
     await rag.initialize_storages()
