@@ -89,7 +89,7 @@ The following is an example.
 
 **Paste the following query into the LightRAG server prompt box.**
 
-/mix [Use mermaid format for diagrams] Please draw a character relationship diagram for Age of Mammals
+>/mix [Use mermaid format for diagrams] Please draw a character relationship diagram for Age of Mammals
 
 **The following is was the response produced**
 
@@ -118,11 +118,31 @@ Finally the query is written.
 The following is an example.   
 **Paste the following query into the LightRAG server prompt box.**
 
-/mix [Only provide the name of the entity in the response. Nothing else is required.] Please examine the Entity ID for all Entities in the following python list. Then please return only the Entities with a Rank of 0. [ "2023-04-02T06:06:17Z", "2023-04-22T23:01:27Z", "Alabama", "Albury", "Biological Compartments", "Cellular Health", "Circadian Biology", "Circadian Health", "Circadian Rhythm", "Cold Thermogenesis Protocol", "Cytochrome C Oxidase", "Delta Airlines", "Deuterium Depleted Water", "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease", "Dr Jack Kruse: WATER, non-native EMFs & mitochondrial basis of disease | Regenerative Health Podcast", "Dr. Anthony Chafee", "Dr. Jack Kruse", "Dr. Max Gulhane", "Eureka Moment", "Farm Tour", "Health Optimization"]
+>/mix [Only provide the name of the entity in the response. Nothing else is required.] Please examine the Entity ID for all Entities in the following python list. Then please return only the Entities with a Rank of 0. [ "2023-04-02T06:06:17Z", "2023-04-22T23:01:27Z", "Alabama", "Albury", "Biological Compartments", "Cellular Health", "Circadian Biology", "Circadian Health", "Circadian Rhythm", "Cold Thermogenesis Protocol", "Cytochrome C Oxidase", "Delta Airlines", "Deuterium Depleted Water", "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease", "Dr Jack Kruse: WATER, non-native EMFs & mitochondrial basis of disease | Regenerative Health Podcast", "Dr. Anthony Chafee", "Dr. Jack Kruse", "Dr. Max Gulhane", "Eureka Moment", "Farm Tour", "Health Optimization"]
 
 **The following is was the response produced**
 
-The only Entity from your provided list with a Rank of 0 is:  
+>The only Entity from your provided list with a Rank of 0 is:  
+>
+>Albury  
+>This entity corresponds to the location in New South Wales where Dr. Max Gulhane is based.  
 
-Albury  
-This entity corresponds to the location in New South Wales where Dr. Max Gulhane is based.  
+## Query 5
+
+### LightRAG can find Type, Description, Rank, and File Path in the knowledge graph. In the previous example we searched from Entity to Entity ID to Rank in order to find orphans. In the following example we go through Entity to Entity ID to Type in order to return categories.
+
+This only works in a mixed mode query.  
+The query type is specified first: /mixed  
+Special instructions about the output go in between brackets []  
+Finally the query is written.  
+
+The following is an example.   
+**Paste the following query into the LightRAG server prompt box.**
+
+>/mix [Only provide the name of the entity in the response. Nothing else is required.] Please examine the Entity ID for all Entities in the following python list. Then please return only the Entities with a Type of Person. [ "2023-04-02T06:06:17Z", "2023-04-22T23:01:27Z", "Alabama", "Albury", "Biological Compartments", "Cellular Health", "Circadian Biology", "Circadian Health", "Circadian Rhythm", "Cold Thermogenesis Protocol", "Cytochrome C Oxidase", "Delta Airlines", "Deuterium Depleted Water", "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease", "Dr Jack Kruse: WATER, non-native EMFs & mitochondrial basis of disease | Regenerative Health Podcast", "Dr. Anthony Chafee", "Dr. Jack Kruse", "Dr. Max Gulhane", "Eureka Moment", "Farm Tour", "Health Optimization"]
+
+**The following is was the response produced**
+
+>Dr. Anthony Chafee  
+Dr. Jack Kruse  
+Dr. Max Gulhane    

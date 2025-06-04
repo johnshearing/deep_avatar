@@ -110,12 +110,10 @@ async def main():
         rag = await initialize_rag()
 
         # Delete By Relation
-        await rag.adelete_by_relation(
-            source_entities=["Dr. Max Gulhane", "Max"],
-            target_entity="Dr. Max Gulhane"
-        )
+        # Export data in markdown format
+        await rag.aexport_data("graph_data.md", file_format="md")
 
-        print("Deleted")
+        print("Exported")
     except Exception as e:
         print(f"An error occurred: {e}")
         import traceback
