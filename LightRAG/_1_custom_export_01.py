@@ -109,7 +109,7 @@ async def main():
             raise ValueError("OPENAI_API_KEY or EMBEDDING_BINDING_API_KEY environment variable not set")
         rag = await initialize_rag()
 
-        # Merge company entities with both strategy and custom data
+        # Delete By Relation
         await rag.adelete_by_relation(
             source_entities=["Dr. Max Gulhane", "Max"],
             target_entity="Dr. Max Gulhane"

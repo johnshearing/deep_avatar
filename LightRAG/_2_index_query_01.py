@@ -117,7 +117,7 @@ async def main():
         '''
 
         query = (
-            "Does Jack have an opinion on sunglasses? "
+            "Please examine all entities and determine which entities have zero edge relationships with other entities? "
         )       
          
         for mode in ["naive", "local", "global", "hybrid", "mix"]:  # "naive", "local", "global", "hybrid", "mix"

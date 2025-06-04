@@ -18,11 +18,6 @@ EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
 MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
-# Files to be indexed
-files_2b_indexed = [
-    "./_1_docs_dir/l9Ubguvfpys.txt"
-]
-
 def configure_logging():
     """Configure logging with console and rotating file handlers."""
     for logger_name in ["uvicorn", "uvicorn.access", "uvicorn.error", "lightrag"]:
@@ -99,8 +94,7 @@ async def initialize_rag():
     rag = LightRAG(
         working_dir=WORKING_DIR,
         embedding_func=embedding_func,
-        llm_model_func=gpt_4o_mini_complete,
-        entity_extract_max_gleaning=3
+        llm_model_func=gpt_4o_mini_complete
     )
     
     await rag.initialize_storages()
@@ -114,37 +108,21 @@ async def main():
         if not os.getenv("OPENAI_API_KEY") and not API_KEY:
             raise ValueError("OPENAI_API_KEY or EMBEDDING_BINDING_API_KEY environment variable not set")
         rag = await initialize_rag()
-        
-        # Check which files are already indexed
-        indexed_files = set()
-        doc_status_file = os.path.join(WORKING_DIR, "kv_store_doc_status.json")
-        if os.path.exists(doc_status_file):
-            with open(doc_status_file, "r") as f:
-                docs = json.load(f)
-                indexed_files = {
-                    doc["file_path"]
-                    for doc in docs.values()
-                    if doc.get("status") == "processed" and "file_path" in doc
-                }
-            print(f"Already indexed files: {indexed_files}")
 
-        # Index new documents
-        for doc_path in files_2b_indexed:
-            if doc_path in indexed_files:
-                print(f"Skipping already indexed file: {doc_path}")
-                continue
-            print(f"Checking document at: {doc_path}")
-            if not os.path.exists(doc_path):
-                print(f"Document file not found at: {doc_path}, skipping...")
-                continue
-            print(f"Indexing document: {doc_path}...")
-            text_content = textract.process(doc_path, method="tesseract")
-            decoded_text = text_content.decode('utf-8')
-            decoded_text = re.sub(r"\n\s*\n", "\n", decoded_text)
-            decoded_text = re.sub(r"Page \d+", "", decoded_text)
-            print(f"Extracted text (first 100 chars): {decoded_text[:100]}")
-            await rag.ainsert(decoded_text, ids=[os.path.basename(doc_path)], file_paths=os.path.basename(doc_path))
-            print(f"Indexed {doc_path}")
+        # Merge company entities with both strategy and custom data
+        await rag.amerge_entities(
+            source_entities=["Dr. Max Gulhane", "Max"],
+            target_entity="Dr. Max Gulhane",
+            merge_strategy={
+                "description": "concatenate",  # Combine all descriptions
+                "source_id": "join_unique"     # Combine source IDs
+            },
+            target_entity_data={
+                "entity_type": "person",
+            }
+        )
+
+        print("Merged")
     except Exception as e:
         print(f"An error occurred: {e}")
         import traceback

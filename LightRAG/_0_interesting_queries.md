@@ -105,3 +105,24 @@ graph TD;
 
 ### Explanation:
 - The diagram illustrates the relationships surrounding the "Age of Mammals," showing its connections to key entities such as Max, the Last Extinction Event, Darwin's Theory of Evolution, the Asteroid Event, Human Evolution, and Dinosaurs. Each relationship highlights how these entities are interconnected in the context of evolutionary history.
+
+## Query 4
+
+### LightRAG can find orphans in the knowledge graph.
+
+This only works in a mixed mode query.  
+The query type is specified first: /mixed  
+Special instructions about the output go in between brackets []  
+Finally the query is written.  
+
+The following is an example.   
+**Paste the following query into the LightRAG server prompt box.**
+
+/mix [Only provide the name of the entity in the response. Nothing else is required.] Please examine the Entity ID for all Entities in the following python list. Then please return only the Entities with a Rank of 0. [ "2023-04-02T06:06:17Z", "2023-04-22T23:01:27Z", "Alabama", "Albury", "Biological Compartments", "Cellular Health", "Circadian Biology", "Circadian Health", "Circadian Rhythm", "Cold Thermogenesis Protocol", "Cytochrome C Oxidase", "Delta Airlines", "Deuterium Depleted Water", "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease", "Dr Jack Kruse: WATER, non-native EMFs & mitochondrial basis of disease | Regenerative Health Podcast", "Dr. Anthony Chafee", "Dr. Jack Kruse", "Dr. Max Gulhane", "Eureka Moment", "Farm Tour", "Health Optimization"]
+
+**The following is was the response produced**
+
+The only Entity from your provided list with a Rank of 0 is:  
+
+Albury  
+This entity corresponds to the location in New South Wales where Dr. Max Gulhane is based.  
