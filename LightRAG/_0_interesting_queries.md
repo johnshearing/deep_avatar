@@ -13,6 +13,10 @@ How the query is written also matters. The following is an example.
 
 /naive [Time stamps in the source text appear like the following sample: [6.56 > 11.68]. The values given between the brackets are in seconds and decimal fractions of a second, not in minutes. Provide the full URLs including timestamped points in the source video so that the videos can be viewed at the moment of interest.] Please search for all instances where topical sunscreen is discussed.
 
+**The following query is more precise in its instruction but performs worse than the one above.**
+
+/naive [Time stamps in the source text appear like the following sample: [6.56 > 11.68]. The values given between the brackets are in seconds and decimal fractions of a second, not in minutes. The source text is a transcript from the source video. The URL for the source video is found in the metadata associated with the source text. Please provide URLs in your responses for source video that incorporate the timestamps found in the source text so that the videos can be viewed at the moment which is relevant to the query response. The following is an example of how the URLs should be structured: https://www.youtube.com/watch?v=Ln3WszTq0uA&t=12. Provide the timestamp in seconds and round the timestamp value to the nearest second] Please search for all instances where POMC is discussed.
+
 **The following is was the response produced**
 
 ### Instances Discussing Topical Sunscreen

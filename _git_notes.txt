@@ -118,5 +118,21 @@ git pull backup main
 The nano text editor will open automatically and it will be required to enter a commit messsage.
 If nothing is entered then the pull and commit from the remote will be aborted.
 
-If the pull from the remote is successful then it will be possible push updates from the local repository:
+If the pull from the remote is successful then it will be possible push updates from the local repository with the following command:
 git push backup main
+
+
+
+########################## The commands is this section are used to unstage files ###################################
+
+
+********************                                 Important!!                         *****************************
+***********git restore <filename> (without --staged): Discards unstaged changes in your working directory ************
+******************************      Use the --staged option when using the restore command.     **********************
+********************                    There will be tears if you fail to do this              ********************** 
+
+If you've staged multiple files and want to unstage all of them at once, you can use git restore with the --staged option and a period (.) 
+git restore --staged .
+
+To unstage a single file run the following command:
+git restore --staged my_file.txt

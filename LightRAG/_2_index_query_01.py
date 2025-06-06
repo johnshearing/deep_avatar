@@ -9,11 +9,12 @@ from lightrag.utils import logger, set_verbose_debug, EmbeddingFunc
 from llama_index.embeddings.openai import OpenAIEmbedding
 
 # Configuration
-WORKING_DIR = "_0_jack_work_dir_02"
+WORKING_DIR = "_0_jack_work_dir_01"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
 MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
+# COSINE_THRESHOLD = float(os.getenv("COSINE_THRESHOLD", 0.2))
 
 def configure_logging():
     """Configure logging with console and rotating file handlers."""
@@ -117,31 +118,11 @@ async def main():
         '''
 
         query = (
-            'Please examine the Entity ID for all Entities in the following python list. '
-            'Then please return only the Entities with a Rank of 0. '
-            '[ "2023-04-02T06:06:17Z", "2023-04-22T23:01:27Z", "Alabama", "Albury", '
-            '"Biological Compartments", "Cellular Health", "Circadian Biology", '
-            '"Circadian Health", "Circadian Rhythm", "Cold Thermogenesis Protocol", '
-            '"Cytochrome C Oxidase", "Delta Airlines", "Deuterium Depleted Water", '
-            '"Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease", '
-            '"Dr Jack Kruse: WATER, non-native EMFs & mitochondrial basis of disease | Regenerative Health Podcast", '
-            '"Dr. Anthony Chafee", "Dr. Jack Kruse", "Dr. Max Gulhane", "Eureka Moment", '
-            '"Farm Tour", "Health Optimization", "Human Cells", "Jake Wolke", "Kale", '
-            '"Leptin Prescription", "Light Environment", "Light, Water, and Magnetism Series", '
-            '"Ln3WszTq0uA.txt", "Ln3WszTq0uA_metadata.json", "Max Gulhane MD", "Medical School", '
-            '"Michelangelo\'s David", "Mitochondria", "Mitochondrial Matrix", "Mitochondrial Medicine", '
-            '"Mitochondrial Optimization", "Mitochondrial Respiration", "Mitochondrial Water", "Neurosurgery", '
-            '"Nutrients from Proteins and Fats", "Oxidative Metabolism", "POMC Gene", "Photosynthesis", '
-            '"Regenerative Health Podcast", "Robin Sharma", "TCA Cycle", "The Monk Who Sold His Ferrari", '
-            '"Water", "arterial arcade", "brain", "en", "glomeruloneph membrane", '
-            '"https://www.youtube.com/watch?v=Ln3WszTq0uA", "https://www.youtube.com/watch?v=l9Ubguvfpys", '
-            '"hypothalamic portal circulation", "l9Ubguvfpys.txt", "metadata-global-hub", '
-            '"metadata-hub-l9Ubguvfpys.txt", "portal circulation", "source-document-global-hub", '
-            '"www.youtube.com" ]'
+            "[Time stamps in the source text appear like the following sample: [6.56 > 11.68]. The values given between the brackets are in seconds and decimal fractions of a second, not in minutes. Provide the full URLs including timestamped points in the source video so that the videos can be viewed at the moment of interest.] Please search for all instances where POMC is discussed."
         )
       
          
-        for mode in ["local"]:  # "naive", "local", "global", "hybrid", "mix"
+        for mode in ["naive"]:  # "naive", "local", "global", "hybrid", "mix"
             print(f"\n=====================")
             print(f"Query mode: {mode}")
             print(f"=====================")

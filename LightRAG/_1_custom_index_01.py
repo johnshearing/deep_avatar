@@ -12,7 +12,7 @@ from llama_index.embeddings.openai import OpenAIEmbedding
 import textract
 
 # Configuration
-WORKING_DIR = "_0_jack_work_dir_02"
+WORKING_DIR = "_0_jack_work_dir_01"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
@@ -20,7 +20,7 @@ MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
 # Files to be indexed
 files_2b_indexed = [
-    "./_1_docs_dir/l9Ubguvfpys_relations.json"
+    "./_1_docs_dir/Ln3WszTq0uA_metadata.json"
 ]
 
 def configure_logging():
