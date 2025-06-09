@@ -12,7 +12,7 @@ from llama_index.embeddings.openai import OpenAIEmbedding
 import textract
 
 # Configuration
-WORKING_DIR = "_0_jack_work_dir_02"
+WORKING_DIR = "_0_jack_work_dir_01"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")

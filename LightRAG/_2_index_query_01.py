@@ -8,13 +8,17 @@ from lightrag.kg.shared_storage import initialize_pipeline_status
 from lightrag.utils import logger, set_verbose_debug, EmbeddingFunc
 from llama_index.embeddings.openai import OpenAIEmbedding
 
+# Load environment variables from .env file
+# from dotenv import load_dotenv
+# load_dotenv()
+
 # Configuration
 WORKING_DIR = "_0_jack_work_dir_01"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
 MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
-# COSINE_THRESHOLD = float(os.getenv("COSINE_THRESHOLD", 0.2))
+
 
 def configure_logging():
     """Configure logging with console and rotating file handlers."""
@@ -81,7 +85,7 @@ async def initialize_rag():
     # Define embedding function
     embedding_func = EmbeddingFunc(
         embedding_dim=EMBEDDING_DIM,
-        max_token_size=MAX_TOKEN_SIZE,
+        max_token_size=MAX_TOKEN_SIZE,               
         func=async_embedding_func
     )
     
@@ -118,17 +122,17 @@ async def main():
         '''
 
         query = (
-            "[Time stamps in the source text appear like the following sample: [6.56 > 11.68]. The values given between the brackets are in seconds and decimal fractions of a second, not in minutes. Provide the full URLs including timestamped points in the source video so that the videos can be viewed at the moment of interest.] Please search for all instances where POMC is discussed."
+            "What does Jack say about Health Education?"
         )
       
          
-        for mode in ["naive"]:  # "naive", "local", "global", "hybrid", "mix"
+        for mode in ["local"]:  # "naive", "local", "global", "hybrid", "mix"
             print(f"\n=====================")
             print(f"Query mode: {mode}")
             print(f"=====================")
             response = await rag.aquery(
                 query,
-                param=QueryParam(mode=mode, top_k=50) # only_need_context=True, only_need_prompt=True
+                param=QueryParam(mode=mode, top_k=50),  # top_k=50, only_need_context=True, only_need_prompt=True
             )
             print(response)
     except Exception as e:
@@ -144,3 +148,17 @@ if __name__ == "__main__":
     configure_logging()
     asyncio.run(main())
     print("\nQuerying Done!")
+
+
+    '''
+    print("--- All Loaded Environment Variables ---")
+    # os.environ is a dictionary-like object
+    # You can iterate over its items (key-value pairs)
+    for key, value in os.environ.items():
+        print(f"{key}={value}")
+
+    print("--------------------------------------")
+    '''
+
+
+

@@ -11,7 +11,7 @@ How the query is written also matters. The following is an example.
 
 **Paste the following query into the LightRAG server prompt box.**
 
-/naive [Time stamps in the source text appear like the following sample: [6.56 > 11.68]. The values given between the brackets are in seconds and decimal fractions of a second, not in minutes. Provide the full URLs including timestamped points in the source video so that the videos can be viewed at the moment of interest.] Please search for all instances where topical sunscreen is discussed.
+/naive [Time stamps in the source text appear like the following sample: [6.56 > 11.68]. The values given between the brackets are in seconds and decimal fractions of a second, not in minutes. Provide the full URLs including timestamped points in the source video (rounded to the nearest second) so that the videos can be viewed at the moment of interest.] Please search for all instances where topical sunscreen is discussed.
 
 **The following query is more precise in its instruction but performs worse than the one above.**
 
