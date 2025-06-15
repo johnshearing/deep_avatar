@@ -1,0 +1,846 @@
+import tkinter as tk
+from tkinter import ttk, messagebox, simpledialog
+import asyncio
+import requests
+import os
+import json
+import platform
+
+from lightrag import LightRAG
+from lightrag.llm.openai import gpt_4o_mini_complete
+from lightrag.kg.shared_storage import initialize_pipeline_status
+from lightrag.utils import EmbeddingFunc
+from llama_index.embeddings.openai import OpenAIEmbedding
+
+# Configuration
+WORKING_DIR = "_0_jack_work_dir_01"
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
+EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
+API_KEY = os.getenv("EMBEDDING_BINDING_API_key")
+MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
+
+# --- LightRAG Server API Configuration ---
+LIGHTRAG_SERVER_URL = "http://localhost:9621" # Default LightRAG server address
+
+
+async def initialize_rag():
+    embed_model = OpenAIEmbedding(
+        model=EMBEDDING_MODEL,
+        api_key=API_KEY,
+        dimensions=EMBEDDING_DIM
+    )
+    async def async_embedding_func(texts):
+        return embed_model.get_text_embedding_batch(texts)
+    embedding_func = EmbeddingFunc(
+        embedding_dim=EMBEDDING_DIM,
+        max_token_size=MAX_TOKEN_SIZE,
+        func=async_embedding_func
+    )
+    rag = LightRAG(
+        working_dir=WORKING_DIR,
+        embedding_func=embedding_func,
+        llm_model_func=gpt_4o_mini_complete
+    )
+    await rag.initialize_storages()
+    await initialize_pipeline_status()
+    return rag
+
+def fetch_entities():
+    try:
+        response = requests.get(f"{LIGHTRAG_SERVER_URL}/graph/label/list")
+        response.raise_for_status()
+        return sorted(response.json(), key=lambda x: x.lower())
+    except requests.exceptions.ConnectionError:
+        messagebox.showerror("Connection Error", "Could not connect to LightRAG server. Is it running?")
+        return []
+    except Exception as e:
+        messagebox.showerror("Error", f"Failed to fetch entities from server: {e}")
+        return []
+
+def fetch_entity_details(label):
+    try:
+        response = requests.get(f"{LIGHTRAG_SERVER_URL}/graphs?label={label}&max_depth=1&max_nodes=1000")
+        response.raise_for_status()
+        data = response.json()
+        for node in data.get("nodes", []):
+            if node.get("id") == label:
+                return node["properties"].get("description", "No description found."), node["properties"].get("entity_type", ""), node["properties"].get("source_id", "")
+        return "No description found.", "", ""
+    except requests.exceptions.ConnectionError:
+        print("Connection Error: Could not connect to LightRAG server to fetch entity details.")
+        return "Error: Server not reachable.", "", ""
+    except Exception as e:
+        print(f"Error fetching entity details for {label}: {e}")
+        return f"Error: {e}", "", ""
+
+# MODIFIED: Renamed and updated to call the new /graph/refresh-data endpoint
+def trigger_server_refresh():
+    try:
+        print("Attempting to trigger LightRAG server data refresh...")
+        response = requests.post(f"{LIGHTRAG_SERVER_URL}/graph/refresh-data") # New endpoint
+        response.raise_for_status()
+        print("LightRAG server data refresh triggered successfully.")
+        return True
+    except requests.exceptions.ConnectionError:
+        messagebox.showwarning("Server Not Running", "Could not connect to LightRAG server to trigger refresh. Please ensure the server is running.")
+        return False
+    except requests.exceptions.HTTPError as e:
+        messagebox.showwarning("API Error", f"Failed to trigger LightRAG server data refresh: {e.response.status_code} - {e.response.text}")
+        return False
+    except Exception as e:
+        messagebox.showwarning("Error", f"An unexpected error occurred while triggering LightRAG server data refresh: {e}")
+        return False
+
+def update_entity_description_api(entity_label, new_description):
+    try:
+        url = f"{LIGHTRAG_SERVER_URL}/graph/entity/edit"
+        headers = {'accept': 'application/json', 'Content-Type': 'application/json'}
+        payload = {
+            "entity_name": entity_label,
+            "updated_data": {"description": new_description},
+            "allow_rename": False
+        }
+        
+        print(f"Sending update request for {entity_label} with new description...")
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+        print(f"Successfully updated description for {entity_label}.")
+        return True
+    except requests.exceptions.ConnectionError:
+        messagebox.showerror("Connection Error", "Could not connect to LightRAG server to update description. Is it running?")
+        return False
+    except requests.exceptions.HTTPError as e:
+        messagebox.showerror("API Error", f"Failed to update description for {entity_label}: {e.response.status_code} - {e.response.text}")
+        return False
+    except Exception as e:
+        messagebox.showerror("Error", f"An unexpected error occurred while updating description for {entity_label}: {e}")
+        return False
+
+class MergeGUI:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("LightRAG Entity Merger")
+        self.entity_list = fetch_entities()
+        self.filtered_entity_list = self.entity_list.copy()
+        
+        self.all_check_vars = {entity: tk.BooleanVar() for entity in self.entity_list}
+
+        self.description_windows = {}
+        self.description_frames = {}
+        self.entity_data = {} # Cache for entity details (description, type, source_id)
+        self.config_file = "merge_gui_config.json"
+        
+        self.load_window_config()
+        self.setup_main_window()
+        
+        self.check_vars = {}
+        self.first_entity_var = tk.StringVar()
+        
+        self.create_ui()
+        
+        self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
+
+    def load_window_config(self):
+        self.window_config = {
+            "geometry": "1200x800",
+            "state": "normal",
+            "paned_position": 300
+        }
+        
+        if os.path.exists(self.config_file):
+            try:
+                with open(self.config_file, 'r') as f:
+                    saved_config = json.load(f)
+                    self.window_config.update(saved_config)
+            except:
+                pass
+
+    def set_initial_paned_position(self):
+        try:
+            self.root.update_idletasks()
+            window_width = self.paned_window.winfo_width()
+            
+            if window_width > 100:
+                position = int(window_width * 0.25)
+            else:
+                position = 300
+            
+            self.paned_window.sashpos(0, position)
+        except Exception as e:
+            self.paned_window.sashpos(0, 300)
+
+    def save_window_config(self):
+        try:
+            geometry = self.root.geometry()
+            state = self.root.state()
+            paned_position = self.paned_window.sash_coord(0)[0]
+            
+            config = {
+                "geometry": geometry,
+                "state": state,
+                "paned_position": paned_position
+            }
+            
+            with open(self.config_file, 'w') as f:
+                json.dump(config, f)
+        except:
+            pass
+
+    def setup_main_window(self):
+        self.root.geometry(self.window_config["geometry"])
+        
+        if platform.system() == "Windows":
+            try:
+                self.root.state('zoomed')
+            except tk.TclError:
+                self.root.geometry(f"{self.root.winfo_screenwidth()}x{self.root.winfo_screenheight()}+0+0")
+        elif platform.system() == "Linux":
+            self.root.geometry(f"{self.root.winfo_screenwidth()}x{self.root.winfo_screenheight()}+0+0")
+        else:
+            self.root.geometry(f"{self.root.winfo_screenwidth()}x{self.root.winfo_screenheight()}+0+0")
+            
+        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_columnconfigure(0, weight=1)
+
+    def create_ui(self):
+        self.paned_window = ttk.PanedWindow(self.root, orient="horizontal")
+        self.paned_window.grid(row=0, column=0, sticky="nsew")
+        
+        self.left_panel = ttk.Frame(self.paned_window)
+        self.paned_window.add(self.left_panel, weight=1)
+        
+        self.right_panel = ttk.Frame(self.paned_window)
+        self.paned_window.add(self.right_panel, weight=3)
+        
+        self.root.after(10, self.set_initial_paned_position)
+        
+        self.create_right_panel()
+        self.create_left_panel()
+
+    def create_left_panel(self):
+        self.left_panel.grid_rowconfigure(2, weight=1)
+        self.left_panel.grid_columnconfigure(0, weight=1)
+        
+        top_controls_frame = ttk.Frame(self.left_panel)
+        top_controls_frame.grid(row=0, column=0, sticky="ew", padx=5, pady=5)
+        top_controls_frame.grid_columnconfigure(1, weight=1)
+
+        ttk.Label(top_controls_frame, text="Filter:").grid(row=0, column=0, padx=(0, 5), sticky="w")
+        self.filter_var = tk.StringVar()
+        self.filter_entry = ttk.Entry(top_controls_frame, textvariable=self.filter_var)
+        self.filter_entry.grid(row=0, column=1, sticky="ew", padx=(0, 5))
+        self.filter_var.trace('w', self.on_filter_change)
+        
+        self.clear_filter_button = ttk.Button(top_controls_frame, text="✕", width=3, command=self.clear_filter)
+        self.clear_filter_button.grid(row=0, column=2, padx=(0,5))
+
+        action_buttons_frame = ttk.Frame(top_controls_frame)
+        action_buttons_frame.grid(row=1, column=0, columnspan=3, sticky="ew", pady=(5,0))
+        action_buttons_frame.grid_columnconfigure(0, weight=1)
+        action_buttons_frame.grid_columnconfigure(1, weight=1)
+        action_buttons_frame.grid_columnconfigure(2, weight=1)
+        action_buttons_frame.grid_columnconfigure(3, weight=1) 
+
+        self.select_all_button = ttk.Button(action_buttons_frame, text="Select All", command=self.select_all_entities)
+        self.select_all_button.grid(row=0, column=0, sticky="ew", padx=(0, 2))
+
+        self.select_all_of_entity_button = ttk.Button(action_buttons_frame, text="Select All Of Type", command=self.select_all_of_entity_type)
+        self.select_all_of_entity_button.grid(row=0, column=1, sticky="ew", padx=(2, 2))
+
+        self.show_selected_button = ttk.Button(action_buttons_frame, text="Selected Only", command=self.show_selected_only)
+        self.show_selected_button.grid(row=0, column=2, sticky="ew", padx=(2, 2))
+
+        self.clear_all_button = ttk.Button(action_buttons_frame, text="Clear All", command=self.clear_all_selections)
+        self.clear_all_button.grid(row=0, column=3, sticky="ew", padx=(2, 0))
+        
+        header_frame = ttk.Frame(self.left_panel)
+        header_frame.grid(row=1, column=0, sticky="ew", padx=5, pady=5)
+        # Configure header columns for labels
+        header_frame.grid_columnconfigure(0, weight=0) # For Show/Hide Desc label (tight)
+        header_frame.grid_columnconfigure(1, weight=0) # For Keep First label (tight)
+        header_frame.grid_columnconfigure(2, weight=1) # For Select Entities label (expands)
+        
+        # --- MODIFIED: Adjusted label positions and text ---
+        self.desc_header_label = ttk.Label(header_frame, text="Show\nDesc", font=("TkDefaultFont", 9, "bold"), anchor="center", justify="center")
+        # Align with the button below it. The button is in column 0 of content_frame, sticky "ns"
+        self.desc_header_label.grid(row=0, column=0, padx=5, sticky="ew") 
+
+        # --- MODIFIED: Changed label text and aligned ---
+        self.keep_first_label = ttk.Label(header_frame, text="Keep\nFirst", font=("TkDefaultFont", 9, "bold"), anchor="center", justify="center")
+        # Align with the radio buttons below it. Radio buttons are in column 0 of scrollable_frame, sticky "w"
+        self.keep_first_label.grid(row=0, column=1, padx=5, sticky="ew")
+
+        # --- MODIFIED: Changed label text and aligned ---
+        self.select_entities_label = ttk.Label(header_frame, text="Select\nEntities", font=("TkDefaultFont", 9, "bold"), anchor="w", justify="left")
+        # Align with the checkboxes below it. Checkboxes are in column 1 of scrollable_frame, sticky "w"
+        self.select_entities_label.grid(row=0, column=2, padx=5, sticky="w")
+        
+        content_frame = ttk.Frame(self.left_panel)
+        content_frame.grid(row=2, column=0, sticky="nsew", padx=5, pady=5)
+        content_frame.grid_rowconfigure(0, weight=1)
+        # Column 0 for the description button, Column 1 for the canvas (which contains radio buttons and checkboxes)
+        content_frame.grid_columnconfigure(1, weight=1) 
+        
+        self.toggle_desc_button = ttk.Button(content_frame, text="⇕", command=self.toggle_descriptions, width=3)
+        self.toggle_desc_button.grid(row=0, column=0, sticky="n", padx=(0, 5)) # Changed sticky to 'n' for top alignment
+
+        list_frame = ttk.Frame(content_frame)
+        list_frame.grid(row=0, column=1, sticky="nsew")
+        list_frame.grid_rowconfigure(0, weight=1)
+        list_frame.grid_columnconfigure(0, weight=1)
+        
+        self.canvas = tk.Canvas(list_frame)
+        self.scrollbar = ttk.Scrollbar(list_frame, orient="vertical", command=self.canvas.yview)
+        self.scrollable_frame = ttk.Frame(self.canvas)
+        
+        self.scrollable_frame.bind("<Configure>", lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all")))
+        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+        
+        self.canvas.grid(row=0, column=0, sticky="nsew")
+        self.scrollbar.grid(row=0, column=1, sticky="ns")
+        
+        # Column 0 of scrollable_frame for radio buttons, Column 1 for checkboxes
+        self.scrollable_frame.grid_columnconfigure(0, weight=0) # Radio button column, tight
+        self.scrollable_frame.grid_columnconfigure(1, weight=1) # Checkbox column, expands
+
+        def _on_mousewheel(event):
+            try:
+                if platform.system() == "Windows":
+                    if hasattr(event, 'delta') and event.delta:
+                        self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+                elif platform.system() == "Darwin":
+                    if hasattr(event, 'delta') and event.delta:
+                        self.canvas.yview_scroll(int(-1 * event.delta), "units")
+                else:
+                    if event.num == 4:
+                        self.canvas.yview_scroll(-1, "units")
+                    elif event.num == 5:
+                        self.canvas.yview_scroll(1, "units")
+                    elif hasattr(event, 'delta') and event.delta:
+                        self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+            except:
+                pass
+            return "break"
+
+        scroll_events = []
+        if platform.system() == "Windows":
+            scroll_events = ["<MouseWheel>", "<Shift-MouseWheel>"]
+        elif platform.system() == "Darwin":
+            scroll_events = ["<MouseWheel>", "<Button-4>", "<Button-5>"]
+        else:
+            scroll_events = ["<Button-4>", "<Button-5>", "<MouseWheel>"]
+
+        for event in scroll_events:
+            try:
+                self.canvas.bind(event, _on_mousewheel)
+            except:
+                pass
+
+        def on_canvas_enter(event):
+            self.canvas.focus_set()
+
+        def on_canvas_leave(event):
+            self.root.focus_set()
+
+        self.canvas.bind("<Enter>", on_canvas_enter)
+        self.canvas.bind("<Leave>", on_canvas_leave)
+        self.canvas.config(takefocus=True)
+
+        def _on_key(event):
+            if event.keysym == "Up":
+                self.canvas.yview_scroll(-1, "units")
+                return "break"
+            elif event.keysym == "Down":
+                self.canvas.yview_scroll(1, "units")
+                return "break"
+            elif event.keysym == "Page_Up":
+                self.canvas.yview_scroll(-5, "units")
+                return "break"
+            elif event.keysym == "Page_Down":
+                self.canvas.yview_scroll(5, "units")
+                return "break"
+
+        self.canvas.bind("<Key>", _on_key)
+        self.canvas.bind("<Button-1>", lambda e: e.widget.focus_set())
+        
+        self.create_entity_list()
+
+    def on_filter_change(self, *args):
+        self.filter_var.get().lower()
+        
+        if not self.filter_var.get():
+            self.filtered_entity_list = self.entity_list.copy()
+        else:
+            self.filtered_entity_list = [
+                entity for entity in self.entity_list 
+                if self.filter_var.get().lower() in entity.lower()
+            ]
+        
+        self.create_entity_list()
+
+    def clear_filter(self):
+        self.filter_var.set("")
+
+    def select_all_entities(self):
+        for label, var in self.all_check_vars.items():
+            var.set(True)
+            if label not in self.entity_data:
+                desc, typ, srcid = fetch_entity_details(label)
+                self.entity_data[label] = {"desc": desc, "type": typ, "srcid": srcid}
+
+        self.filter_var.set("")
+        self.filtered_entity_list = self.entity_list.copy()
+        self.create_entity_list()
+
+    def select_all_of_entity_type(self):
+        selected_type = self.entity_type.get()
+        if not selected_type:
+            messagebox.showinfo("No Type Selected", "Please select an Entity Type from the dropdown first.")
+            return
+
+        for var in self.all_check_vars.values():
+            var.set(False)
+        
+        entities_of_selected_type = []
+        for label in self.entity_list:
+            if label not in self.entity_data:
+                desc, typ, srcid = fetch_entity_details(label)
+                self.entity_data[label] = {"desc": desc, "type": typ, "srcid": srcid}
+            
+            if self.entity_data[label]["type"] == selected_type:
+                self.all_check_vars[label].set(True)
+                entities_of_selected_type.append(label)
+
+        self.filter_var.set("")
+        self.filtered_entity_list = sorted(entities_of_selected_type, key=lambda x: x.lower())
+        self.create_entity_list()
+
+        if not entities_of_selected_type:
+            messagebox.showinfo("No Entities Found", f"No entities of type '{selected_type}' found.")
+
+    def show_selected_only(self):
+        selected_entities = [label for label, var in self.all_check_vars.items() if var.get()]
+        if not selected_entities:
+            messagebox.showinfo("No Selection", "No entities are currently selected.")
+            self.filter_var.set("")
+            self.filtered_entity_list = self.entity_list.copy()
+            self.create_entity_list()
+            return
+        
+        self.filter_var.set("")
+        self.filtered_entity_list = sorted(selected_entities, key=lambda x: x.lower())
+        self.create_entity_list()
+
+    def clear_all_selections(self):
+        for var in self.all_check_vars.values():
+            var.set(False)
+        self.filter_var.set("")
+        self.filtered_entity_list = self.entity_list.copy()
+        self.create_entity_list()
+        self.first_entity_var.set("")
+
+    def create_right_panel(self):
+        self.right_panel.grid_rowconfigure(1, weight=1) 
+        self.right_panel.grid_columnconfigure(0, weight=1)
+        
+        control_frame = ttk.Frame(self.right_panel)
+        control_frame.grid(row=0, column=0, sticky="ew", padx=10, pady=10)
+        control_frame.grid_columnconfigure(0, weight=0) 
+        control_frame.grid_columnconfigure(1, weight=1) 
+        
+        ttk.Label(control_frame, text="Target Entity:").grid(row=0, column=0, sticky="w", padx=5, pady=2)
+        self.target_entry = ttk.Combobox(control_frame, values=[], width=40)
+        self.target_entry.grid(row=0, column=1, sticky="ew", padx=5, pady=2)
+
+        ttk.Label(control_frame, text="Merge Strategy - Description:").grid(row=1, column=0, sticky="w", padx=5, pady=2)
+        self.strategy_desc = ttk.Combobox(control_frame, values=["concatenate", "keep_first", "join_unique"])
+        self.strategy_desc.set("join_unique")
+        self.strategy_desc.grid(row=1, column=1, sticky="ew", padx=5, pady=2)
+
+        ttk.Label(control_frame, text="Merge Strategy - Source ID:").grid(row=2, column=0, sticky="w", padx=5, pady=2)
+        self.strategy_srcid = ttk.Combobox(control_frame, values=["concatenate", "keep_first", "join_unique"])
+        self.strategy_srcid.set("join_unique")
+        self.strategy_srcid.grid(row=2, column=1, sticky="ew", padx=5, pady=2)
+
+        ttk.Label(control_frame, text="Entity Type:").grid(row=3, column=0, sticky="w", padx=5, pady=2)
+        self.entity_type = ttk.Combobox(control_frame, values=[], width=37)
+        self.entity_type.grid(row=3, column=1, sticky="ew", padx=5, pady=2)
+
+        info_label = ttk.Label(control_frame, text="Note: 'Keep First' strategy uses the selected radio button item.", 
+                                 font=("TkDefaultFont", 8), foreground="gray", wraplength=300)
+        info_label.grid(row=4, column=0, columnspan=2, sticky="w", padx=5, pady=10)
+
+        self.merge_button = ttk.Button(control_frame, text="Merge Entities", command=self.submit_merge)
+        self.merge_button.grid(row=5, column=0, sticky="w", padx=5, pady=10) 
+
+        self.description_area = ttk.Frame(self.right_panel)
+        self.description_area.grid(row=1, column=0, sticky="nsew", padx=10, pady=(0, 10))
+        self.description_area.grid_columnconfigure(0, weight=1)
+        self.description_area.grid_rowconfigure(0, weight=1)
+
+        self.desc_canvas = tk.Canvas(self.description_area)
+        self.desc_scrollbar = ttk.Scrollbar(self.description_area, orient="vertical", command=self.desc_canvas.yview)
+        self.desc_scrollable_frame = ttk.Frame(self.desc_canvas)
+        
+        self.desc_scrollable_frame.bind("<Configure>", lambda e: self.desc_canvas.configure(scrollregion=self.desc_canvas.bbox("all")))
+        self.desc_canvas.create_window((0, 0), window=self.desc_scrollable_frame, anchor="nw")
+        self.desc_canvas.configure(yscrollcommand=self.desc_scrollbar.set)
+        
+        self.desc_canvas.grid(row=0, column=0, sticky="nsew")
+        self.desc_scrollbar.grid(row=0, column=1, sticky="ns")
+
+        def _on_desc_mousewheel(event):
+            try:
+                if platform.system() == "Windows":
+                    if hasattr(event, 'delta') and event.delta:
+                        self.desc_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+                elif platform.system() == "Darwin":
+                    if hasattr(event, 'delta') and event.delta:
+                        self.desc_canvas.yview_scroll(int(-1 * event.delta), "units")
+                else:
+                    if event.num == 4:
+                        self.desc_canvas.yview_scroll(-1, "units")
+                    elif event.num == 5:
+                        self.desc_canvas.yview_scroll(1, "units")
+                    elif hasattr(event, 'delta') and event.delta:
+                        self.desc_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+            except:
+                pass
+            return "break"
+
+        desc_scroll_events = []
+        if platform.system() == "Windows":
+            desc_scroll_events = ["<MouseWheel>", "<Shift-MouseWheel>"]
+        elif platform.system() == "Darwin":
+            desc_scroll_events = ["<MouseWheel>", "<Button-4>", "<Button-5>"]
+        else:
+            desc_scroll_events = ["<Button-4>", "<Button-5>", "<MouseWheel>"]
+
+        for event in desc_scroll_events:
+            try:
+                self.desc_canvas.bind(event, _on_desc_mousewheel)
+            except:
+                pass
+
+    def create_entity_list(self):
+        for widget in self.scrollable_frame.winfo_children():
+            widget.destroy()
+        
+        self.check_vars.clear() 
+        
+        for i, ent in enumerate(self.filtered_entity_list):
+            rb = ttk.Radiobutton(self.scrollable_frame, text="", variable=self.first_entity_var, value=ent)
+            # Align radio button to its header label
+            rb.grid(row=i, column=0, padx=(5, 2), pady=1, sticky="w") 
+            
+            var = self.all_check_vars.get(ent)
+            if var is None:
+                var = tk.BooleanVar()
+                self.all_check_vars[ent] = var
+            
+            cb = ttk.Checkbutton(self.scrollable_frame, text=ent, variable=var, command=self.update_selection)
+            # Align checkbox with its header label
+            cb.grid(row=i, column=1, padx=(2, 5), pady=1, sticky="w") 
+        
+        current_first_entity = self.first_entity_var.get()
+        if current_first_entity and current_first_entity in self.filtered_entity_list:
+            self.first_entity_var.set(current_first_entity)
+        else:
+            self.first_entity_var.set("")
+        
+        self.update_selection()
+
+    def update_selection(self):
+        selected = [label for label, var in self.all_check_vars.items() if var.get()]
+        
+        if not hasattr(self, 'target_entry'):
+            return
+            
+        self.target_entry["values"] = selected
+        
+        types = set()
+        for label in selected:
+            # Ensure entity data is fetched or updated for selected entities
+            if label not in self.entity_data:
+                desc, typ, srcid = fetch_entity_details(label)
+                self.entity_data[label] = {"desc": desc, "type": typ, "srcid": srcid}
+            
+            if self.entity_data[label]["type"] and not self.entity_data[label]["type"].startswith("Error:"):
+                types.add(self.entity_data[label]["type"])
+        
+        current_entity_type = self.entity_type.get()
+        self.entity_type["values"] = sorted(list(types))
+        
+        if current_entity_type and current_entity_type in self.entity_type["values"]:
+            self.entity_type.set(current_entity_type)
+        else:
+            self.entity_type.set("")
+        
+        if self.target_entry.get() not in selected:
+            self.target_entry.set("")
+        
+        if self.first_entity_var.get() and self.first_entity_var.get() not in selected:
+            self.first_entity_var.set("")
+
+    def calculate_tile_layout(self, available_width, available_height, num_items, min_height=200):
+        if num_items == 0:
+            return 0, 0, 0, 0
+        
+        effective_min_width = max(300, (available_width // 2) - 10) 
+        
+        cols = max(1, available_width // effective_min_width)
+            
+        if available_width >= 2 * effective_min_width and num_items > 1:
+            cols = 2
+        elif num_items == 1:
+            cols = 1 
+        else:
+            cols = 1 
+
+        cols = min(cols, num_items)
+
+        rows = (num_items + cols - 1) // cols
+        
+        frame_width = available_width // cols
+        frame_height = max(min_height, available_height // rows if rows > 0 else available_height)
+        
+        return cols, rows, frame_width, frame_height
+
+    def toggle_descriptions(self):
+        any_open = bool(self.description_frames)
+        if any_open:
+            for frame in list(self.description_frames.values()): 
+                frame.destroy()
+            self.description_frames.clear()
+            self.desc_header_label["text"] = "Show\nDesc"
+        else:
+            selected = [label for label, var in self.all_check_vars.items() if var.get()]
+            if not selected:
+                messagebox.showinfo("No Selection", "Please select some entities first to show descriptions.")
+                return
+            
+            self.root.update_idletasks()
+            self.desc_scrollable_frame.update_idletasks()
+            available_width = self.desc_scrollable_frame.winfo_width()
+            available_height = self.desc_scrollable_frame.winfo_height()
+
+            if available_width < 100:
+                available_width = self.right_panel.winfo_width() - 20 
+                if available_width < 100: available_width = 800 
+            if available_height < 100:
+                 available_height = 600 
+
+            cols, rows, frame_width, frame_height = self.calculate_tile_layout(
+                available_width, available_height, len(selected), min_height=200
+            )
+            
+            for c in range(cols):
+                self.desc_scrollable_frame.grid_columnconfigure(c, weight=1)
+            for r in range(rows):
+                self.desc_scrollable_frame.grid_rowconfigure(r, weight=1)
+
+            for idx, label in enumerate(selected):
+                try:
+                    if label not in self.entity_data:
+                        desc, typ, srcid = fetch_entity_details(label)
+                        self.entity_data[label] = {"desc": desc, "type": typ, "srcid": srcid}
+                    
+                    row = idx // cols
+                    col = idx % cols
+                    
+                    desc_frame = ttk.LabelFrame(self.desc_scrollable_frame, text="", padding=5)
+                    desc_frame.config(width=frame_width - 4, height=frame_height - 4)
+                    desc_frame.grid_propagate(False)
+                    
+                    desc_frame.grid(row=row, column=col, sticky="nsew", padx=2, pady=2)
+                    
+                    header_sub_frame = ttk.Frame(desc_frame)
+                    header_sub_frame.pack(fill="x")
+                    header_sub_frame.grid_columnconfigure(0, weight=1)
+                    header_sub_frame.grid_columnconfigure(1, weight=0)
+
+                    ttk.Label(header_sub_frame, text=label, font=("TkDefaultFont", 10, "bold")).grid(row=0, column=0, sticky="w")
+                    
+                    edit_button = ttk.Button(header_sub_frame, text="Edit Description", 
+                                             command=lambda l=label: self.open_edit_description_modal(l))
+                    edit_button.grid(row=0, column=1, sticky="e", padx=(5,0))
+
+                    text_frame = ttk.Frame(desc_frame)
+                    text_frame.pack(fill="both", expand=True, pady=(5,0))
+                    
+                    text_widget = tk.Text(text_frame, wrap="word", font=("TkDefaultFont", 9))
+                    text_scrollbar = ttk.Scrollbar(text_frame, orient="vertical", command=text_widget.yview)
+                    text_widget.configure(yscrollcommand=text_scrollbar.set)
+                    
+                    desc = self.entity_data[label]["desc"]
+                    srcid = self.entity_data[label]["srcid"]
+                    
+                    text_widget.insert("1.0", f"Description:\n{desc}\n\nSource ID:\n{srcid}")
+                    text_widget.config(state="disabled")
+                    
+                    text_widget.pack(side="left", fill="both", expand=True)
+                    text_scrollbar.pack(side="right", fill="y")
+                    
+                    self.description_frames[label] = desc_frame
+                    
+                except Exception as e:
+                    print(f"Error showing description for {label}: {e}")
+            
+            self.desc_scrollable_frame.update_idletasks()
+            self.desc_canvas.configure(scrollregion=self.desc_canvas.bbox("all"))
+            
+            if self.description_frames:
+                self.desc_header_label["text"] = "Hide\nDesc"
+
+    def open_edit_description_modal(self, entity_label):
+        modal = tk.Toplevel(self.root)
+        modal.title(f"Edit Description for {entity_label}")
+        modal.transient(self.root)
+        modal.grab_set()
+        modal.protocol("WM_DELETE_WINDOW", modal.destroy)
+        
+        modal.grid_columnconfigure(0, weight=1)
+        modal.grid_rowconfigure(1, weight=1)
+
+        current_description = self.entity_data.get(entity_label, {}).get("desc", "")
+
+        ttk.Label(modal, text=f"Editing Description for: {entity_label}", font=("TkDefaultFont", 10, "bold")).grid(row=0, column=0, padx=10, pady=5, sticky="w")
+
+        text_frame = ttk.Frame(modal)
+        text_frame.grid(row=1, column=0, sticky="nsew", padx=10, pady=5)
+        text_frame.grid_rowconfigure(0, weight=1)
+        text_frame.grid_columnconfigure(0, weight=1)
+
+        description_text = tk.Text(text_frame, wrap="word", font=("TkDefaultFont", 10))
+        description_text.insert("1.0", current_description)
+        
+        text_scrollbar = ttk.Scrollbar(text_frame, orient="vertical", command=description_text.yview)
+        description_text.configure(yscrollcommand=text_scrollbar.set)
+        
+        description_text.pack(side="left", fill="both", expand=True)
+        text_scrollbar.pack(side="right", fill="y")
+
+        button_frame = ttk.Frame(modal)
+        button_frame.grid(row=2, column=0, sticky="ew", padx=10, pady=10)
+        button_frame.grid_columnconfigure(0, weight=1)
+        
+        save_button = ttk.Button(button_frame, text="Save", 
+                                 command=lambda: self.save_entity_description(entity_label, description_text, modal))
+        save_button.pack(side="right", padx=(5,0))
+
+        cancel_button = ttk.Button(button_frame, text="Cancel", command=modal.destroy)
+        cancel_button.pack(side="right")
+        
+        self.root.update_idletasks()
+        modal.update_idletasks()
+        min_width = 400
+        min_height = 300
+        if modal.winfo_width() < min_width or modal.winfo_height() < min_height:
+            modal.geometry(f"{min_width}x{min_height}")
+            modal.update_idletasks()
+
+        x = self.root.winfo_x() + (self.root.winfo_width() // 2) - (modal.winfo_width() // 2)
+        y = self.root.winfo_y() + (self.root.winfo_height() // 2) - (modal.winfo_height() // 2)
+        modal.geometry(f"+{x}+{y}")
+        
+        self.root.wait_window(modal)
+
+    def save_entity_description(self, entity_label, description_text_widget, modal_window):
+        new_description = description_text_widget.get("1.0", tk.END).strip()
+
+        if update_entity_description_api(entity_label, new_description):
+            if entity_label in self.entity_data:
+                self.entity_data[entity_label]["desc"] = new_description
+            
+            if self.description_frames:
+                for frame in list(self.description_frames.values()):
+                    frame.destroy()
+                self.description_frames.clear()
+                self.toggle_descriptions()
+            
+            modal_window.destroy()
+
+    def submit_merge(self):
+        if not self.entity_type.get() or not self.target_entry.get():
+            messagebox.showerror("Missing info", "Please select a target entity and entity type.")
+            return
+        
+        selected = [label for label, var in self.all_check_vars.items() if var.get()]
+
+        if not selected:
+            messagebox.showerror("No entities", "Select at least one source entity.")
+            return
+        
+        for frame in list(self.description_frames.values()):
+            frame.destroy()
+        self.description_frames.clear()
+        self.desc_header_label["text"] = "Show\nDesc"
+
+        strategy = {
+            "description": self.strategy_desc.get(),
+            "source_id": self.strategy_srcid.get()
+        }
+        
+        if (strategy["description"] == "keep_first" or strategy["source_id"] == "keep_first"):
+            first_entity = self.first_entity_var.get()
+            if not first_entity:
+                messagebox.showerror("Missing Selection", "Please select which entity should be 'first' using the radio buttons when using 'keep_first' strategy.")
+                return
+            if first_entity not in selected:
+                messagebox.showerror("Invalid Selection", "The selected 'first' entity must be in the list of selected entities.")
+                return
+            selected = [first_entity] + [e for e in selected if e != first_entity]
+
+        asyncio.run(self.run_merge(selected, self.target_entry.get(), strategy, etype=self.entity_type.get()))
+
+    async def run_merge(self, sources, target, strategy, etype):
+        rag = await initialize_rag()
+        try:
+            await rag.amerge_entities(
+                source_entities=sources,
+                target_entity=target,
+                merge_strategy=strategy,
+                target_entity_data={"entity_type": etype}
+            )
+            messagebox.showinfo("Success", f"Entities merged into '{target}'")
+            
+            print("Refreshing LightRAG server data from disk...")
+            if not trigger_server_refresh():
+                print("Server data refresh failed or server not running. Manual restart might still be needed if changes don't appear.")
+            else:
+                print("Server refresh attempted.")
+
+            # --- MODIFICATION START ---
+            self.entity_data.clear() # Clear the cached entity data to force re-fetch
+            # --- MODIFICATION END ---
+
+            newly_fetched_entities = fetch_entities()
+            
+            new_all_check_vars = {}
+            for entity in newly_fetched_entities:
+                new_all_check_vars[entity] = self.all_check_vars.get(entity, tk.BooleanVar())
+            self.all_check_vars = new_all_check_vars
+            self.entity_list = newly_fetched_entities
+            
+            self.filter_var.set("")
+            self.filtered_entity_list = self.entity_list.copy()
+            self.create_entity_list()
+            
+            self.target_entry.set("")
+            self.entity_type.set("")
+            self.first_entity_var.set("")
+                
+        except Exception as e:
+            messagebox.showerror("Error", str(e))
+        finally:
+            await rag.finalize_storages()
+
+    def on_closing(self):
+        self.save_window_config()
+        self.root.destroy()
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = MergeGUI(root)
+    root.mainloop()

@@ -109,10 +109,10 @@ async def main():
             raise ValueError("OPENAI_API_KEY or EMBEDDING_BINDING_API_KEY environment variable not set")
         rag = await initialize_rag()
 
-        # Delete By Relation
+        # Delete By Entity
         await rag.adelete_by_entity("Circadian Practice")
 
-        print("Deleted")
+        print("Entity Deleted")
     except Exception as e:
         print(f"An error occurred: {e}")
         import traceback
