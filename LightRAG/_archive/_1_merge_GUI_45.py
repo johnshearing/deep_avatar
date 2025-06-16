@@ -501,6 +501,8 @@ class MergeGUI:
         self.filter_var.set("")
         self.filtered_entity_list = self.entity_list.copy()
         self.first_entity_var.set("")
+        self.strategy_desc.set("join_unique")
+        self.strategy_srcid.set("join_unique")        
         self.create_entity_list() # Call to refresh list and button visibility
 
     def create_right_panel(self):
