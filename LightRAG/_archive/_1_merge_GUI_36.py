@@ -82,7 +82,8 @@ def fetch_entity_details(label):
                 main_entity_type = node_type
                 main_entity_source_id = node_properties.get("source_id", "")
                 main_entity_file_path = node_properties.get("file_path", "")
-            else:
+            # Only add other nodes as related nodes
+            elif node_id != label:
                 related_nodes_info.append({"id": node_id, "description": node_desc, "type": node_type})
         
         edges_info = []
@@ -288,41 +289,46 @@ class MergeGUI:
 
         self.select_all_of_entity_button = ttk.Button(action_buttons_frame, text="Select All Of Type", command=self.select_all_of_entity_type)
         self.select_all_of_entity_button.grid(row=0, column=1, sticky="ew", padx=(2, 2))
+        
+        # New "Select Orphans" button
+        self.select_orphans_button = ttk.Button(action_buttons_frame, text="Select Orphans", command=self.select_orphans)
+        self.select_orphans_button.grid(row=0, column=2, sticky="ew", padx=(2, 2))
 
         self.show_selected_button = ttk.Button(action_buttons_frame, text="Selected Only", command=self.show_selected_only)
-        self.show_selected_button.grid(row=0, column=2, sticky="ew", padx=(2, 2))
+        self.show_selected_button.grid(row=0, column=3, sticky="ew", padx=(2, 2)) # Shifted to column 3
 
         self.clear_all_button = ttk.Button(action_buttons_frame, text="Clear All", command=self.clear_all_selections)
-        self.clear_all_button.grid(row=0, column=3, sticky="ew", padx=(2, 0))
+        self.clear_all_button.grid(row=0, column=4, sticky="ew", padx=(2, 0)) # Shifted to column 4
         
         header_frame = ttk.Frame(self.left_panel)
         header_frame.grid(row=1, column=0, sticky="ew", padx=5, pady=5)
         # Configure header columns for labels
-        header_frame.grid_columnconfigure(0, weight=0) # For Show/Hide Desc label (tight)
+        header_frame.grid_columnconfigure(0, weight=0) # For Show/Hide Desc label (tight) - Now not used due to removal of single description buttons
         header_frame.grid_columnconfigure(1, weight=0) # For Keep First label (tight)
         header_frame.grid_columnconfigure(2, weight=1) # For Select Entities label (expands)
         
-        self.desc_header_label = ttk.Label(header_frame, text="Show\nDesc", font=("TkDefaultFont", 9, "bold"), anchor="center", justify="center")
-        self.desc_header_label.grid(row=0, column=0, padx=5, sticky="ew") 
+        # self.desc_header_label = ttk.Label(header_frame, text="Show\nDesc", font=("TkDefaultFont", 9, "bold"), anchor="center", justify="center")
+        # self.desc_header_label.grid(row=0, column=0, padx=5, sticky="ew") 
 
         self.keep_first_label = ttk.Label(header_frame, text="Keep\nFirst", font=("TkDefaultFont", 9, "bold"), anchor="center", justify="center")
-        self.keep_first_label.grid(row=0, column=1, padx=5, sticky="ew")
+        self.keep_first_label.grid(row=0, column=0, padx=5, sticky="ew") # Shifted to column 0
 
         self.select_entities_label = ttk.Label(header_frame, text="Select\nEntities", font=("TkDefaultFont", 9, "bold"), anchor="w", justify="left")
-        self.select_entities_label.grid(row=0, column=2, padx=5, sticky="w")
+        self.select_entities_label.grid(row=0, column=1, padx=5, sticky="w") # Shifted to column 1
         
         content_frame = ttk.Frame(self.left_panel)
         content_frame.grid(row=2, column=0, sticky="nsew", padx=5, pady=5)
         content_frame.grid_rowconfigure(0, weight=1)
-        content_frame.grid_columnconfigure(1, weight=1) 
-        
-        self.toggle_desc_button = ttk.Button(content_frame, text="⇕", command=self.toggle_descriptions, width=3)
-        self.toggle_desc_button.grid(row=0, column=0, sticky="n", padx=(0, 5)) 
+        content_frame.grid_columnconfigure(0, weight=1) # Only one column now for list frame
+
+        # Removed the toggle_desc_button from the left panel as per user request
+        # self.toggle_desc_button = ttk.Button(content_frame, text="⇕", command=self.toggle_descriptions, width=3)
+        # self.toggle_desc_button.grid(row=0, column=0, sticky="n", padx=(0, 5)) 
 
         list_frame = ttk.Frame(content_frame)
-        list_frame.grid(row=0, column=1, sticky="nsew")
+        list_frame.grid(row=0, column=0, sticky="nsew") # Occupies column 0 directly
         list_frame.grid_rowconfigure(0, weight=1)
-        list_frame.grid_columnconfigure(0, weight=1)
+        list_frame.grid_columnconfigure(0, weight=1) 
         
         self.canvas = tk.Canvas(list_frame)
         self.scrollbar = ttk.Scrollbar(list_frame, orient="vertical", command=self.canvas.yview)
@@ -335,8 +341,8 @@ class MergeGUI:
         self.canvas.grid(row=0, column=0, sticky="nsew")
         self.scrollbar.grid(row=0, column=1, sticky="ns")
         
-        self.scrollable_frame.grid_columnconfigure(0, weight=0) 
-        self.scrollable_frame.grid_columnconfigure(1, weight=1) 
+        self.scrollable_frame.grid_columnconfigure(0, weight=0) # For radio button
+        self.scrollable_frame.grid_columnconfigure(1, weight=1) # For checkbox label 
 
         def _on_mousewheel(event):
             try:
@@ -400,202 +406,218 @@ class MergeGUI:
         
         self.create_entity_list()
 
-    def on_filter_change(self, *args):
-        self.filter_var.get().lower()
-        
-        if not self.filter_var.get():
-            self.filtered_entity_list = self.entity_list.copy()
-        else:
-            self.filtered_entity_list = [
-                entity for entity in self.entity_list 
-                if self.filter_var.get().lower() in entity.lower()
-            ]
-        
-        self.create_entity_list()
-
-    def clear_filter(self):
-        self.filter_var.set("")
-        self.create_entity_list() # Call to refresh list and button visibility
-
-    def select_all_entities(self):
-        for label, var in self.all_check_vars.items():
-            var.set(True)
-            if label not in self.entity_data:
-                # Store full dict from fetch_entity_details
-                self.entity_data[label] = fetch_entity_details(label)
-
-        self.filter_var.set("")
-        self.filtered_entity_list = self.entity_list.copy()
-        self.create_entity_list()
-
-    def select_all_of_entity_type(self):
-        selected_type = self.entity_type.get()
-        if not selected_type:
-            messagebox.showinfo("No Type Selected", "Please select an Entity Type from the dropdown first.")
-            return
-
-        for var in self.all_check_vars.values():
-            var.set(False)
-        
-        entities_of_selected_type = []
-        for label in self.entity_list:
-            if label not in self.entity_data:
-                # Store full dict from fetch_entity_details
-                self.entity_data[label] = fetch_entity_details(label)
-            
-            if self.entity_data[label]["type"] == selected_type:
-                self.all_check_vars[label].set(True)
-                entities_of_selected_type.append(label)
-
-        self.filter_var.set("")
-        self.filtered_entity_list = sorted(entities_of_selected_type, key=lambda x: x.lower())
-        self.create_entity_list()
-
-        if not entities_of_selected_type:
-            messagebox.showinfo("No Entities Found", f"No entities of type '{selected_type}' found.")
-
-    def show_selected_only(self):
-        selected_entities = [label for label, var in self.all_check_vars.items() if var.get()]
-        if not selected_entities:
-            messagebox.showinfo("No Selection", "No entities are currently selected.")
-            self.filter_var.set("")
-            self.filtered_entity_list = self.entity_list.copy()
-            self.create_entity_list()
-            return
-        
-        self.filter_var.set("")
-        self.filtered_entity_list = sorted(selected_entities, key=lambda x: x.lower())
-        self.create_entity_list()
-
-    def clear_all_selections(self):
-        for var in self.all_check_vars.values():
-            var.set(False)
-        self.filter_var.set("")
-        self.filtered_entity_list = self.entity_list.copy()
-        self.first_entity_var.set("")
-        self.create_entity_list() # Call to refresh list and button visibility
-
     def create_right_panel(self):
-        self.right_panel.grid_rowconfigure(1, weight=1) 
+        self.right_panel.grid_rowconfigure(1, weight=1) # This row now contains the description display frame
         self.right_panel.grid_columnconfigure(0, weight=1)
-        
-        control_frame = ttk.Frame(self.right_panel)
-        control_frame.grid(row=0, column=0, sticky="ew", padx=10, pady=10)
-        control_frame.grid_columnconfigure(0, weight=0) 
-        control_frame.grid_columnconfigure(1, weight=1) 
-        
-        ttk.Label(control_frame, text="Target Entity:").grid(row=0, column=0, sticky="w", padx=5, pady=2)
-        self.target_entry = ttk.Combobox(control_frame, values=[], width=40)
+
+        # Merge Controls Frame - Changed to ttk.Frame to make it 'invisible'
+        self.merge_controls_frame = ttk.Frame(self.right_panel, padding=10)
+        self.merge_controls_frame.grid(row=0, column=0, sticky="ew", padx=10, pady=10)
+        self.merge_controls_frame.grid_columnconfigure(1, weight=1)
+
+        ttk.Label(self.merge_controls_frame, text="Target Entity:").grid(row=0, column=0, sticky="w", pady=2)
+        # Restored to combination edit/pulldown
+        self.target_entry = ttk.Combobox(self.merge_controls_frame, state="normal")
         self.target_entry.grid(row=0, column=1, sticky="ew", padx=5, pady=2)
 
-        ttk.Label(control_frame, text="Merge Strategy - Description:").grid(row=1, column=0, sticky="w", padx=5, pady=2)
-        self.strategy_desc = ttk.Combobox(control_frame, values=["concatenate", "keep_first", "join_unique"])
-        self.strategy_desc.set("join_unique")
-        self.strategy_desc.grid(row=1, column=1, sticky="ew", padx=5, pady=2)
+        ttk.Label(self.merge_controls_frame, text="Entity Type:").grid(row=1, column=0, sticky="w", pady=2)
+        # Restored to combination edit/pulldown
+        self.entity_type = ttk.Combobox(self.merge_controls_frame, state="normal")
+        self.entity_type.grid(row=1, column=1, sticky="ew", padx=5, pady=2)
+        self.entity_type.bind("<<ComboboxSelected>>", self.update_selection) # Bind to update selected type in left panel
 
-        ttk.Label(control_frame, text="Merge Strategy - Source ID:").grid(row=2, column=0, sticky="w", padx=5, pady=2)
-        self.strategy_srcid = ttk.Combobox(control_frame, values=["concatenate", "keep_first", "join_unique"])
-        self.strategy_srcid.set("join_unique")
-        self.strategy_srcid.grid(row=2, column=1, sticky="ew", padx=5, pady=2)
+        # Merge Strategy Frame
+        strategy_frame = ttk.LabelFrame(self.merge_controls_frame, text="Merge Strategy", padding=10)
+        strategy_frame.grid(row=2, column=0, columnspan=2, sticky="ew", pady=10)
+        strategy_frame.grid_columnconfigure(0, weight=1)
+        strategy_frame.grid_columnconfigure(1, weight=1)
+        strategy_frame.grid_columnconfigure(2, weight=1)
 
-        ttk.Label(control_frame, text="Entity Type:").grid(row=3, column=0, sticky="w", padx=5, pady=2)
-        self.entity_type = ttk.Combobox(control_frame, values=[], width=37)
-        self.entity_type.grid(row=3, column=1, sticky="ew", padx=5, pady=2)
+        # Description Strategy - Changed to Combobox
+        ttk.Label(strategy_frame, text="Description:").grid(row=0, column=0, sticky="w", pady=2)
+        self.strategy_desc = tk.StringVar(value="append")
+        self.desc_strategy_combobox = ttk.Combobox(strategy_frame, textvariable=self.strategy_desc, 
+                                                    values=["append", "keep_first"], state="readonly") # Only supported options
+        self.desc_strategy_combobox.grid(row=0, column=1, columnspan=2, sticky="ew", padx=5)
 
-        info_label = ttk.Label(control_frame, text="Note: 'Keep First' strategy uses the selected radio button item.", 
-                                 font=("TkDefaultFont", 8), foreground="gray", wraplength=300)
-        info_label.grid(row=4, column=0, columnspan=2, sticky="w", padx=5, pady=10)
+        # Source ID Strategy - Changed to Combobox
+        ttk.Label(strategy_frame, text="Source ID:").grid(row=1, column=0, sticky="w", pady=2)
+        self.strategy_srcid = tk.StringVar(value="union")
+        self.srcid_strategy_combobox = ttk.Combobox(strategy_frame, textvariable=self.strategy_srcid, 
+                                                     values=["union", "keep_first"], state="readonly") # Only supported options
+        self.srcid_strategy_combobox.grid(row=1, column=1, columnspan=2, sticky="ew", padx=5)
 
-        # Frame to hold merge and delete buttons for proper alignment
-        button_row_frame = ttk.Frame(control_frame)
-        button_row_frame.grid(row=5, column=0, columnspan=2, sticky="ew", pady=10)
-        button_row_frame.grid_columnconfigure(0, weight=1)
-        button_row_frame.grid_columnconfigure(1, weight=1)
+        # Action Buttons
+        button_frame = ttk.Frame(self.merge_controls_frame)
+        button_frame.grid(row=3, column=0, columnspan=2, sticky="ew", pady=(10, 0))
+        button_frame.grid_columnconfigure(0, weight=1)
+        button_frame.grid_columnconfigure(1, weight=1)
 
-        self.merge_button = ttk.Button(button_row_frame, text="Merge Entities", command=self.submit_merge)
-        self.merge_button.grid(row=0, column=0, sticky="w", padx=(5, 5))
-
-        self.delete_button = ttk.Button(button_row_frame, text="Delete Entities", command=lambda: asyncio.run(self.run_delete()))
-        self.delete_button.grid(row=0, column=1, sticky="w", padx=(5, 5))
-
-        # Initially hide both buttons
-        self.merge_button.grid_remove()
-        self.delete_button.grid_remove()
-
-        self.description_area = ttk.Frame(self.right_panel)
-        self.description_area.grid(row=1, column=0, sticky="nsew", padx=10, pady=(0, 10))
-        self.description_area.grid_columnconfigure(0, weight=1)
-        self.description_area.grid_rowconfigure(0, weight=1)
-
-        self.desc_canvas = tk.Canvas(self.description_area)
-        self.desc_scrollbar = ttk.Scrollbar(self.description_area, orient="vertical", command=self.desc_canvas.yview)
-        self.desc_scrollable_frame = ttk.Frame(self.desc_canvas)
+        self.merge_button = ttk.Button(button_frame, text="Merge Selected Entities", command=self.submit_merge)
+        self.merge_button.grid(row=0, column=0, sticky="ew", padx=(0, 5))
         
+        self.delete_button = ttk.Button(button_frame, text="Delete Selected Entities", command=lambda: asyncio.run(self.run_delete()))
+        self.delete_button.grid(row=0, column=1, sticky="ew", padx=(5, 0))
+
+        # Description Display Frame - Changed to ttk.Frame to make it 'invisible'
+        self.description_display_frame = ttk.Frame(self.right_panel, padding=10)
+        self.description_display_frame.grid(row=1, column=0, sticky="nsew", padx=10, pady=10) # Fills the remaining space
+        self.description_display_frame.grid_rowconfigure(0, weight=1)
+        self.description_display_frame.grid_columnconfigure(0, weight=1)
+
+        self.desc_canvas = tk.Canvas(self.description_display_frame)
+        self.desc_scrollbar = ttk.Scrollbar(self.description_display_frame, orient="vertical", command=self.desc_canvas.yview)
+        self.desc_scrollable_frame = ttk.Frame(self.desc_canvas)
+
         self.desc_scrollable_frame.bind("<Configure>", lambda e: self.desc_canvas.configure(scrollregion=self.desc_canvas.bbox("all")))
         self.desc_canvas.create_window((0, 0), window=self.desc_scrollable_frame, anchor="nw")
         self.desc_canvas.configure(yscrollcommand=self.desc_scrollbar.set)
-        
+
         self.desc_canvas.grid(row=0, column=0, sticky="nsew")
         self.desc_scrollbar.grid(row=0, column=1, sticky="ns")
+        
+        # Add a "Show Descriptions" button here, next to the scrollable frame
+        self.toggle_desc_button_right = ttk.Button(self.description_display_frame, text="Show Descriptions", command=self.toggle_descriptions)
+        self.toggle_desc_button_right.grid(row=0, column=2, sticky="n", padx=(5,0)) # Place it right of the canvas
 
-        def _on_desc_mousewheel(event):
-            try:
-                if platform.system() == "Windows":
-                    if hasattr(event, 'delta') and event.delta:
-                        self.desc_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
-                elif platform.system() == "Darwin":
-                    if hasattr(event, 'delta') and event.delta:
-                        self.desc_canvas.yview_scroll(int(-1 * event.delta), "units")
-                else:
-                    if event.num == 4:
-                        self.desc_canvas.yview_scroll(-1, "units")
-                    elif event.num == 5:
-                        self.desc_canvas.yview_scroll(1, "units")
-                    elif hasattr(event, 'delta') and event.delta:
-                        self.desc_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
-            except:
-                pass
-            return "break"
-
-        desc_scroll_events = []
-        if platform.system() == "Windows":
-            desc_scroll_events = ["<MouseWheel>", "<Shift-MouseWheel>"]
-        elif platform.system() == "Darwin":
-            desc_scroll_events = ["<MouseWheel>", "<Button-4>", "<Button-5>"]
-        else:
-            desc_scroll_events = ["<Button-4>", "<Button-5>", "<MouseWheel>"]
-
-        for event in desc_scroll_events:
-            try:
-                self.desc_canvas.bind(event, _on_desc_mousewheel)
-            except:
-                pass
+        # Initial call to populate the list and setup visibility
+        self.update_selection() 
 
     def create_entity_list(self):
         for widget in self.scrollable_frame.winfo_children():
             widget.destroy()
+
+        self.check_vars.clear()
+
+        for idx, entity in enumerate(self.filtered_entity_list):
+            var = self.all_check_vars.get(entity, tk.BooleanVar())
+            self.check_vars[entity] = var
+
+            # Removed Show/Hide Description button for each entity
+            # desc_button = ttk.Button(self.scrollable_frame, text="ⓘ", width=3,
+            #                          command=lambda l=entity: self.show_single_description(l))
+            # desc_button.grid(row=idx, column=0, sticky="ew", padx=(0, 5), pady=1)
+
+            # Radio button for "Keep First" (now in column 0)
+            radio_button = ttk.Radiobutton(self.scrollable_frame, variable=self.first_entity_var, value=entity,
+                                           command=self.update_selection)
+            radio_button.grid(row=idx, column=0, sticky="w", padx=(0, 5), pady=1)
+
+            # Checkbox for selection (now in column 1)
+            cb = ttk.Checkbutton(self.scrollable_frame, text=entity, variable=var,
+                                 command=self.update_selection)
+            cb.grid(row=idx, column=1, sticky="ew", padx=(0, 5), pady=1)
+
+        self.scrollable_frame.update_idletasks()
+        self.canvas.configure(scrollregion=self.canvas.bbox("all"))
+        self.update_button_visibility()
+
+    def show_single_description(self, label):
+        # This method is no longer directly called from individual buttons on the left panel
+        # and is kept for `toggle_descriptions` internal use to populate one description.
         
-        self.check_vars.clear() 
-        
-        for i, ent in enumerate(self.filtered_entity_list):
-            rb = ttk.Radiobutton(self.scrollable_frame, text="", variable=self.first_entity_var, value=ent)
-            rb.grid(row=i, column=0, padx=(5, 2), pady=1, sticky="w") 
-            
-            var = self.all_check_vars.get(ent)
-            if var is None:
-                var = tk.BooleanVar()
-                self.all_check_vars[ent] = var
-            
-            cb = ttk.Checkbutton(self.scrollable_frame, text=ent, variable=var, command=self.update_selection)
-            cb.grid(row=i, column=1, padx=(2, 5), pady=1, sticky="w") 
-        
-        current_first_entity = self.first_entity_var.get()
-        if current_first_entity and current_first_entity in self.filtered_entity_list:
-            self.first_entity_var.set(current_first_entity)
-        else:
-            self.first_entity_var.set("")
-        
-        self.update_selection()
+        # Destroy all existing description frames first
+        for frame in list(self.description_frames.values()):
+            frame.destroy()
+        self.description_frames.clear()
+
+        # Update the toggle button text on the right panel
+        self.toggle_desc_button_right["text"] = "Hide Descriptions"
+
+        self.root.update_idletasks()
+        self.desc_scrollable_frame.update_idletasks()
+        available_width = self.desc_scrollable_frame.winfo_width()
+        available_height = self.desc_scrollable_frame.winfo_height()
+
+        if available_width < 100:
+            available_width = self.right_panel.winfo_width() - 20
+            if available_width < 100: available_width = 800
+        if available_height < 100:
+            available_height = 600
+
+        # For a single description, use 1 column and 1 row
+        cols, rows, frame_width, frame_height = 1, 1, available_width, available_height # Recalculate if needed
+        if frame_width < 300: frame_width = 300
+        if frame_height < 600: frame_height = 600
+
+
+        try:
+            if label not in self.entity_data:
+                self.entity_data[label] = fetch_entity_details(label)
+
+            entity_details = self.entity_data[label]
+            desc = entity_details.get("desc", "No description found.")
+            entity_type = entity_details.get("type", "No type found.")
+            srcid = entity_details.get("srcid", "")
+            fpath = entity_details.get("fpath", "")
+            related_nodes = entity_details.get("related_nodes", [])
+            edges = entity_details.get("edges", [])
+
+            desc_frame = ttk.LabelFrame(self.desc_scrollable_frame, text="", padding=5)
+            desc_frame.config(width=frame_width - 4, height=frame_height - 4)
+            desc_frame.grid_propagate(False)
+
+            desc_frame.grid(row=0, column=0, sticky="nsew", padx=2, pady=2)
+
+            header_sub_frame = ttk.Frame(desc_frame)
+            header_sub_frame.pack(fill="x")
+            header_sub_frame.grid_columnconfigure(0, weight=1)
+            header_sub_frame.grid_columnconfigure(1, weight=0)
+
+            ttk.Label(header_sub_frame, text=label, font=("TkDefaultFont", 10, "bold")).grid(row=0, column=0, sticky="w")
+
+            edit_button = ttk.Button(header_sub_frame, text="Edit Description",
+                                     command=lambda l=label: self.open_edit_description_modal(l))
+            edit_button.grid(row=0, column=1, sticky="e", padx=(5,0))
+
+            text_frame = ttk.Frame(desc_frame)
+            text_frame.pack(fill="both", expand=True, pady=(5,0))
+
+            text_widget = tk.Text(text_frame, wrap="word", font=("TkDefaultFont", 9), height=15)
+            text_scrollbar = ttk.Scrollbar(text_frame, orient="vertical", command=text_widget.yview)
+            text_widget.configure(yscrollcommand=text_scrollbar.set)
+
+            text_content_parts = []
+            if desc and desc != "No description found.":
+                text_content_parts.append(f"Description:\n{desc}")
+            if entity_type and entity_type != "No type found.":
+                text_content_parts.append(f"Entity Type:\n{entity_type}")
+            if srcid:
+                text_content_parts.append(f"Source ID:\n{srcid}")
+            if fpath:
+                text_content_parts.append(f"File Path:\n{fpath}")
+
+            if related_nodes:
+                text_content_parts.append(f"\nRelated Entities: {len(related_nodes)}")
+                for node in related_nodes:
+                    node_id = node.get("id", "N/A")
+                    node_desc = node.get("description", "")
+                    node_type = node.get("type", "")
+                    text_content_parts.append(f"- {node_id} (Type: {node_type})")
+                    if node_desc and node_desc != "No description found.":
+                        text_content_parts.append(f"  Description: {node_desc}")
+
+            if edges:
+                text_content_parts.append("\nRelationships:")
+                for edge in edges:
+                    source = edge.get("source", "N/A")
+                    target = edge.get("target", "N/A")
+                    edge_desc = edge.get("properties", {}).get("description", "No description provided.")
+                    text_content_parts.append(f"- From: {source}\n  To: {target}\n  Relation: {edge_desc}")
+
+            text_widget.insert("1.0", "\n\n".join(text_content_parts))
+            text_widget.config(state="disabled")
+
+            text_widget.pack(side="left", fill="both", expand=True)
+            text_scrollbar.pack(side="right", fill="y")
+
+            self.description_frames[label] = desc_frame
+
+        except Exception as e:
+            print(f"Error showing description for {label}: {e}")
+
+        self.desc_scrollable_frame.update_idletasks()
+        self.desc_canvas.configure(scrollregion=self.desc_canvas.bbox("all"))
 
     def on_filter_change(self, *args):
         self.filter_var.get().lower()
@@ -650,6 +672,32 @@ class MergeGUI:
 
         if not entities_of_selected_type:
             messagebox.showinfo("No Entities Found", f"No entities of type '{selected_type}' found.")
+
+    def select_orphans(self):
+        orphan_entities = []
+        # First, unselect all existing selections
+        for var in self.all_check_vars.values():
+            var.set(False)
+
+        for label in self.entity_list:
+            if label not in self.entity_data:
+                self.entity_data[label] = fetch_entity_details(label)
+            
+            entity_details = self.entity_data[label]
+            # An entity is an "orphan" if it has no related nodes AND no edges
+            if not entity_details.get("related_nodes") and not entity_details.get("edges"):
+                self.all_check_vars[label].set(True)
+                orphan_entities.append(label)
+
+        self.filter_var.set("") # Clear any existing filter
+        self.filtered_entity_list = sorted(orphan_entities, key=lambda x: x.lower())
+        self.create_entity_list() # Rebuild the list to show only orphans
+
+        if not orphan_entities:
+            messagebox.showinfo("No Orphans Found", "No entities without relationships were found.")
+        else:
+            messagebox.showinfo("Orphans Selected", f"Found and selected {len(orphan_entities)} orphan entities.")
+
 
     def show_selected_only(self):
         selected_entities = [label for label, var in self.all_check_vars.items() if var.get()]
@@ -748,7 +796,7 @@ class MergeGUI:
             for frame in list(self.description_frames.values()): 
                 frame.destroy()
             self.description_frames.clear()
-            self.desc_header_label["text"] = "Show\nDesc"
+            self.toggle_desc_button_right["text"] = "Show Descriptions" # Update button text
             # Ensure canvas updates after destroying frames
             self.desc_scrollable_frame.update_idletasks()
             self.desc_canvas.configure(scrollregion=self.desc_canvas.bbox("all"))
@@ -831,6 +879,7 @@ class MergeGUI:
                     if fpath:
                         text_content_parts.append(f"File Path:\n{fpath}")
 
+                    # Add count to Related Entities heading
                     if related_nodes:
                         text_content_parts.append(f"\nRelated Entities: {len(related_nodes)}")
                         for node in related_nodes:
@@ -846,7 +895,7 @@ class MergeGUI:
                         for edge in edges:
                             source = edge.get("source", "N/A")
                             target = edge.get("target", "N/A")
-                            edge_desc = edge.get("description", "No description provided.")
+                            edge_desc = edge.get("properties", {}).get("description", "No description provided.")
                             text_content_parts.append(f"- From: {source}\n  To: {target}\n  Relation: {edge_desc}")
                     
                     text_widget.insert("1.0", "\n\n".join(text_content_parts)) # Join with double newline for separation
@@ -864,7 +913,7 @@ class MergeGUI:
             self.desc_canvas.configure(scrollregion=self.desc_canvas.bbox("all"))
             
             if self.description_frames:
-                self.desc_header_label["text"] = "Hide\nDesc"
+                self.toggle_desc_button_right["text"] = "Hide Descriptions" # Update button text
 
     def open_edit_description_modal(self, entity_label):
         modal = tk.Toplevel(self.root)
@@ -954,7 +1003,7 @@ class MergeGUI:
         for frame in list(self.description_frames.values()):
             frame.destroy()
         self.description_frames.clear()
-        self.desc_header_label["text"] = "Show\nDesc"
+        self.toggle_desc_button_right["text"] = "Show Descriptions"
 
         strategy = {
             "description": self.strategy_desc.get(),
@@ -1022,7 +1071,7 @@ class MergeGUI:
 
         # Crucial check: Ensure that only selected entities are currently visible in the filtered list
         selected_from_filtered = {label for label in self.filtered_entity_list if self.all_check_vars.get(label, tk.BooleanVar()).get()}
-        if not (set(selected_for_deletion) == selected_from_filtered and len(selected_for_deletion) == len(selected_from_filtered)):
+        if not (set(selected_for_deletion) == selected_from_filtered and len(selected_for_deletion) == len(selected_for_deletion)):
             messagebox.showerror("Operation Not Allowed", "Delete operation can only be performed when 'Selected Only' mode is active and the displayed list exactly matches the selected entities.")
             return
 
@@ -1038,7 +1087,7 @@ class MergeGUI:
         for frame in list(self.description_frames.values()):
             frame.destroy()
         self.description_frames.clear()
-        self.desc_header_label["text"] = "Show\nDesc"
+        self.toggle_desc_button_right["text"] = "Show Descriptions" # Update button text
 
         rag = await initialize_rag()
         try:
