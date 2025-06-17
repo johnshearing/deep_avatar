@@ -92,7 +92,8 @@ def fetch_entity_details(label):
             edges_info.append({
                 "source": edge.get("source", ""),
                 "target": edge.get("target", ""),
-                "description": edge.get("properties", {}).get("description", "")
+                "description": edge.get("properties", {}).get("description", ""),
+                "keywords": edge.get("properties", {}).get("keywords", "")
             })
 
         return {
@@ -157,6 +158,34 @@ def update_entity_description_api(entity_label, new_description):
         return False
     except Exception as e:
         messagebox.showerror("Error", f"An unexpected error occurred while updating description for {entity_label}: {e}")
+        return False
+
+def update_relationship_api(source_id, target_id, new_description, new_keywords):
+    try:
+        url = f"{LIGHTRAG_SERVER_URL}/graph/relation/edit"
+        headers = {'accept': 'application/json', 'Content-Type': 'application/json'}
+        payload = {
+            "source_id": source_id,
+            "target_id": target_id,
+            "updated_data": {
+                "description": new_description,
+                "keywords": new_keywords
+            }
+        }
+        
+        print(f"Sending update request for relationship from {source_id} to {target_id}...")
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+        print(f"Successfully updated relationship from {source_id} to {target_id}.")
+        return True
+    except requests.exceptions.ConnectionError:
+        messagebox.showerror("Connection Error", "Could not connect to LightRAG server to update relationship. Is it running?")
+        return False
+    except requests.exceptions.HTTPError as e:
+        messagebox.showerror("API Error", f"Failed to update relationship from {source_id} to {target_id}: {e.response.status_code} - {e.response.text}")
+        return False
+    except Exception as e:
+        messagebox.showerror("Error", f"An unexpected error occurred while updating relationship from {source_id} to {target_id}: {e}")
         return False
 
 class MergeGUI:
@@ -752,12 +781,17 @@ class MergeGUI:
                     header_sub_frame.pack(fill="x")
                     header_sub_frame.grid_columnconfigure(0, weight=1)
                     header_sub_frame.grid_columnconfigure(1, weight=0)
+                    header_sub_frame.grid_columnconfigure(2, weight=0)
 
                     ttk.Label(header_sub_frame, text=label, font=("TkDefaultFont", 10, "bold")).grid(row=0, column=0, sticky="w")
                     
                     edit_button = ttk.Button(header_sub_frame, text="Edit Description", 
                                              command=lambda l=label: self.open_edit_description_modal(l))
-                    edit_button.grid(row=0, column=1, sticky="e", padx=(5,0))
+                    edit_button.grid(row=0, column=1, sticky="e", padx=(5,5))
+                    
+                    edit_rel_button = ttk.Button(header_sub_frame, text="Edit Relationships",
+                                                 command=lambda l=label: self.open_edit_relationships_modal(l))
+                    edit_rel_button.grid(row=0, column=2, sticky="e", padx=(0,5))
 
                     text_frame = ttk.Frame(desc_frame)
                     text_frame.pack(fill="both", expand=True, pady=(5,0))
@@ -793,8 +827,6 @@ class MergeGUI:
                             if node_desc and node_desc != "No description found.":
                                 text_content_parts.append(f"  Description: {node_desc}")
 
-
-
                     if edges:
                         filtered_edges = [edge for edge in edges if edge.get("source") == label or edge.get("target") == label]
                         if filtered_edges:
@@ -803,8 +835,11 @@ class MergeGUI:
                                 source = edge.get("source", "N/A")
                                 target = edge.get("target", "N/A")
                                 edge_desc = edge.get("description", "No description provided.")
+                                edge_keywords = edge.get("keywords", "")
                                 text_content_parts.append(f"- From: {source}\n  To: {target}\n  Relation: {edge_desc}")
-                    
+                                if edge_keywords:
+                                    text_content_parts.append(f"  Keywords: {edge_keywords}")
+
                     text_widget.insert("1.0", "\n\n".join(text_content_parts))
                     text_widget.config(state="disabled")
                     
@@ -874,6 +909,121 @@ class MergeGUI:
         modal.geometry(f"+{x}+{y}")
         
         self.root.wait_window(modal)
+
+    def open_edit_relationships_modal(self, entity_label):
+        modal = tk.Toplevel(self.root)
+        modal.title(f"Edit Relationships for {entity_label}")
+        modal.transient(self.root)
+        modal.grab_set()
+        modal.protocol("WM_DELETE_WINDOW", modal.destroy)
+        
+        modal.grid_columnconfigure(0, weight=1)
+        modal.grid_rowconfigure(2, weight=1)
+
+        ttk.Label(modal, text=f"Select Relationship for: {entity_label}", font=("TkDefaultFont", 10, "bold")).grid(row=0, column=0, padx=10, pady=5, sticky="w")
+
+        # Get relationships
+        entity_details = self.entity_data.get(entity_label, {})
+        edges = entity_details.get("edges", [])
+        filtered_edges = [edge for edge in edges if edge.get("source") == entity_label or edge.get("target") == entity_label]
+        
+        if not filtered_edges:
+            ttk.Label(modal, text="No relationships found.", font=("TkDefaultFont", 10)).grid(row=1, column=0, padx=10, pady=5, sticky="w")
+            button_frame = ttk.Frame(modal)
+            button_frame.grid(row=2, column=0, sticky="ew", padx=10, pady=10)
+            ttk.Button(button_frame, text="Close", command=modal.destroy).pack(side="right")
+            return
+
+        # Create combobox for selecting relationship
+        relationship_options = [f"From: {edge['source']} To: {edge['target']}" for edge in filtered_edges]
+        selected_relationship = tk.StringVar()
+        relationship_combobox = ttk.Combobox(modal, textvariable=selected_relationship, values=relationship_options, state="readonly")
+        relationship_combobox.grid(row=1, column=0, sticky="ew", padx=10, pady=5)
+        if relationship_options:
+            relationship_combobox.set(relationship_options[0])
+
+        # Frames for editing description and keywords
+        edit_frame = ttk.Frame(modal)
+        edit_frame.grid(row=2, column=0, sticky="nsew", padx=10, pady=5)
+        edit_frame.grid_columnconfigure(0, weight=1)
+        edit_frame.grid_rowconfigure(1, weight=1)
+
+        ttk.Label(edit_frame, text="Relationship Description:").grid(row=0, column=0, sticky="w", padx=5, pady=2)
+        desc_text = tk.Text(edit_frame, wrap="word", font=("TkDefaultFont", 10), height=5)
+        desc_scrollbar = ttk.Scrollbar(edit_frame, orient="vertical", command=desc_text.yview)
+        desc_text.configure(yscrollcommand=desc_scrollbar.set)
+        desc_text.grid(row=1, column=0, sticky="nsew", padx=5, pady=2)
+        desc_scrollbar.grid(row=1, column=1, sticky="ns")
+
+        ttk.Label(edit_frame, text="Keywords (comma-separated):").grid(row=2, column=0, sticky="w", padx=5, pady=2)
+        keywords_entry = ttk.Entry(edit_frame)
+        keywords_entry.grid(row=3, column=0, sticky="ew", padx=5, pady=2)
+
+        # Function to update fields when a new relationship is selected
+        def update_fields(*args):
+            selected_idx = relationship_combobox.current()
+            if selected_idx >= 0:
+                edge = filtered_edges[selected_idx]
+                desc_text.delete("1.0", tk.END)
+                desc_text.insert("1.0", edge.get("description", ""))
+                keywords_entry.delete(0, tk.END)
+                keywords_entry.insert(0, edge.get("keywords", ""))
+
+        selected_relationship.trace("w", update_fields)
+        update_fields()  # Initialize fields
+
+        # Buttons
+        button_frame = ttk.Frame(modal)
+        button_frame.grid(row=3, column=0, sticky="ew", padx=10, pady=10)
+        button_frame.grid_columnconfigure(0, weight=1)
+
+        save_button = ttk.Button(button_frame, text="Save",
+                                 command=lambda: self.save_relationship(entity_label, filtered_edges, relationship_combobox.current(), desc_text, keywords_entry, modal))
+        save_button.pack(side="right", padx=(5,0))
+
+        cancel_button = ttk.Button(button_frame, text="Cancel", command=modal.destroy)
+        cancel_button.pack(side="right")
+
+        # Set modal size and position
+        self.root.update_idletasks()
+        modal.update_idletasks()
+        min_width = 500
+        min_height = 400
+        modal.geometry(f"{min_width}x{min_height}")
+
+        x = self.root.winfo_x() + (self.root.winfo_width() // 2) - (modal.winfo_width() // 2)
+        y = self.root.winfo_y() + (self.root.winfo_height() // 2) - (modal.winfo_height() // 2)
+        modal.geometry(f"+{x}+{y}")
+
+        self.root.wait_window(modal)
+
+    def save_relationship(self, entity_label, edges, selected_idx, desc_text, keywords_entry, modal):
+        if selected_idx < 0:
+            messagebox.showerror("Error", "No relationship selected.")
+            return
+
+        edge = edges[selected_idx]
+        source_id = edge["source"]
+        target_id = edge["target"]
+        new_description = desc_text.get("1.0", tk.END).strip()
+        new_keywords = keywords_entry.get().strip()
+
+        if update_relationship_api(source_id, target_id, new_description, new_keywords):
+            # Update cached data
+            for e in self.entity_data[entity_label]["edges"]:
+                if e["source"] == source_id and e["target"] == target_id:
+                    e["description"] = new_description
+                    e["keywords"] = new_keywords
+                    break
+            
+            # Refresh descriptions
+            if self.description_frames:
+                for frame in list(self.description_frames.values()):
+                    frame.destroy()
+                self.description_frames.clear()
+                self.toggle_descriptions()
+            
+            modal.destroy()
 
     def save_entity_description(self, entity_label, description_text_widget, modal_window):
         new_description = description_text_widget.get("1.0", tk.END).strip()

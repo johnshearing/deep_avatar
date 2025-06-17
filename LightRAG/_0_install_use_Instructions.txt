@@ -13,6 +13,7 @@ python -m venv venv_lightrag
 
 
 # Now activate the venv_lightrag virtual environment with the following command.
+# Be sure that you are in the LightRAG directory.
 # Any time when you wish to use the LightRAG library or install the required packages that the library uses, the virtual environment must be activated.
 source venv_lightrag/bin/activate
 
