@@ -584,7 +584,9 @@ class MergeGUI:
         self.strategy_srcid.set("join_unique")
         self.strategy_srcid.grid(row=2, column=1, sticky="ew", padx=5, pady=2)
 
-        ttk.Label(control_frame, text="Entity Type:").grid(row=3, column=0, sticky="w", padx=5, pady=2)
+        # Replaced "Entity Type" label with a button
+        self.entity_type_button = ttk.Button(control_frame, text="Select Entity Type", command=self.open_all_entity_types_modal)
+        self.entity_type_button.grid(row=3, column=0, sticky="w", padx=5, pady=2)
         self.entity_type = ttk.Combobox(control_frame, values=[], width=37)
         self.entity_type.grid(row=3, column=1, sticky="ew", padx=5, pady=2)
 
@@ -659,6 +661,69 @@ class MergeGUI:
                 self.desc_canvas.bind(event, _on_desc_mousewheel)
             except:
                 pass
+
+    def open_all_entity_types_modal(self):
+        # Fetch entity types for all entities
+        all_types = set()
+        for label in self.entity_list:
+            if label not in self.entity_data:
+                self.entity_data[label] = fetch_entity_details(label)
+            entity_type = self.entity_data[label].get("type", "")
+            if entity_type and not entity_type.startswith("Error:"):
+                all_types.add(entity_type)
+        all_types = sorted(list(all_types))
+
+        if not all_types:
+            messagebox.showinfo("No Entity Types", "No entity types found for any entities.")
+            return
+
+        # Create modal window
+        modal = tk.Toplevel(self.root)
+        modal.title("Select Entity Type")
+        modal.transient(self.root)
+        modal.grab_set()
+        modal.protocol("WM_DELETE_WINDOW", modal.destroy)
+
+        modal.grid_columnconfigure(0, weight=1)
+        modal.grid_rowconfigure(0, weight=1)
+
+        # Create scrollable listbox
+        list_frame = ttk.Frame(modal)
+        list_frame.grid(row=0, column=0, sticky="nsew", padx=10, pady=10)
+        list_frame.grid_rowconfigure(0, weight=1)
+        list_frame.grid_columnconfigure(0, weight=1)
+
+        listbox = tk.Listbox(list_frame, font=("TkDefaultFont", 10), height=10)
+        listbox.grid(row=0, column=0, sticky="nsew")
+        scrollbar = ttk.Scrollbar(list_frame, orient="vertical", command=listbox.yview)
+        listbox.configure(yscrollcommand=scrollbar.set)
+        scrollbar.grid(row=0, column=1, sticky="ns")
+
+        # Populate listbox with entity types
+        for entity_type in all_types:
+            listbox.insert(tk.END, entity_type)
+
+        # Handle double-click to select entity type
+        def on_double_click(event):
+            selection = listbox.curselection()
+            if selection:
+                selected_type = listbox.get(selection[0])
+                self.entity_type.set(selected_type)
+                modal.destroy()
+
+        listbox.bind("<Double-1>", on_double_click)
+
+        # Cancel button
+        button_frame = ttk.Frame(modal)
+        button_frame.grid(row=1, column=0, sticky="ew", padx=10, pady=10)
+        cancel_button = ttk.Button(button_frame, text="Cancel", command=modal.destroy)
+        cancel_button.pack(side="right")
+
+        # Set modal size and position
+        modal.geometry("300x300")
+        x = self.root.winfo_x() + (self.root.winfo_width() // 2) - 150
+        y = self.root.winfo_y() + (self.root.winfo_height() // 2) - 150
+        modal.geometry(f"+{x}+{y}")
 
     def create_entity_list(self):
         for widget in self.scrollable_frame.winfo_children():
@@ -978,27 +1043,22 @@ class MergeGUI:
         modal.grab_set()
         modal.protocol("WM_DELETE_WINDOW", modal.destroy)
         
-        # Configure grid columns and rows
-        modal.grid_columnconfigure(0, weight=1)  # Main column for labels and controls
-        modal.grid_columnconfigure(1, weight=0)  # For scrollbar
-        modal.grid_rowconfigure(5, weight=0)     # Description text area
+        modal.grid_columnconfigure(0, weight=1)
+        modal.grid_columnconfigure(1, weight=0)
+        modal.grid_rowconfigure(5, weight=0)
 
-        # Header
         ttk.Label(modal, text="Create Relationship Between Entities", font=("TkDefaultFont", 10, "bold")).grid(row=0, column=0, padx=10, pady=5, sticky="w")
 
-        # Source Entity
         ttk.Label(modal, text="Source Entity:").grid(row=1, column=0, sticky="w", padx=10, pady=2)
         source_var = tk.StringVar(value=entity1)
         source_combobox = ttk.Combobox(modal, textvariable=source_var, values=selected, state="readonly")
         source_combobox.grid(row=2, column=0, sticky="ew", padx=10, pady=2)
 
-        # Target Entity
         ttk.Label(modal, text="Target Entity:").grid(row=3, column=0, sticky="w", padx=10, pady=2)
         target_var = tk.StringVar(value=entity2)
         target_combobox = ttk.Combobox(modal, textvariable=target_var, values=selected, state="readonly")
         target_combobox.grid(row=4, column=0, sticky="ew", padx=10, pady=2)
 
-        # Description
         ttk.Label(modal, text="Relationship Description:").grid(row=5, column=0, sticky="w", padx=10, pady=2)
         desc_text = tk.Text(modal, wrap="word", font=("TkDefaultFont", 10), height=5)
         desc_scrollbar = ttk.Scrollbar(modal, orient="vertical", command=desc_text.yview)
@@ -1006,23 +1066,19 @@ class MergeGUI:
         desc_text.grid(row=6, column=0, sticky="nsew", padx=10, pady=2)
         desc_scrollbar.grid(row=6, column=1, sticky="ns")
 
-        # Keywords
         ttk.Label(modal, text="Keywords (comma-separated):").grid(row=7, column=0, sticky="w", padx=10, pady=2)
         keywords_entry = ttk.Entry(modal)
         keywords_entry.grid(row=8, column=0, sticky="ew", padx=10, pady=2)
 
-        # Weight
         ttk.Label(modal, text="Weight (1.0-10.0):").grid(row=9, column=0, sticky="w", padx=10, pady=2)
         weight_var = tk.StringVar(value="7.0")
         weight_entry = ttk.Entry(modal, textvariable=weight_var)
         weight_entry.grid(row=10, column=0, sticky="ew", padx=10, pady=2)
 
-        # Source File ID
         ttk.Label(modal, text="Source File ID:").grid(row=11, column=0, sticky="w", padx=10, pady=2)
         source_file_id_entry = ttk.Entry(modal)
         source_file_id_entry.grid(row=12, column=0, sticky="ew", padx=10, pady=2)
 
-        # Buttons
         button_frame = ttk.Frame(modal)
         button_frame.grid(row=13, column=0, columnspan=2, sticky="ew", padx=10, pady=10)
         button_frame.grid_columnconfigure(0, weight=1)
@@ -1036,7 +1092,7 @@ class MergeGUI:
         cancel_button = ttk.Button(button_frame, text="Cancel", command=modal.destroy)
         cancel_button.pack(side="right")
 
-        modal.geometry("500x500")  
+        modal.geometry("500x450")  
         x = self.root.winfo_x() + (self.root.winfo_width() // 2) - 250
         y = self.root.winfo_y() + (self.root.winfo_height() // 2) - 300
         modal.geometry(f"+{x}+{y}")
