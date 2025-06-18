@@ -20,7 +20,7 @@ MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
 # Files to be indexed
 files_2b_indexed = [
-    "./_1_custom_index_sample.json"
+    "./_1_custom_index_test.json"
 ]
 
 def configure_logging():

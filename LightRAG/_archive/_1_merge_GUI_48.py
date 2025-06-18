@@ -789,7 +789,7 @@ class MergeGUI:
                                              command=lambda l=label: self.open_edit_description_modal(l))
                     edit_button.grid(row=0, column=1, sticky="e", padx=(5,5))
                     
-                    edit_rel_button = ttk.Button(header_sub_frame, text="Edit Relationships",
+                    edit_rel_button = ttk.Button(header_sub_frame, text="Edit/Delete Relationships",
                                                  command=lambda l=label: self.open_edit_relationships_modal(l))
                     edit_rel_button.grid(row=0, column=2, sticky="e", padx=(0,5))
 
