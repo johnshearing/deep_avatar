@@ -61,8 +61,15 @@ Right now I am just playing in order to see what is possible with the currently 
 
 Overall Roadmap:
 1. Build the RAG system and deploy a web interface so that the public can query the vector database using natural language.  
-   - The RAG system is currently working and ingesting data.  
-   - Recently, I built the app shown below, which makes it possible to rapidly examine and clean any dirty data that gets ingested into the knowledge graph and vector database during the indexing process.  
+   - The RAG system is currently working and ingesting data but is currently under testing. It will be deployed the Internet shortly.    
+- Recently, I built the app shown below, which makes it possible to rapidly examine and clean any dirty data that gets ingested into the knowledge graph and vector database during the indexing process.  
+
+<br>
+<p>
+<img src="/_images/cleanup_app.jpg">
+</p>
+<br>  
+
    - If you are interested, the app can be found in the LightRAG directory as _1_merge_GUI_??.py where the question marks represent the version number.
    - The manual merging app mentioned above now easily does the following:
      - Edit entity name
@@ -78,11 +85,6 @@ Overall Roadmap:
      - A big help for me is to use the API to get a list of all the entities. Then I give this list to any a.i. such as Grok, or Gemini and ask them to look over the list and recommend candidates for merging. This catches all the duplicates which are written in different cases like "Melanoma" and "melanoma" and it also catches pairs like "melanoma" and "skin cancer". The substring filter is also a great help in identifying candidates for a merge, rename, delete, or a new relationship.
    - Next I will see what can be done with the prompt at indexing time in order to ingest cleaner data so that less of the above will be required.
    - After that experiment I will see if I can use this application to collect training data in order to fine-tune a.i. to do the cleanup both during the indexing process and on a second pass after indexing if needed.   
-<br>
-<p>
-<img src="/_images/cleanup_app.jpg">
-</p>
-<br>  
 
 2. Use the RAG system to create question and answer pairs which will be used to fine-tune an LLM deep avatar of Charles.  
 3. Fine-tune the LLM so as to become a deep avatar of Charles which also has a full understanding of all the Cardano protocol's technical details, Lean-4, and which can cite all the data in the RAG system that was used for fine-tuning.  
