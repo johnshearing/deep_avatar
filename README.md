@@ -63,8 +63,21 @@ Overall Roadmap:
 1. Build the RAG system and deploy a web interface so that the public can query the vector database using natural language.  
    - The RAG system is currently working and ingesting data.  
    - Recently, I built the app shown below, which makes it possible to rapidly examine and clean any dirty data that gets ingested into the knowledge graph and vector database during the indexing process.  
-   - If you are interested, the app can be found in the LightRAG directory as _1_merge_GUI_??.py where the question marks represent the version number.   
-   - The next step is to use this application to train the a.i. to do the cleanup both during the indexing process and on a second pass after indexing if needed.   
+   - If you are interested, the app can be found in the LightRAG directory as _1_merge_GUI_??.py where the question marks represent the version number.
+   - The manual merging app mentioned above now easily does the following:
+     - Edit entity name
+     - Edit entity description
+     - Edit entity type
+     - Edit entity relationships
+     - Add new entity relationships
+     - Delete entities
+     - Delete entity relationships
+     - Show all entities of a particular category
+     - Show all entities that have not relations (orphans)
+     - Show all information about selected entities and their relations side by side with other selected entities in order to understand what operations from above need to be performed in order to clean up the data.
+     - A big help for me is to use the API to get a list of all the entities. Then I give this list to any a.i. such as Grok, or Gemini and ask them to look over the list and recommend candidates for merging. This catches all the duplicates which are written in different cases like "Melanoma" and "melanoma" and it also catches pairs like "melanoma" and "skin cancer". The substring filter is also a great help in identifying candidates for a merge, rename, delete, or a new relationship.
+   - Next I will see what can be done with the prompt at indexing time in order to ingest cleaner data so that less of the above will be required.
+   - After that experiment I will see if I can use this application to collect training data in order to fine-tune a.i. to do the cleanup both during the indexing process and on a second pass after indexing if needed.   
 <br>
 <p>
 <img src="/_images/cleanup_app.jpg">
