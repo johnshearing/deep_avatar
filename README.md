@@ -61,10 +61,10 @@ Right now I am just playing in order to see what is possible with the currently 
 
 Overall Roadmap:
 1. Build the RAG system and deploy a web interface so that the public can query the vector database using natural language.
-   The RAG system is currently working and ingesting data. 
-   Recently, I built the app shown below, which makes it possible to rapidly examine and clean any dirty data that gets ingested into the knowledge graph during the indexing process.
-   If you are interested, the app can be found in the LightRAG directory as _1_merge_GUI_??.py where the question marks represent the version number.  
-   The next step is to use this application to train the a.i. to do the cleanup both during the indexing process and on a second pass after indexing if needed.  
+   - The RAG system is currently working and ingesting data. 
+   - Recently, I built the app shown below, which makes it possible to rapidly examine and clean any dirty data that gets ingested into the knowledge graph and vector database during the indexing process.
+   - If you are interested, the app can be found in the LightRAG directory as _1_merge_GUI_??.py where the question marks represent the version number.  
+   - The next step is to use this application to train the a.i. to do the cleanup both during the indexing process and on a second pass after indexing if needed.  
 <br>
 <p>
 <img src="/_images/cleanup_app.jpg">
