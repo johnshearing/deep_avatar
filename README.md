@@ -76,6 +76,7 @@ Overall Roadmap:
      - Edit entity description
      - Edit entity type
      - Edit entity relationships
+     - Add new entity types
      - Add new entity relationships
      - Delete entities
      - Delete entity relationships
