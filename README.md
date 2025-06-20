@@ -82,7 +82,7 @@ Overall Roadmap:
      - Delete entity relationships
      - Show all entities for a particular category
      - Show all entities that have no relations to other entities (orphans)
-     - Show all information about selected entities and their relations side by side with other selected entities in order to understand what operations from above need to be performed in order to clean up the data.
+     - Show all information about selected entities and their relations side by side with other selected entities in order to compare and decide what operations from above need to be performed in order to clean up the data.
      - A big help for me is to use the API to get a list of all the entities. Then I give this list to any a.i. such as Grok, or Gemini and ask them to look over the list and recommend candidates for merging. This catches all the duplicates which are written in different cases like "Melanoma" and "melanoma" and it also catches pairs like "melanoma" and "skin cancer".
      - The substring filter finds merge candidates like "Jack" and "Dr. Jack Kruse" which don't sort next to each other alphpbetically.  
    - Next I will see what can be done with the prompt at indexing time in order to ingest cleaner data so that less of the above will be required.
