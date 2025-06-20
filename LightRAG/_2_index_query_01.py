@@ -122,11 +122,11 @@ async def main():
         '''
 
         query = (
-            "What does Jack say about Health Education?"
+            "How does sunlight effect ACTH levels?"
         )
       
          
-        for mode in ["local"]:  # "naive", "local", "global", "hybrid", "mix"
+        for mode in ["naive", "local", "global", "hybrid", "mix"]:  # "naive", "local", "global", "hybrid", "mix"
             print(f"\n=====================")
             print(f"Query mode: {mode}")
             print(f"=====================")
