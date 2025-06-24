@@ -10,7 +10,10 @@ PROMPTS["DEFAULT_TUPLE_DELIMITER"] = "<|>"
 PROMPTS["DEFAULT_RECORD_DELIMITER"] = "##"
 PROMPTS["DEFAULT_COMPLETION_DELIMITER"] = "<|COMPLETE|>"
 
-PROMPTS["DEFAULT_ENTITY_TYPES"] = ["organization", "person", "geo", "event", "category"]
+PROMPTS["DEFAULT_ENTITY_TYPES"] = ["organization", "cartel", "complex_adaptive_system", "person", "place", "time", "event", "infrastructure", "anatomy", "media", "protocol", "molecule", "hormone", 
+                                   "neurotransmitter", "ethnicity", "demographic", "control_system", "paradigm", "plant", "animal", "bacteria", "archaea", "eukarya", "organism", "organ", "tissue",  
+                                   "organelle", "cell", "art", "field_of_study", "physics", "biophysics", "concept", "disease", "knowledge", "medical_procedure", "condition", 
+                                   "situation", "problem", "process", "measurement", "boundry", "attribute", "energy", "energy_conversion", "toxin", "element", "isotope", "material", "range"]
 
 PROMPTS["entity_extraction"] = """---Goal---
 Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.
@@ -18,7 +21,7 @@ Use {language} as output language.
 
 ---Steps---
 1. Identify all entities. For each identified entity, extract the following information:
-- entity_name: Name of the entity, use same language as input text. If English, capitalize the name. If a person check the spelling of the name.
+- entity_name: Name of the entity, use same language as input text. If English, capitalize the name. If the entity is a person then check the spelling of the name. Don't assume the name is spelled like it sounds.
 - entity_type: One of the following types: [{entity_types}]
 - entity_description: Comprehensive description of the entity's attributes and activities
 Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
@@ -35,7 +38,7 @@ Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tupl
 3. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document.
 Format the content-level key words as ("content_keywords"{tuple_delimiter}<high_level_keywords>)
 
-4. Return output in {language} as a single list of all the entities and relationships identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+4. Return output in {language} as a single list of all the entities and relationships identified in steps 1, 2, and 3. Use **{record_delimiter}** as the list delimiter.
 
 5. When finished, output {completion_delimiter}
 
@@ -69,6 +72,78 @@ It was a small transformation, barely perceptible, but one that Alex noted with 
 ```
 
 Output:
+("entity"{tuple_delimiter}"category"{tuple_delimiter}"category_hub"{tuple_delimiter}"category is the hub entity which shares a relationship with every entity that has the entity_type of category."){record_delimiter}
+("entity"{tuple_delimiter}"organization"{tuple_delimiter}"category"{tuple_delimiter}"organization is an entity_type which describes governments, companies, institutions, establishments, consortiums, conglomerates, associations, and similar."){record_delimiter}
+("entity"{tuple_delimiter}"cartel"{tuple_delimiter}"category"{tuple_delimiter}"cartel is an entity_type which describes alliances of organizations such that competition and choice is diminished for their clients while control over clients is increased."){record_delimiter}
+("entity"{tuple_delimiter}"complex_adaptive_system"{tuple_delimiter}"category"{tuple_delimiter}"complex_adaptive_system is an entity_type which describe processes such as cartels, orgainzations, organisms and similar, that are controlled by a complex web of positive feedback loops which cause it to seek feeding and growth before any other objective."){record_delimiter}
+("entity"{tuple_delimiter}"person"{tuple_delimiter}"category"{tuple_delimiter}"person is an entity_type which describes any human."){record_delimiter}
+("entity"{tuple_delimiter}"place"{tuple_delimiter}"category"{tuple_delimiter}"place is an entity_type which describes any geographic location."){record_delimiter}
+("entity"{tuple_delimiter}"time"{tuple_delimiter}"category"{tuple_delimiter}"time is an entity_type which describes any starting point, ending point, or interval of time."){record_delimiter}
+("entity"{tuple_delimiter}"event"{tuple_delimiter}"category"{tuple_delimiter}"event is an entity_type which describes a particular situation at a specific time."){record_delimiter}
+("entity"{tuple_delimiter}"infrastructure"{tuple_delimiter}"category"{tuple_delimiter}"infrastructure is an entity_type which describes anything built by an organization for the purpose of serving the organization or its membership."){record_delimiter}
+("entity"{tuple_delimiter}"anatomy"{tuple_delimiter}"category"{tuple_delimiter}"anatomy is an entity_type which describes any part of a living organism."){record_delimiter}
+("entity"{tuple_delimiter}"media"{tuple_delimiter}"category"{tuple_delimiter}"media is an entity_type which describes any type of recorded information such as books, computer files, paintings, videos and similar."){record_delimiter}
+("entity"{tuple_delimiter}"protocol"{tuple_delimiter}"category"{tuple_delimiter}"protocol is an entity_type which describes widely agreed upon method for accomplishing a task."){record_delimiter}
+("entity"{tuple_delimiter}"molecule"{tuple_delimiter}"category"{tuple_delimiter}"molecule is an entity_type which describes arrangements of atoms often in the context of biology and biophysics."){record_delimiter}
+("entity"{tuple_delimiter}"hormone"{tuple_delimiter}"category"{tuple_delimiter}"hormone is an entity_type which describes molecules used to as signals to regulate biological processes in the body."){record_delimiter}
+("entity"{tuple_delimiter}"neurotransmitter"{tuple_delimiter}"category"{tuple_delimiter}"neurotransmitter is an entity_type which describes molecules used for signaling within the nervous system."){record_delimiter}
+("entity"{tuple_delimiter}"ethnicity"{tuple_delimiter}"category"{tuple_delimiter}"ethnicity is an entity_type used to catagorize humans by ancestry."){record_delimiter}
+("entity"{tuple_delimiter}"demographic"{tuple_delimiter}"category"{tuple_delimiter}"demographic is an entity_type which describes any combination of physical charactaristic, ethnicity, or organizational affilitation such as black people, white males, white democrates, black christians and similar."){record_delimiter}
+("entity"{tuple_delimiter}"control_system"{tuple_delimiter}"category"{tuple_delimiter}"control_system is an entity_type which describes any system of signal, control, and feedback such as a thermostatic system for controlling heat in a building, a system of trade policy for controlling an ecconomy, or the endocrine system for regulating the body."){record_delimiter}
+("entity"{tuple_delimiter}"paradigm"{tuple_delimiter}"category"{tuple_delimiter}"paradigm is an entity_type which describes a viewpoint or way of understanding such as allopathic medicine vs traditional chinese medicine or capitalism vs communism, where the active paradigm controls behavior."){record_delimiter}
+("entity"{tuple_delimiter}"plant"{tuple_delimiter}"category"{tuple_delimiter}"plant is an entity_type which describes eukaryotes that comprise the kingdom Plantae."){record_delimiter}
+("entity"{tuple_delimiter}"animal"{tuple_delimiter}"category"{tuple_delimiter}"animal is an entity_type which describes a multicellular eukaryotic organism in the biological kingdom, Animalia."){record_delimiter}
+("entity"{tuple_delimiter}"bacteria"{tuple_delimiter}"category"{tuple_delimiter}"bacteria is an entity_type which describe a large group of unicellular microorganisms which have cell walls but lack organelles and an organized nucleus."){record_delimiter}
+("entity"{tuple_delimiter}"archaea"{tuple_delimiter}"category"{tuple_delimiter}"archaea is an entity_type which describes prokaryotes which are evolutionarily distinct from both bacteria and eukaryotes, often found in extreme environments like hot springs or salty lakes."){record_delimiter}
+("entity"{tuple_delimiter}"eukarya"{tuple_delimiter}"category"{tuple_delimiter}"eukarya is an entity_type which describes organisms characterized by cells containing a nucleus and other membrane-bound organelles."){record_delimiter}
+("entity"{tuple_delimiter}"organism"{tuple_delimiter}"category"{tuple_delimiter}"organism is an entity_type which describes an individual animal, plant, or single-celled life form."){record_delimiter}
+("entity"{tuple_delimiter}"organ"{tuple_delimiter}"category"{tuple_delimiter}"organ is an entity_type which describes a collection of tissues that structurally form a functional unit specialized to perform a particular function."){record_delimiter}
+("entity"{tuple_delimiter}"tissue"{tuple_delimiter}"category"{tuple_delimiter}"tissue is an entity_type which describes a group of similar cells that work together to perform a specific function within an organism."){record_delimiter}
+("entity"{tuple_delimiter}"organelle"{tuple_delimiter}"category"{tuple_delimiter}"organelle is an entity_type which describes a subcellular structure that has one or more specific jobs to perform in the cell."){record_delimiter}
+("entity"{tuple_delimiter}"cell"{tuple_delimiter}"category"{tuple_delimiter}"cell is an entity_type which describes the basic membrane-bound unit that contains the fundamental molecules of life and of which all living things are composed."){record_delimiter}
+("entity"{tuple_delimiter}"art"{tuple_delimiter}"category"{tuple_delimiter}"art is an entity_type which describes the expression or application of human creative skill and imagination."){record_delimiter}
+("entity"{tuple_delimiter}"field_of_study"{tuple_delimiter}"category"{tuple_delimiter}"field_of_study is an entity_type which describes subjects that require time and attention to master such as medicine, physics, farming, art and similar."){record_delimiter}
+("entity"{tuple_delimiter}"physics"{tuple_delimiter}"category"{tuple_delimiter}"physics is an entity_type which describes a field of study concerned with the nature and properties of matter and energy."){record_delimiter}
+("entity"{tuple_delimiter}"biophysics"{tuple_delimiter}"category"{tuple_delimiter}"biophysics is an entity_type which describes an interdisciplinary field that applies the principles and methods of physics to understand biological systems."){record_delimiter}
+("entity"{tuple_delimiter}"concept"{tuple_delimiter}"category"{tuple_delimiter}"concept is an entity_type which describes an idea which has been well thought out and defined."){record_delimiter}
+("entity"{tuple_delimiter}"disease"{tuple_delimiter}"category"{tuple_delimiter}"disease is an entity_type which describes a condition of the living animal or plant body that impairs normal functioning."){record_delimiter}
+("entity"{tuple_delimiter}"knowledge"{tuple_delimiter}"category"{tuple_delimiter}"knowledge is an entity_type which describes information, and principles acquired by humankind."){record_delimiter}
+("entity"{tuple_delimiter}"medical_procedure"{tuple_delimiter}"category"{tuple_delimiter}"medical_procedure is an entity_type which describes a course of action or a specific technique used by healthcare professionals to diagnose, treat, or manage a health condition."){record_delimiter}
+("entity"{tuple_delimiter}"condition"{tuple_delimiter}"category"{tuple_delimiter}"condition is an entity_type which describes a specific aspect of a subject's state."){record_delimiter}
+("entity"{tuple_delimiter}"situation"{tuple_delimiter}"category"{tuple_delimiter}"situation is an entity_type which describes all the conditions or specific aspects of a subject's state."){record_delimiter}
+("entity"{tuple_delimiter}"problem"{tuple_delimiter}"category"{tuple_delimiter}"problem is an entity_type which describes any question or situation involving doubt, uncertainty, or difficulty."){record_delimiter}
+("entity"{tuple_delimiter}"process"{tuple_delimiter}"category"{tuple_delimiter}"process is an entity_type which describes a natural or involuntary series of changes."){record_delimiter}
+("entity"{tuple_delimiter}"person"{tuple_delimiter}"category"{tuple_delimiter}"person is an entity_type which describes any human."){record_delimiter}
+("entity"{tuple_delimiter}"person"{tuple_delimiter}"category"{tuple_delimiter}"person is an entity_type which describes any human."){record_delimiter}
+
+
+
+("entity"{tuple_delimiter}"Taylor"{tuple_delimiter}"person"{tuple_delimiter}"Taylor is portrayed with authoritarian certainty and shows a moment of reverence towards a device, indicating a change in perspective."){record_delimiter}
+("entity"{tuple_delimiter}"Jordan"{tuple_delimiter}"person"{tuple_delimiter}"Jordan shares a commitment to discovery and has a significant interaction with Taylor regarding a device."){record_delimiter}
+("entity"{tuple_delimiter}"Cruz"{tuple_delimiter}"person"{tuple_delimiter}"Cruz is associated with a vision of control and order, influencing the dynamics among other characters."){record_delimiter}
+("entity"{tuple_delimiter}"The Device"{tuple_delimiter}"technology"{tuple_delimiter}"The Device is central to the story, with potential game-changing implications, and is revered by Taylor."){record_delimiter}
+("relationship"{tuple_delimiter}"Alex"{tuple_delimiter}"Taylor"{tuple_delimiter}"Alex is affected by Taylor's authoritarian certainty and observes changes in Taylor's attitude towards the device."{tuple_delimiter}"power dynamics, perspective shift"{tuple_delimiter}7){record_delimiter}
+("relationship"{tuple_delimiter}"Alex"{tuple_delimiter}"Jordan"{tuple_delimiter}"Alex and Jordan share a commitment to discovery, which contrasts with Cruz's vision."{tuple_delimiter}"shared goals, rebellion"{tuple_delimiter}6){record_delimiter}
+("relationship"{tuple_delimiter}"Taylor"{tuple_delimiter}"Jordan"{tuple_delimiter}"Taylor and Jordan interact directly regarding the device, leading to a moment of mutual respect and an uneasy truce."{tuple_delimiter}"conflict resolution, mutual respect"{tuple_delimiter}8){record_delimiter}
+("relationship"{tuple_delimiter}"Jordan"{tuple_delimiter}"Cruz"{tuple_delimiter}"Jordan's commitment to discovery is in rebellion against Cruz's vision of control and order."{tuple_delimiter}"ideological conflict, rebellion"{tuple_delimiter}5){record_delimiter}
+("relationship"{tuple_delimiter}"Taylor"{tuple_delimiter}"The Device"{tuple_delimiter}"Taylor shows reverence towards the device, indicating its importance and potential impact."{tuple_delimiter}"reverence, technological significance"{tuple_delimiter}9){record_delimiter}
+("content_keywords"{tuple_delimiter}"power dynamics, ideological conflict, discovery, rebellion"){completion_delimiter}
+#############################""",    
+    """Example 2:
+
+Entity_types: [person, technology, mission, organization, location]
+Text:
+```
+while Alex clenched his jaw, the buzz of frustration dull against the backdrop of Taylor's authoritarian certainty. It was this competitive undercurrent that kept him alert, the sense that his and Jordan's shared commitment to discovery was an unspoken rebellion against Cruz's narrowing vision of control and order.
+
+Then Taylor did something unexpected. They paused beside Jordan and, for a moment, observed the device with something akin to reverence. "If this tech can be understood..." Taylor said, their voice quieter, "It could change the game for us. For all of us."
+
+The underlying dismissal earlier seemed to falter, replaced by a glimpse of reluctant respect for the gravity of what lay in their hands. Jordan looked up, and for a fleeting heartbeat, their eyes locked with Taylor's, a wordless clash of wills softening into an uneasy truce.
+
+It was a small transformation, barely perceptible, but one that Alex noted with an inward nod. They had all been brought here by different paths
+```
+
+Output:
 ("entity"{tuple_delimiter}"Alex"{tuple_delimiter}"person"{tuple_delimiter}"Alex is a character who experiences frustration and is observant of the dynamics among other characters."){record_delimiter}
 ("entity"{tuple_delimiter}"Taylor"{tuple_delimiter}"person"{tuple_delimiter}"Taylor is portrayed with authoritarian certainty and shows a moment of reverence towards a device, indicating a change in perspective."){record_delimiter}
 ("entity"{tuple_delimiter}"Jordan"{tuple_delimiter}"person"{tuple_delimiter}"Jordan shares a commitment to discovery and has a significant interaction with Taylor regarding a device."){record_delimiter}
@@ -81,7 +156,7 @@ Output:
 ("relationship"{tuple_delimiter}"Taylor"{tuple_delimiter}"The Device"{tuple_delimiter}"Taylor shows reverence towards the device, indicating its importance and potential impact."{tuple_delimiter}"reverence, technological significance"{tuple_delimiter}9){record_delimiter}
 ("content_keywords"{tuple_delimiter}"power dynamics, ideological conflict, discovery, rebellion"){completion_delimiter}
 #############################""",
-    """Example 2:
+    """Example 3:
 
 Entity_types: [company, index, commodity, market_trend, economic_policy, biological]
 Text:
@@ -109,7 +184,7 @@ Output:
 ("relationship"{tuple_delimiter}"Federal Reserve Policy Announcement"{tuple_delimiter}"Market Selloff"{tuple_delimiter}"Speculation over Federal Reserve policy changes contributed to market volatility and investor selloff."{tuple_delimiter}"interest rate impact, financial regulation"{tuple_delimiter}7){record_delimiter}
 ("content_keywords"{tuple_delimiter}"market downturn, investor sentiment, commodities, Federal Reserve, stock performance"){completion_delimiter}
 #############################""",
-    """Example 3:
+    """Example 4:
 
 Entity_types: [economic_policy, athlete, event, location, record, organization, equipment]
 Text:
@@ -155,7 +230,7 @@ MANY entities and relationships were missed in the last extraction.
 ---Remember Steps---
 
 1. Identify all entities. For each identified entity, extract the following information:
-- entity_name: Name of the entity, use same language as input text. If English, capitalized the name.
+- entity_name: Name of the entity, use same language as input text. If English, capitalize the name. If the entity is a person then check the spelling of the name. Don't assume the name is spelled like it sounds. 
 - entity_type: One of the following types: [{entity_types}]
 - entity_description: Comprehensive description of the entity's attributes and activities
 Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
