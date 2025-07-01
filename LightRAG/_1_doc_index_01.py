@@ -20,7 +20,7 @@ MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
 # Files to be indexed
 files_2b_indexed = [
-    "./_1_docs_dir/Ln3WszTq0uA.txt"
+    "/home/js/lgt/LightRAG/testout_trunc.txt"
 ]
 
 def configure_logging():
@@ -100,7 +100,7 @@ async def initialize_rag():
         working_dir=WORKING_DIR,
         embedding_func=embedding_func,
         llm_model_func=gpt_4o_mini_complete,
-        entity_extract_max_gleaning=3
+        entity_extract_max_gleaning=0
     )
     
     await rag.initialize_storages()

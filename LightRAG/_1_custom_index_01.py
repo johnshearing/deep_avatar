@@ -20,7 +20,7 @@ MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
 # Files to be indexed
 files_2b_indexed = [
-    "./_1_custom_index_test.json"
+    "/home/js/lgt/LightRAG/_0_jack_processed/Ln3WszTq0uA_metadata.json"
 ]
 
 def configure_logging():
