@@ -10,11 +10,74 @@ PROMPTS["DEFAULT_TUPLE_DELIMITER"] = "<|>"
 PROMPTS["DEFAULT_RECORD_DELIMITER"] = "##"
 PROMPTS["DEFAULT_COMPLETION_DELIMITER"] = "<|COMPLETE|>"
 
-PROMPTS["DEFAULT_ENTITY_TYPES"] = ["category", "organization", "cartel", "complex_adaptive_system", "person", "practitioner", "place", "time", "event", "infrastructure", "anatomy", "media", "protocol", 
-                                   "molecule", "hormone", "neurotransmitter", "ethnicity", "demographic", "control_system", "paradigm", "plant", "animal", "bacteria", "archaea", "eukarya", "organism", 
-                                   "organ", "tissue", "organelle", "cell", "art", "field_of_study", "physics", "biophysics", "concept", "disease", "remnant", "knowledge", "procedure", "condition", 
-                                   "situation", "problem", "incentive", "process", "measurement", "unit_of_measure", "boundry", "attribute", "property", "miracle", "blessing", "impedance", "admittance", 
-                                   "well_being", "energy", "energy_conversion", "entropy", "toxin", "element", "ion", "isotope", "subatomic_particle", "material", "range", "unique_id", "address"]
+PROMPTS["DEFAULT_ENTITY_TYPES"] = [
+    "category_hub is the hub entity with an entity_type of category_hub and which shares a relationship with every entity that has the entity_type of category.",
+    "organization is an entity with an entity_type of category which describes governments, companies, institutions, establishments, consortiums, conglomerates, associations, and similar.",
+    "cartel is an entity with an entity_type of category which describes alliances of organizations such that competition and choice is diminished for their clients while control over clients is increased.",
+    "complex_adaptive_system is an entity with an entity_type of category which describe entities such as cartels, orgainzations, organisms, ecosystems and similar, that are controlled by a complex web of positive feedback loops which cause it to seek feeding and growth before any other objective.",
+    "person is an entity with an entity_type of category which describes any human.",
+    "practitioner is an entity with an entity_type of category which describes a person actively engaged in an art, discipline, or profession.",
+    "place is an entity with an entity_type of category which describes any geographic location.",
+    "time is an entity with an entity_type of category which describes any starting point, ending point, or interval of time.",
+    "event is an entity with an entity_type of category which describes a particular situation at a specific time.",
+    "infrastructure is an entity with an entity_type of category which describes anything built by an organization for the purpose of serving the organization or its membership.",
+    "anatomy is an entity with an entity_type of category which describes any part of a living organism.",
+    "media is an entity with an entity_type of category which describes any type of recorded information such as books, computer files, paintings, videos and similar.",
+    "protocol is an entity with an entity_type of category which describes widely agreed upon method for accomplishing a task.",
+    "molecule is an entity with an entity_type of category which describes arrangements of atoms often in the context of biology and biophysics.",
+    "hormone is an entity with an entity_type of category which describes molecules used to as signals to regulate biological processes in the body.",
+    "neurotransmitter is an entity with an entity_type of category which describes molecules used for signaling within the nervous system.",
+    "ethnicity is an entity with an entity_type of category used to catagorize humans by ancestry.",
+    "demographic is an entity with an entity_type of category which describes any combination of physical charactaristic, ethnicity, or organizational affilitation such as black people, white males, white democrates, black christians and similar.",
+    "control_system is an entity with an entity_type of category which describes any system of signal, control, and feedback such as a thermostatic system for controlling heat in a building, a system of trade policy for controlling an ecconomy, or the endocrine system for regulating the body.",
+    "paradigm is an entity with an entity_type of category which describes a viewpoint or way of understanding such as allopathic medicine vs traditional chinese medicine or capitalism vs communism, where the active paradigm controls behavior.",
+    "plant is an entity with an entity_type of category which describes eukaryotes that comprise the kingdom Plantae.",
+    "animal is an entity with an entity_type of category which describes a multicellular eukaryotic organism in the biological kingdom, Animalia.",
+    "bacteria is an entity with an entity_type of category which describe a large group of unicellular microorganisms which have cell walls but lack organelles and an organized nucleus.",
+    "archaea is an entity with an entity_type of category which describes prokaryotes which are evolutionarily distinct from both bacteria and eukaryotes, often found in extreme environments like hot springs or salty lakes.",
+    "eukarya is an entity with an entity_type of category which describes organisms characterized by cells containing a nucleus and other membrane-bound organelles.",
+    "organism is an entity with an entity_type of category which describes an individual animal, plant, or single-celled life form.",
+    "organ is an entity with an entity_type of category which describes a collection of tissue specialized to perform a particular function.",
+    "tissue is an entity with an entity_type of category which describes a group of similar cells that work together to perform a specific function within an organism.",
+    "organelle is an entity with an entity_type of category which describes a subcellular structure that has one or more specific jobs to perform in the cell.",
+    "cell is an entity with an entity_type of category which describes the basic membrane-bound unit that contains the fundamental molecules of life and of which all living things are composed.",
+    "art is an entity with an entity_type of category which describes the expression or application of human creative skill and imagination.",
+    "field_of_study is an entity with an entity_type of category which describes subjects that require time and attention to master such as medicine, physics, farming, art and similar.",
+    "physics is an entity with an entity_type of category which describes a field of study concerned with the nature and properties of matter and energy.",
+    "biophysics is an entity with an entity_type of category which describes an interdisciplinary field that applies the principles and methods of physics to understand biological systems.",
+    "concept is an entity with an entity_type of category which describes an idea which has been well thought out and defined.",
+    "disease is an entity with an entity_type of category which describes a condition of the living animal or plant body that impairs normal functioning.",
+    "remnant is an entity with an entity_type of category which describes a remaining part of a larger item that indicates the history of the larger item.",
+    "knowledge is an entity with an entity_type of category which describes information, and principles acquired by humankind.",
+    "procedure is an entity with an entity_type of category which describes a course of action or a specific technique used to accomplish a goal.",
+    "condition is an entity with an entity_type of category which describes a specific aspect of a subject's state.",
+    "situation is an entity with an entity_type of category which describes the environment and all the conditions or specific aspects of a subject's state.",
+    "problem is an entity with an entity_type of category which describes any question or situation involving doubt, uncertainty, or difficulty.",
+    "incentive is an entity with an entity_type of category which describes anything such as punishment, reward, fees, pay, benefits, and similar that motivates or encourages organisms or organizations to do something or not as the incentive directs.",
+    "process is an entity with an entity_type of category which describes a natural or involuntary series of changes.",
+    "measurement is an entity with an entity_type of category which describes process of comparison of an unknown quantity with a known or standard quantity.",
+    "unit_of_measure is an entity with an entity_type of category which describes a defined standard used to express a physical quantity, such as length, mass, time, volume, etc.",
+    "boundry is an entity with an entity_type of category which describes a distinct line or region that marks the transition between two different environments, characterized by a sharp change in key properties.",
+    "attribute is an entity with an entity_type of category which describes an assignment of a quality to an object or subject such as authority to a badge.",
+    "property is an entity with an entity_type of category which describes an inherent quality of an object or subject such as the hardness of diamond.",
+    "miracle is an entity with an entity_type of category which describes an action taken by God or communication from God.",
+    "blessings is an entity with an entity_type of category that describes choices, which flow endlessly and without impedance from God.",
+    "impedance is an entity with an entity_type of category that describes the total opposition to current flow in an AC circuit but is also used to describe the opposition humans may present to the flow of God's blessings.",
+    "admittance is an entity with an entity_type of category that describes the reciprocal of impedance and so represents the ease with which current flows in an AC circuit but is also used to describe the ease with which humans may allow the flow of God's blessings.",
+    "well_being is an entity with an entity_type of category which describes one's physical, mental, and emotional admittance to the flow of God's endless blessings or endless choices, which may be indicated by health and prosperity, but is always indicated by a sense of love, peace and joy.",
+    "energy is an entity with an entity_type of category which describes the capacity to do work.",
+    "energy_conversion is an entity with an entity_type of category which describes the process of converting energy from one form to another usually for the purpose of performing work of some type or for creating a signal.",
+    "entropy is an entity with an entity_type of category which describes the measure of the disorder or randomness of a system, and more precisely, the dispersal of energy within that system.",
+    "toxin is an entity with an entity_type of category which describes any agent, whether a substance, an addiction, a thought pattern, a disagreeable individual, or an external factor, that elicits an immediate or chronic state of stress or sickness and which disrupt an individual's physical, mental, or emotional well-being, leading to detrimental effects on their overall health and functioning.",
+    "element is an entity with an entity_type of category which describes a pure substance consisting of only one type of atom.",
+    "ion is an entity with an entity_type of category which describes an atom or molecule that has gained or lost one or more electrons, giving it a net positive or negative electrical charge.",
+    "isotope is an entity with an entity_type of category which describes different forms of the same chemical element, distinguished by having the same number of protons but varying numbers of neutrons in their atomic nuclei.",
+    "subatomic_particle is an entity with an entity_type of category which describes particles including protons, neutrons, quarks, bosons, and leptons (like electrons, muons, and neutrinos) that are smaller than an atom and are the fundamental building blocks of matter.",
+    "material is an entity with an entity_type of category which describes any substance or mixture of substances that has a specific set of properties.",
+    "range is an entity with an entity_type of category which describes measure or extent between the extreme ends of a set of values or a physical quantity.",
+    "unique_id is an entity with an entity_type of category which describes a code or number that distinguishes a specific entity (place, person, object, data record, etc.) from all others.",
+    "address is an entity with an entity_type of category which describes a unique_id that distinguishes a specific singleton (place, object, data record, etc.) from all others and provides information on how to locate that singleton."
+]
 
 PROMPTS["entity_extraction"] = """---Goal---
 Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.
@@ -27,16 +90,7 @@ Use {language} as output language.
 - entity_description: For all entities with an entity_type of category, use only the provided example for the entity_description. Otherwise, provide a comprehensive description of the entity's attributes and activities
 Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
 
-2. For each of the entities identified in step 1 with an entity_type of category, identify all entities which are not of the entity_type category (source_entity, target_entity) which might be a member of the category defined by the entity_name of the source entity.
-For each category/member pair of related entities, extract the following information:
-- source_entity: name of the source entity, as identified in step 1 with an entity_type of category
-- target_entity: name of the target entity, as identified in step 1 with an entity_type other than category
-- relationship_description: explanation as to why you think the target entity is a member of the source entity's entity_type
-- relationship_strength: a numeric score indicating strength of the relationship between the target entity and source entity
-- relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on why the target entity might a member of the category defined by the source entity's entity_type
-Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)
-
-3. From the entities identified in step 1 with an entity_type other than category, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
 For each pair of related entities, extract the following information:
 - source_entity: name of the source entity, as identified in step 1
 - target_entity: name of the target entity, as identified in step 1
@@ -45,12 +99,12 @@ For each pair of related entities, extract the following information:
 - relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on concepts or themes rather than specific details
 Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>) 
 
-4. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document.
+3. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document.
 Format the content-level key words as ("content_keywords"{tuple_delimiter}<high_level_keywords>)
 
-5. Return output in {language} as a single list of all the entities and relationships identified in steps 1, 2, and 3. Use **{record_delimiter}** as the list delimiter.
+4. Return output in {language} as a single list of all the entities and relationships identified in steps 1, 2, and 3. Use **{record_delimiter}** as the list delimiter.
 
-6. When finished, output {completion_delimiter}
+5. When finished, output {completion_delimiter}
 
 ######################
 ---Examples---
@@ -66,153 +120,8 @@ Text:
 ######################
 Output:"""
 
-PROMPTS["entity_extraction_examples"] = [
+PROMPTS["entity_extraction_examples"] = [   
     """Example 1:
-
-Entity_types: ["category", "organization", "cartel", "complex_adaptive_system", "person", "practitioner", "place", "time", "event", "infrastructure", "anatomy", "media", "protocol", 
-               "molecule", "hormone", "neurotransmitter", "ethnicity", "demographic", "control_system", "paradigm", "plant", "animal", "bacteria", "archaea", "eukarya", "organism", 
-               "organ", "tissue", "organelle", "cell", "art", "field_of_study", "physics", "biophysics", "concept", "disease", "remnant", "knowledge", "procedure", "condition", 
-               "situation", "problem", "incentive", "process", "measurement", "unit_of_measure", "boundry", "attribute", "property", "miracle", "blessing", "impedance", "admittance", 
-               "well_being", "energy", "energy_conversion", "entropy", "toxin", "element", "ion", "isotope", "subatomic_particle", "material", "range", "unique_id", "address"]
-Text:
-```
-category is the hub entity with an entity_type of category_hub which shares a relationship with every entity that has the entity_type of category.
-organization is an entity with an entity_type of category which describes governments, companies, institutions, establishments, consortiums, conglomerates, associations, and similar.
-cartel is an entity with an entity_type of category which describes alliances of organizations such that competition and choice is diminished for their clients while control over clients is increased.
-complex_adaptive_system is an entity with an entity_type of category which describe entities such as cartels, orgainzations, organisms, ecosystems and similar, that are controlled by a complex web of positive feedback loops which cause it to seek feeding and growth before any other objective.
-person is an entity with an entity_type of category which describes any human.
-practitioner is an entity with an entity_type of category which describes a person actively engaged in an art, discipline, or profession.
-place is an entity with an entity_type of category which describes any geographic location.
-time is an entity with an entity_type of category which describes any starting point, ending point, or interval of time.
-event is an entity with an entity_type of category which describes a particular situation at a specific time.
-infrastructure is an entity with an entity_type of category which describes anything built by an organization for the purpose of serving the organization or its membership.
-anatomy is an entity with an entity_type of category which describes any part of a living organism.
-media is an entity with an entity_type of category which describes any type of recorded information such as books, computer files, paintings, videos and similar.
-protocol is an entity with an entity_type of category which describes widely agreed upon method for accomplishing a task.
-molecule is an entity with an entity_type of category which describes arrangements of atoms often in the context of biology and biophysics.
-hormone is an entity with an entity_type of category which describes molecules used to as signals to regulate biological processes in the body.
-neurotransmitter is an entity with an entity_type of category which describes molecules used for signaling within the nervous system.
-ethnicity is an entity with an entity_type of category used to catagorize humans by ancestry.
-demographic is an entity with an entity_type of category which describes any combination of physical charactaristic, ethnicity, or organizational affilitation such as black people, white males, white democrates, black christians and similar.
-control_system is an entity with an entity_type of category which describes any system of signal, control, and feedback such as a thermostatic system for controlling heat in a building, a system of trade policy for controlling an ecconomy, or the endocrine system for regulating the body.
-paradigm is an entity with an entity_type of category which describes a viewpoint or way of understanding such as allopathic medicine vs traditional chinese medicine or capitalism vs communism, where the active paradigm controls behavior.
-plant is an entity with an entity_type of category which describes eukaryotes that comprise the kingdom Plantae.
-animal is an entity with an entity_type of category which describes a multicellular eukaryotic organism in the biological kingdom, Animalia.
-bacteria is an entity with an entity_type of category which describe a large group of unicellular microorganisms which have cell walls but lack organelles and an organized nucleus.
-archaea is an entity with an entity_type of category which describes prokaryotes which are evolutionarily distinct from both bacteria and eukaryotes, often found in extreme environments like hot springs or salty lakes.
-eukarya is an entity with an entity_type of category which describes organisms characterized by cells containing a nucleus and other membrane-bound organelles.
-organism is an entity with an entity_type of category which describes an individual animal, plant, or single-celled life form.
-organ is an entity with an entity_type of category which describes a collection of tissues that structurally form a functional unit specialized to perform a particular function.
-tissue is an entity with an entity_type of category which describes a group of similar cells that work together to perform a specific function within an organism.
-organelle is an entity with an entity_type of category which describes a subcellular structure that has one or more specific jobs to perform in the cell.
-cell is an entity with an entity_type of category which describes the basic membrane-bound unit that contains the fundamental molecules of life and of which all living things are composed.
-art is an entity with an entity_type of category which describes the expression or application of human creative skill and imagination.
-field_of_study is an entity with an entity_type of category which describes subjects that require time and attention to master such as medicine, physics, farming, art and similar.
-physics is an entity with an entity_type of category which describes a field of study concerned with the nature and properties of matter and energy.
-biophysics is an entity with an entity_type of category which describes an interdisciplinary field that applies the principles and methods of physics to understand biological systems.
-concept is an entity with an entity_type of category which describes an idea which has been well thought out and defined.
-disease is an entity with an entity_type of category which describes a condition of the living animal or plant body that impairs normal functioning.
-remnant is an entity with an entity_type of category which describes a remaining part of a larger item that indicates the history of the larger item.
-knowledge is an entity with an entity_type of category which describes information, and principles acquired by humankind.
-procedure is an entity with an entity_type of category which describes a course of action or a specific technique used to accomplish a goal.
-condition is an entity with an entity_type of category which describes a specific aspect of a subject's state.
-situation is an entity with an entity_type of category which describes the environment and all the conditions or specific aspects of a subject's state.
-problem is an entity with an entity_type of category which describes any question or situation involving doubt, uncertainty, or difficulty.
-incentive is an entity with an entity_type of category which describes anything such as punishment, reward, fees, pay, benefits, and similar that motivates or encourages organisms or organizations to do something or not as the incentive directs.
-process is an entity with an entity_type of category which describes a natural or involuntary series of changes.
-measurement is an entity with an entity_type of category which describes process of comparison of an unknown quantity with a known or standard quantity.
-unit_of_measure is an entity with an entity_type of category which describes a defined standard used to express a physical quantity, such as length, mass, time, volume, etc.
-boundry is an entity with an entity_type of category which describes a distinct line or region that marks the transition between two different environments, characterized by a sharp change in key properties.
-attribute is an entity with an entity_type of category which describes an assignment of a quality to an object or subject such as authority to a badge.
-property is an entity with an entity_type of category which describes an inherent quality of an object or subject such as the hardness of diamond.
-miracle is an entity with an entity_type of category which describes an action taken by God or communication from God.
-blessings is an entity with an entity_type of category that describes choices, which flow endlessly and without impedance from God.
-impedance is an entity with an entity_type of category that describes the total opposition to current flow in an AC circuit but is also used to describe the opposition humans may present to the flow of God's blessings.
-admittance is an entity with an entity_type of category that describes the reciprocal of impedance and so represents the ease with which current flows in an AC circuit but is also used to describe the ease with which humans may allow the flow of God's blessings.
-well_being is an entity with an entity_type of category which describes one's physical, mental, and emotional admittance to the flow of God's endless blessings or endless choices, which may be indicated by health and prosperity, but is always indicated by a sense of love, peace and joy.
-energy is an entity with an entity_type of category which describes the capacity to do work.
-energy_conversion is an entity with an entity_type of category which describes the process of converting energy from one form to another usually for the purpose of performing work of some type or for creating a signal.
-entropy is an entity with an entity_type of category which describes the measure of the disorder or randomness of a system, and more precisely, the dispersal of energy within that system.
-toxin is an entity with an entity_type of category which describes any agent, whether a substance, an addiction, a thought pattern, a disagreeable individual, or an external factor, that elicits an immediate or chronic state of stress or sickness and which disrupt an individual's physical, mental, or emotional well-being, leading to detrimental effects on their overall health and functioning.
-element is an entity with an entity_type of category which describes a pure substance consisting of only one type of atom.
-ion is an entity with an entity_type of category which describes an atom or molecule that has gained or lost one or more electrons, giving it a net positive or negative electrical charge.
-isotope is an entity with an entity_type of category which describes different forms of the same chemical element, distinguished by having the same number of protons but varying numbers of neutrons in their atomic nuclei.
-subatomic_particle is an entity with an entity_type of category which describes particles including protons, neutrons, quarks, bosons, and leptons (like electrons, muons, and neutrinos) that are smaller than an atom and are the fundamental building blocks of matter.
-material is an entity with an entity_type of category which describes any substance or mixture of substances that has a specific set of properties.
-range is an entity with an entity_type of category which describes measure or extent between the extreme ends of a set of values or a physical quantity.
-unique_id is an entity which describes a code or number that distinguishes a specific entity (place, person, object, data record, etc.) from all others.
-address is an entity which describes a unique_id that distinguishes a specific singleton (place, object, data record, etc.) from all others and provides information on how to locate that singleton.
-```
-
-Output:
-("entity"{tuple_delimiter}"category"{tuple_delimiter}"category_hub"{tuple_delimiter}"category is the hub entity with an entity_type of category_hub which shares a relationship with every entity that has the entity_type of category."){record_delimiter}
-("entity"{tuple_delimiter}"organization"{tuple_delimiter}"category"{tuple_delimiter}"organization is an entity with an entity_type of category which describes governments, companies, institutions, establishments, consortiums, conglomerates, associations, and similar."){record_delimiter}
-("entity"{tuple_delimiter}"cartel"{tuple_delimiter}"category"{tuple_delimiter}"cartel is an entity with an entity_type of category which describes alliances of organizations such that competition and choice is diminished for their clients while control over clients is increased."){record_delimiter}
-("entity"{tuple_delimiter}"complex_adaptive_system"{tuple_delimiter}"category"{tuple_delimiter}"complex_adaptive_system is an entity with an entity_type of category which describe entities such as cartels, orgainzations, organisms, ecosystems and similar, that are controlled by a complex web of positive feedback loops which cause it to seek feeding and growth before any other objective."){record_delimiter}
-("entity"{tuple_delimiter}"person"{tuple_delimiter}"category"{tuple_delimiter}"person is an entity with an entity_type of category which describes any human."){record_delimiter}
-("entity"{tuple_delimiter}"practitioner"{tuple_delimiter}"category"{tuple_delimiter}"practitioner is an entity with an entity_type of category which describes a person actively engaged in an art, discipline, or profession."){record_delimiter}
-("entity"{tuple_delimiter}"place"{tuple_delimiter}"category"{tuple_delimiter}"place is an entity with an entity_type of category which describes any geographic location."){record_delimiter}
-("entity"{tuple_delimiter}"time"{tuple_delimiter}"category"{tuple_delimiter}"time is an entity with an entity_type of category which describes any starting point, ending point, or interval of time."){record_delimiter}
-("entity"{tuple_delimiter}"event"{tuple_delimiter}"category"{tuple_delimiter}"event is an entity with an entity_type of category which describes a particular situation at a specific time."){record_delimiter}
-("entity"{tuple_delimiter}"infrastructure"{tuple_delimiter}"category"{tuple_delimiter}"infrastructure is an entity with an entity_type of category which describes anything built by an organization for the purpose of serving the organization or its membership."){record_delimiter}
-("entity"{tuple_delimiter}"anatomy"{tuple_delimiter}"category"{tuple_delimiter}"anatomy is an entity with an entity_type of category which describes any part of a living organism."){record_delimiter}
-("entity"{tuple_delimiter}"media"{tuple_delimiter}"category"{tuple_delimiter}"media is an entity with an entity_type of category which describes any type of recorded information such as books, computer files, paintings, videos and similar."){record_delimiter}
-("entity"{tuple_delimiter}"protocol"{tuple_delimiter}"category"{tuple_delimiter}"protocol is an entity with an entity_type of category which describes widely agreed upon method for accomplishing a task."){record_delimiter}
-("entity"{tuple_delimiter}"molecule"{tuple_delimiter}"category"{tuple_delimiter}"molecule is an entity with an entity_type of category which describes arrangements of atoms often in the context of biology and biophysics."){record_delimiter}
-("entity"{tuple_delimiter}"hormone"{tuple_delimiter}"category"{tuple_delimiter}"hormone is an entity with an entity_type of category which describes molecules used to as signals to regulate biological processes in the body."){record_delimiter}
-("entity"{tuple_delimiter}"neurotransmitter"{tuple_delimiter}"category"{tuple_delimiter}"neurotransmitter is an entity with an entity_type of category which describes molecules used for signaling within the nervous system."){record_delimiter}
-("entity"{tuple_delimiter}"ethnicity"{tuple_delimiter}"category"{tuple_delimiter}"ethnicity is an entity with an entity_type of category used to catagorize humans by ancestry."){record_delimiter}
-("entity"{tuple_delimiter}"demographic"{tuple_delimiter}"category"{tuple_delimiter}"demographic is an entity with an entity_type of category which describes any combination of physical charactaristic, ethnicity, or organizational affilitation such as black people, white males, white democrates, black christians and similar."){record_delimiter}
-("entity"{tuple_delimiter}"control_system"{tuple_delimiter}"category"{tuple_delimiter}"control_system is an entity with an entity_type of category which describes any system of signal, control, and feedback such as a thermostatic system for controlling heat in a building, a system of trade policy for controlling an ecconomy, or the endocrine system for regulating the body."){record_delimiter}
-("entity"{tuple_delimiter}"paradigm"{tuple_delimiter}"category"{tuple_delimiter}"paradigm is an entity with an entity_type of category which describes a viewpoint or way of understanding such as allopathic medicine vs traditional chinese medicine or capitalism vs communism, where the active paradigm controls behavior."){record_delimiter}
-("entity"{tuple_delimiter}"plant"{tuple_delimiter}"category"{tuple_delimiter}"plant is an entity with an entity_type of category which describes eukaryotes that comprise the kingdom Plantae."){record_delimiter}
-("entity"{tuple_delimiter}"animal"{tuple_delimiter}"category"{tuple_delimiter}"animal is an entity with an entity_type of category which describes a multicellular eukaryotic organism in the biological kingdom, Animalia."){record_delimiter}
-("entity"{tuple_delimiter}"bacteria"{tuple_delimiter}"category"{tuple_delimiter}"bacteria is an entity with an entity_type of category which describe a large group of unicellular microorganisms which have cell walls but lack organelles and an organized nucleus."){record_delimiter}
-("entity"{tuple_delimiter}"archaea"{tuple_delimiter}"category"{tuple_delimiter}"archaea is an entity with an entity_type of category which describes prokaryotes which are evolutionarily distinct from both bacteria and eukaryotes, often found in extreme environments like hot springs or salty lakes."){record_delimiter}
-("entity"{tuple_delimiter}"eukarya"{tuple_delimiter}"category"{tuple_delimiter}"eukarya is an entity with an entity_type of category which describes organisms characterized by cells containing a nucleus and other membrane-bound organelles."){record_delimiter}
-("entity"{tuple_delimiter}"organism"{tuple_delimiter}"category"{tuple_delimiter}"organism is an entity with an entity_type of category which describes an individual animal, plant, or single-celled life form."){record_delimiter}
-("entity"{tuple_delimiter}"organ"{tuple_delimiter}"category"{tuple_delimiter}"organ is an entity with an entity_type of category which describes a collection of tissues that structurally form a functional unit specialized to perform a particular function."){record_delimiter}
-("entity"{tuple_delimiter}"tissue"{tuple_delimiter}"category"{tuple_delimiter}"tissue is an entity with an entity_type of category which describes a group of similar cells that work together to perform a specific function within an organism."){record_delimiter}
-("entity"{tuple_delimiter}"organelle"{tuple_delimiter}"category"{tuple_delimiter}"organelle is an entity with an entity_type of category which describes a subcellular structure that has one or more specific jobs to perform in the cell."){record_delimiter}
-("entity"{tuple_delimiter}"cell"{tuple_delimiter}"category"{tuple_delimiter}"cell is an entity with an entity_type of category which describes the basic membrane-bound unit that contains the fundamental molecules of life and of which all living things are composed."){record_delimiter}
-("entity"{tuple_delimiter}"art"{tuple_delimiter}"category"{tuple_delimiter}"art is an entity with an entity_type of category which describes the expression or application of human creative skill and imagination."){record_delimiter}
-("entity"{tuple_delimiter}"field_of_study"{tuple_delimiter}"category"{tuple_delimiter}"field_of_study is an entity with an entity_type of category which describes subjects that require time and attention to master such as medicine, physics, farming, art and similar."){record_delimiter}
-("entity"{tuple_delimiter}"physics"{tuple_delimiter}"category"{tuple_delimiter}"physics is an entity with an entity_type of category which describes a field of study concerned with the nature and properties of matter and energy."){record_delimiter}
-("entity"{tuple_delimiter}"biophysics"{tuple_delimiter}"category"{tuple_delimiter}"biophysics is an entity with an entity_type of category which describes an interdisciplinary field that applies the principles and methods of physics to understand biological systems."){record_delimiter}
-("entity"{tuple_delimiter}"concept"{tuple_delimiter}"category"{tuple_delimiter}"concept is an entity with an entity_type of category which describes an idea which has been well thought out and defined."){record_delimiter}
-("entity"{tuple_delimiter}"disease"{tuple_delimiter}"category"{tuple_delimiter}"disease is an entity with an entity_type of category which describes a condition of the living animal or plant body that impairs normal functioning."){record_delimiter}
-("entity"{tuple_delimiter}"remnant"{tuple_delimiter}"category"{tuple_delimiter}"remnant is an entity with an entity_type of category which describes a remaining part of a larger item that indicates the history of the larger item."){record_delimiter}
-("entity"{tuple_delimiter}"knowledge"{tuple_delimiter}"category"{tuple_delimiter}"knowledge is an entity with an entity_type of category which describes information, and principles acquired by humankind."){record_delimiter}
-("entity"{tuple_delimiter}"procedure"{tuple_delimiter}"category"{tuple_delimiter}"procedure is an entity with an entity_type of category which describes a course of action or a specific technique used to accomplish a goal."){record_delimiter}
-("entity"{tuple_delimiter}"condition"{tuple_delimiter}"category"{tuple_delimiter}"condition is an entity with an entity_type of category which describes a specific aspect of a subject's state."){record_delimiter}
-("entity"{tuple_delimiter}"situation"{tuple_delimiter}"category"{tuple_delimiter}"situation is an entity with an entity_type of category which describes the environment and all the conditions or specific aspects of a subject's state."){record_delimiter}
-("entity"{tuple_delimiter}"problem"{tuple_delimiter}"category"{tuple_delimiter}"problem is an entity with an entity_type of category which describes any question or situation involving doubt, uncertainty, or difficulty."){record_delimiter}
-("entity"{tuple_delimiter}"incentive"{tuple_delimiter}"category"{tuple_delimiter}"incentive is an entity with an entity_type of category which describes anything such as punishment, reward, fees, pay, benefits, and similar that motivates or encourages organisms or organizations to do something or not as the incentive directs."){record_delimiter}
-("entity"{tuple_delimiter}"process"{tuple_delimiter}"category"{tuple_delimiter}"process is an entity with an entity_type of category which describes a natural or involuntary series of changes."){record_delimiter}
-("entity"{tuple_delimiter}"measurement"{tuple_delimiter}"category"{tuple_delimiter}"measurement is an entity with an entity_type of category which describes process of comparison of an unknown quantity with a known or standard quantity."){record_delimiter}
-("entity"{tuple_delimiter}"unit_of_measure"{tuple_delimiter}"category"{tuple_delimiter}"unit_of_measure is an entity with an entity_type of category which describes a defined standard used to express a physical quantity, such as length, mass, time, volume, etc."){record_delimiter}
-("entity"{tuple_delimiter}"boundry"{tuple_delimiter}"category"{tuple_delimiter}"boundry is an entity with an entity_type of category which describes a distinct line or region that marks the transition between two different environments, characterized by a sharp change in key properties."){record_delimiter}
-("entity"{tuple_delimiter}"attribute"{tuple_delimiter}"category"{tuple_delimiter}"attribute is an entity with an entity_type of category which describes an assignment of a quality to an object or subject such as authority to a badge."){record_delimiter}
-("entity"{tuple_delimiter}"property"{tuple_delimiter}"category"{tuple_delimiter}"property is an entity with an entity_type of category which describes an inherent quality of an object or subject such as the hardness of diamond."){record_delimiter}
-("entity"{tuple_delimiter}"miracle"{tuple_delimiter}"category"{tuple_delimiter}"miracle is an entity with an entity_type of category which describes an action taken by God or communication from God."){record_delimiter}
-("entity"{tuple_delimiter}"blessings"{tuple_delimiter}"category"{tuple_delimiter}"blessings is an entity with an entity_type of category that describes choices, which flow endlessly and without impedance from God."){record_delimiter}
-("entity"{tuple_delimiter}"impedance"{tuple_delimiter}"category"{tuple_delimiter}"impedance is an entity with an entity_type of category that describes the total opposition to current flow in an AC circuit but is also used to describe the opposition humans may present to the flow of God's blessings."){record_delimiter}
-("entity"{tuple_delimiter}"admittance"{tuple_delimiter}"category"{tuple_delimiter}"admittance is an entity with an entity_type of category that describes the reciprocal of impedance and so represents the ease with which current flows in an AC circuit but is also used to describe the ease with which humans may allow the flow of God's blessings."){record_delimiter}
-("entity"{tuple_delimiter}"well_being"{tuple_delimiter}"category"{tuple_delimiter}"well_being is an entity with an entity_type of category which describes one's physical, mental, and emotional admittance to the flow of God's endless blessings or endless choices, which may be indicated by health and prosperity, but is always indicated by a sense of love, peace and joy."){record_delimiter}
-("entity"{tuple_delimiter}"energy"{tuple_delimiter}"category"{tuple_delimiter}"energy is an entity with an entity_type of category which describes the capacity to do work."){record_delimiter}
-("entity"{tuple_delimiter}"energy_conversion"{tuple_delimiter}"category"{tuple_delimiter}"energy_conversion is an entity with an entity_type of category which describes the process of converting energy from one form to another usually for the purpose of performing work of some type or for creating a signal."){record_delimiter}
-("entity"{tuple_delimiter}"entropy"{tuple_delimiter}"category"{tuple_delimiter}"entropy is an entity with an entity_type of category which describes the measure of the disorder or randomness of a system, and more precisely, the dispersal of energy within that system."){record_delimiter}
-("entity"{tuple_delimiter}"toxin"{tuple_delimiter}"category"{tuple_delimiter}"toxin is an entity with an entity_type of category which describes any agent, whether a substance, an addiction, a thought pattern, a disagreeable individual, or an external factor, that elicits an immediate or chronic state of stress or sickness and which disrupt an individual's physical, mental, or emotional well-being, leading to detrimental effects on their overall health and functioning."){record_delimiter}
-("entity"{tuple_delimiter}"element"{tuple_delimiter}"category"{tuple_delimiter}"element is an entity with an entity_type of category which describes a pure substance consisting of only one type of atom."){record_delimiter}
-("entity"{tuple_delimiter}"ion"{tuple_delimiter}"category"{tuple_delimiter}"ion is an entity with an entity_type of category which describes an atom or molecule that has gained or lost one or more electrons, giving it a net positive or negative electrical charge."){record_delimiter}
-("entity"{tuple_delimiter}"isotope"{tuple_delimiter}"category"{tuple_delimiter}"isotope is an entity with an entity_type of category which describes different forms of the same chemical element, distinguished by having the same number of protons but varying numbers of neutrons in their atomic nuclei."){record_delimiter}
-("entity"{tuple_delimiter}"subatomic_particle"{tuple_delimiter}"category"{tuple_delimiter}"subatomic_particle is an entity with an entity_type of category which describes particles including protons, neutrons, quarks, bosons, and leptons (like electrons, muons, and neutrinos) that are smaller than an atom and are the fundamental building blocks of matter."){record_delimiter}
-("entity"{tuple_delimiter}"material"{tuple_delimiter}"category"{tuple_delimiter}"material is an entity with an entity_type of category which describes any substance or mixture of substances that has a specific set of properties."){record_delimiter}
-("entity"{tuple_delimiter}"range"{tuple_delimiter}"category"{tuple_delimiter}"range is an entity with an entity_type of category which describes measure or extent between the extreme ends of a set of values or a physical quantity."){record_delimiter}
-("entity"{tuple_delimiter}"unique_id"{tuple_delimiter}"category"{tuple_delimiter}"unique_id is an entity which describes a code or number that distinguishes a specific entity (person, object, data record, etc.) from all others."){record_delimiter}
-("entity"{tuple_delimiter}"address"{tuple_delimiter}"category"{tuple_delimiter}"address is an entity which describes a unique_id that distinguishes a specific singleton (place, object, data record, etc.) from all others and provides information on how to locate that singleton."){record_delimiter}
-#############################""",    
-    """Example 2:
 
 Entity_types: [person, technology, mission, organization, location]
 Text:
@@ -239,7 +148,7 @@ Output:
 ("relationship"{tuple_delimiter}"Taylor"{tuple_delimiter}"The Device"{tuple_delimiter}"Taylor shows reverence towards the device, indicating its importance and potential impact."{tuple_delimiter}"reverence, technological significance"{tuple_delimiter}9){record_delimiter}
 ("content_keywords"{tuple_delimiter}"power dynamics, ideological conflict, discovery, rebellion"){completion_delimiter}
 #############################""",
-    """Example 3:
+    """Example 2:
 
 Entity_types: [company, index, commodity, market_trend, economic_policy, biological]
 Text:
@@ -267,7 +176,7 @@ Output:
 ("relationship"{tuple_delimiter}"Federal Reserve Policy Announcement"{tuple_delimiter}"Market Selloff"{tuple_delimiter}"Speculation over Federal Reserve policy changes contributed to market volatility and investor selloff."{tuple_delimiter}"interest rate impact, financial regulation"{tuple_delimiter}7){record_delimiter}
 ("content_keywords"{tuple_delimiter}"market downturn, investor sentiment, commodities, Federal Reserve, stock performance"){completion_delimiter}
 #############################""",
-    """Example 4:
+    """Example 3:
 
 Entity_types: [economic_policy, athlete, event, location, record, organization, equipment]
 Text:

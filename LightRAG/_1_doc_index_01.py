@@ -20,7 +20,7 @@ MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
 # Files to be indexed
 files_2b_indexed = [
-    "/home/js/lgt/LightRAG/testout_trunc.txt"
+    "/home/js/lgt/LightRAG/testout_trunc_no_cat.txt"
 ]
 
 def configure_logging():
