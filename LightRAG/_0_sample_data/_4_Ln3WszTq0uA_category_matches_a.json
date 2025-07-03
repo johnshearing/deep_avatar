@@ -1,0 +1,236 @@
+{
+    "relationships": [
+        {
+            "src_id": "time",
+            "tgt_id": "125 Years",
+            "description": "125 Years is a member of the category time",
+            "keywords": "125 Years, element of, time",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "time",
+            "tgt_id": "2023-04-02T06:06:17Z",
+            "description": "2023-04-02T06:06:17Z is a member of the category time",
+            "keywords": "2023-04-02T06:06:17Z, element of, time",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "hormone",
+            "tgt_id": "ACTH",
+            "description": "ACTH is a member of the category hormone",
+            "keywords": "ACTH, element of, hormone",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "molecule",
+            "tgt_id": "ACTH",
+            "description": "ACTH is a member of the category molecule",
+            "keywords": "ACTH, element of, molecule",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "molecule",
+            "tgt_id": "ATP",
+            "description": "ATP is a member of the category molecule",
+            "keywords": "ATP, element of, molecule",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "neurotransmitter",
+            "tgt_id": "Acetylcholine",
+            "description": "Acetylcholine is a member of the category neurotransmitter",
+            "keywords": "Acetylcholine, element of, neurotransmitter",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "molecule",
+            "tgt_id": "Acetylcholine",
+            "description": "Acetylcholine is a member of the category molecule",
+            "keywords": "Acetylcholine, element of, molecule",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "molecule",
+            "tgt_id": "Adenosine",
+            "description": "Adenosine is a member of the category molecule",
+            "keywords": "Adenosine, element of, molecule",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "demographic",
+            "tgt_id": "African American Patient",
+            "description": "African American Patient is a member of the category demographic",
+            "keywords": "African American Patient, element of, demographic",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "demographic",
+            "tgt_id": "African American Woman",
+            "description": "African American Woman is a member of the category demographic",
+            "keywords": "African American Woman, element of, demographic",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "time",
+            "tgt_id": "Age of Mammals",
+            "description": "Age of Mammals is a member of the category time",
+            "keywords": "Age of Mammals, element of, time",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "place",
+            "tgt_id": "Alabama",
+            "description": "Alabama is a member of the category place",
+            "keywords": "Alabama, element of, place",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "person",
+            "tgt_id": "Alexander Gerwich",
+            "description": "Alexander Gerwich is a member of the category person",
+            "keywords": "Alexander Gerwich, element of, person",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "hormone",
+            "tgt_id": "Alpha MSH",
+            "description": "Alpha MSH is a member of the category hormone",
+            "keywords": "Alpha MSH, element of, hormone",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "molecule",
+            "tgt_id": "Alpha MSH",
+            "description": "Alpha MSH is a member of the category molecule",
+            "keywords": "Alpha MSH, element of, molecule",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "disease",
+            "tgt_id": "Alzheimer's Disease",
+            "description": "Alzheimer's Disease is a member of the category disease",
+            "keywords": "Alzheimer's Disease, element of, disease",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "material",
+            "tgt_id": "Animal Food",
+            "description": "Animal Food is a member of the category material",
+            "keywords": "Animal Food, element of, material",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "condition",
+            "tgt_id": "Anxiety",
+            "description": "Anxiety is a member of the category condition",
+            "keywords": "Anxiety, element of, condition",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "disease",
+            "tgt_id": "Aortic Aneurysm",
+            "description": "Aortic Aneurysm is a member of the category disease",
+            "keywords": "Aortic Aneurysm, element of, disease",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "disease",
+            "tgt_id": "Aortic Stenosis",
+            "description": "Aortic Stenosis is a member of the category disease",
+            "keywords": "Aortic Stenosis, element of, disease",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "archaea",
+            "tgt_id": "Archaea",
+            "description": "Archaea is a member of the category archaea",
+            "keywords": "Archaea, element of, archaea",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "organism",
+            "tgt_id": "Archaea",
+            "description": "Archaea is a member of the category organism",
+            "keywords": "Archaea, element of, organism",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "environment",
+            "tgt_id": "Artificial Light Environment",
+            "description": "Artificial Light Environment is a member of the category environment",
+            "keywords": "Artificial Light Environment, element of, environment",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "event",
+            "tgt_id": "Asteroid Event",
+            "description": "Asteroid Event is a member of the category event",
+            "keywords": "Asteroid Event, element of, event",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "field_of_study",
+            "tgt_id": "Atomic Molecular Orbital Physics",
+            "description": "Atomic Molecular Orbital Physics is a member of the category field_of_study",
+            "keywords": "Atomic Molecular Orbital Physics, element of, field_of_study",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "concept",
+            "tgt_id": "Atomic Precision",
+            "description": "Atomic Precision is a member of the category concept",
+            "keywords": "Atomic Precision, element of, concept",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "place",
+            "tgt_id": "Australia",
+            "description": "Australia is a member of the category place",
+            "keywords": "Australia, element of, place",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "disease",
+            "tgt_id": "Autoimmune Conditions",
+            "description": "Autoimmune Conditions is a member of the category disease",
+            "keywords": "Autoimmune Conditions, element of, disease",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "disease",
+            "tgt_id": "Autoimmunity",
+            "description": "Autoimmunity is a member of the category disease",
+            "keywords": "Autoimmunity, element of, disease",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        }
+    ]
+}

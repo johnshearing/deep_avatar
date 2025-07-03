@@ -1,0 +1,238 @@
+[0.0 > 12.32] (Max) Okay, welcome to another episode of the regenerative health podcast.
+[12.32 > 14.4] (Max) I'm Dr. Max Gulhane.
+[14.4 > 21.86] (Max) And as many of you would know, this podcast is all about understanding chronic diseases
+[21.86 > 25.88] (Max) and how to help people optimize their health.
+[25.92 > 31.68] (Max) And for a long time, I've been thinking about circadian health.
+[31.68 > 37.68] (Max) And I've been following a range of people online on Twitter and on YouTube who are talking
+[37.68 > 47.56] (Max) about circadian health, light, mitochondrial medicine, and similar topics, who are using
+[47.56 > 57.08] (Max) these in order to optimize health and basically get to another level of human performance
+[57.08 > 62.56] (Max) above which diet is unable to get to.
+[62.56 > 64.84] (Max) So it's been on my mind for a while.
+[64.84 > 71.88] (Max) And for this episode, I've got on possibly the godfather of the entire movement.
+[71.88 > 74.96] (Max) And that is Dr. Jack Kruse.
+[75.12 > 81.76] (Max) Now Dr. Kruse is a neurosurgeon from the United States who, like a lot of the doctors I've
+[81.76 > 88.6] (Max) interviewed on this podcast, had his own health journey, which prompted a very, very, very
+[88.6 > 93.24] (Max) deep look into the fundamental drivers of disease.
+[93.24 > 102.2] (Max) And what he's learned and what he's been teaching for the past well over a decade has been that
+[102.88 > 108.88] (Max) and the light environment that we're exposed to is critical to health and to achieving
+[108.88 > 110.36] (Max) optimal health.
+[110.36 > 118.28] (Max) So in this first podcast that I'm doing with Dr. Kruse, we talk about all things light.
+[118.28 > 121.16] (Max) And it is a very, very in-depth podcast.
+[121.16 > 126.68] (Max) It's not necessarily a simple one to understand.
+[126.68 > 136.04] (Max) We go very in-depth into the history of mammalian evolution, a very important gene called POMC,
+[136.04 > 143.2] (Max) the role of melanin, the human cells and the mitochondria is generating their own sources
+[143.2 > 152.6] (Max) of light, and why mainstream wisdom or mainstream perhaps dogma about the role of sun and health
+[152.6 > 156.16] (Max) is wrong and many, many, many other topics.
+[156.16 > 162.28] (Max) So this was an absolutely fascinating interview, and I encourage everyone to bring an open
+[162.28 > 171.04] (Max) mind into what Dr. Kruse is saying, because it is frankly paradigm shattering for a lot
+[171.04 > 177.8] (Max) of people who've traditionally placed diet, an optimal diet at the center of health.
+[177.8 > 186.04] (Max) So what Dr. Kruse has to say is very much putting light instead at the center of the center
+[186.04 > 187.4] (Max) of that paradigm.
+[187.4 > 193.88] (Max) So that's a little bit of a preview about this next three hours.
+[193.88 > 196.88] (Max) And if you can't listen to all of it once, that's fine.
+[196.88 > 200.16] (Max) Pause it, replay it, re-listen to it, understand it.
+[200.16 > 206.08] (Max) And that's definitely what I had to do to really understand and really draw out the
+[206.08 > 210.44] (Max) essence of what he was saying, but it is absolutely fascinating.
+[210.44 > 213.44] (Max) And I thoroughly enjoyed recording this podcast.
+[213.44 > 220.8] (Max) So enjoy this up-coding recording and stay tuned for another couple of episodes of similar
+[220.8 > 222.96] (Max) depth with Dr. Kruse.
+[222.96 > 226.8] (Max) So thanks for your support and thanks for listening.
+[226.8 > 233.84] (Max) I am extremely excited to be sitting down tonight with Dr. Jack Kruse.
+[233.84 > 241.54] (Max) Now he is a neurosurgeon, a biophysicist, a health optimization researcher, and effectively
+[241.9 > 248.58] (Max) one of the godfathers of an entire new area of health and medicine, which centers around
+[248.58 > 253.06] (Max) the circadian rhythm and mitochondrial optimization.
+[253.06 > 256.22] (Max) So Dr. Kruse, thank you so much for coming on.
+[256.22 > 258.5] (Jack) Hey, no problem.
+[258.5 > 265.14] (Jack) Like we said, told everybody it's night time for you and it's not even daytime for me yet.
+[265.14 > 266.14] (Max) Yeah.
+[266.14 > 268.14] (Max) Well, we've both got our circadians.
+[268.14 > 270.14] (Jack) We're breaking all of our rules.
+[270.14 > 271.14] (Max) Yeah.
+[271.14 > 275.3] (Max) Well, I've got my blue blockers on, I've got a red light, you've got your whole place lit
+[275.3 > 276.3] (Max) up red.
+[276.3 > 280.06] (Max) So we're practicing what we preach, that's for sure.
+[280.06 > 282.86] (Jack) I got UV in here too, just so you know that.
+[282.86 > 283.86] (Max) Full spectrum.
+[283.86 > 284.86] (Max) Partial spectrum.
+[284.86 > 294.98] (Max) Well, why don't we start by maybe just giving us an idea about how you went from a centralized
+[295.78 > 304.86] (Max) mainstream neurosurgeon to what is basically what you call a Black Swan mitochondria.
+[304.86 > 308.5] (Max) So give us an idea of that transition for the listener.
+[308.5 > 313.22] (Jack) Yeah, it happened almost 20 years ago now.
+[313.22 > 316.58] (Jack) It's like 18 and a half, 19 years ago.
+[316.58 > 321.82] (Jack) And I was given a talk about minimally invasive spine surgery to a group of neurosurgeons
+[321.82 > 324.82] (Jack) and orthopedic surgeons in Alabama.
+[324.82 > 329.7] (Jack) And I stood up to give my talk and had a horrible pain in my right knee.
+[329.7 > 335.02] (Jack) Long story short, tore my knee meniscus, had to have help to get to the podium, didn't
+[335.02 > 337.74] (Jack) understand how it happened.
+[337.74 > 344.94] (Jack) And one of the ortho guys actually examined me, he says, look, I think you've got a meniscus
+[344.94 > 346.86] (Jack) tear, that's what's going on here.
+[347.86 > 351.14] (Jack) They asked me if I ever had any knee problems, the answer was no.
+[351.14 > 359.34] (Jack) Well, long story short, this guy happened to be married to somebody who was involved,
+[359.34 > 365.34] (Jack) how shall we say, in centralized paradigm of medicine.
+[365.34 > 372.78] (Jack) And she told me, she goes, look, she goes, I think I know why this happened to you.
+[372.78 > 377.46] (Jack) She goes, I'd like to share with you a book and a couple of papers.
+[377.46 > 380.02] (Jack) And my husband says, you're a pretty smart guy.
+[380.02 > 382.7] (Jack) She goes, I think you can figure this out.
+[382.7 > 385.94] (Jack) So she sends me a book written by Robin Sharma.
+[385.94 > 387.26] (Jack) Remember, this is a fable.
+[387.26 > 390.34] (Jack) It's not like actually a real science book.
+[390.34 > 393.06] (Jack) And it's called The Monk Who Sold His Ferrari.
+[393.06 > 396.46] (Jack) Then she sends me six papers, all different topics.
+[396.46 > 401.66] (Jack) But one of the things that they linked, I think it was one of the first papers, was
+[401.7 > 403.38] (Jack) about leptin.
+[403.38 > 408.86] (Jack) And she gave me pretty specific directions, read the book first, then read the papers
+[408.86 > 411.22] (Jack) and then go through there.
+[411.22 > 416.1] (Jack) So I read the book and I thought the book was very interesting.
+[416.1 > 420.62] (Jack) Then I read the papers and then I thought to myself, what is she trying to tell me?
+[420.62 > 429.86] (Jack) And what she tried to tell me was that the paradigm was screwing people.
+[429.86 > 431.78] (Jack) It was Big Pharma going after us.
+[431.78 > 433.82] (Jack) That's what her goal was.
+[433.82 > 436.14] (Jack) But I took it a little different.
+[436.14 > 441.42] (Jack) What I saw was she trying to tell me what was in the book possible.
+[441.42 > 448.58] (Jack) So what I did at that time, I jumped down the rabbit hole and went to the medical school
+[448.58 > 451.34] (Jack) library in the town that I was practicing in.
+[451.34 > 459.54] (Jack) And for about 18 months, I started studying all these links, because when I went to medical
+[459.54 > 462.66] (Jack) school, I'm a lot older than you.
+[462.66 > 466.54] (Jack) Leptin wasn't even discovered when I finished medical school.
+[466.54 > 469.58] (Jack) So there was no way that I was going to learn about it in my training.
+[469.58 > 472.98] (Jack) This was something that happened afterwards.
+[472.98 > 481.72] (Jack) And I was probably 18, well, I wouldn't say 18, it was probably somewhere in the middle
+[482.72 > 489.48] (Jack) rabbit hole jump that I went to Europe with my family.
+[489.48 > 496.88] (Jack) And it was at the foot of Michelangelo's David, where I kind of looked up at perfection and
+[496.88 > 503.04] (Jack) then looked at myself and I said, what's the main difference between perfection and him
+[503.04 > 506.52] (Jack) 500 years apart?
+[506.52 > 512.76] (Jack) And as I looked up, if you've ever been to Florence, you'll know that his statue was
+[512.76 > 515.24] (Jack) in a domed area that has windows.
+[515.24 > 519.04] (Jack) And there's a big cornice that goes all the way around.
+[519.04 > 523.36] (Jack) And on the cornice, there was a bird and there was light coming through the window that was
+[523.36 > 524.36] (Jack) hitting David.
+[524.36 > 527.52] (Jack) As soon as I looked up, that was it.
+[527.52 > 528.76] (Jack) Everything clicked.
+[528.76 > 535.8] (Jack) All the things that I had been reading about, I was like, holy shit, I think I got the answer.
+[536.8 > 544.72] (Jack) And I was flying home the next day on Delta, and I basically wrote the entire quilt document
+[544.72 > 549.64] (Jack) that's on my website on these napkins.
+[549.64 > 552.8] (Jack) And I realized immediately what the key was.
+[552.8 > 559.04] (Jack) The difference between David and myself was that he minded his circadian biology, and
+[559.04 > 563.56] (Jack) I didn't, and that the light environment had changed.
+[564.0 > 570.36] (Jack) And from that eureka moment came the leptin prescription, the cold thermogenesis protocol.
+[570.36 > 576.28] (Jack) That was the basis of the 30 different levies.
+[576.28 > 580.8] (Jack) And I call them levies because I did my training in New Orleans and levies protect this city
+[580.8 > 583.92] (Jack) from floods.
+[583.92 > 588.62] (Jack) But the real basis, like you go back and read the original leptin prescription as it's released
+[588.62 > 598.46] (Jack) on my website, you'll not notice that everything about the leptin prescription is about light.
+[598.46 > 605.14] (Jack) And I realized when I figured out how this works, because I understood immediately that
+[605.14 > 609.62] (Jack) it was all biophysics, I'm like, how are people going to understand this when they have a
+[609.62 > 611.78] (Jack) biologic perspective?
+[611.78 > 615.86] (Jack) And I'm going to have to slowly release parts of the story.
+[615.86 > 623.14] (Jack) So it turns out, I guess this is where we'll, that's where I really got transitioned between
+[623.14 > 625.34] (Jack) centralized to decentralized.
+[625.34 > 629.46] (Jack) And I say decentralized for the listeners in the audience who don't know what the difference
+[629.46 > 630.46] (Jack) is.
+[630.46 > 634.78] (Jack) Centralized means there's a single controller, being Big Pharma, you know, the medicine boards,
+[634.78 > 636.58] (Jack) things like that.
+[636.58 > 639.5] (Jack) Decentralized means that there is no central controller.
+[639.5 > 641.86] (Jack) And it turns out in nature, there is none.
+[642.1 > 646.98] (Jack) Nature has the first ever decentralized network.
+[646.98 > 652.54] (Jack) It's controlled by light and dark, two things, you have to have both for it to work.
+[652.54 > 655.62] (Jack) And then it works on coupled oscillations.
+[655.62 > 662.98] (Jack) But in the process, when I went back home on the Delta flight, I went back to the medical
+[662.98 > 672.7] (Jack) school library to figure out some of the interesting ideas that I came up with, like,
+[672.7 > 674.82] (Jack) how does nature do this and do that?
+[674.82 > 680.58] (Jack) And one of the things that struck me about light, when you read the book, The Monk Who
+[680.58 > 686.38] (Jack) Sold His Ferrari, it's about a lawyer from New York who basically was a total asshole,
+[686.38 > 693.78] (Jack) a low dopamine guy who was really good at his job while he was fighting the judge and
+[693.78 > 696.14] (Jack) another lawyer in the courtroom.
+[696.14 > 700.18] (Jack) He has a heart attack and he changes his career.
+[700.18 > 702.74] (Jack) He was overweight.
+[702.74 > 708.9] (Jack) He changes his career and he goes, sells his Ferrari and goes to the Himalayan mountains,
+[708.9 > 714.14] (Jack) comes back one year later, tan, svelte, strong.
+[714.38 > 717.58] (Jack) His dopamine level magically went up.
+[717.58 > 721.26] (Jack) That's really the gist of the story.
+[721.26 > 729.66] (Jack) So one of the things that happened at the foot of Michelangelo's David is I realized
+[729.66 > 732.42] (Jack) the story was really about light, water, and magnetism.
+[732.42 > 739.22] (Jack) But the one that really struck me when the light came down wasn't just the circadian
+[739.22 > 740.22] (Jack) biology link.
+[740.46 > 746.74] (Jack) The number one thing that always stuck out when I was a centralized doctor was two things.
+[746.74 > 752.02] (Jack) Most of us in biology have learned about Darwin and his theory of evolution.
+[752.02 > 756.74] (Jack) And there's two things about Darwin's theories that makes no sense at all.
+[756.74 > 764.34] (Jack) If you believe in conditions of existence and random mutations, the two sore thumbs
+[764.34 > 771.18] (Jack) that stick out in this theory are the Cambrian explosion and also the age of mammals when
+[771.18 > 773.22] (Jack) mammals came out of nowhere.
+[773.22 > 777.58] (Jack) And the real, I guess you would call it the pinky that sticks out, is the transition from
+[777.58 > 783.86] (Jack) chimp to human, how little data we have and the fact that we have basically the same number
+[783.86 > 785.7] (Jack) of genes as our cousins.
+[785.7 > 793.38] (Jack) Those things just don't jive with either the neo-Darwinists like Dawkins or what the
+[793.38 > 794.62] (Jack) dominant paradigm was.
+[794.62 > 802.54] (Jack) And I realized immediately when that light came out that the difference is when the age of
+[802.54 > 807.9] (Jack) mammals took over 65 million years ago, mammals were already on the planet.
+[807.9 > 813.94] (Jack) They came around 210 million years ago, 220, you know, depending on the book you read.
+[813.94 > 819.06] (Jack) So for about 140 million years, there were small little furry creatures that lived under the
+[819.06 > 821.1] (Jack) ground outside of the sun.
+[821.14 > 826.34] (Jack) And one of the things that defines the family of mammals that everybody learns about, you
+[826.34 > 830.5] (Jack) know, in third grade, is they were little furry creatures that have hair all over their
+[830.5 > 836.54] (Jack) body and they lived under the ground outside of the sun.
+[836.54 > 842.3] (Jack) And part of the reason they had to do that is the fur that they have or the hair they have is
+[842.3 > 846.94] (Jack) filled with melanin and melanin happens to fluoresce.
+[846.94 > 851.42] (Jack) If you know anything about dinosaurs, because the other animals that made it through the last
+[851.42 > 855.3] (Jack) extinction event 65 million years ago were theropod dinosaurs.
+[855.3 > 858.78] (Jack) Those are dinosaurs that fly, that had feathers.
+[858.78 > 862.26] (Jack) What was the common tie between mammals and theropod dinosaurs?
+[862.26 > 866.66] (Jack) I immediately realized it was the melanin in their feathers.
+[866.66 > 871.42] (Jack) So I started to learn a little bit about melanin and found out that melanin fluoresces in
+[871.42 > 877.22] (Jack) sunlight. And we know that birds can see in the UV range through their retina.
+[877.22 > 882.62] (Jack) So that immediately told me that's the reason why mammals had to have an underground
+[882.62 > 888.62] (Jack) existence, because it wouldn't be really good to put your melanin out with T-Rexes
+[888.62 > 891.7] (Jack) all around, because they would, you know, come after you.
+[891.7 > 896.26] (Jack) And that's the reason why they stayed small, underdeveloped, with not big central nerve
+[896.26 > 903.18] (Jack) systems. But what happened 65 million years ago was rather remarkable.
+[903.18 > 909.94] (Jack) The biggest, most feared carnivore on the planet that was built perfectly by evolution
+[909.94 > 915.14] (Jack) didn't get taken out because it wasn't well adapted to its environment.
+[915.14 > 917.78] (Jack) It was perfectly adapted to its environment.
+[917.78 > 925.14] (Jack) Something from outside came in and allowed these little mammals and flying dinosaurs
+[925.14 > 927.9] (Jack) to take over. And it turns out that was an asteroid event.
+[927.9 > 932.54] (Jack) And what's the genesis of this transition?
+[932.54 > 935.66] (Jack) Why was light so important to this story?
+[935.66 > 943.86] (Jack) Well, the key factor was when the asteroid hit the planet, a 50-mile cube of the crust
+[943.86 > 949.74] (Jack) of the Earth in Mexico, in the Gulf of Mexico, went up in the air and blocked photosynthesis
+[949.74 > 951.02] (Jack) for a long period of time.
+[951.18 > 957.7] (Jack) The number one frequencies it would have blocked would have been the UV frequency.
+[957.7 > 962.94] (Jack) So that would have left the dominant spectrum for a long period of time.
+[962.94 > 967.38] (Jack) This is still to this day a point of contention with evolutionary biologists.
+[967.38 > 970.78] (Jack) We don't know how long photosynthesis was interrupted.
+[970.78 > 975.5] (Jack) But the one thing that we do know for sure, it was interrupted enough that not one of
+[975.5 > 981.86] (Jack) those huge carnivore dinosaurs ever lived past that event because we can't find any
+[981.86 > 988.46] (Jack) of their skeletons above a boundary everywhere on the Earth's crust called the KT boundary.
+[988.46 > 989.86] (Jack) And that KT boundary is everywhere.
+[989.86 > 994.22] (Jack) It's in Antarctica, it's in Australia, it's in the United States, it's everywhere.
+[994.22 > 1000.1] (Jack) And there's never been one dinosaur fossil found above it.
+[1000.26 > 1009.34] (Jack) So then in this journey in the medical school during this 18 months, I said, what was it
+[1009.34 > 1015.06] (Jack) that allowed these little mammals to basically live without any food chain?
+[1015.06 > 1021.18] (Jack) And it's just when you actually think about it, you're like, these T-Rexes, these Brontosaurus,
+[1021.18 > 1023.94] (Jack) they all got taken out because there's no food around.
+[1023.94 > 1029.46] (Jack) Well, they're massive creatures, so they need a lot of energy.
+[1029.46 > 1036.82] (Jack) And I thought to myself, if they got taken out, this event probably had to happen relatively
+[1036.82 > 1037.82] (Jack) quickly.
+[1037.82 > 1041.78] (Jack) I didn't think it lasted 100 or 1,000 years.
+[1041.78 > 1047.06] (Jack) It was not plausible to me why birds and mammals would make it through if that was long.
+[1047.06 > 1053.74] (Jack) I said, I could probably buy a year, maybe two, but then I thought about the mammals.
+[1053.74 > 1060.38] (Jack) The birds were easy to explain because they could fly to where parts of the earth where
+[1060.38 > 1065.82] (Jack) there wasn't a lot of particulate matter in the air and photosynthesis would recover.
+[1065.82 > 1069.62] (Jack) But the mammals were a really different conundrum.
+[1069.62 > 1076.86] (Jack) And the more I thought about it, I said, there's got to be something linked to their physiology
+[1076.86 > 1079.26] (Jack) tied to light that was important.
+[1079.26 > 1086.14] (Jack) And in the medical school library, I found it, and it's a gene.
+[1086.14 > 1091.62] (Jack) It's a gene that mammals have amplified through their whole existence.
+[1091.62 > 1095.94] (Jack) And in fact, they define this gene, and it's called the POMC gene.
+[1095.94 > 1100.14] (Jack) You probably learned about it in medical school, but don't know that much about it.
+[1100.14 > 1106.34] (Jack) The people who in medical school learn a lot about it are neurosurgeons, predominantly.
+[1106.34 > 1111.38] (Jack) Not even endocrinologists learn about it, but it's called pro-opiomelanocortin.
+[1111.38 > 1120.3] (Jack) And the reason why it's really important is because this gene product isn't active itself.
+[1120.3 > 1127.14] (Jack) It basically includes about seven peptides, and these seven peptides are cleaved.
+[1127.14 > 1135.62] (Jack) And if you remember the story that we're laying out here, how did mammals make food when photosynthesis
+[1135.62 > 1136.82] (Jack) was interrupted?
+[1136.82 > 1142.5] (Jack) For those of you listening to this that don't know, the entire food web on planet Earth
+[1142.5 > 1144.06] (Jack) is linked back to the sun.
+[1144.06 > 1146.46] (Jack) It's linked back to photosynthesis.
+[1146.46 > 1149.4] (Jack) Without photosynthesis, there is no food.
+[1149.4 > 1155.54] (Jack) And I knew, I asked the question to myself, does nature ever make any mistakes?
+[1155.54 > 1157.74] (Jack) And the answer I knew implicitly was no.

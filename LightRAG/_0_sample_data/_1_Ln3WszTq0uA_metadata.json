@@ -1,0 +1,208 @@
+{
+    "chunks": [
+        {
+            "content": "The video URL is https://www.youtube.com/watch?v=Ln3WszTq0uA\nThe video platform is www.youtube.com\nThe video channel is Max Gulhane MD\nThe video title is Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease\nThe video was posted on 2023-04-02T06:06:17Z\nThe video language is en",
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        }
+    ],
+    "entities": [
+        {
+            "entity_name": "source-document-global-hub",
+            "entity_type": "source-document-global-hub",
+            "description": "The source-document-global-hub joins all source documents via edge relationships. source-document-global-hub can be referenced to list all source documents",
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "entity_name": "metadata-global-hub",
+            "entity_type": "metadata-global-hub",
+            "description": "The metadata-global-hub joins all metadata-hub entities via edge relationships. metadata-global-hub can be referenced to list all metadata-hubs",
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "entity_name": "Ln3WszTq0uA_metadata.json",
+            "entity_type": "metadata-hub",
+            "description": "Ln3WszTq0uA_metadata.json is a meta-data-hub. All metadata for the source document Ln3WszTq0uA.txt can be located by referencing Ln3WszTq0uA_metadata.json",
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "entity_name": "Ln3WszTq0uA.txt",
+            "entity_type": "source-document",
+            "description": "Ln3WszTq0uA.txt is the file name of a source document used to populate this index with information. Ln3WszTq0uA.txt contains a video transcript",
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "entity_name": "https://www.youtube.com/watch?v=Ln3WszTq0uA",
+            "entity_type": "metadata-for-Ln3WszTq0uA.txt",
+            "description": "URL for source video",
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "entity_name": "www.youtube.com",
+            "entity_type": "metadata-for-Ln3WszTq0uA.txt",
+            "description": "video platform which hosted the source video.",
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "entity_name": "Max Gulhane MD",
+            "entity_type": "metadata-for-Ln3WszTq0uA.txt",
+            "description": "Video channel which published the source video.",
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "entity_name": "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease",
+            "entity_type": "metadata-for-Ln3WszTq0uA.txt",
+            "description": "Video title for source video",
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "entity_name": "2023-04-02T06:06:17Z",
+            "entity_type": "metadata-for-Ln3WszTq0uA.txt",
+            "description": "Date source video was posted.",
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "entity_name": "en",
+            "entity_type": "metadata-for-Ln3WszTq0uA.txt",
+            "description": "Language spoken in the source video",
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        }
+    ],
+    "relationships": [
+        {
+            "src_id": "https://www.youtube.com/watch?v=Ln3WszTq0uA",
+            "tgt_id": "www.youtube.com",
+            "description": "The source video found at the URL https://www.youtube.com/watch?v=Ln3WszTq0uA was hosted by www.youtube.com platform",
+            "keywords": "source video URL host platform",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "https://www.youtube.com/watch?v=Ln3WszTq0uA",
+            "tgt_id": "Max Gulhane MD",
+            "description": "The source video found at URL https://www.youtube.com/watch?v=Ln3WszTq0uA was produced by the Max Gulhane MD video channel",
+            "keywords": "source video URL channel produced",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "https://www.youtube.com/watch?v=Ln3WszTq0uA",
+            "tgt_id": "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease",
+            "description": "The source video at URL https://www.youtube.com/watch?v=Ln3WszTq0uA is titled Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease",
+            "keywords": "source video URL title",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "https://www.youtube.com/watch?v=Ln3WszTq0uA",
+            "tgt_id": "2023-04-02T06:06:17Z",
+            "description": "The source video at URL https://www.youtube.com/watch?v=Ln3WszTq0uA was posted at the date and time of 2023-04-02T06:06:17Z",
+            "keywords": "source video URL posted date time",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "www.youtube.com",
+            "tgt_id": "Max Gulhane MD",
+            "description": "www.youtube.com was the platform hosting the Max Gulhane MD channel",
+            "keywords": "platform hosting channel",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "Max Gulhane MD",
+            "tgt_id": "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease",
+            "description": "The Max Gulhane MD channel produced the video titled Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease",
+            "keywords": "channel content creator produced video",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease",
+            "tgt_id": "2023-04-02T06:06:17Z",
+            "description": "The video titled Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease was posted on 2023-04-02T06:06:17Z",
+            "keywords": "titled video posted date time",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease",
+            "tgt_id": "en",
+            "description": "The video titled Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease was presented in the en language",
+            "keywords": "titled video spoken language",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "metadata-global-hub",
+            "tgt_id": "Ln3WszTq0uA_metadata.json",
+            "description": "Ln3WszTq0uA_metadata.json is an element of the set metadata-global-hub",
+            "keywords": "element of metadata-global-hub",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "source-document-global-hub",
+            "tgt_id": "Ln3WszTq0uA.txt",
+            "description": "Ln3WszTq0uA.txt is an element of the set source-document-global-hub",
+            "keywords": "element of source-document-global-hub",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "Ln3WszTq0uA_metadata.json",
+            "tgt_id": "Ln3WszTq0uA.txt",
+            "description": "Ln3WszTq0uA_metadata.json is the metadata hub for the source document Ln3WszTq0uA.txt",
+            "keywords": "metadata for Ln3WszTq0uA.txt",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "Ln3WszTq0uA_metadata.json",
+            "tgt_id": "https://www.youtube.com/watch?v=Ln3WszTq0uA",
+            "description": "Ln3WszTq0uA_metadata.json is the metadata hub for the URL https://www.youtube.com/watch?v=Ln3WszTq0uA",
+            "keywords": "URL Ln3WszTq0uA_metadata.json",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "Ln3WszTq0uA_metadata.json",
+            "tgt_id": "www.youtube.com",
+            "description": "Ln3WszTq0uA_metadata.json is the metadata hub for the video platform www.youtube.com",
+            "keywords": "video platform Ln3WszTq0uA_metadata.json",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "Ln3WszTq0uA_metadata.json",
+            "tgt_id": "Max Gulhane MD",
+            "description": "Ln3WszTq0uA_metadata.json is the metadata hub for the video channel Max Gulhane MD",
+            "keywords": "video channel Ln3WszTq0uA_metadata.json",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "Ln3WszTq0uA_metadata.json",
+            "tgt_id": "Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease",
+            "description": "Ln3WszTq0uA_metadata.json is the metadata hub for the video titled Dr Jack Kruse: Light, Melanin, POMC in Human Evolution & Disease",
+            "keywords": "video title Ln3WszTq0uA_metadata.json",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "Ln3WszTq0uA_metadata.json",
+            "tgt_id": "2023-04-02T06:06:17Z",
+            "description": "Ln3WszTq0uA_metadata.json is the metadata hub for the video posting time and date of 2023-04-02T06:06:17Z",
+            "keywords": "posting date time Ln3WszTq0uA_metadata.json",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        },
+        {
+            "src_id": "Ln3WszTq0uA_metadata.json",
+            "tgt_id": "en",
+            "description": "Ln3WszTq0uA_metadata.json is the metadata hub for en, the spoken language in the video",
+            "keywords": "en spoken language Ln3WszTq0uA_metadata.json",
+            "weight": 7.0,
+            "source_id": "Ln3WszTq0uA_metadata.json"
+        }
+    ]
+}

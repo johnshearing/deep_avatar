@@ -1,0 +1,844 @@
+{
+    "chunks": [
+        {
+            "content": "category_hub is the hub entity with an entity_type of category_hub and which shares a relationship with every entity that has the entity_type of category.\norganization is an entity with an entity_type of category which describes governments, companies, institutions, establishments, consortiums, conglomerates, associations, and similar.\ncartel is an entity with an entity_type of category which describes alliances of organizations such that competition and choice is diminished for their clients while control over clients is increased.\ncomplex_adaptive_system is an entity with an entity_type of category which describe entities such as cartels, orgainzations, organisms, ecosystems and similar, that are controlled by a complex web of positive feedback loops which cause it to seek feeding and growth before any other objective.\nperson is an entity with an entity_type of category which describes any human.\npractitioner is an entity with an entity_type of category which describes a person actively engaged in an art, discipline, or profession.\nplace is an entity with an entity_type of category which describes any geographic location.\ntime is an entity with an entity_type of category which describes any starting point, ending point, or interval of time.\nevent is an entity with an entity_type of category which describes a particular situation at a specific time.\ninfrastructure is an entity with an entity_type of category which describes anything built by an organization for the purpose of serving the organization or its membership.\nanatomy is an entity with an entity_type of category which describes any part of a living organism.\nmedia is an entity with an entity_type of category which describes any type of recorded information such as books, computer files, paintings, videos and similar.\nprotocol is an entity with an entity_type of category which describes widely agreed upon method for accomplishing a task.\nmolecule is an entity with an entity_type of category which describes arrangements of atoms often in the context of biology and biophysics.\nhormone is an entity with an entity_type of category which describes molecules used to as signals to regulate biological processes in the body.\nneurotransmitter is an entity with an entity_type of category which describes molecules used for signaling within the nervous system.\ndemographic is an entity with an entity_type of category which describes any combination of physical charactaristic, ethnicity, or organizational affilitation such as black people, white males, white democrates, black christians and similar.\ncontrol_system is an entity with an entity_type of category which describes any system of signal, control, and feedback such as a thermostatic system for controlling heat in a building, a system of trade policy for controlling an ecconomy, or the endocrine system for regulating the body.\nparadigm is an entity with an entity_type of category which describes a viewpoint or way of understanding such as allopathic medicine vs traditional chinese medicine or capitalism vs communism, where the active paradigm controls behavior.\nplant is an entity with an entity_type of category which describes eukaryotes that comprise the kingdom Plantae.\nanimal is an entity with an entity_type of category which describes a multicellular eukaryotic organism in the biological kingdom, Animalia.\nbacteria is an entity with an entity_type of category which describe a large group of unicellular microorganisms which have cell walls but lack organelles and an organized nucleus.\narchaea is an entity with an entity_type of category which describes prokaryotes which are evolutionarily distinct from both bacteria and eukaryotes, often found in extreme environments like hot springs or salty lakes.\neukarya is an entity with an entity_type of category which describes organisms characterized by cells containing a nucleus and other membrane-bound organelles.\norganism is an entity with an entity_type of category which describes an individual animal, plant, or single-celled life form.\norgan is an entity with an entity_type of category which describes a collection of tissue specialized to perform a particular function.\ntissue is an entity with an entity_type of category which describes a group of similar cells that work together to perform a specific function within an organism.\norganelle is an entity with an entity_type of category which describes a subcellular structure that has one or more specific jobs to perform in the cell.\ncell is an entity with an entity_type of category which describes the basic membrane-bound unit that contains the fundamental molecules of life and of which all living things are composed.\nart is an entity with an entity_type of category which describes the expression or application of human creative skill and imagination.\nfield_of_study is an entity with an entity_type of category which describes subjects that require time and attention to master such as medicine, physics, farming, art and similar.\nconcept is an entity with an entity_type of category which describes an idea which has been well thought out and defined.\ndisease is an entity with an entity_type of category which describes a condition of the living animal or plant body that impairs normal functioning.\nremnant is an entity with an entity_type of category which describes a remaining part of a larger item that indicates the history of the larger item.\nknowledge is an entity with an entity_type of category which describes information, and principles acquired by humankind.\nprocedure is an entity with an entity_type of category which describes a course of action or a specific technique used to accomplish a goal.\ncondition is an entity with an entity_type of category which describes a specific aspect of a subject's state.\nsituation is an entity with an entity_type of category which describes the environment and all the conditions or specific aspects of a subject's state.\nproblem is an entity with an entity_type of category which describes any question or situation involving doubt, uncertainty, or difficulty.\nincentive is an entity with an entity_type of category which describes anything such as punishment, reward, fees, pay, benefits, and similar that motivates or encourages organisms or organizations to do something or not as the incentive directs.\nprocess is an entity with an entity_type of category which describes a natural or involuntary series of changes.\nmeasurement is an entity with an entity_type of category which describes process of comparison of an unknown quantity with a known or standard quantity.\nunit_of_measure is an entity with an entity_type of category which describes a defined standard used to express a physical quantity, such as length, mass, time, volume, etc.\nboundry is an entity with an entity_type of category which describes a distinct line or region that marks the transition between two different environments, characterized by a sharp change in key properties.\nattribute is an entity with an entity_type of category which describes an assignment of a quality to an object or subject such as authority to a badge.\nproperty is an entity with an entity_type of category which describes an inherent quality of an object or subject such as the hardness of diamond.\nmiracle is an entity with an entity_type of category which describes an action taken by God or communication from God.\nwell_being is an entity with an entity_type of category which describes one's physical, mental, and emotional admittance to the flow of God's endless blessings or endless choices, which may be indicated by health and prosperity, but is always indicated by a sense of love, peace and joy.\nenergy is an entity with an entity_type of category which describes the capacity to do work.\nenergy_conversion is an entity with an entity_type of category which describes the process of converting energy from one form to another usually for the purpose of performing work of some type or for creating a signal.\nentropy is an entity with an entity_type of category which describes the measure of the disorder or randomness of a system, and more precisely, the dispersal of energy within that system.\ntoxin is an entity with an entity_type of category which describes any agent, whether a substance, an addiction, a thought pattern, a disagreeable individual, or an external factor, that elicits an immediate or chronic state of stress or sickness and which disrupt an individual's physical, mental, or emotional well-being, leading to detrimental effects on their overall health and functioning.\nelement is an entity with an entity_type of category which describes a pure substance consisting of only one type of atom.\nion is an entity with an entity_type of category which describes an atom or molecule that has gained or lost one or more electrons, giving it a net positive or negative electrical charge.\nisotope is an entity with an entity_type of category which describes different forms of the same chemical element, distinguished by having the same number of protons but varying numbers of neutrons in their atomic nuclei.\nsubatomic_particle is an entity with an entity_type of category which describes particles including protons, neutrons, quarks, bosons, and leptons (like electrons, muons, and neutrinos) that are smaller than an atom and are the fundamental building blocks of matter.\nmaterial is an entity with an entity_type of category which describes any substance or mixture of substances that has a specific set of properties.\nrange is an entity with an entity_type of category which describes measure or extent between the extreme ends of a set of values or a physical quantity.\nunique_id is an entity with an entity_type of category which describes a code or number that distinguishes a specific entity (place, person, object, data record, etc.) from all others.\naddress is an entity with an entity_type of category which describes a unique_id that distinguishes a specific singleton (place, object, data record, etc.) from all others and provides information on how to locate that singleton.",
+            "source_id": "category_data.json"
+        }
+    ],
+    "entities": [
+        {
+            "entity_name": "category_hub",
+            "entity_type": "category_hub",
+            "description": "category_hub is the hub entity with an entity_type of category_hub and which shares a relationship with every entity that has the entity_type of category.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "organization",
+            "entity_type": "category",
+            "description": "organization is an entity with an entity_type of category which describes governments, companies, institutions, establishments, consortiums, conglomerates, associations, and similar.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "cartel",
+            "entity_type": "category",
+            "description": "cartel is an entity with an entity_type of category which describes alliances of organizations such that competition and choice is diminished for their clients while control over clients is increased.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "complex_adaptive_system",
+            "entity_type": "category",
+            "description": "complex_adaptive_system is an entity with an entity_type of category which describe entities such as cartels, orgainzations, organisms, ecosystems and similar, that are controlled by a complex web of positive feedback loops which cause it to seek feeding and growth before any other objective.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "person",
+            "entity_type": "category",
+            "description": "person is an entity with an entity_type of category which describes any human.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "practitioner",
+            "entity_type": "category",
+            "description": "practitioner is an entity with an entity_type of category which describes a person actively engaged in an art, discipline, or profession.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "place",
+            "entity_type": "category",
+            "description": "place is an entity with an entity_type of category which describes any geographic location.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "time",
+            "entity_type": "category",
+            "description": "time is an entity with an entity_type of category which describes any starting point, ending point, or interval of time.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "event",
+            "entity_type": "category",
+            "description": "event is an entity with an entity_type of category which describes a particular situation at a specific time.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "infrastructure",
+            "entity_type": "category",
+            "description": "infrastructure is an entity with an entity_type of category which describes anything built by an organization for the purpose of serving the organization or its membership.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "anatomy",
+            "entity_type": "category",
+            "description": "anatomy is an entity with an entity_type of category which describes any part of a living organism.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "media",
+            "entity_type": "category",
+            "description": "media is an entity with an entity_type of category which describes any type of recorded information such as books, computer files, paintings, videos and similar.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "protocol",
+            "entity_type": "category",
+            "description": "protocol is an entity with an entity_type of category which describes widely agreed upon method for accomplishing a task.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "molecule",
+            "entity_type": "category",
+            "description": "molecule is an entity with an entity_type of category which describes arrangements of atoms often in the context of biology and biophysics.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "hormone",
+            "entity_type": "category",
+            "description": "hormone is an entity with an entity_type of category which describes molecules used to as signals to regulate biological processes in the body.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "neurotransmitter",
+            "entity_type": "category",
+            "description": "neurotransmitter is an entity with an entity_type of category which describes molecules used for signaling within the nervous system.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "demographic",
+            "entity_type": "category",
+            "description": "demographic is an entity with an entity_type of category which describes any combination of physical charactaristic, ethnicity, or organizational affilitation such as black people, white males, white democrates, black christians and similar.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "control_system",
+            "entity_type": "category",
+            "description": "control_system is an entity with an entity_type of category which describes any system of signal, control, and feedback such as a thermostatic system for controlling heat in a building, a system of trade policy for controlling an ecconomy, or the endocrine system for regulating the body.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "paradigm",
+            "entity_type": "category",
+            "description": "paradigm is an entity with an entity_type of category which describes a viewpoint or way of understanding such as allopathic medicine vs traditional chinese medicine or capitalism vs communism, where the active paradigm controls behavior.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "plant",
+            "entity_type": "category",
+            "description": "plant is an entity with an entity_type of category which describes eukaryotes that comprise the kingdom Plantae.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "animal",
+            "entity_type": "category",
+            "description": "animal is an entity with an entity_type of category which describes a multicellular eukaryotic organism in the biological kingdom, Animalia.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "bacteria",
+            "entity_type": "category",
+            "description": "bacteria is an entity with an entity_type of category which describe a large group of unicellular microorganisms which have cell walls but lack organelles and an organized nucleus.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "archaea",
+            "entity_type": "category",
+            "description": "archaea is an entity with an entity_type of category which describes prokaryotes which are evolutionarily distinct from both bacteria and eukaryotes, often found in extreme environments like hot springs or salty lakes.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "eukarya",
+            "entity_type": "category",
+            "description": "eukarya is an entity with an entity_type of category which describes organisms characterized by cells containing a nucleus and other membrane-bound organelles.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "organism",
+            "entity_type": "category",
+            "description": "organism is an entity with an entity_type of category which describes an individual animal, plant, or single-celled life form.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "organ",
+            "entity_type": "category",
+            "description": "organ is an entity with an entity_type of category which describes a collection of tissue specialized to perform a particular function.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "tissue",
+            "entity_type": "category",
+            "description": "tissue is an entity with an entity_type of category which describes a group of similar cells that work together to perform a specific function within an organism.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "organelle",
+            "entity_type": "category",
+            "description": "organelle is an entity with an entity_type of category which describes a subcellular structure that has one or more specific jobs to perform in the cell.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "cell",
+            "entity_type": "category",
+            "description": "cell is an entity with an entity_type of category which describes the basic membrane-bound unit that contains the fundamental molecules of life and of which all living things are composed.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "art",
+            "entity_type": "category",
+            "description": "art is an entity with an entity_type of category which describes the expression or application of human creative skill and imagination.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "field_of_study",
+            "entity_type": "category",
+            "description": "field_of_study is an entity with an entity_type of category which describes subjects that require time and attention to master such as medicine, physics, farming, art and similar.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "concept",
+            "entity_type": "category",
+            "description": "concept is an entity with an entity_type of category which describes an idea which has been well thought out and defined.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "disease",
+            "entity_type": "category",
+            "description": "disease is an entity with an entity_type of category which describes a condition of the living animal or plant body that impairs normal functioning.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "remnant",
+            "entity_type": "category",
+            "description": "remnant is an entity with an entity_type of category which describes a remaining part of a larger item that indicates the history of the larger item.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "knowledge",
+            "entity_type": "category",
+            "description": "knowledge is an entity with an entity_type of category which describes information, and principles acquired by humankind.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "procedure",
+            "entity_type": "category",
+            "description": "procedure is an entity with an entity_type of category which describes a course of action or a specific technique used to accomplish a goal.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "condition",
+            "entity_type": "category",
+            "description": "condition is an entity with an entity_type of category which describes a specific aspect of a subject's state.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "situation",
+            "entity_type": "category",
+            "description": "situation is an entity with an entity_type of category which describes the environment and all the conditions or specific aspects of a subject's state.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "problem",
+            "entity_type": "category",
+            "description": "problem is an entity with an entity_type of category which describes any question or situation involving doubt, uncertainty, or difficulty.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "incentive",
+            "entity_type": "category",
+            "description": "incentive is an entity with an entity_type of category which describes anything such as punishment, reward, fees, pay, benefits, and similar that motivates or encourages organisms or organizations to do something or not as the incentive directs.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "process",
+            "entity_type": "category",
+            "description": "process is an entity with an entity_type of category which describes a natural or involuntary series of changes.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "measurement",
+            "entity_type": "category",
+            "description": "measurement is an entity with an entity_type of category which describes process of comparison of an unknown quantity with a known or standard quantity.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "unit_of_measure",
+            "entity_type": "category",
+            "description": "unit_of_measure is an entity with an entity_type of category which describes a defined standard used to express a physical quantity, such as length, mass, time, volume, etc.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "boundry",
+            "entity_type": "category",
+            "description": "boundry is an entity with an entity_type of category which describes a distinct line or region that marks the transition between two different environments, characterized by a sharp change in key properties.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "attribute",
+            "entity_type": "category",
+            "description": "attribute is an entity with an entity_type of category which describes an assignment of a quality to an object or subject such as authority to a badge.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "property",
+            "entity_type": "category",
+            "description": "property is an entity with an entity_type of category which describes an inherent quality of an object or subject such as the hardness of diamond.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "miracle",
+            "entity_type": "category",
+            "description": "miracle is an entity with an entity_type of category which describes an action taken by God or communication from God.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "well_being",
+            "entity_type": "category",
+            "description": "well_being is an entity with an entity_type of category which describes one's physical, mental, and emotional admittance to the flow of God's endless blessings or endless choices, which may be indicated by health and prosperity, but is always indicated by a sense of love, peace and joy.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "energy",
+            "entity_type": "category",
+            "description": "energy is an entity with an entity_type of category which describes the capacity to do work.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "energy_conversion",
+            "entity_type": "category",
+            "description": "energy_conversion is an entity with an entity_type of category which describes the process of converting energy from one form to another usually for the purpose of performing work of some type or for creating a signal.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "entropy",
+            "entity_type": "category",
+            "description": "entropy is an entity with an entity_type of category which describes the measure of the disorder or randomness of a system, and more precisely, the dispersal of energy within that system.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "toxin",
+            "entity_type": "category",
+            "description": "toxin is an entity with an entity_type of category which describes any agent, whether a substance, an addiction, a thought pattern, a disagreeable individual, or an external factor, that elicits an immediate or chronic state of stress or sickness and which disrupt an individual's physical, mental, or emotional well-being, leading to detrimental effects on their overall health and functioning.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "element",
+            "entity_type": "category",
+            "description": "element is an entity with an entity_type of category which describes a pure substance consisting of only one type of atom.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "ion",
+            "entity_type": "category",
+            "description": "ion is an entity with an entity_type of category which describes an atom or molecule that has gained or lost one or more electrons, giving it a net positive or negative electrical charge.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "isotope",
+            "entity_type": "category",
+            "description": "isotope is an entity with an entity_type of category which describes different forms of the same chemical element, distinguished by having the same number of protons but varying numbers of neutrons in their atomic nuclei.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "subatomic_particle",
+            "entity_type": "category",
+            "description": "subatomic_particle is an entity with an entity_type of category which describes particles including protons, neutrons, quarks, bosons, and leptons (like electrons, muons, and neutrinos) that are smaller than an atom and are the fundamental building blocks of matter.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "material",
+            "entity_type": "category",
+            "description": "material is an entity with an entity_type of category which describes any substance or mixture of substances that has a specific set of properties.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "range",
+            "entity_type": "category",
+            "description": "range is an entity with an entity_type of category which describes measure or extent between the extreme ends of a set of values or a physical quantity.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "unique_id",
+            "entity_type": "category",
+            "description": "unique_id is an entity with an entity_type of category which describes a code or number that distinguishes a specific entity (place, person, object, data record, etc.) from all others.",
+            "source_id": "category_data.json"
+        },
+        {
+            "entity_name": "address",
+            "entity_type": "category",
+            "description": "address is an entity with an entity_type of category which describes a unique_id that distinguishes a specific singleton (place, object, data record, etc.) from all others and provides information on how to locate that singleton.",
+            "source_id": "category_data.json"
+        }
+    ],
+    "relationships": [
+        {
+            "src_id": "category_hub",
+            "tgt_id": "organization",
+            "description": "organization is an element of the set category_hub",
+            "keywords": "organization, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "cartel",
+            "description": "cartel is an element of the set category_hub",
+            "keywords": "cartel, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "complex_adaptive_system",
+            "description": "complex_adaptive_system is an element of the set category_hub",
+            "keywords": "complex_adaptive_system, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "person",
+            "description": "person is an element of the set category_hub",
+            "keywords": "person, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "practitioner",
+            "description": "practitioner is an element of the set category_hub",
+            "keywords": "practitioner, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "place",
+            "description": "place is an element of the set category_hub",
+            "keywords": "place, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "time",
+            "description": "time is an element of the set category_hub",
+            "keywords": "time, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "event",
+            "description": "event is an element of the set category_hub",
+            "keywords": "event, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "infrastructure",
+            "description": "infrastructure is an element of the set category_hub",
+            "keywords": "infrastructure, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "anatomy",
+            "description": "anatomy is an element of the set category_hub",
+            "keywords": "anatomy, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "media",
+            "description": "media is an element of the set category_hub",
+            "keywords": "media, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "protocol",
+            "description": "protocol is an element of the set category_hub",
+            "keywords": "protocol, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "molecule",
+            "description": "molecule is an element of the set category_hub",
+            "keywords": "molecule, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "hormone",
+            "description": "hormone is an element of the set category_hub",
+            "keywords": "hormone, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "neurotransmitter",
+            "description": "neurotransmitter is an element of the set category_hub",
+            "keywords": "neurotransmitter, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "demographic",
+            "description": "demographic is an element of the set category_hub",
+            "keywords": "demographic, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "control_system",
+            "description": "control_system is an element of the set category_hub",
+            "keywords": "control_system, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "paradigm",
+            "description": "paradigm is an element of the set category_hub",
+            "keywords": "paradigm, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "plant",
+            "description": "plant is an element of the set category_hub",
+            "keywords": "plant, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "animal",
+            "description": "animal is an element of the set category_hub",
+            "keywords": "animal, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "bacteria",
+            "description": "bacteria is an element of the set category_hub",
+            "keywords": "bacteria, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "archaea",
+            "description": "archaea is an element of the set category_hub",
+            "keywords": "archaea, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "eukarya",
+            "description": "eukarya is an element of the set category_hub",
+            "keywords": "eukarya, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "organism",
+            "description": "organism is an element of the set category_hub",
+            "keywords": "organism, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "organ",
+            "description": "organ is an element of the set category_hub",
+            "keywords": "organ, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "tissue",
+            "description": "tissue is an element of the set category_hub",
+            "keywords": "tissue, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "organelle",
+            "description": "organelle is an element of the set category_hub",
+            "keywords": "organelle, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "cell",
+            "description": "cell is an element of the set category_hub",
+            "keywords": "cell, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "art",
+            "description": "art is an element of the set category_hub",
+            "keywords": "art, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "field_of_study",
+            "description": "field_of_study is an element of the set category_hub",
+            "keywords": "field_of_study, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "concept",
+            "description": "concept is an element of the set category_hub",
+            "keywords": "concept, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "disease",
+            "description": "disease is an element of the set category_hub",
+            "keywords": "disease, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "remnant",
+            "description": "remnant is an element of the set category_hub",
+            "keywords": "remnant, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "knowledge",
+            "description": "knowledge is an element of the set category_hub",
+            "keywords": "knowledge, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "procedure",
+            "description": "procedure is an element of the set category_hub",
+            "keywords": "procedure, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "condition",
+            "description": "condition is an element of the set category_hub",
+            "keywords": "condition, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "situation",
+            "description": "situation is an element of the set category_hub",
+            "keywords": "situation, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "problem",
+            "description": "problem is an element of the set category_hub",
+            "keywords": "problem, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "incentive",
+            "description": "incentive is an element of the set category_hub",
+            "keywords": "incentive, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "process",
+            "description": "process is an element of the set category_hub",
+            "keywords": "process, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "measurement",
+            "description": "measurement is an element of the set category_hub",
+            "keywords": "measurement, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "unit_of_measure",
+            "description": "unit_of_measure is an element of the set category_hub",
+            "keywords": "unit_of_measure, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "boundry",
+            "description": "boundry is an element of the set category_hub",
+            "keywords": "boundry, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "attribute",
+            "description": "attribute is an element of the set category_hub",
+            "keywords": "attribute, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "property",
+            "description": "property is an element of the set category_hub",
+            "keywords": "property, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "miracle",
+            "description": "miracle is an element of the set category_hub",
+            "keywords": "miracle, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "well_being",
+            "description": "well_being is an element of the set category_hub",
+            "keywords": "well_being, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "energy",
+            "description": "energy is an element of the set category_hub",
+            "keywords": "energy, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "energy_conversion",
+            "description": "energy_conversion is an element of the set category_hub",
+            "keywords": "energy_conversion, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "entropy",
+            "description": "entropy is an element of the set category_hub",
+            "keywords": "entropy, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "toxin",
+            "description": "toxin is an element of the set category_hub",
+            "keywords": "toxin, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "element",
+            "description": "element is an element of the set category_hub",
+            "keywords": "element, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "ion",
+            "description": "ion is an element of the set category_hub",
+            "keywords": "ion, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "isotope",
+            "description": "isotope is an element of the set category_hub",
+            "keywords": "isotope, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "subatomic_particle",
+            "description": "subatomic_particle is an element of the set category_hub",
+            "keywords": "subatomic_particle, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "material",
+            "description": "material is an element of the set category_hub",
+            "keywords": "material, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "range",
+            "description": "range is an element of the set category_hub",
+            "keywords": "range, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "unique_id",
+            "description": "unique_id is an element of the set category_hub",
+            "keywords": "unique_id, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "category_hub",
+            "tgt_id": "address",
+            "description": "address is an element of the set category_hub",
+            "keywords": "address, element of, category_hub",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        }
+    ]
+}

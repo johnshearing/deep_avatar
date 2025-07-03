@@ -1,0 +1,154 @@
+Using _1_custom_index_01.py apply _1_Ln3WszTq0uA_metadata.json and _2_Ln3WszTq0uA_categories.json
+
+Using _1_doc_index_01.py apply _3_Ln3WszTq0uA_truncated.txt
+
+Look in prompt.py for the category descriptions.
+Using the LighRAG server API get a list of all the entities.
+
+Ask any ai the following and put the output in a file like _4_Ln3WszTq0uA_category_matches_a.json
+Notice that that _4_Ln3WszTq0uA_category_matches_a.json only contains the entities that start with the letter a.
+This is so that the ai does not get overloaded. 
+It will be required to make a file for each letter. 
+Or the process can be automated with an agent.
+Once you have the file _4_Ln3WszTq0uA_category_matches_a.json then use _1_custom_index_01.py to index the file.
+This creates a relationship between every entity and any categories the entity may fall into.
+
+Greetings,
+I have a list of categories pasted below, and below that I have a list of entities which might be considered members of one or more of those categories. 
+For entities which fall into one or more of the categories I need to create a json entry that documents the relationships as in the following example.
+Would you please create the requied json?
+
+{
+    "relationships": [
+        {
+            "src_id": "place",
+            "tgt_id": "Alabama",
+            "description": "Alabama is a member of the category place",
+            "keywords": "Alabama, element of, place",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "event",
+            "tgt_id": "Asteroid Event",
+            "description": "Asteroid Event is a member of the category event",
+            "keywords": "Asteroid Event, element of, event",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+        {
+            "src_id": "organization",
+            "tgt_id": "Big Pharma",
+            "description": "Big Pharma is a member of the category organization",
+            "keywords": "Big Pharma, element of, organization",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        },
+                {
+            "src_id": "complex_adaptive_system",
+            "tgt_id": "Big Pharma",
+            "description": "Big Pharma is a member of the category complex_adaptive_system",
+            "keywords": "Big Pharma, element of, complex_adaptive_system",
+            "weight": 7.0,
+            "source_id": "category_data.json"
+        }
+    ]
+}
+
+
+Please notice how some of the entities may be members of many categories.
+Would you please generate the required json?
+
+    "category_hub is the hub entity with an entity_type of category_hub and which shares a relationship with every entity that has the entity_type of category.",
+    "organization is an entity with an entity_type of category which describes governments, companies, institutions, establishments, consortiums, conglomerates, associations, and similar.",
+    "cartel is an entity with an entity_type of category which describes alliances of organizations such that competition and choice is diminished for their clients while control over clients is increased.",
+    "complex_adaptive_system is an entity with an entity_type of category which describe entities such as cartels, orgainzations, organisms, ecosystems and similar, that are controlled by a complex web of positive feedback loops which cause it to seek feeding and growth before any other objective.",
+    "person is an entity with an entity_type of category which describes any human.",
+    "practitioner is an entity with an entity_type of category which describes a person actively engaged in an art, discipline, or profession.",
+    "place is an entity with an entity_type of category which describes any geographic location.",
+    "time is an entity with an entity_type of category which describes any starting point, ending point, or interval of time.",
+    "event is an entity with an entity_type of category which describes a particular situation at a specific time.",
+    "infrastructure is an entity with an entity_type of category which describes anything built by an organization for the purpose of serving the organization or its membership.",
+    "anatomy is an entity with an entity_type of category which describes any part of a living organism.",
+    "media is an entity with an entity_type of category which describes any type of recorded information such as books, computer files, paintings, videos and similar.",
+    "protocol is an entity with an entity_type of category which describes widely agreed upon method for accomplishing a task.",
+    "molecule is an entity with an entity_type of category which describes arrangements of atoms often in the context of biology and biophysics.",
+    "hormone is an entity with an entity_type of category which describes molecules used to as signals to regulate biological processes in the body.",
+    "neurotransmitter is an entity with an entity_type of category which describes molecules used for signaling within the nervous system.",
+    "ethnicity is an entity with an entity_type of category used to catagorize humans by ancestry.",
+    "demographic is an entity with an entity_type of category which describes any combination of physical charactaristic, ethnicity, or organizational affilitation such as black people, white males, white democrates, black christians and similar.",
+    "control_system is an entity with an entity_type of category which describes any system of signal, control, and feedback such as a thermostatic system for controlling heat in a building, a system of trade policy for controlling an ecconomy, or the endocrine system for regulating the body.",
+    "paradigm is an entity with an entity_type of category which describes a viewpoint or way of understanding such as allopathic medicine vs traditional chinese medicine or capitalism vs communism, where the active paradigm controls behavior.",
+    "plant is an entity with an entity_type of category which describes eukaryotes that comprise the kingdom Plantae.",
+    "animal is an entity with an entity_type of category which describes a multicellular eukaryotic organism in the biological kingdom, Animalia.",
+    "bacteria is an entity with an entity_type of category which describe a large group of unicellular microorganisms which have cell walls but lack organelles and an organized nucleus.",
+    "archaea is an entity with an entity_type of category which describes prokaryotes which are evolutionarily distinct from both bacteria and eukaryotes, often found in extreme environments like hot springs or salty lakes.",
+    "eukarya is an entity with an entity_type of category which describes organisms characterized by cells containing a nucleus and other membrane-bound organelles.",
+    "organism is an entity with an entity_type of category which describes an individual animal, plant, or single-celled life form.",
+    "organ is an entity with an entity_type of category which describes a collection of tissue specialized to perform a particular function.",
+    "tissue is an entity with an entity_type of category which describes a group of similar cells that work together to perform a specific function within an organism.",
+    "organelle is an entity with an entity_type of category which describes a subcellular structure that has one or more specific jobs to perform in the cell.",
+    "cell is an entity with an entity_type of category which describes the basic membrane-bound unit that contains the fundamental molecules of life and of which all living things are composed.",
+    "art is an entity with an entity_type of category which describes the expression or application of human creative skill and imagination.",
+    "field_of_study is an entity with an entity_type of category which describes subjects that require time and attention to master such as medicine, physics, farming, art and similar.",
+    "concept is an entity with an entity_type of category which describes an idea which has been well thought out and defined.",
+    "disease is an entity with an entity_type of category which describes a condition of the living animal or plant body that impairs normal functioning.",
+    "remnant is an entity with an entity_type of category which describes a remaining part of a larger item that indicates the history of the larger item.",
+    "knowledge is an entity with an entity_type of category which describes information, and principles acquired by humankind.",
+    "procedure is an entity with an entity_type of category which describes a course of action or a specific technique used to accomplish a goal.",
+    "condition is an entity with an entity_type of category which describes a specific aspect of a subject's state.",
+    "situation is an entity with an entity_type of category which describes the environment and all the conditions or specific aspects of a subject's state.",
+    "problem is an entity with an entity_type of category which describes any question or situation involving doubt, uncertainty, or difficulty.",
+    "incentive is an entity with an entity_type of category which describes anything such as punishment, reward, fees, pay, benefits, and similar that motivates or encourages organisms or organizations to do something or not as the incentive directs.",
+    "process is an entity with an entity_type of category which describes a natural or involuntary series of changes.",
+    "measurement is an entity with an entity_type of category which describes process of comparison of an unknown quantity with a known or standard quantity.",
+    "unit_of_measure is an entity with an entity_type of category which describes a defined standard used to express a physical quantity, such as length, mass, time, volume, etc.",
+    "boundry is an entity with an entity_type of category which describes a distinct line or region that marks the transition between two different environments, characterized by a sharp change in key properties.",
+    "attribute is an entity with an entity_type of category which describes an assignment of a quality to an object or subject such as authority to a badge.",
+    "property is an entity with an entity_type of category which describes an inherent quality of an object or subject such as the hardness of diamond.",
+    "miracle is an entity with an entity_type of category which describes an action taken by God or communication from God.",
+    "blessings is an entity with an entity_type of category that describes choices, which flow endlessly and without impedance from God.",
+    "impedance is an entity with an entity_type of category that describes the total opposition to current flow in an AC circuit but is also used to describe the opposition humans may present to the flow of God's blessings.",
+    "admittance is an entity with an entity_type of category that describes the reciprocal of impedance and so represents the ease with which current flows in an AC circuit but is also used to describe the ease with which humans may allow the flow of God's blessings.",
+    "well_being is an entity with an entity_type of category which describes one's physical, mental, and emotional admittance to the flow of God's endless blessings or endless choices, which may be indicated by health and prosperity, but is always indicated by a sense of love, peace and joy.",
+    "energy is an entity with an entity_type of category which describes the capacity to do work.",
+    "energy_conversion is an entity with an entity_type of category which describes the process of converting energy from one form to another usually for the purpose of performing work of some type or for creating a signal.",
+    "entropy is an entity with an entity_type of category which describes the measure of the disorder or randomness of a system, and more precisely, the dispersal of energy within that system.",
+    "toxin is an entity with an entity_type of category which describes any agent, whether a substance, an addiction, a thought pattern, a disagreeable individual, or an external factor, that elicits an immediate or chronic state of stress or sickness and which disrupt an individual's physical, mental, or emotional well-being, leading to detrimental effects on their overall health and functioning.",
+    "element is an entity with an entity_type of category which describes a pure substance consisting of only one type of atom.",
+    "ion is an entity with an entity_type of category which describes an atom or molecule that has gained or lost one or more electrons, giving it a net positive or negative electrical charge.",
+    "isotope is an entity with an entity_type of category which describes different forms of the same chemical element, distinguished by having the same number of protons but varying numbers of neutrons in their atomic nuclei.",
+    "subatomic_particle is an entity with an entity_type of category which describes particles including protons, neutrons, quarks, bosons, and leptons (like electrons, muons, and neutrinos) that are smaller than an atom and are the fundamental building blocks of matter.",
+    "material is an entity with an entity_type of category which describes any substance or mixture of substances that has a specific set of properties.",
+    "range is an entity with an entity_type of category which describes measure or extent between the extreme ends of a set of values or a physical quantity.",
+    "unique_id is an entity with an entity_type of category which describes a code or number that distinguishes a specific entity (place, person, object, data record, etc.) from all others.",
+    "address is an entity with an entity_type of category which describes a unique_id that distinguishes a specific singleton (place, object, data record, etc.) from all others and provides information on how to locate that singleton."
+
+
+[
+  "125 Years",
+  "2023-04-02T06:06:17Z",
+  "ACTH",
+  "ATP",
+  "Acetylcholine",
+  "Adenosine",
+  "African American Patient",
+  "African American Woman",
+  "Age of Mammals",
+  "Alabama",
+  "Alexander Gerwich",
+  "Alpha MSH",
+  "Alzheimer's Disease",
+  "Animal Food",
+  "Anxiety",
+  "Aortic Aneurysm",
+  "Aortic Stenosis",
+  "Archaea",
+  "Artificial Light Environment",
+  "Asteroid Event",
+  "Atomic Molecular Orbital Physics",
+  "Atomic Precision",
+  "Australia",
+  "Autoimmune Conditions",
+  "Autoimmunity"
+ ]
