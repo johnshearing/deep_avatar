@@ -43,8 +43,6 @@ PROMPTS["DEFAULT_ENTITY_TYPES"] = [
     "cell is an entity with an entity_type of category which describes the basic membrane-bound unit that contains the fundamental molecules of life and of which all living things are composed.",
     "art is an entity with an entity_type of category which describes the expression or application of human creative skill and imagination.",
     "field_of_study is an entity with an entity_type of category which describes subjects that require time and attention to master such as medicine, physics, farming, art and similar.",
-    "physics is an entity with an entity_type of category which describes a field of study concerned with the nature and properties of matter and energy.",
-    "biophysics is an entity with an entity_type of category which describes an interdisciplinary field that applies the principles and methods of physics to understand biological systems.",
     "concept is an entity with an entity_type of category which describes an idea which has been well thought out and defined.",
     "disease is an entity with an entity_type of category which describes a condition of the living animal or plant body that impairs normal functioning.",
     "remnant is an entity with an entity_type of category which describes a remaining part of a larger item that indicates the history of the larger item.",
@@ -99,12 +97,24 @@ For each pair of related entities, extract the following information:
 - relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on concepts or themes rather than specific details
 Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>) 
 
-3. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document.
+3. For every entity_type listed in step one there has previously been created an entity of the same name.
+For each of these entities already created from the list of entity types, identify entities currently in scope which might be a member of the entity created from the list of entity types.
+For each category/member pair of related entities, extract the following information:
+- source_entity: name of the source entity which was created from the list of entity types
+- Consider this source_entity as the name of a set
+- target_entity: name of the target entity, as identified by the entity in scope currently being considered for membership in the set
+- Consider this target_entity for possible membership in the source_entity set
+- relationship_description: explanation as to why you think the target entity is a member of the source entity set
+- relationship_strength: a numeric score indicating strength of the relationship between the target entity and source entity
+- relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on why the target entity might a member of the category defined by the source entity
+Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)
+
+4. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document.
 Format the content-level key words as ("content_keywords"{tuple_delimiter}<high_level_keywords>)
 
-4. Return output in {language} as a single list of all the entities and relationships identified in steps 1, 2, and 3. Use **{record_delimiter}** as the list delimiter.
+5. Return output in {language} as a single list of all the entities and relationships identified in steps 1, 2, and 3. Use **{record_delimiter}** as the list delimiter.
 
-5. When finished, output {completion_delimiter}
+6. When finished, output {completion_delimiter}
 
 ######################
 ---Examples---
@@ -217,17 +227,8 @@ Output:
 """
 
 PROMPTS["entity_continue_extraction"] = """
-MANY entities and relationships were missed in the last extraction.
 
----Remember Steps---
-
-1. Identify all entities. For each identified entity, extract the following information:
-- entity_name: Name of the entity, use same language as input text. Always capitalize the first letter of every word in the entity_name. Never use a lower case letter for the first letter in an entity_name. Never use an upper case letter in an entity_name except for the first letter in a word in the entity_name 
-- entity_type: One of the following types: [{entity_types}]. 
-- entity_description: For all entities with an entity_type of category, use only the provided example for the entity_description. Otherwise, provide a comprehensive description of the entity's attributes and activities
-Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
-
-2. For each of the entities identified in step 1 with an entity_type of category, identify all entities which are not of the entity_type category (source_entity, target_entity) which might be a member of the category defined by the entity_name of the source entity.
+1. For each of the entities identified in step 1 with an entity_type of category, identify all entities which are not of the entity_type category (source_entity, target_entity) which might be a member of the category defined by the entity_name of the source entity.
 For each category/member pair of related entities, extract the following information:
 - source_entity: name of the source entity, as identified in step 1 with an entity_type of category
 - target_entity: name of the target entity, as identified in step 1 with an entity_type other than category
@@ -236,21 +237,9 @@ For each category/member pair of related entities, extract the following informa
 - relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on why the target entity might a member of the category defined by the source entity's entity_type
 Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)
 
-3. From the entities identified in step 1 with an entity_type other than category, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
-For each pair of related entities, extract the following information:
-- source_entity: name of the source entity, as identified in step 1
-- target_entity: name of the target entity, as identified in step 1
-- relationship_description: explanation as to why you think the source entity and the target entity are related to each other
-- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity
-- relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on concepts or themes rather than specific details
-Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>) 
+2. Return output in {language} as a single list of all the entities and relationships identified. Use **{record_delimiter}** as the list delimiter.
 
-4. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document.
-Format the content-level key words as ("content_keywords"{tuple_delimiter}<high_level_keywords>)
-
-5. Return output in {language} as a single list of all the entities and relationships identified in steps 1, 2, and 3. Use **{record_delimiter}** as the list delimiter.
-
-6. When finished, output {completion_delimiter}
+3. When finished, output {completion_delimiter}
 
 ---Output---
 

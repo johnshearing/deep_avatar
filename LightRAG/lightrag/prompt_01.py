@@ -27,16 +27,7 @@ Use {language} as output language.
 - entity_description: For all entities with an entity_type of category, use only the provided example for the entity_description. Otherwise, provide a comprehensive description of the entity's attributes and activities
 Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
 
-2. For each of the entities identified in step 1 with an entity_type of category, identify all entities which are not of the entity_type category (source_entity, target_entity) which might be a member of the category defined by the entity_name of the source entity.
-For each category/member pair of related entities, extract the following information:
-- source_entity: name of the source entity, as identified in step 1 with an entity_type of category
-- target_entity: name of the target entity, as identified in step 1 with an entity_type other than category
-- relationship_description: explanation as to why you think the target entity is a member of the source entity's entity_type
-- relationship_strength: a numeric score indicating strength of the relationship between the target entity and source entity
-- relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on why the target entity might a member of the category defined by the source entity's entity_type
-Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)
-
-3. From the entities identified in step 1 with an entity_type other than category, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
+2. From the entities identified in step 1 with an entity_type other than category, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
 For each pair of related entities, extract the following information:
 - source_entity: name of the source entity, as identified in step 1
 - target_entity: name of the target entity, as identified in step 1
@@ -45,12 +36,12 @@ For each pair of related entities, extract the following information:
 - relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on concepts or themes rather than specific details
 Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>) 
 
-4. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document.
+3. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document.
 Format the content-level key words as ("content_keywords"{tuple_delimiter}<high_level_keywords>)
 
-5. Return output in {language} as a single list of all the entities and relationships identified in steps 1, 2, and 3. Use **{record_delimiter}** as the list delimiter.
+4. Return output in {language} as a single list of all the entities and relationships identified in steps 1, 2, and 3. Use **{record_delimiter}** as the list delimiter.
 
-6. When finished, output {completion_delimiter}
+5. When finished, output {completion_delimiter}
 
 ######################
 ---Examples---
