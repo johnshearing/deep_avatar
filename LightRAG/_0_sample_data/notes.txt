@@ -1,19 +1,42 @@
+Step 1. Load the LightRAG index with metadata about the video. (URL, title, channel, upload date, etc)
+        Load the LightRAG index with entities to represent the categories.
+Step 2. Load. Load the LightRAG index with the video transcript.
+
+Step 3. Inspect and clean up the indexed data.
+
+Step 4. Use any a.i. to match the entities captured from the video transcript with the categories. 
+
+
+Step 1 in detail:
 Using _1_custom_index_01.py apply _1_Ln3WszTq0uA_metadata.json and _2_Ln3WszTq0uA_categories.json
 
+Step 2 in detail:
 Using _1_doc_index_01.py apply _3_Ln3WszTq0uA_truncated.txt
 
+Step 3 in detail:
+The a.i. will do a very good job of indexing the video but not a perfect job.
+It will be required to inspect and clean up the data.
+Using _1_merge_GUI_52.py and the LightRAG WebUI, clean up the data descriptions and relationships.
+
+Step 4 in detail:
 Look in prompt.py for the category descriptions.
 Using the LighRAG server API get a list of all the entities.
 
-Ask any ai the following and put the output in a file like _4_Ln3WszTq0uA_category_matches_a.json
-Notice that that _4_Ln3WszTq0uA_category_matches_a.json only contains the entities that start with the letter a.
-This is so that the ai does not get overloaded. 
-It will be required to make a file for each letter. 
-Or the process can be automated with an agent.
-Once you have the file _4_Ln3WszTq0uA_category_matches_a.json then use _1_custom_index_01.py to index the file.
-This creates a relationship between every entity and any categories the entity may fall into.
+Using information from the above, ask any ai the following query and put the output in a file like _4_Ln3WszTq0uA_category_matches_a.json.
 
-Greetings,
+Notice that that _4_Ln3WszTq0uA_category_matches_a.json only contains the relationships for entities that start with the letter a.
+This is so that the ai does not quit in the middle of the process because the free token limit has been exceeded. 
+It will be required to make a json file for each letter. 
+In the alternative you can purchase tokens with an API key in which case the a.i. will likely catagorize all the entities in one shot without quiting.
+
+Once you have the file _4_Ln3WszTq0uA_category_matches_a.json then use _1_custom_index_01.py to index that file.
+This creates a relationship in the LightRAG index between every entity and any categories each entity may fall into.
+Repeat this process with entities that start with other letters.
+
+
+##################   The following is the a.i. prompt to match entities with categories   ####################
+
+Greetings Grok, Gemini, Claude, or whatever a.i. I am asking for help.
 I have a list of categories pasted below, and below that I have a list of entities which might be considered members of one or more of those categories. 
 For entities which fall into one or more of the categories I need to create a json entry that documents the relationships as in the following example.
 Would you please create the requied json?
