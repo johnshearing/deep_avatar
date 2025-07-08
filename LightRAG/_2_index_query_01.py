@@ -98,7 +98,7 @@ async def initialize_rag():
     
     await rag.initialize_storages()
     await initialize_pipeline_status()
-    # await rag.aclear_cache()
+    await rag.aclear_cache()
     return rag
 
 async def main():
@@ -115,14 +115,8 @@ async def main():
         
         # Perform query
 
-        '''
-        "The Mod-Linx conveyor is stopping and starting by itself. What should I do? , "
-        "Tell me everything you can about wire 110? , "
-        "What is the likely cause of an overheating motor?, "
-        '''
-
         query = (
-            "What were the changes in health trends around 2010?"
+            "Which parts of the anatomy inside human cells can conduct DC current?"
         )
       
          

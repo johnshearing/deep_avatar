@@ -49,7 +49,7 @@ def fetch_entities():
     try:
         response = requests.get(f"{LIGHTRAG_SERVER_URL}/graph/label/list")
         response.raise_for_status()
-        return sorted(response.json(), key=lambda x: x.lower())
+        return sorted(response.json(), key=lambda x: x.lower())       
     except requests.exceptions.ConnectionError:
         messagebox.showerror("Connection Error", "Could not connect to LightRAG server. Is it running?")
         return []
@@ -60,7 +60,7 @@ def fetch_entities():
 def fetch_entity_details(label):
     try:
         encoded_label = urllib.parse.quote_plus(label)
-        response = requests.get(f"{LIGHTRAG_SERVER_URL}/graphs?label={encoded_label}&max_depth=1&max_nodes=20000")
+        response = requests.get(f"{LIGHTRAG_SERVER_URL}/graphs?label={encoded_label}&max_depth=1&max_nodes=1000")
         response.raise_for_status()
         data = response.json()
         
