@@ -1,24 +1,46 @@
+
 Step 1. Load the LightRAG index with metadata about the video. (URL, title, channel, upload date, etc)
         Load the LightRAG index with entities to represent the categories.
-Step 2. Load. Load the LightRAG index with the video transcript.
 
-Step 3. Inspect and clean up the indexed data.
+Step 2. Load the LightRAG index with the video transcript.
 
-Step 4. Use any a.i. to match the entities captured from the video transcript with the categories. 
+Step 3. Inspect the indexed data, and clean the source txt of duplicate entities with slightly different spellings and also mis-spellings from the transcribed audio.
+
+Step 4. Repeat steps 1, 2, and 3 until the data is clean.
+
+Step 5. With clean transcripts it is now possible to add the metadata and transcript to an index with multiple source documents.
+
+Step 6. Add category entities to the index of source documents.
+
+Step 7. Use any a.i. to match the entities captured from the video transcript with the categories. 
 
 
 Step 1 in detail:
-Using _1_custom_index_01.py apply _1_Ln3WszTq0uA_metadata.json and _2_Ln3WszTq0uA_categories.json
+Using _1_custom_index_01.py apply _1_Ln3WszTq0uA_metadata.json or a similar file.
+This creates metadata entities in the index about the video from which the transcript originates.
 
 Step 2 in detail:
-Using _1_doc_index_01.py apply _3_Ln3WszTq0uA_truncated.txt
+Using _1_doc_index_01.py apply _3_Ln3WszTq0uA_truncated.txt or similar file to the index.
+This indexes the video transcript.
 
 Step 3 in detail:
-The a.i. will do a very good job of indexing the video but not a perfect job.
-It will be required to inspect and clean up the data.
-Using _1_merge_GUI_52.py and the LightRAG WebUI, clean up the data descriptions and relationships.
+The a.i. will do a very good job of indexing the video transcript but not a perfect job.
+Using _1_merge_GUI_52.py and the LightRAG WebUI, inspect the indexed data.
+Clean the source txt of duplicate entities with slightly different spellings (make them all the same)
+Also fix all the mis-spellings from the transcribed audio.
 
 Step 4 in detail:
+Repeat steps 1, 2, and 3 until the data is clean.
+
+Step 5 in detail:
+With clean transcripts it is now possible to add the metadata and transcript to an index with multiple source documents.
+
+Step 6 in detail:
+Add category entities to the index of source documents.
+Use _1_custom_cat_generate_01.py to generate a json file of all desired categories.
+then use _1_custom_index_01.py to add the categories as new entities in the index.
+
+Step 7 in detail:
 Look in prompt.py for the category descriptions.
 Using the LighRAG server API get a list of all the entities.
 

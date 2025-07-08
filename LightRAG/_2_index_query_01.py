@@ -13,7 +13,7 @@ from llama_index.embeddings.openai import OpenAIEmbedding
 # load_dotenv()
 
 # Configuration
-WORKING_DIR = "_0_midnight_work_dir"
+WORKING_DIR = "_0_jack_work_dir_01"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
@@ -98,7 +98,7 @@ async def initialize_rag():
     
     await rag.initialize_storages()
     await initialize_pipeline_status()
-    await rag.aclear_cache()
+    # await rag.aclear_cache()
     return rag
 
 async def main():
@@ -122,7 +122,7 @@ async def main():
         '''
 
         query = (
-            "What makes Midnight different than other blockchains?"
+            "What were the changes in health trends around 2010?"
         )
       
          

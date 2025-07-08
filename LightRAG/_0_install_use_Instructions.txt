@@ -37,19 +37,48 @@ cd LightRAG
 # Activate the venv_lightrag virtual environment with the following command.
 source venv_lightrag/bin/activate
 
+
+For detailed instructions follow all instructions in _0_sample_data/notes.txt
+But generally do the following:
+
+
 # To index the document of interest. 
+# First index the metadata json file if any with the following script:
+_1_custom_index_01.py
+
+
 # Open the following python script in your text editor.
-nano _1_pdf_index_02.py
+nano _1_custom_index_01.py
 
 # Specify the WORKING_DIR where you wish to have the index created:
 # Below is an example of what you might specify
 WORKING_DIR = "./_ts_work_dir"
 
-# Specify the PDF_FILES to be indexed.
+# Specify the json files to be indexed.
+# Below is an example.
+# You can specify as many documents as you want in the list.
+files_2b_indexed = [
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/0KglcWXUh-c_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/7B3pVAvB5JQ_metadata.json",
+]
+
+
+
+# Then index the text with the following script:
+_1_doc_index_01.py
+
+# Open the following python script in your text editor.
+nano _1_doc_index_01.py
+
+# Specify the WORKING_DIR where you wish to have the index created:
+# Below is an example of what you might specify
+WORKING_DIR = "./_ts_work_dir"
+
+# Specify the PDF_FILES, txt files or whatever to be indexed.
 # Below is an example.
 # You can specify as many documents as you want in the list.
 # The variable is called "PDF_FILES" but txt, csv, docx, can be specified as well.
-PDF_FILES = [
+files_2b_indexed = [
     "./_docs_dir/about_conveyors.docx", 
     "./_docs_dir/troubleshooting_conveyors.pdf"
 ]
@@ -57,7 +86,14 @@ PDF_FILES = [
 # Save your changes and close the text editor.
 
 # Run the script at the bash terminal with the following command:
-python3 _1_pdf_index_02.py
+python3 _1_doc_index_01.py
+
+
+# Index the document and it's metadata first in its own individual directory before indexing it with other documents.
+# Then examine the index with the following GUI to determine misspellings and duplicate entities with minor spelling differences:
+python3 _1_merge_GUI_52.py
+# Fix all of the spelling errors in the orignial documents and consolidate the spellings of names and other entities.
+
 
 
 

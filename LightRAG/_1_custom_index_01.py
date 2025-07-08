@@ -20,7 +20,18 @@ MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
 # Files to be indexed
 files_2b_indexed = [
-    "/home/js/lgt/LightRAG/_0_jack_processed/Ln3WszTq0uA_category_matches.json"
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/0KglcWXUh-c_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/7B3pVAvB5JQ_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/A7Y0j9DTbDk_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/i6-lTljUP-A_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/IOAjeyAhB4k_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/KV-1dlqowKw_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/ouksSZxRtnc_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/PE7zCK_fypQ_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/T6aPbWg7Ahk_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/tCPeQNzizXs_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/U5lpTokLmT8_metadata.json",
+    "/home/js/lgt/LightRAG/_0_ryan_to_be_processed/wu1C4yzyEqk_metadata.json"
 ]
 
 def configure_logging():
