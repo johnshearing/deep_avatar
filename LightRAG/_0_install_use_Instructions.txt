@@ -91,8 +91,9 @@ python3 _1_doc_index_01.py
 
 # Index the document and it's metadata first in its own individual directory before indexing it with other documents.
 # Then examine the index with the following GUI to determine misspellings and duplicate entities with minor spelling differences:
-python3 _1_merge_GUI_52.py
+python3 _1_merge_GUI_58.py
 # Fix all of the spelling errors in the orignial documents and consolidate the spellings of names and other entities.
+# Look for in the _0_sample_data folder for detailed notes on cleaning up dirty data.
 
 
 

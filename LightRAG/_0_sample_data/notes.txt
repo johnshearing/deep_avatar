@@ -25,9 +25,25 @@ This indexes the video transcript.
 
 Step 3 in detail:
 The a.i. will do a very good job of indexing the video transcript but not a perfect job.
-Using _1_merge_GUI_52.py and the LightRAG WebUI, inspect the indexed data.
+Using _1_merge_GUI_58.py and the LightRAG WebUI, inspect the indexed data.
 Clean the source txt of duplicate entities with slightly different spellings (make them all the same)
 Also fix all the mis-spellings from the transcribed audio.
+It will not be required to fix any data in the ????_metadata.json files. So keep these files in a separate folder from the video transcripts.
+
+The using the regex function in the find and replace tab of the VS Code IDE is ideal for cleaning up the transcripts. 
+Put all the transcripts in a single folder and set the "files to include" filter to look only in this folder and to only look in .txt files.
+Set the files to exclude filter to ".json" so as to be sure the metadata files are not changed.
+
+In the search box enter a regex as in the following example:
+(Pollack|Dr. Pollack|Gerald Pollack|Dr. Gerald Pollack)
+###  This is required   ###
+Notice we specify the shorter names first in the search term above. 
+###  This is required   ###
+
+The following regex example will be handy. 
+It will find the term Pollack but will not find the term (Pollack)
+(?<!\()Pollack(?!\))
+
 
 Step 4 in detail:
 Repeat steps 1, 2, and 3 until the data is clean.

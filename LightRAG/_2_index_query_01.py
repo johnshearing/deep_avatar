@@ -116,7 +116,7 @@ async def main():
         # Perform query
 
         query = (
-            "Which parts of the anatomy inside human cells can conduct DC current?"
+            "/mix [Time stamps in the source text appear like the following sample: [6.56 > 11.68]. The values given between the brackets are in seconds and decimal fractions of a second, not in minutes. The source text is a transcript from the source video. The URL for the source video is found in the metadata associated with the source text. So the values between the brackets in the above sample indicate a time between 6.56 seconds and 11.68 seconds into the video. Please provide URLs in your responses for source video that incorporate the timestamps found in the source text so that the videos can be viewed at the moment which is relevant to the query response. The following is an example of how the URLs should be structured if the source text is from Ln3WszTq0uA.txt and the moment of interest has a time stamp of [6.56 > 11.68]: https://www.youtube.com/watch?v=Ln3WszTq0uA&t=6s. Provide the timestamp in seconds and round the timestamp value to the nearest second] Please search for all instances where Don Scott and how did he contribute to the understanding of phases of water is discussed."
         )
       
          
