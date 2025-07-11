@@ -6,6 +6,7 @@ import os
 import json
 import platform
 import urllib.parse
+import subprocess
 from lightrag import LightRAG
 from lightrag.llm.openai import gpt_4o_mini_complete
 from lightrag.kg.shared_storage import initialize_pipeline_status
@@ -59,7 +60,7 @@ def fetch_entities():
 def fetch_entity_details(label):
     try:
         encoded_label = urllib.parse.quote_plus(label)
-        response = requests.get(f"{LIGHTRAG_SERVER_URL}/graphs?label={encoded_label}&max_depth=1&max_nodes=1000")
+        response = requests.get(f"{LIGHTRAG_SERVER_URL}/graphs?label={encoded_label}&max_depth=1&max_nodes=20000")
         response.raise_for_status()
         data = response.json()
         
@@ -240,6 +241,20 @@ class MergeGUI:
         self.create_ui()
         
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
+
+    
+    def copy_selected_text(self, text_widget):
+        try:
+            selected_text = text_widget.get("sel.first", "sel.last")
+            self.root.clipboard_clear()
+            self.root.clipboard_append(selected_text)
+            self.root.update()
+            subprocess.run(['xclip', '-selection', 'clipboard'], input=selected_text.encode(), check=True)
+            print(f"Copied to clipboard: {selected_text}")
+        except tk.TclError:
+            print("No text selected to copy.")
+        except subprocess.CalledProcessError as e:
+            print(f"Failed to copy to clipboard via xclip: {e}")
 
     def load_window_config(self):
         self.window_config = {
@@ -1072,6 +1087,8 @@ class MergeGUI:
         x = self.root.winfo_x() + (self.root.winfo_width() // 2) - (modal.winfo_width() // 2)
         y = self.root.winfo_y() + (self.root.winfo_height() // 2) - (modal.winfo_height() // 2)
         modal.geometry(f"+{x}+{y}")
+
+        description_text.bind("<Control-c>", lambda event: self.copy_selected_text(description_text))
         
         self.root.wait_window(modal)
 
@@ -1141,6 +1158,8 @@ class MergeGUI:
         x = self.root.winfo_x() + (self.root.winfo_width() // 2) - 250
         y = self.root.winfo_y() + (self.root.winfo_height() // 2) - 300
         modal.geometry(f"+{x}+{y}")
+
+        desc_text.bind("<Control-c>", lambda event: self.copy_selected_text(desc_text))
 
     def save_new_relationship(self, source_id, target_id, desc_text, keywords, weight, source_file_id, modal):
         description = desc_text.get("1.0", tk.END).strip()
