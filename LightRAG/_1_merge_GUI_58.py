@@ -225,7 +225,7 @@ class MergeGUI:
         self.entity_list = fetch_entities()
         self.filtered_entity_list = self.entity_list.copy()
         self.current_page = 0  # Initialize page counter
-        self.page_size = 100  # Number of entities per page
+        self.page_size = 35  # Number of entities per page
         self.all_check_vars = {entity: tk.BooleanVar() for entity in self.entity_list}
         self.description_windows = {}
         self.description_frames = {}

@@ -35,14 +35,21 @@ Put all the transcripts in a single folder and set the "files to include" filter
 Set the files to exclude filter to ".json" so as to be sure the metadata files are not changed.
 
 In the search box enter a regex as in the following example:
-(Pollack|Dr. Pollack|Gerald Pollack|Dr. Gerald Pollack)
+\b(Dr\. Nick Lane|Dr Nick Lane|Dr\. Nick|Dr Nick|Dr\. Lane|Dr Lane|Nick Lane|Nick|Lane)\b
 ###  This is required   ###
-Notice we specify the shorter names first in the search term above. 
+Notice we specify the longer names first in the search term above. 
 ###  This is required   ###
+The \b at the beginning and end of the regex prevents matches where the word lane is found inside the word planet.
 
 The following regex example will be handy. 
 It will find the term Pollack but will not find the term (Pollack)
 (?<!\()Pollack(?!\))
+
+The following will find Jack but will not find (Jack) or Jack Kruse
+(?<!\()Jack(?!\)| Kruse)
+
+The following finds Warburg but not if preceeded by Otto
+\b((?<!Otto )Warburg)\b
 
 
 Step 4 in detail:
