@@ -424,7 +424,7 @@ class MergeGUI:
         content_frame.grid_columnconfigure(1, weight=1) 
         
         self.toggle_desc_button = ttk.Button(content_frame, text="⇕", command=self.toggle_descriptions, width=3)
-        self.toggle_desc_button.grid(row=0, column=0, sticky="n", padx=(0, 5)) 
+        self.toggle_desc_button.grid(row=0, column=0, sticky="ns", padx=(0, 5)) 
 
         list_frame = ttk.Frame(content_frame)
         list_frame.grid(row=0, column=1, sticky="nsew")

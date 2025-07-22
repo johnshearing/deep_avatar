@@ -116,7 +116,7 @@ async def main():
         # Perform query
 
         query = (
-            "What does the context tell us about Wiltsi Robinson?"
+            "What can humans do to bring more free electrons into the body or reduce the amount of hydrogen ions the body produces?"
         )
       
          

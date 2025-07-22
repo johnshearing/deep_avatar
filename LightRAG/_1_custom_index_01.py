@@ -20,9 +20,32 @@ MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
 # Files to be indexed
 files_2b_indexed = [
-    "/home/js/lgt/LightRAG/_0_jack_to_be_processed/q33KyLkP_Rg_metadata.json",
-    "/home/js/lgt/LightRAG/_0_jack_to_be_processed/rfxDs1N_-3c_metadata.json",
-    "/home/js/lgt/LightRAG/_0_jack_to_be_processed/XEezQ9Mv820_metadata.json"
+"/home/js/lgt/LightRAG/_0_jack_processed/A7Y0j9DTbDk_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/wu1C4yzyEqk_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/Zc9Xk99gCr4_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/l9Ubguvfpys_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/7B3pVAvB5JQ_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/PE7zCK_fypQ_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/T6aPbWg7Ahk_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/almlINDXU5c_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/U5lpTokLmT8_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/i6-lTljUP-A_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/tCPeQNzizXs_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/q33KyLkP_Rg_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/rfxDs1N_-3c_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/KV-1dlqowKw_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/W5w0WainlMM_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/XEezQ9Mv820_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/ouksSZxRtnc_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/IOAjeyAhB4k_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/Ln3WszTq0uA_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/6P8gqB4zLGQ_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/ieN8AzuYG3s_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/tSR5_QueeZs_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/0KglcWXUh-c_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/NW7VUFgwqg8_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/Y1fapBBMmSI_metadata.json",
+"/home/js/lgt/LightRAG/_0_jack_processed/_categories.json"
 ]
 
 def configure_logging():
