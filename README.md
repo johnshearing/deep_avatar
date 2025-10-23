@@ -1,7 +1,7 @@
 <a href="https://johnshearing.github.io/">Main list of projects</a><br>
 <br> 
-<a href="http://174.167.38.230:9621" target="_blank">Ask Deep Avatar About Mitochondrial Health</a><br>
-<br>
+<!-- <a href="http://174.167.38.230:9621" target="_blank">Ask Deep Avatar About Mitochondrial Health</a><br>
+<br> -->
 ### Creating a.i. Avatars Which Answer The Same As Their Human Models.  
 
 ---
