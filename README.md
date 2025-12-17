@@ -10,13 +10,13 @@
 <b>  
 Case Study: Using A Deep Avatar modeled after Charles Hoskinson For Voting Decisions in Cardano Governance<br>
 </b>  
-To illustrate the idea, we feed <a href="https://www.youtube.com/live/_BGKIwReb0o?si=NM88Zm4vJdW146fO">Charles' video on the budget proposal vote</a> into our LightRAG vector database. Now we need to know if Charles wants DReps to vote for the Pragma budget proposal or not. The image below is a portion of the entire Knowledge Graph created by the LightRAG server after ingesting Charles' video. When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships including source material.<br>
+To illustrate the idea, we feed <a href="https://www.youtube.com/live/_BGKIwReb0o?si=NM88Zm4vJdW146fO">Charles' video on the budget proposal vote</a> into our LightRAG knowledge graph and vector database. Now we need to know if Charles wants DReps to vote for the Pragma budget proposal or not. The image below is a portion of the entire Knowledge Graph created by the LightRAG server after ingesting Charles' video. When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships including source material.<br>
 <br>
 <p>
 <img src="/_images/c_graph.jpg">
 </p>
 <br>
-Below, in a different tab of the LightRAG server, we ask an a.i. to look at the knowledge graph and answer our question:<br>
+Below, in a different tab of the LightRAG server, we ask an a.i. to look at the knowledge graph and the vector database and answer our question:<br>
 Does Charles want DReps to vote for the Pragma budget proposal?<br>
 <br>
 <p>
@@ -24,7 +24,7 @@ Does Charles want DReps to vote for the Pragma budget proposal?<br>
 </p>
 <br>
 The a.i. answers, "Yes!".<br>
-This is useful, and it's a good start, but this is just an OpenAI LLM looking at a vector database and answering our questions about the ingested videos. The ultimate goal is to use Retrieval Augmented Generation (LightRAG) to collect and manage training data that we will use to create a deep avatar of Charles which will have opinions very much like Charles himself and will have direct access to the Lean 4 Proving System. Imagine how helpful a deep avatar of Charles might be as it quickly ingests huge amounts of data, that no one else has time to look at, and then uses that data to make the same decisions Charles himself would make were he looking at the same information.<br>
+This is useful, and it's a very good start, but this is just an OpenAI LLM looking at our knowledge graph/vector database and answering our questions about the ingested videos. The ultimate goal is to use Retrieval Augmented Generation (LightRAG) to collect and manage training data that we will use to create a deep avatar of Charles which will have opinions very much like Charles himself and will have direct access to the Lean 4 Proving System. Imagine how helpful a deep avatar of Charles might be as it quickly ingests huge amounts of data, that no one else has time to look at, and then uses that data to make the same decisions Charles himself would make were he looking at the same information.<br>
 <br>  
 <br>  
 
@@ -41,14 +41,15 @@ This is a system for automatically collecting data such as videos and documents 
 The RAG system is used to create training data for fine-tuning an LLM (Large Language Model) so as to give the same answers as the human model when provided with the same questions.  
 The RAG system also allows the deep avatar to give accurate answers and to quote its sources.  
 The open source repository [LightRag](https://github.com/HKUDS/LightRAG) is being used to build the RAG system.  
-All the scripts in this repository are used with this library in order to create deep avatars.  
+All the scripts in this repository are used together with the LightRAG library in order to create deep avatars.  
 
 I have been programming for most of my life, but in this project, a.i. such as Grok, ChatGPT, Claude, and Gemini are doing most of the coding.  
+My job is to imagine what I want, make decisions about how to approch the implementation, ask for what I want, test and tweek what the a.i. gives me, decide if. 
 For this reason, the work is going very quickly.  
   
-The following library is being used in the project to scrape videos from the Internet and create transcripts which are punctuated and diarized so that we know who is speaking and when. Video timestamps are also gathered in the transcripts so that the avatar can cite source videos when validating its responses.  
+I created the library linked below to scrape videos from the Internet and create transcripts which are punctuated and diarized so that we know who is speaking and when. Video timestamps are also gathered in the transcripts so that the avatar can cite source videos when validating its responses.  
 https://github.com/johnshearing/scrape_yt_mk_transcripts  
-These transcripts along with the metadata about the source videos are fed into the LightRAG system for indexing and querying by the ai of our choice. Most any format of written document can also be injested by the system.  
+These transcripts along with the metadata about the source videos are fed into the LightRAG system for indexing and querying by the ai of our choice. Most any type of multimedia document can also be injested by the system.  
 
 A very special ai has been chosen.  
 Charles made a 20 million dollar donation to Carnegie Mellon to work on the Lean 4 Theorem Proving System. This is a system for making theorems understandable to computers. Formerly, only humans could understand these. His intention is to use Lean 4 to code the Cardano constitution into a smart contract. The idea was to use this smart contract to allow or disallow other smart contracts to be deployed on the Cardano blockchain based on whether or not these are determined to be constitutional. My previous work in both functional programming and artificial intelligence has taught me that a.i. is likely the best path to achieving a machine understandable constitution that can validate smart contracts on the Cardano blockchain. While not 100% open source, the [DeepSeek Prover-V2 7B: Formal Theorem Proving in Lean 4](https://youtu.be/Y-bsdjB21DI?si=F_IE_eNrnWjpMoDZ) will be selected as the LLM we fine-tune to become like Charles. [Remember, Charles donated 20M to Carnegie Mellon University to open the Hoskinson center for formal mathematics which is focused on developing the Lean 4 Theorem Proving System](https://youtu.be/gCLJOrJFLZQ?si=KDRdKWIFGNrXlZFF&t=258). He did this because he wants to embed soul and ethics into the Cardano protocol in a way that the system itself will understand. [The following is a direct quote from the video:](https://www.youtube.com/watch?v=H9wAyW_EcDA&t=1462s) "There's a question of how much should the ethics, the integrity, the soul, and the intentions of the system be machine understandable? Because if they're machine understandable you can then build protocols that can actually operate on the intent and embed them as a kind of regulator of the system for all smart contracts". From Charles' quote, we can see that the DeepSeek Prover-V2 7B is likely the very LLM that Charles himself would select if he were doing this project because it was specifically trained to run the Lean 4 Proving System. This LLM will be fine-tuned on the data collected (all things Charles and Cardano) to become a deep avatar of Charles. Ultimately I am imagining that a deep avatar of Charles Hoskinson will run for a seat on the constitutional committee which is decided by a community wide election. This deep avatar of Charles will have direct access to Lean 4 as it evaluates smart contracts and governance proposals as constitutional or not along with other committee members.  
