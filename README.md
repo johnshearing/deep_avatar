@@ -14,7 +14,7 @@
 <b>  
 Case Study: Using A Deep Avatar modeled after Charles Hoskinson For Voting Decisions in Cardano Governance<br>
 </b>  
-To illustrate the idea, we feed <a href="https://www.youtube.com/live/_BGKIwReb0o?si=NM88Zm4vJdW146fO">Charles' video on the budget proposal vote</a> into our LightRAG knowledge graph and vector database. Now we need to know if Charles wants DReps to vote for the Pragma budget proposal or not. The image below is a portion of the entire Knowledge Graph created by the LightRAG server after ingesting Charles' video. When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships including source material.<br>
+To illustrate the idea, we feed <a href="https://www.youtube.com/live/_BGKIwReb0o?si=NM88Zm4vJdW146fO" target="_blank">Charles' video on the budget proposal vote</a> into our LightRAG knowledge graph and vector database. Now we need to know if Charles wants DReps to vote for the Pragma budget proposal or not. The image below is a portion of the entire Knowledge Graph created by the LightRAG server after ingesting Charles' video. When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships including source material.<br>
 <br>
 <p>
 <img src="/_images/c_graph.jpg">
