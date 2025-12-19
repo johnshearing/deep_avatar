@@ -14,7 +14,7 @@
 <b>  
 Case Study: Using A Deep Avatar modeled after Charles Hoskinson For Voting Decisions in Cardano Governance<br>
 </b>  
-To illustrate the idea, we feed <a href="https://www.youtube.com/live/_BGKIwReb0o?si=NM88Zm4vJdW146fO" target="_blank">Charles' video on the budget proposal vote</a> into our LightRAG knowledge graph and vector database. Now we need to know if Charles wants DReps to vote for the Pragma budget proposal or not. The image below is a portion of the entire Knowledge Graph created by the LightRAG server after ingesting Charles' video. When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships including source material.<br>
+To illustrate the idea, we feed <a href="https://www.youtube.com/live/_BGKIwReb0o?si=NM88Zm4vJdW146fO">Charles' video on the budget proposal vote</a> into our LightRAG knowledge graph and vector database. Now we need to know if Charles wants DReps to vote for the Pragma budget proposal or not. The image below is a portion of the entire Knowledge Graph created by the LightRAG server after ingesting Charles' video. When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships including source material.<br>
 <br>
 <p>
 <img src="/_images/c_graph.jpg">
@@ -28,7 +28,10 @@ Does Charles want DReps to vote for the Pragma budget proposal?<br>
 </p>
 <br>
 The a.i. answers "yes" and explains why Charles would agree".<br>
-This is useful, and it's a very good start. Already our RAG system can accurately predict what Charles will say when asked a question. The only thing left to do is to swap out the OpenAI LLM currently in use for the [DeepSeek Prover-V2 7B: Formal Theorem Proving in Lean 4](https://youtu.be/Y-bsdjB21DI?si=F_IE_eNrnWjpMoDZ). This will allow the system to prove in a rigorous mathematical way that a smart contract either is or is not constitutional. This will be discussed in more detail as we proceed.<br>
+This is useful, and it's a very good start. Already our RAG system can accurately predict what Charles will say when asked a question.<br>
+The only things left to do are:<br>
+1. to swap out the OpenAI LLM currently in use for the DeepSeek Prover-V2 7B: Formal Theorem Proving in Lean 4. This will allow the system to prove in a rigorous mathematical way that a smart contract either is or is not constitutional. This will be discussed in more detail as we proceed.<br>
+2. Run the LLM and RAG system locally on a computer designed to host Large Language Models and supporting data sources.
 <br>  
 <br>  
 
@@ -71,11 +74,11 @@ In order for this idea to work, the entire Cardano community will need to be inv
  
 
 ### Overall Roadmap:
-1. Build the RAG system and deploy a web interface so that the public can query the vector database using natural language.
+1. Build the RAG system and deploy a web interface so that the public can query the vector database using natural language.  
 This is done.
     
 2. Recently, I built the app shown below, which makes it possible to rapidly find and sanitize any dirty data that gets ingested into the knowledge graph and vector database during the indexing process.  
-   - Currently I am porting this stand-alone Python app to JavaScript for seamless integration into the LightRAG WebUI so that only one single application is necessary to create and maintain the data and so that this application is available online to all with the correct privileges.  
+   - Currently I am porting this stand-alone Python app to JavaScript for seamless integration into the LightRAG WebUI so that only one single application is necessary to create, maintain, and query the data.  
 <br>
 <p>
 <img src="/_images/cleanup_app.jpg">
@@ -105,6 +108,6 @@ This is done.
 7. Decentralize the LLM and the RAG system.
    -  Much like the Cardano blockchain uses thousands of stakepool operators to validate transactions, we can have multiple operators running the same LLM and RAG system to validate the answers provided by the system.
 8. Experiment with allowing Charles' avatar to vote on the Cardano test net.  
-6. Public feedback.  
+6. Seek public feedback, respond, and repeat.
   
-
+I mentioned in the title that the system can already rapidly create thousands of question and answer pairs for fine-tuning LLMs on a particular knowledge domain but I didn't explore the idea further because everything described above can be accoomplished with the Deep Avatar and LightRAG without the need for a fine-tuned LLM.
