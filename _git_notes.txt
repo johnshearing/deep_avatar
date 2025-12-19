@@ -80,7 +80,7 @@ The following was the basic setup to make an online repository from this directo
 
 
 
-############## The commands is this section are used to merge the local and remote repositories ####################
+############## The commands in this section are used to merge the local and remote repositories ####################
 
 It is best to push to or pull from the remote immediatly after doing work on either the remote or the local repository.
 If both remote and local repositories are in the updated state at the same time then a merge will be required which is a pain.
