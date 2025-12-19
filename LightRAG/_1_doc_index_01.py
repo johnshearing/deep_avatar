@@ -12,7 +12,7 @@ from llama_index.embeddings.openai import OpenAIEmbedding
 import textract
 
 # Configuration
-WORKING_DIR = "_0_ryan_work_dir_01"
+WORKING_DIR = "_0_seheult_work_dir"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
@@ -20,7 +20,40 @@ MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", 8192))
 
 # Files to be indexed
 files_2b_indexed = [
-    "/home/js/lgt/LightRAG/_0_jack_to_be_processed/ieN8AzuYG3s.txt"
+"/home/js/lgt/LightRAG/_0_seheult_data/4V5UvU8f6Ss.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/isz2IQs_EPg.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/3Prb6hG-TXw.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/BW_EtdPWmKM.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/6Win49aeh8A.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/WtQIXgA_4wA.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/Hy8G5TKxiLY.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/ha2mLz-Xdpg.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/D81k6RKN5_w.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/nP8lG26EwdU.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/wadKIiGsDTw.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/slLP3ZxGXHU.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/dVGEED-i8cc.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/SXfOtQkHlig.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/ZdiUnmpOgqE.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/5YV_iKnzDRg.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/mGDvmVhrVQw.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/_bNySyEobfY.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/8njSowpQ6uI.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/OIwHYaDyswA.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/0m1Qekrfs7w.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/2Zzo4SJopcY.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/e_wTDynIscQ.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/y6hkCGb_tE8.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/lLDYNoIVLmk.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/eCSe4af9Wmk.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/PXEuPZTPV5o.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/16UHK1gPUO8.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/2fNqjn0gE94.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/UceHiFblPUs.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/xWvoWM1cq_8.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/9eEyWlbToI4.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/e6xj14QYsoc.txt",
+"/home/js/lgt/LightRAG/_0_seheult_data/8QuvTjLZaXs.txt"
 ]
 
 def configure_logging():

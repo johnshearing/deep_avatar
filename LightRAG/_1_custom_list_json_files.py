@@ -1,7 +1,7 @@
 import os
 
 # Set the directory to search and the output file name
-directory = '_0_jack_processed'
+directory = '_0_seheult_data'
 output_file = '_0_list_of_json_files.txt'
 
 # Get list of .json files with full paths

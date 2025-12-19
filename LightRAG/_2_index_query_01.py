@@ -13,7 +13,7 @@ from llama_index.embeddings.openai import OpenAIEmbedding
 # load_dotenv()
 
 # Configuration
-WORKING_DIR = "_0_jack_work_dir_01"
+WORKING_DIR = "_0_seheult_work_dir"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", 3072))
 API_KEY = os.getenv("EMBEDDING_BINDING_API_KEY")
@@ -116,7 +116,7 @@ async def main():
         # Perform query
 
         query = (
-            "What can humans do to bring more free electrons into the body or reduce the amount of hydrogen ions the body produces?"
+            "With regard to document mGDvmVhrVQw.txt, Is the cause of vitamin D toxicity from sunshine or from supplements?"
         )
       
          
@@ -126,7 +126,7 @@ async def main():
             print(f"=====================")
             response = await rag.aquery(
                 query,
-                param=QueryParam(mode=mode, top_k=50),  # top_k=50, only_need_context=True, only_need_prompt=True
+                param=QueryParam(mode=mode, top_k=70),  # top_k=70, only_need_context=True, only_need_prompt=True
             )
             print(response)
     except Exception as e:

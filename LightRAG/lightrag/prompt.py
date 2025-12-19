@@ -15,6 +15,7 @@ PROMPTS["DEFAULT_ENTITY_TYPES"] = [
     "organization is an entity with an entity_type of category which describes governments, companies, institutions, establishments, consortiums, conglomerates, associations, and similar.",
     "cartel is an entity with an entity_type of category which describes alliances of organizations such that competition and choice is diminished for their clients while control over clients is increased.",
     "complex_adaptive_system is an entity with an entity_type of category which describe entities such as cartels, orgainzations, organisms, ecosystems and similar, that are controlled by a complex web of positive feedback loops which cause it to seek feeding and growth before any other objective.",
+    "nutrition is an entity with an entity_type of category which describes any substance consumed by living matter in order to sustain life."    
     "person is an entity with an entity_type of category which describes any human.",
     "practitioner is an entity with an entity_type of category which describes a person actively engaged in an art, discipline, or profession.",
     "place is an entity with an entity_type of category which describes any geographic location.",
@@ -74,7 +75,7 @@ PROMPTS["DEFAULT_ENTITY_TYPES"] = [
     "material is an entity with an entity_type of category which describes any substance or mixture of substances that has a specific set of properties.",
     "range is an entity with an entity_type of category which describes measure or extent between the extreme ends of a set of values or a physical quantity.",
     "unique_id is an entity with an entity_type of category which describes a code or number that distinguishes a specific entity (place, person, object, data record, etc.) from all others.",
-    "address is an entity with an entity_type of category which describes a unique_id that distinguishes a specific singleton (place, object, data record, etc.) from all others and provides information on how to locate that singleton."
+    "address is an entity with an entity_type of category which describes a unique_id that distinguishes a specific singleton (place, object, data record, etc.) from all others and provides information on how to locate that singleton."    
 ]
 
 PROMPTS["entity_extraction"] = """---Goal---
@@ -98,7 +99,7 @@ For each pair of related entities, extract the following information:
 Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>) 
 
 3. For every entity_type listed in step one there has previously been created an entity of the same name.
-For each of these entities already created from the list of entity types, identify entities currently in scope which might be a member of the entity created from the list of entity types.
+For each of these entities already created from the list of entity types, excluding the first of these entities (category_hub), identify entities currently in scope which might be a member of the entity created from the list of entity types.
 For each category/member pair of related entities, extract the following information:
 - source_entity: name of the source entity which was created from the list of entity types
 - Consider this source_entity as the name of a set

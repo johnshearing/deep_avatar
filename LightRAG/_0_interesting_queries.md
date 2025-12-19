@@ -9,46 +9,35 @@ The magic which make this possible is in the way the data was prepared and index
 <br>
 How the query is written also matters. The following is an example. 
 
-**Paste the following query into the LightRAG server prompt box.**
+**Paste the following query into the LightRAG server prompt box.  
+Try Naive, Local, Global, Hybrid, and Mix mode for each query**
 
-/naive [Time stamps in the source text appear like the following sample: [6.56 > 11.68]. The values given between the brackets are in seconds and decimal fractions of a second, not in minutes. Provide the full URLs including timestamped points in the source video (rounded to the nearest second) so that the videos can be viewed at the moment of interest.] Please search for all instances where topical sunscreen is discussed.
 
-**The following query is more precise and seems to give better results.**
+[The source text is a transcript from the source video. The URL for the source video is found in the metadata associated with the source text. Time stamps in the source text appear between brackets at the beginning of each line as shown in the following sample text: <sample text begins here>[6.56 > 11.4] (Roger) the different years that in those that had COVID there were higher levels of oxidative stress.<sample text ends here> In the sample text, the values given between the brackets are given in seconds and decimal fractions of a second. So the first value in the timestamp sample is six seconds and 56 hundreths of a second. Only use the integer part of the value and only return the first value in the pair. So from the sample text, only use the number 6 to represent six seconds into the video when generating your answer. To say it another way, only use the whole number part of the first value given between the brackets when forming your answer. Please provide URLs in your responses for source video that incorporate the timestamps found in the source text so that the videos can be viewed at the moment which is relevant to the query response. The following is an example of how the URLs should be structured if the source text is from Ln3WszTq0uA.txt and the moment of interest has a time stamp of [6.56 > 11.68]: https://www.youtube.com/watch?v=Ln3WszTq0uA&t=6s. To build the URL always start with the URL you find in the metadata which is associated with the source text. In this case the URL associated with the source text is "https://www.youtube.com/watch?v=Ln3WszTq0uA". Append the characters &t= to the URL. So now the URL will look as follows: "https://www.youtube.com/watch?v=Ln3WszTq0uA&t=". Next, append the number 6 to the URL if the timestamp is [6.56 > 11.4] because we are only interested in the whole number part of the first value in the timestamp. So now the URL will look as follows: "https://www.youtube.com/watch?v=Ln3WszTq0uA&t=6". Finally, append the letter s to the URL to denote seconds. So the final resulting URL will look as follows: "https://www.youtube.com/watch?v=Ln3WszTq0uA&t=6s"] Please search for all instances where infrared light is discussed with regard to studies done in Brazil.
 
-/mix [Time stamps in the source text appear like the following sample: [6.56 > 11.68]. The values given between the brackets are in seconds and decimal fractions of a second, not in minutes. The source text is a transcript from the source video. The URL for the source video is found in the metadata associated with the source text. So the values between the brackets in the above sample indicate a time between 6.56 seconds and 11.68 seconds into the video. Please provide URLs in your responses for source video that incorporate the timestamps found in the source text so that the videos can be viewed at the moment which is relevant to the query response. The following is an example of how the URLs should be structured if the source text is from Ln3WszTq0uA.txt and the moment of interest has a time stamp of [6.56 > 11.68]: https://www.youtube.com/watch?v=Ln3WszTq0uA&t=6s. Provide the timestamp in seconds and round the timestamp value to the nearest second] Please search for all instances where POMC is discussed.
+**The following was the response produced**
 
-**The following is was the response produced**
+Infrared Light Studies in Brazil
+In the context of infrared light and its potential benefits for COVID-19, there is a notable study mentioned that was conducted in Brazil. This study involved the use of a jacket for patients with mild to moderate COVID-19 who were hospitalized but not on ventilators. The findings indicated that the use of near-infrared light therapy significantly improved several pulmonary functions and reduced hospitalization time by four days. Specifically, there was a 32% improvement in maximum inspiratory pressure and a 23% improvement in maximum expiratory pressure.
 
-### Instances Discussing Topical Sunscreen
+The researchers highlighted the systemic effects of photobiomodulation, which suggests that near-infrared light could have broader implications for treating conditions like COVID-19. However, the study's main limitation was the small cohort size of only 30 patients, suggesting that further research with larger populations is necessary to strengthen the conclusions.
 
-1. **Timestamp: [8261.02 > 8267.42]**
-   - **Content:** The centralized medical dogma suggests that total cumulative UV light exposure causes skin cancer and recommends completely avoiding UV light and blocking it with topical sunscreen.
-   - **Video URL:** [Watch here](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=8261s)
-
-2. **Timestamp: [8339.26 > 8345.42]**
-   - **Content:** It is mentioned that putting chemicals or things on the skin that block the system (like topical sunscreen) guarantees an increased risk of melanoma.
-   - **Video URL:** [Watch here](https://www.youtube.com/watch?v=Ln3WszTq0uA&t=8339s)
+For more information on this topic, you can view the relevant section of the video discussing the Brazilian study at this timestamp: https://www.youtube.com/watch?v=Hy8G5TKxiLY&t=2102s.
 
 ### Summary
 The discussion around topical sunscreen highlights a critical view of its use in preventing skin cancer, suggesting that blocking UV light with sunscreen may lead to adverse health outcomes, including an increased risk of melanoma.
 
-### References
-- [DC] Ln3WszTq0uA.txt
-- [DC] Ln3WszTq0uA_metadata.json
-<br>
-
 ---
 #### The following explains the effect of the query formating in the above example
 
-* "/naive" was specified as the query method.
-  * Methods available are naive, local, global, hybrid, mix, and bypass.
+  * Query methods available are naive, local, global, hybrid, mix, and bypass.
     * naive only looks in the vector database for information but will give thoughtfull answers beyond what it finds. So it's not just searching for words. Rather it is searching for meaning and reporting on that.
-    * local seems to use information found in the knowledge graph nodes.
-    * global seems to uses information found in knowledge graph relations.
-    * hybrid seems to combines local and global methods.
-    * mix combines seems to combine hybrid with naive
+    * local uses information found in the knowledge graph nodes.
+    * global uses information found in knowledge graph relations.
+    * hybrid combines local and global methods.
+    * mix combines hybrid with naive
     * The results vary significantly based on the method used.
-    * There is no tell which will give the best result so it is good to try them all. 
+    * There is no telling which will give the best result so it is good to try them all. 
     * The python script _2_index_query_??.py does indeed try all the methods so it might be wise to run the query in the script first to see which method produces the best response and then run the query again in the LightRAG server to get the best formatting.
 
 * [Time stamps in the...] 
