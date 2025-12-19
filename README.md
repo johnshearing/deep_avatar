@@ -110,4 +110,4 @@ This is done.
 8. Experiment with allowing Charles' avatar to vote on the Cardano test net.  
 6. Seek public feedback, respond, and repeat.
   
-I mentioned in the title that the system can already rapidly create thousands of question and answer pairs for fine-tuning LLMs on a particular knowledge domain but I didn't explore the idea further because everything described above can be accoomplished with the Deep Avatar and LightRAG without the need for a fine-tuned LLM.
+I mentioned in the title that the system can already rapidly create thousands of question and answer pairs for fine-tuning LLMs on a particular knowledge domain but I didn't explore the idea further because everything described above can be accomplished with the Deep Avatar and LightRAG systems without the need for a fine-tuned LLM.
