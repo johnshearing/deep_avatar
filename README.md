@@ -5,8 +5,10 @@
 ## What Can We Do Right Now With Deep Avatar?
 ### Rapidly create a.i. avatars which answer the same as their human models. 
 ### Rapidly create a.i. experts in any knowledge domain by ingesting scientific papers and videos.  
-### Rapidly create a.i. helpers for troubleshooting and repair of complex machines and systems.  
+### Rapidly create a.i. helpers for troubleshooting and repair of complex machines and systems. 
 ### Rapidly create thousands of question and answer pairs for fine-tuning LLMs on a particular knowledge domain.
+### Constrain any a.i. to source it's answers from the media provided and not from its training data.
+### Force any a.i. to quote it's sources and point out the exact place in the media where the answer is sourced.  
 
 ---
 
@@ -39,9 +41,13 @@ The only things left to do are:<br>
 
  ### What else can we do already with the system?
 Deep Avatar has been used to rapidly create specialized a.i. and for making sense of complex scientific papers and videos. It's like having an a.i. librarian that is intimately familiar with every book and every video in the library and that can talk intelligently about each and every one of them. For instance, I used the deep_avatar system to ingest and then help me make sense of more than 50 high-level esoteric medical videos curated specifically for specialists and researchers in the field. The collection explores the most granular complexities of mitochondrial health, often presenting data and methodologies that remain inscrutable to the layperson. Deep Avatar was able to look across all the videos when answering questions and was even able to produce correct answers by inference when the data was there but not plainly stated.
-[The result was this webpage about mitochondrial health](https://johnshearing.github.io/mitochondria_in_vitality_healing_and_chronic_disease_prevention/) 
+[The result was this webpage about mitochondrial health](https://johnshearing.github.io/mitochondria_in_vitality_healing_and_chronic_disease_prevention/)  
 
-Deep Avatar has also been used to ingest service manuals for complicated factory machinery and then aid in troubleshooting and repair.
+Of key importance in the above example is that the a.i. was constrained to source it's answers about mitochondrial health from the videos and documents that I provided, much of which is contrary to the narrative the a.i. was trained on. So now it is possible to use any a.i. without being subjected to biased data the a.i. may have been trained on.  
+
+An a.i. constrained by this system will provide a link to the exact place in a video or document from where answers are sourced when requested to do so. This is made possible by the way Deep Avatar prepares the data before it is ingested into the system. Because a.i. is able to reason about the data it is presented with it may provide answers that are inferred from the source media but not specifically stated. In that case the general area in the source media from which the answers were inferred are cited but it is up to the user to check if the inference is correct. I have found the inferences to be very accurate but later versions of deep avatar may include prompt logic that will allow an a.i. to explain how the inference was constructed and exactly where the data came from.   
+
+Deep Avatar has also been used to ingest service manuals for complicated factory machinery and then aid in troubleshooting and repair.  
 
 The main building block is a Retrieval Augmented Generation system.  
 This is a system for automatically collecting and organizing data such as videos and multimedia documents.   
