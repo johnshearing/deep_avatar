@@ -60,7 +60,10 @@ My job is to imagine what I want, make decisions about how to approach the imple
   
 I created the library linked below to scrape videos from the Internet and create transcripts which are punctuated and diarized so that we know who is speaking and when. Video timestamps are also gathered in the transcripts so that the avatar can cite source videos when validating its responses.  
 https://github.com/johnshearing/scrape_yt_mk_transcripts  
-These transcripts along with the metadata about the source videos are fed into the LightRAG system for indexing and querying by the ai of our choice. These a.i. can be run on a local computer so that all the data and queries remain private and secure. Most any type of multimedia document can also be ingested by the system.  
+Most any type of multimedia document can also be ingested by the system.  
+These transcripts along with the metadata about the source videos are fed into the LightRAG system for indexing and querying by the ai of our choice. 
+
+These a.i. used by Deep Avatar and LightRAG can be run on a local computer so that all the data and queries remain private and secure.   
 
 ### Back to the case study
 
