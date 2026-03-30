@@ -12,9 +12,13 @@
 
 ---
 
+<h3><a href="http://174.167.38.230:9621" target="_blank">🧠💬✨👉 Click here to ask Deep Avatar about Charles Hoskinson's book "The Seven Layer Magic Trick"  👈✨💬🧠</a></h3>
+---
+
 <br>    
 <b>  
-Case Study: Using A Deep Avatar modeled after Charles Hoskinson For Voting Decisions in Cardano Governance<br>
+#### Case Study: 
+Using A Deep Avatar modeled after Charles Hoskinson For Voting Decisions in Cardano Governance<br>
 </b>  
 To illustrate the idea, we feed <a href="https://www.youtube.com/live/_BGKIwReb0o?si=NM88Zm4vJdW146fO">Charles' video on the budget proposal vote</a> into our LightRAG knowledge graph and vector database. Now we need to know if Charles wants DReps to vote for the Pragma budget proposal or not. The image below is a portion of the entire Knowledge Graph created by the LightRAG server after ingesting Charles' video. When the LightRAG server is running, we can click on any of these nodes and on items in the dialog box to get all kinds of information about the entities and their relationships including source material.<br>
 <br>
