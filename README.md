@@ -11,8 +11,7 @@
 ### Force any a.i. to quote it's sources and point out the exact place in the media where the answer is sourced.  
 
 ---
-
-<h3><a href="http://174.167.38.230:9621" target="_blank">🧠💬✨👉 Click here to ask Deep Avatar about Charles Hoskinson's book "The Seven Layer Magic Trick"  👈✨💬🧠</a></h3>
+### [Click here to ask Deep Avatar about Charles Hoskinson's book "The Seven Layer Magic Trick](http://174.167.38.230:9621)
 ---
 
 <br>    
