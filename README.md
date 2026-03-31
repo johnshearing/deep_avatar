@@ -51,6 +51,9 @@ Of key importance in the above example is that the a.i. was constrained to sourc
 An a.i. constrained by this system will provide a link to the exact place in a video or document from where answers are sourced when requested to do so. This is made possible by the way Deep Avatar prepares the data before it is ingested into the system. Because a.i. is able to reason about the data it is presented with it may provide answers that are inferred from the source media but not specifically stated. In that case the general area in the source media from which the answers were inferred are cited but it is up to the user to check if the inference is correct. I have found the inferences to be very accurate but later versions of deep avatar may include prompt logic that will allow an a.i. to explain how the inference was constructed and exactly where the data came from.   
 
 Deep Avatar has also been used to ingest service manuals for complicated factory machinery and then aid in troubleshooting and repair.  
+[This video](https://youtu.be/KMdG7ihIl7Y) and [this video](https://youtu.be/1CsTgYwEgZ0) give a general overview on how Deep Avatar can be used to create a.i. troubleshooting experts.  
+[This video](https://youtu.be/70iZxleULYY) gives instructions on using Deep Avatar's Sanitize Data tab. This where we insert a human in the loop to quickly identify and correct any faulty information that might be created when an a.i. indexes a document that it does not fully understand. The Sanitize Data application was vibe coded by me using several a.i. over the course of several months. I open sourced this project which is found at the following URL:
+https://github.com/johnshearing/LightRAG
 
 The main building block is a Retrieval Augmented Generation system.  
 This is a system for automatically collecting and organizing data such as videos and multimedia documents.   
@@ -90,7 +93,9 @@ In order for this idea to work, the entire Cardano community will need to be inv
 This is done.
     
 2. Recently, I built the app shown below, which makes it possible to rapidly find and sanitize any dirty data that gets ingested into the knowledge graph and vector database during the indexing process.  
-   - Currently I am porting this stand-alone Python app to JavaScript for seamless integration into the LightRAG WebUI so that only one single application is necessary to create, maintain, and query the data.  
+   - Originally I prototyped the application in Python. Later I ported this stand-alone Python app to JavaScript for seamless integration into the LightRAG WebUI so that only one single application is necessary to create, maintain, and query the data.
+   - The pull request is found here:
+   - https://github.com/HKUDS/LightRAG/pull/2681
 <br>
 <p>
 <img src="/_images/cleanup_app.jpg">
